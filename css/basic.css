@@ -1,0 +1,250 @@
+body {
+    font-family: "Roboto", "Microsoft YaHei", sans-serif;
+    margin: 0px;
+    top: 0%;
+    max-width: 100%;
+    font-size: 16px;
+    background-color: #f1f1f1;
+    color: #808080;
+}
+
+.main {
+    margin: 0;
+    padding-top: 60px;
+    margin-left: 20px;
+    max-width: 98%;
+}
+
+h2 {
+    font-size: 2em;
+    word-break: break-all;
+}
+
+h4 {
+    padding: bottom 1px;
+    margin: 0;
+    padding-left: 6px;
+    font-size: 1em;
+}
+
+h6 {
+    float: right;
+    font-size: 1em;
+    top: 1px;
+    margin: 0;
+    padding-right: 8px;
+}
+
+p {
+    font-size: 0.8em;
+    word-break: break-all;
+    padding-left: 6px;
+}
+
+.row {
+    margin: 8px -12px;
+}
+
+.row,
+.row>.column {
+    padding: 6px;
+}
+
+.column {
+    float: left;
+    width: 18%;
+    display: none;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content {
+    background-color: white;
+    padding: 6px;
+    border-radius: 2px;
+}
+
+.show {
+    display: block;
+}
+
+.btn {
+    border: none;
+    border-radius: 150px;
+    outline: none;
+    padding: 8px 12px;
+    background-color: white;
+    cursor: pointer;
+    font: size 0.5em;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+.btn.active {
+    background-color: #FFA500;
+    color: white;
+}
+
+.w3-sidebar {
+    z-index: 3;
+    width: 200px;
+    top: 43px;
+    bottom: 0;
+    height: inherit;
+    font: size 0.5em;
+}
+
+.gyp-Navbar-small-bgcolor {
+    background-color: #FFA500;
+}
+
+.gyp-Navbar-bgcolor {
+    background-color: #f1f1f1;
+}
+
+abbr {
+    font-style: italic;
+    font-weight: 100;
+}
+
+h6specific {
+    float: right;
+    font-size: 0.4em;
+    padding-top: 20px;
+    padding-right: 8px;
+}
+
+.imgplace {
+    background-color: #aaa;
+    width: 100%;
+    padding: 1px;
+}
+
+.dailypost {
+    margin: 0px auto;
+    margin-top: 20px;
+    justify-content: center;
+    border: 1px solid red;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+.pp {
+    width: 90%;
+    font-size: 0.3em;
+    margin-left: 5px;
+}
+
+footer {
+    /* padding-top: 20px; */
+    text-align: center;
+    background: #ddd;
+    /* margin-top: 20px; */
+}
+
+footer p {
+    margin-left: 0px;
+}
+
+.w3-container:after,
+.w3-container:before {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.w3-container {
+    padding: 0.01em 16px
+}
+
+.w3-main {
+    width: 100%;
+}
+
+.summaryRed {
+    font-size: 120%;
+    color: #808080;
+    margin: 20px 0px 20px 0px;
+    border-left: 2px solid #66CCCC;
+    /* border-right: 6px solid #66CCCC; */
+    padding-left: 10px;
+}
+
+.summaryRed:before {
+    content: "红橙黄绿青蓝紫，7步贯标小意思";
+    font-weight: bold;
+}
+
+.summaryOrange {
+    font-size: 120%;
+    color: #808080;
+    margin: 20px 0px 20px 0px;
+    border-left: 5px solid #f5972c;
+    padding-left: 10px;
+}
+
+.summaryOrange:before {
+    content: "学习发现风险和机遇:  ";
+    font-weight: bold;
+}
+
+.summary {
+    font-size: 120%;
+    color: #808080;
+    margin: 20px 0px 20px 0px;
+    border-left: 5px solid #ED1951;
+    padding-left: 10px;
+}
+
+.summary:before {
+    content: "惜时如金:  ";
+    font-weight: bold;
+}
+
+.simple {
+    font-size: 1.2em;
+}
+
+.simpleimportant {
+    font-size: 0.8em;
+}
+
+.floatnoteQ {
+    border-radius: 150px;
+    background-color: #66CCCC;
+}
+
+.floatnoteG {
+    border-radius: 150px;
+    background-color: #CCFF66;
+}
+
+.floatnoteV {
+    border-radius: 150px;
+    background-color: #FF99CC;
+}
+
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 600px) {
+    .simple {
+        font-size: 0.8em;
+    }
+}
+
+
+/* Tablet Styles */
+
+@media only screen and (min-width: 601px) and (max-width: 960px) {}
+
+
+/* Desktop Styles */
+
+@media only screen and (min-width: 961px) {}

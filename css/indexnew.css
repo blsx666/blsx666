@@ -1,0 +1,40 @@
+/* Mobile Styles */
+
+@media only screen and (max-width: 600px) {
+    .btn {
+        font-size: 8px;
+    }
+    h2 {
+        font-size: 1em;
+        word-break: break-all;
+    }
+    h4 {
+        padding: bottom 1px;
+        margin: 0;
+        padding-left: 1px;
+        font-size: 6px;
+    }
+    h6 {
+        display: none;
+    }
+    p {
+        display: none;
+    }
+    .row {
+        margin: 2px -2px;
+    }
+    .row,
+    .row>.column {
+        padding: 2px;
+    }
+}
+
+
+/* Tablet Styles */
+
+@media only screen and (min-width: 801px) and (max-width: 960px) {}
+
+
+/* Desktop Styles */
+
+@media only screen and (min-width: 961px) {}
