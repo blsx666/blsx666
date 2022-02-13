@@ -30,10 +30,13 @@ h4 {
 
 h6 {
     float: right;
-    font-size: 1em;
+    font-size: 0.6em;
     top: 1px;
     margin: 0;
     padding-right: 8px;
+    /* color: #FFA500; */
+    /* background-color: darkorange;
+    border-radius: 3px; */
 }
 
 p {
