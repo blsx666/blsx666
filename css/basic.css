@@ -1,12 +1,34 @@
+:root {
+    --maincolor: #62f1f1;
+    --secondarycolor: #8dfcfc;
+    --white2: #64f7f7;
+    --textcolor: #808080;
+    --white: #f1f1f1;
+}
+
 body {
+    background: var(--white);
+    color: var(--textcolor);
     font-family: "Roboto", "Microsoft YaHei", sans-serif;
     margin: 0px;
     top: 0%;
     max-width: 100%;
     font-size: 16px;
-    background-color: #f1f1f1;
-    color: #808080;
 }
+
+
+/* set sidenavbar text color */
+
+.gyp-textcolor {
+    color: var(--textcolor)!important;
+}
+
+.gyp-sidenavbar-bgcolor {
+    background: var(--white);
+}
+
+
+/* end */
 
 .main {
     margin: 0;
@@ -199,17 +221,18 @@ footer p {
     content: "大家好Greeting，我是QM经理 XB，姓包，名相。";
 }
 
-.summary {
-    font-size: 120%;
+.summaryXS {
+    font-size: 1rem;
     color: #808080;
     margin: 20px 0px 20px 0px;
     border-left: 5px solid #ED1951;
     padding-left: 10px;
 }
 
-.summary:before {
-    content: "惜时如金:  ";
-    font-weight: bold;
+.summaryXS:before {
+    /* content: "大家好Greeting，我是安全经理 XS，姓三，名相。我的座右铭是：安全不规范，三相两行泪。安全要规范，全靠你管我。"; */
+    /* font-weight: bold; */
+    content: "大家好Greeting，我是安全经理 XS，姓三，名相。";
 }
 
 .simple {
@@ -239,11 +262,8 @@ footer p {
 /* Mobile Styles */
 
 @media only screen and (max-width: 600px) {
-    body {
-        font-size: 0.6em;
-    }
     .simple {
-        font-size: 0.6em;
+        font-size: 1em;
     }
     h1 {
         font-size: 1.2em;
@@ -259,3 +279,75 @@ footer p {
 /* Desktop Styles */
 
 @media only screen and (min-width: 961px) {}
+
+
+/* 0522 start */
+
+.container {
+    box-sizing: border-box;
+    width: 70%;
+    background-color: var(--white2);
+    border-radius: 20px;
+    box-shadow: -28px -28px 60px var(--maincolor), 28px 28px 60px var(--secondarycolor);
+    margin: auto;
+    margin-top: 70px;
+    font-size: 1.2em;
+}
+
+.gypbutton {
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.8em;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 16px;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+.gyp-main {
+    margin-left: 50px;
+    width: 90%;
+}
+
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 600px) {
+    .container {
+        box-sizing: border-box;
+        width: 90%;
+        background-color: var(--white2);
+        border-radius: 20px;
+        box-shadow: -28px -28px 60px var(--maincolor), 28px 28px 60px var(--secondarycolor);
+        margin: auto;
+        margin-top: 50px;
+        font-size: 1em;
+    }
+    .gyp-main {
+        margin-left: 12px;
+        width: 70%;
+    }
+}
+
+
+/* 0522 end */
