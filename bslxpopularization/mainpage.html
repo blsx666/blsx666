@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>how to blsx</title>
+    <title>蓝标规则速成</title>
 </head>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3schools30.css">
@@ -37,9 +37,6 @@
     /* Mobile Styles */
     
     @media only screen and (max-width: 600px) {
-        body {
-            font-size: 0.6px;
-        }
         .container {
             box-sizing: border-box;
             width: 80%;
@@ -207,15 +204,50 @@
     }
 
     // Create a Map
+    const noofrule = 8
     const fruits = new Map([
-        ["0", "问：蓝标认证化学品有没有证书？<br> <br> 答：没有证书。而且不需要证书。<br> <br> 蓝标化学品认证的运作模式，与过往不同，是这样设计的：当要知道一个化学品是不是蓝标认证的，只需拿出手机或电脑，登录bluesign FINDER: https://finder.bluesign.com/，在线实时自主核对。<br> <br> 可是我没有账号？免费注册一个就可以啦。bluesign FINDER是免费使用的。<br> <br>"],
-        ["1", "问：蓝标认证化学品在FINDER里怎么核对？<br> <br> 答：第一步，准备好需要核对的化学品的英文品名全称和供应商的公司英文全名。注意：不支持中文名字。<br> <br> 第二步，登录bluesign FINDER: https://finder.bluesign.com/，在搜索框输入英文品名。<br> <br> 第三步，在搜索结果清单里，看有无英文品名一致的化学品。如无，先再次核对英文品名是否正确，如确定正确，该化学品尚未通过蓝标认证，需催供应商注册或淘汰。如有，继续第四步。<br> <br> 第四步，点击产品名字，进入产品信息详细页，核对供应商是否一致。如一致，恭喜你购买的化学品是通过蓝标认证的。如否，很不幸，催供应商注册或淘汰。 <br> <br>"],
+        ["0", "问：蓝标认证化学品有没有证书？<br> <br> 答：没有证书。而且不需要证书。<br> <br> 蓝标化学品认证的运作模式，与过往不同，是这样设计的：当要知道一个化学品是不是蓝标认证的，只需拿出手机或电脑，登录<a href=\'https://finder.bluesign.com/'>bluesign FINDER</a>: https://finder.bluesign.com/，在线实时自主核对。<br> <br> 可是我没有账号？免费注册一个就可以啦。<a href=\'https://finder.bluesign.com/'>bluesign FINDER</a>是免费使用的。<br> <br>"],
+        ["1", "问：蓝标认证化学品在FINDER里怎么核对？<br> <br> 答：第一步，准备好需要核对的化学品的英文品名全称和供应商的公司英文全名。注意：不支持中文名字。<br> <br> 第二步，登录<a href=\'https://finder.bluesign.com/'>bluesign FINDER</a>: https://finder.bluesign.com/，在搜索框输入英文品名。<br> <br> 第三步，在搜索结果清单里，看有无英文品名一致的化学品。如无，先再次核对英文品名是否正确，如确定正确，该化学品尚未通过蓝标认证，需催供应商注册或淘汰。如有，继续第四步。<br> <br> 第四步，点击产品名字，进入产品信息详细页，核对供应商是否一致。如一致，恭喜你购买的化学品是通过蓝标认证的。如否，很不幸，催供应商注册或淘汰。 <br> <br>"],
         ["2", "问: 蓝标有规定哪些是化学品吗？<br> <br> 答：印染工厂：各类基础化学品如酸碱盐，染料，助剂，原液着色的色纱，印花油墨，印花用离型纸，印花制版用化学品，原水制备用化学品，废水废气处理用的化学品。<br> <br> 涂层工厂：溶剂，机台清洗剂，机涂层胶水，涂层胶片，后整理助剂，原水制备用化学品，废水废气处理用的化学品。<br> <br> 贴合工厂：热熔胶，贴合用的膜，机台清洗剂。制膜工厂：胶粒，机台清洗剂。<br> <br>"],
         ["3", "问: 废水测试APEO，是取排放口的废水送测吗？<br> <br> 答：不是。是取原始废水送测。<br> <br> 一年要测试2次。测试检出限要小于5微克。<br> <br> 测试机构的APEO测试项目要有ISO 17025即CNAS认证。<br> <br> "],
-        ["4", "问: 蓝标体系文件都是公开的吗？<br> <br> 答：是的，在官网公开：https://www.bluesign.com/。<br> <br> 蓝标体系文件分为准则文件，信用物质清单即bsbl和bssl，以及各类规范文件和模板文件。<br> <br> 准则文件，信用物质清单即bsbl和bssl，在官网向所有人公开，不论是否蓝标伙伴。<br> <br> 各类规范文件和模板文件仅向蓝标伙伴公开。使用会员账号在官网登录。<br> <br>"],
+        ["4", "问: 蓝标体系文件都是公开的吗？<br> <br> 答：是的，在官网公开：https://www.bluesign.com/。<br> <br> 蓝标体系文件分为准则文件，限用物质清单即bsbl和bssl，以及各类规范文件和模板文件。<br> <br> 准则文件，限用物质清单即bsbl和bssl，在官网向所有人公开，不论是否蓝标伙伴。<br> <br> 各类规范文件和模板文件仅向蓝标伙伴公开。使用会员账号在官网登录。<br> <br>"],
         ["5", "问: 蓝标体系文件会有辅导解释吗？<br> <br> 答：会由客户关系管理经理提供基本的解释。<br> <br> 不过如同法律法规，品牌要求，需要工厂建立获取识别合规评价管理制度，安排定期工厂内部学习和培训。<br> <br> "],
-        ["6", "问：蓝标认证面料有没有证书？<br> <br> 答：面料，辅料都会有证书。化学品是不提供证书的。不过，面料辅料的认证信息，全部在登记在blue GUIDE里。蓝标合作伙伴只需使用会员账号，在手机和电脑里登录blue GUIDE，在线实时自主核对。<br> <br>"]
+        ["6", "问：蓝标认证面料有没有证书？<br> <br> 答：面料，辅料都会有证书。化学品是不提供证书的。不过，面料辅料的认证信息，全部在登记在<a href=\'https://finder.bluesign.com/'>bluesign GUIDE</a>里。蓝标合作伙伴只需使用会员账号，在手机和电脑里登录<a href=\'https://finder.bluesign.com/'>bluesign GUIDE</a>，在线实时自主核对。<br> <br>"],
+        ["7", "问：SDS不是5年更新修订一次嘛？<br> <br> 答：对，国标是这样规定的。<br> 蓝标规定: <br> a/每3年修订一次；b/当法律法规标准有更新时应及时修订； c/当危险化学品有新的危险特性时应及时修订。b和c也是法规里面规定的。可看<a href=\'https: //www.iso.org/standard/44690.html'>ISO 11014:2009</a>，了解ISO标准是如何修订的。"],
+        ["8", "问：蓝标认证是像ISO等等管理体系那样，由第三方来审核的嘛？<br> <br> 答：审核由蓝标自己完成的，等同于直营。"]
     ]);
+
+    function mapnext() {
+        document.getElementById("gypdetails").style.display = "none";
+
+        // var ruleid = Math.floor(Math.random() * 7)
+        var ruleid = document.getElementById("gypramdonruleID").innerHTML
+        if (parseInt(ruleid) < noofrule) {
+            document.getElementById("gypramdonruleID").style.display = "block";
+            document.getElementById("gypramdonrule").style.display = "block";
+            document.getElementById("gypramdonruleID").innerHTML = parseInt(ruleid) + 1;
+            document.getElementById("gypramdonrule").innerHTML = fruits.get(ruleid.toString());
+        } else {
+
+            if (confirm("恭喜，全部练成。单击“确定”，再练一遍。单击“取消”，明天再练。")) {
+                document.getElementById("gypramdonruleID").style.display = "none";
+                document.getElementById("gypramdonrule").style.display = "none";
+                document.getElementById("gypramdonruleMessage").style.display = "block";
+                document.getElementById("gypramdonruleMessage").innerHTML = "主人，您作出了非常正确的决定。学海无涯，再练一遍。<br> 点击按钮逐条浏览，开始吧。<br> ";
+                document.getElementById("gypramdonruleID").innerHTML = 0;
+
+            } else {
+
+                document.getElementById("gypramdonruleID").style.display = "none";
+                document.getElementById("gypramdonrule").style.display = "none";
+                document.getElementById("gypramdonruleMessage").style.display = "block";
+                document.getElementById("gypramdonruleMessage").innerHTML = "劳逸结合，明天再练。主人，您作出了非常正确的决定。<br> 记得明天一定要再来啦。"
+            }
+
+        }
+    }
+
+
 
     function getramdoncolor() {
         var c;
@@ -285,7 +317,10 @@
         //     d.open = false
         // });
         document.getElementById("gypdetails").style.display = "none";
-        document.getElementById("gypramdonrule").innerHTML = fruits.get(Math.floor(Math.random() * 7).toString());
+        var ruleid = Math.floor(Math.random() * noofrule)
+        document.getElementById("gypramdonruleID").innerHTML = ruleid + 1;
+        document.getElementById("gypramdonrule").innerHTML = fruits.get(ruleid.toString());
+        document.getElementById("gypramdonruleID").style.display = "block";
 
     }
 </script>
@@ -297,7 +332,7 @@
         <div class="w3-top">
 
             <div class="w3-bar w3-top w3-left-align w3-large gyp-Navbar-bgcolor">
-                <a href="index.html" class="w3-bar-item w3-button gyp-Navbar-bgcolor w3-hover-orange">home</a>
+                <a href="../index.html" class="w3-bar-item w3-button gyp-Navbar-bgcolor w3-hover-orange">home</a>
                 <!-- <a href="index.html " class="w3-bar-item w3-button w3-hide-small w3-hover-orange ">包罗三相</a>
                 <a href="about.html " class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange ">about</a>
                 <a href="https://blsx.readthedocs.io " class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange ">点击这里看包罗三相 第一卷</a>
@@ -355,7 +390,8 @@
 
     <main class="container">
         <div class="gyptext">
-
+            <div id="gypramdonruleMessage" style="display: none;"></div>
+            <div id="gypramdonruleID" style="display: none;">0</div>
             <div id="gypramdonrule"></div>
             <details id="gypdetails" open>
                 <summary>如何开始？</summary>
@@ -370,7 +406,7 @@
     </main>
     <div class="center">
         <button class="w3-button w3-hover-orange " onclick="getramdoncolor()">颜色自由</button>
-        <button class="w3-button w3-hover-orange ">逐条浏览</button>
+        <button class="w3-button w3-hover-orange " onclick="mapnext()">逐条浏览</button>
     </div>
 </body>
 
