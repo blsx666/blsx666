@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="sdsfooter.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title70350">SDS example</title>
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#a6ad66"
+     borderopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="1.5358305"
+     inkscape:cx="522.5186"
+     inkscape:cy="1185.3522"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:lockguides="true"
+     borderlayer="false">
+    <sodipodi:guide
+       position="0,297"
+       orientation="0,793.70079"
+       inkscape:locked="true"
+       id="guide70338" />
+    <sodipodi:guide
+       position="210,297"
+       orientation="1122.5197,0"
+       inkscape:locked="true"
+       id="guide70340" />
+    <sodipodi:guide
+       position="210,0"
+       orientation="0,-793.70079"
+       inkscape:locked="true"
+       id="guide70342" />
+    <sodipodi:guide
+       position="0,0"
+       orientation="-1122.5197,0"
+       inkscape:locked="true"
+       id="guide70344" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid70346" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path26407" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker26894"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path26892" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path26404" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lend-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path26407-1" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="13.092807"
+       y="12.231438"
+       id="text2960"><tspan
+         sodipodi:role="line"
+         id="tspan2958"
+         style="font-size:4.93889px;stroke-width:0.264583"
+         x="13.092807"
+         y="12.231438">化学品安全技术说明书</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="12.920533"
+       y="17.916473"
+       id="text7722"><tspan
+         sodipodi:role="line"
+         id="tspan7720"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="12.920533"
+         y="17.916473">按照GB/T 16483-2008和GB/T 17519-2013 编写</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.87778px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="12.920531"
+       y="33.765659"
+       id="text22644"><tspan
+         sodipodi:role="line"
+         id="tspan22642"
+         style="font-size:9.87778px;stroke-width:0.264583"
+         x="12.920531"
+         y="33.765659">过氧化氢溶液, 50%</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="64.947212"
+       y="12.23144"
+       id="text29670"><tspan
+         sodipodi:role="line"
+         id="tspan29668"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="64.947212"
+         y="12.23144">GB/T 17519-2013 4.2.1.a的要求</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="71.100243"
+       y="45.025188"
+       id="text29670-7"><tspan
+         sodipodi:role="line"
+         id="tspan29668-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="71.100243"
+         y="45.025188">GB/T 17519-2013 4.2.1.c的要求</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="114.31276"
+       y="17.708178"
+       id="text29670-5"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="114.31276"
+         y="17.708178"
+         id="tspan79232">GB/T 17519-2013 4.2.1.e的要求</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="103.21004"
+       y="29.939619"
+       id="text29670-5-4"><tspan
+         sodipodi:role="line"
+         id="tspan29668-6-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="103.21004"
+         y="29.939619">GB/T 17519-2013 4.2.1.b的要求: 要和化学品安全标签</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="103.21004"
+         y="35.231285"
+         id="tspan82914">上保持一致。</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="13.229166"
+       y="44.979168"
+       id="text87732"><tspan
+         sodipodi:role="line"
+         id="tspan87730"
+         style="stroke-width:0.264583"
+         x="13.229166"
+         y="44.979168">修订日期: 2015年08月18日</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="13.229166"
+         y="50.682438"
+         id="tspan91556">最初编制日期: 2000年05年28日</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="13.533299"
+       y="56.521511"
+       id="text96708"><tspan
+         sodipodi:role="line"
+         id="tspan96706"
+         style="stroke-width:0.264583"
+         x="13.533299"
+         y="56.521511">SDS编号: XXX001</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="13.533299"
+         y="62.224781"
+         id="tspan96710">SDS版本: V4.0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="77.978302"
+       y="50.738831"
+       id="text29670-53"><tspan
+         sodipodi:role="line"
+         id="tspan29668-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="77.978302"
+         y="50.738831">GB/T 17519-2013 4.2.1.d的要求</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="52.800518"
+       y="56.362141"
+       id="text29670-53-5"><tspan
+         sodipodi:role="line"
+         id="tspan29668-8-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="52.800518"
+         y="56.362141">GB/T 17519-2013 4.2.1.f的要求</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="47.778767"
+       y="62.258163"
+       id="text29670-53-1"><tspan
+         sodipodi:role="line"
+         id="tspan29668-8-9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="47.778767"
+         y="62.258163">GB/T 17519-2013 4.2.1.g的要求</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 13.229167,64.029164 H 195.79166 v 0 0"
+       id="path131659" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 13.229167,280.45833 H 195.79161 v 0 0"
+       id="path131659-0" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="89.958336"
+       y="285.75"
+       id="text23669"><tspan
+         sodipodi:role="line"
+         id="tspan23667"
+         style="stroke-width:0.264583"
+         x="89.958336"
+         y="285.75">第1页，总16页</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="166.60727"
+       y="285.57773"
+       id="text23669-4"><tspan
+         sodipodi:role="line"
+         id="tspan23667-9"
+         style="stroke-width:0.264583"
+         x="166.60727"
+         y="285.57773">第1页，总16页</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="105.18745"
+       y="279.04422"
+       id="text29670-53-1-3"><tspan
+         sodipodi:role="line"
+         id="tspan29668-8-9-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="105.18745"
+         y="279.04422">GB/T 17519-2013 4.2.3的要求: 居中，或靠右</tspan></text>
+  </g>
+  <metadata
+     id="metadata70348">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>SDS example</dc:title>
+        <dc:date>20220202</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Roger Gong</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Free use</dc:title>
+          </cc:Agent>
+        </dc:rights>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
