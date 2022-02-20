@@ -23,7 +23,7 @@
         font-size: 16px;
     }
     
-    .container {
+    .gypcontainer {
         box-sizing: border-box;
         width: 50%;
         background-color: var(--white2);
@@ -34,10 +34,16 @@
         align-items: center;
         font-size: 1em;
     }
+    
+    .gyptext {
+        padding-top: 50px;
+        padding-left: 50px;
+        padding: 50px;
+    }
     /* Mobile Styles */
     
     @media only screen and (max-width: 600px) {
-        .container {
+        .gypcontainer {
             box-sizing: border-box;
             width: 80%;
             background-color: var(--white2);
@@ -46,13 +52,8 @@
             margin: auto;
             margin-top: 50px;
             align-items: center;
+            font-size: 1em;
         }
-    }
-    
-    .gyptext {
-        padding-top: 50px;
-        padding-left: 50px;
-        padding: 50px;
     }
     /* .colorTable,
     #colorhexDIV,
@@ -211,7 +212,7 @@
         ["2", "问: 蓝标有规定哪些是化学品吗？<br> <br> 答：印染工厂：各类基础化学品如酸碱盐，染料，助剂，原液着色的色纱，印花油墨，印花用离型纸，印花制版用化学品，原水制备用化学品，废水废气处理用的化学品。<br> <br> 涂层工厂：溶剂，机台清洗剂，机涂层胶水，涂层胶片，后整理助剂，原水制备用化学品，废水废气处理用的化学品。<br> <br> 贴合工厂：热熔胶，贴合用的膜，机台清洗剂。制膜工厂：胶粒，机台清洗剂。<br> <br>"],
         ["3", "问: 废水测试APEO，是取排放口的废水送测吗？<br> <br> 答：不是。是取原始废水送测。<br> <br> 一年要测试2次。测试检出限要小于5微克。<br> <br> 测试机构的APEO测试项目要有ISO 17025即CNAS认证。<br> <br> "],
         ["4", "问: 蓝标体系文件都是公开的吗？<br> <br> 答：是的，在官网公开：https://www.bluesign.com/。<br> <br> 蓝标体系文件分为准则文件，限用物质清单即bsbl和bssl，以及各类规范文件和模板文件。<br> <br> 准则文件，限用物质清单即bsbl和bssl，在官网向所有人公开，不论是否蓝标伙伴。<br> <br> 各类规范文件和模板文件仅向蓝标伙伴公开。使用会员账号在官网登录。<br> <br>"],
-        ["5", "问: 蓝标体系文件会有辅导解释吗？<br> <br> 答：会由客户关系管理经理提供基本的解释。<br> <br> 不过如同法律法规，品牌要求，需要工厂建立获取识别合规评价管理制度，安排定期工厂内部学习和培训。<br> <br> "],
+        ["5", "问: 蓝标体系文件会有咨询吗？<br> <br> 答：审核和咨询，就像裁判员和运动员。仅会由客户关系管理经理提供基本的解释。<br> <br> 不过如同法律法规，品牌要求，需要工厂建立获取识别合规评价管理制度，安排定期工厂内部学习和培训。<br> <br> "],
         ["6", "问：蓝标认证面料有没有证书？<br> <br> 答：面料，辅料都会有证书。化学品是不提供证书的。不过，面料辅料的认证信息，全部在登记在<a href=\'https://finder.bluesign.com/'>bluesign GUIDE</a>里。蓝标合作伙伴只需使用会员账号，在手机和电脑里登录<a href=\'https://finder.bluesign.com/'>bluesign GUIDE</a>，在线实时自主核对。<br> <br>"],
         ["7", "问：SDS不是5年更新修订一次嘛？<br> <br> 答：对，国标是这样规定的。<br> 蓝标规定: <br> a/每3年修订一次；b/当法律法规标准有更新时应及时修订； c/当危险化学品有新的危险特性时应及时修订。b和c也是法规里面规定的。可看<a href=\'https: //www.iso.org/standard/44690.html'>ISO 11014:2009</a>，了解ISO标准是如何修订的。"],
         ["8", "问：蓝标认证是像ISO等等管理体系那样，由第三方来审核的嘛？<br> <br> 答：审核由蓝标自己完成的，等同于直营。"]
@@ -317,6 +318,8 @@
         //     d.open = false
         // });
         document.getElementById("gypdetails").style.display = "none";
+        document.getElementById("gypramdonruleMessage").style.display = "none";
+        document.getElementById("gypramdonrule").style.display = "block";
         var ruleid = Math.floor(Math.random() * noofrule)
         document.getElementById("gypramdonruleID").innerHTML = ruleid + 1;
         document.getElementById("gypramdonrule").innerHTML = fruits.get(ruleid.toString());
@@ -388,7 +391,7 @@
 
 
 
-    <main class="container">
+    <main class="gypcontainer">
         <div class="gyptext">
             <div id="gypramdonruleMessage" style="display: none;"></div>
             <div id="gypramdonruleID" style="display: none;">0</div>
