@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<title>包罗三相</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3schools30.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/basic.css">
+<link rel="stylesheet" type="text/css" href="../css/alerts.css">
+<link rel="stylesheet" type="text/css" href="../css/0522.css">
+<style>
+     :root {
+        --maincolor: #130b58;
+        --secondarycolor: #160bb4;
+        --white: #192c80;
+        --textcolor: #808080;
+        --white2: #190d80;
+    }
+</style>
+
+<script src="https://www.w3schools.com/lib/w3color.js"></script>
+<script>
+    var r = document.querySelector(':root');
+
+    function getramdoncolor() {
+        var c;
+
+        c = '#' + Math.floor(Math.random() * (2 << 23)).toString(16)
+        cObj = w3color(c);
+        // document.getElementById("colornamDIV").innerHTML = (cObj.toName() || "");
+        // document.getElementById("colorhexDIV").innerHTML = cObj.toHexString();
+        // document.getElementById("colorrgbDIV").innerHTML = cObj.toRgbString();
+        // document.getElementById("colorhslDIV").innerHTML = cObj.toHslString();
+        var h = cObj.hue;
+        var s = cObj.sat;
+        var l = cObj.lightness;
+
+        if (l < 0.1) {
+            w2lp = 10;
+            mclp = 10;
+            sclp = 10;
+        } else if (l < 0.3) {
+            w2lp = 1.8;
+            mclp = 1.4;
+            sclp = 1.2;
+        } else {
+            w2lp = 0.8;
+            mclp = 0.6;
+            sclp = 0.8;
+        }
+
+        if (s < 0.1) {
+            w2sp = 10;
+            mcsp = 10;
+            scsp = 10;
+        } else if (s < 0.3) {
+            w2sp = 1.9;
+            mcsp = 1.4;
+            scsp = 0.8;
+
+        } else {
+            w2sp = 0.9;
+            mcsp = 0.6;
+            scsp = 1.2;
+        }
+        if (l < 0.4) {
+            // if (s > 0.8) {
+            r.style.setProperty('--textcolor', "white");
+            // } else {
+            //     r.style.setProperty('--textcolor', "black");
+            // }
+            r.style.setProperty('--white', "hsl(" + Math.round(h) + "," + Math.round(s * 100) + "%" + "," + Math.round(l * 100) + "%" + ")");
+            r.style.setProperty('--white2', "hsl(" + Math.round(h) + "," + Math.round(s * w2sp * 100) + "%" + "," + Math.round(l * w2lp * 100) + "%" + ")");
+
+        } else {
+            if (s > 0.4) {
+                r.style.setProperty('--textcolor', "white");
+            } else {
+                r.style.setProperty('--textcolor', "black");
+            }
+            r.style.setProperty('--white', "hsl(" + Math.round(h) + "," + Math.round(s * 100) + "%" + "," + Math.round(l * 100) + "%" + ")");
+            r.style.setProperty('--white2', "hsl(" + Math.round(h) + "," + Math.round(s * w2sp * 100) + "%" + "," + Math.round(l * w2lp * 100) + "%" + ")");
+
+        }
+
+        r.style.setProperty('--maincolor', "hsl(" + Math.round(h) + "," + Math.round(s * mcsp * 100) + "%" + "," + Math.round(l * mclp * 100) + "%" + ")");
+        r.style.setProperty('--secondarycolor', "hsl(" + Math.round(h) + "," + Math.round(s * scsp * 100) + "%" + "," + Math.round(l * sclp * 100) + "%" + ")");
+
+        // document.querySelectorAll('details').forEach(d => {
+        //     d.open = false
+        // });
+        // document.getElementById("gypdetails").style.display = "none";
+        // document.getElementById("gypramdonrule").innerHTML = fruits.get(Math.floor(Math.random() * 7).toString());
+
+    }
+</script>
+
+<body>
+
+    <header>
+        <!-- Navbar -->
+        <div class="w3-top">
+
+            <div class="w3-bar w3-top w3-left-align w3-large">
+                <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-orange w3-large" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+                <a href="../index.html" class="w3-bar-item w3-button w3-hover-orange">home</a>
+                <button class="w3-button w3-hover-orange " onclick="getramdoncolor()">颜色自由</button>
+                <!-- <a href="index.html " class="w3-bar-item w3-button w3-hide-small w3-hover-orange ">包罗三相</a>
+                <a href="about.html " class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange ">about</a>
+                <a href="https://blsx.readthedocs.io " class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange ">点击这里看包罗三相 第一卷</a>
+                <button class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange " onclick="myFunction()">颜色自由</button> -->
+                <!-- <button class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange " onclick="getramdoncolor()">颜色自由2</button> -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-collapse w3-animate-left gyp-sidenavbar-bgcolor" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-orange w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+        </a>
+        <h5 class="w3-bar-item w3-small">目录</h5>
+        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="052200.html">0522 00 SDS是什么？</a>
+        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="052201.html">0522 01 不是叫CSDS嘛？</a>
+        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="052202.html">0522 02 一直叫MSDS啊？</a>
+        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="052203.html">0522 03 SDS有什么用呢？</a>
+        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="052204.html">0522 04 必须要提供SDS？</a>
+        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="052205.html">0522 05 谁负责编写SDS？</a>
+        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="052206.html">0522 06 每三年修订SDS？</a>
+        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="052207.html">0522 07 正确的SDS有嘛？</a>
+        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="052208.html">0522 08 SDS示例 书写要求</a>
+        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="052209.html">0522 09 SDS示例 首页上部</a>
+        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="052210.html">0522 10 SDS示例 后各页上部 </a>
+        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="052211.html">0522 11 SDS示例 各页页脚 </a>
+        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="052212.html">0522 12 SDS示例 第1部分 </a>
+        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="052213.html">0522 13 SDS示例 第2部分 </a>
+        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="052214.html">0522 14 SDS示例 第2部分 续 </a>
+        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="052215.html">0522 15 SDS示例 第2部分 续 </a>
+        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="052216.html">0522 16 SDS示例 第3部分 </a>
+        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="052217.html">0522 17 SDS示例 第4部分 </a>
+        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="052218.html">0522 18 SDS示例 第5，6，7部分 </a>
+
+
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <div class="w3-main" style="margin-left:60px;">
+        <div class="container ">
+            <!-- 这里开写正文 -->
+            <div class="w3-row w3-padding-64 gyp-main">
+                <h1 class="w3-text-teal gyp-textcolor">SDS示例 第5，6，7部分</h1>
+                <div>
+                    <div class="summaryXB">今天我开始自学编写SDS。</div>
+                    <br>
+                    <br>
+                    <!-- <p><mark class="floatnoteG"> <strong> 化学品安全技术说明书 </strong> </mark>
+                        <br/> 按照 <mark class="floatnoteG">  <a href="http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=67992CA972A4CF9222095CA06064724A">GB/T 16483-2008</a> 和 <a class="reference external" href="http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=0DF24B277B29E2F0B39D13D0F2B7BA07">GB/T 17519-2013</a>   </mark>                        编制</p>
+
+                    <mark class="floatnoteG"> <h2>过氧化氢溶液, 50%</h2></mark> -->
+                    <img src="../image/sdsp7.svg" alt="sdsp2" style="width: 100%;">
+
+
+
+                    <hr />
+
+                    <!-- <table>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>岗位名称</td>
+                            <td><mark class="floatnoteG">蓝标窗口</mark></td>
+                            <td>岗位编号</td>
+                            <td>XXX1018</td>
+                        </tr>
+
+                    </table> -->
+
+                    <br>
+                </div>
+
+
+                <div class="admonition note">
+                    <p class="admonition-title">
+                        <i>质量经理XB 学习笔记 20150818 09:00 Sunny</i>
+                    </p>
+                    <ol class="simpleimportant">
+                        <p>自学SDS编制. 用时3个小时.</p>
+                        <p>好多网站, 心累.</p>
+                        <li>
+                            <p>化学品生产商：按照<mark class="floatnoteG">  <a href="http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=67992CA972A4CF9222095CA06064724A">GB/T 16483-2008</a> 和 <a class="reference external" href="http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=0DF24B277B29E2F0B39D13D0F2B7BA07">GB/T 17519-2013</a>   </mark>编写，顿时神清气爽。</p>
+                        </li>
+                        <li>
+                            <p>化学品使用者：按照国标来接收或拒收SDS，凡是图中这些没有或不齐全，拒收，顿时神清气爽，只爱轻松的工作。</p>
+                        </li>
+                        <li>
+                            <p><a href="http://openstd.samr.gov.cn/bzgk/gb/">国家标准全文公开系统</a></p>
+                        </li>
+                        <li>
+                            <p><a href="https://unece.org/ghs-rev6-2015">UN GHS</a></p>
+                        </li>
+                        <li>
+                            <p><a href="https://pubchem.ncbi.nlm.nih.gov/ghs/">GHS Classification</a></p>
+                        </li>
+                        <li>
+                            <p>每个小节, 都写出 <strong>老板指示</strong> , 即要执行化学品销往地的国家法规或标准.</p>
+                        </li>
+                        <li>
+                            <p>应急喷淋器和洗眼器国标<a href="http://c.gb688.cn/bzgk/gb/showGb?type=online&hcno=E0D0A051E9C2D7445EF348AC14155856">GB/T 38144.1-2019 眼面部防护 应急喷淋和洗眼设备 第1部分：技术要求标准</a> 。</p>
+                        </li>
+                        <li>
+                            <p>应急喷淋器和洗眼器国标<a href="http://c.gb688.cn/bzgk/gb/showGb?type=online&hcno=F2F580791E3F1F1D985B09B1133A74AF">GB/T 38144.2-2019 眼面部防护 应急喷淋和洗眼设备 第2部分：使用指南</a> 。</p>
+                        </li>
+
+
+
+                        <!-- <li>
+                            <p> <a href="https://www.iso.org/standard/44690.html">ISO 11014:2009: </a> the SDS is a means of transferring essential hazard information (including information on transport, handling, storage and emergency actions) from the supplier
+                                of a chemical product to the recipient of the chemical product. It may also be used to transfer this information to institutions, services and other bodies that play a role in dealing with the chemical product.
+                            </p>
+                        </li> -->
+                    </ol>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- </div> -->
+    <!-- <div class="center">
+        <button class="w3-button w3-hover-orange " onclick="getramdoncolor()">颜色自由</button>
+        <button class="w3-button w3-hover-orange ">逐条浏览</button>
+    </div> -->
+
+
+    <script>
+        // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+
+        // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+
+        // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+                overlayBg.style.display = "none";
+            } else {
+                mySidebar.style.display = 'block';
+                overlayBg.style.display = "block";
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+            overlayBg.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

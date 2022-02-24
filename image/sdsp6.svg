@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="sdsp6.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title70350">SDS example</title>
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#a6ad66"
+     borderopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="1.5358305"
+     inkscape:cx="427.45602"
+     inkscape:cy="724.36379"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:lockguides="true"
+     borderlayer="false">
+    <sodipodi:guide
+       position="0,297"
+       orientation="0,793.70079"
+       inkscape:locked="true"
+       id="guide70338" />
+    <sodipodi:guide
+       position="210,297"
+       orientation="1122.5197,0"
+       inkscape:locked="true"
+       id="guide70340" />
+    <sodipodi:guide
+       position="210,0"
+       orientation="0,-793.70079"
+       inkscape:locked="true"
+       id="guide70342" />
+    <sodipodi:guide
+       position="0,0"
+       orientation="-1122.5197,0"
+       inkscape:locked="true"
+       id="guide70344" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid70346" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <rect
+       x="540"
+       y="350"
+       width="280"
+       height="50"
+       id="rect32382" />
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path26407" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker26894"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path26892" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path26404" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lend-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path26407-1" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="13.028823"
+       y="29.154102"
+       id="text96708"><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="13.028823"
+         y="29.154102"
+         id="tspan96710">SDS编号: XXX001</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="13.277424"
+       y="18.088745"
+       id="text22644"><tspan
+         sodipodi:role="line"
+         id="tspan22642"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="13.277424"
+         y="18.088745">产品名称: 过氧化氢溶液, 50%</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="69.549782"
+       y="24.007786"
+       id="text29670-7"><tspan
+         sodipodi:role="line"
+         id="tspan29668-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="69.549782"
+         y="24.007786">GB/T 17519-2013 4.2.2.b的要求</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="74.268044"
+       y="18.225002"
+       id="text29670-5-4"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="74.268044"
+         y="18.225002"
+         id="tspan82914">GB/T 17519-2013 4.2.2.a的要求</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="12.712345"
+       y="23.789492"
+       id="text87732"><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="12.712345"
+         y="23.789492"
+         id="tspan91556">修订日期: 2015年08月18日</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="53.661888"
+       y="29.130537"
+       id="text29670-53-5"><tspan
+         sodipodi:role="line"
+         id="tspan29668-8-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="53.661888"
+         y="29.130537">GB/T 17519-2013 4.2.2.c的要求</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 13.229167,30.162476 H 195.79166 v 0 0"
+       id="path131659" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 13.22917,280.45833 h 182.56254 v 0 0"
+       id="path131659-0" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="89.958351"
+       y="285.75"
+       id="text23669"><tspan
+         sodipodi:role="line"
+         id="tspan23667"
+         style="stroke-width:0.264583"
+         x="89.958351"
+         y="285.75">第6页，总16页</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="166.60706"
+       y="285.57773"
+       id="text23669-4"><tspan
+         sodipodi:role="line"
+         id="tspan23667-9"
+         style="stroke-width:0.264583"
+         x="166.60706"
+         y="285.57773">第6页，总16页</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="105.18745"
+       y="279.04422"
+       id="text29670-53-1-3"><tspan
+         sodipodi:role="line"
+         id="tspan29668-8-9-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="105.18745"
+         y="279.04422">GB/T 17519-2013 4.2.3的要求: 居中，或靠右</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text32380"
+       style="line-height:1.25;font-family:sans-serif;font-size:16px;white-space:pre;shape-inside:url(#rect32382)" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.264583"
+       x="60.460239"
+       y="46.173561"
+       id="text35175-1"><tspan
+         sodipodi:role="line"
+         id="tspan35173-1"
+         style="font-size:7.05556px;stroke-width:0.264583"
+         x="60.460239"
+         y="46.173561">第4部分 急救措施 </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="47.608738"
+       y="59.68438"
+       id="text29670-53-2-9-0-6"><tspan
+         sodipodi:role="line"
+         id="tspan29668-8-6-7-0-66"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="47.608738"
+         y="59.68438">GB/T 17519-2013 3.4.1和4.2.4的要求</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="8.7086821"
+       y="58.98822"
+       id="text29670-53-2-9-1-6-5-2"><tspan
+         sodipodi:role="line"
+         id="tspan29668-8-6-7-5-3-2-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="8.7086821"
+         y="58.98822"><tspan
+           style="fill:#ff0000"
+           id="tspan85291-8-6-4">4.1</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="39.637569"
+       y="68.005219"
+       id="text60158-6-7"><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="68.005219"
+         id="tspan4804-7-8">吸入</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="73.601868"
+         id="tspan60898">吸入之后:新鲜空气. 如有不适则咨询医生.</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="79.000153"
+         id="tspan63870" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="84.596802"
+         id="tspan60900">皮肤接触</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="90.193451"
+         id="tspan60902">在皮肤接触的情况下: 立即除去∕脱掉所有沾污的衣物。 用水清洗皮肤/淋浴。</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="95.591736"
+         id="tspan65198" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="101.18839"
+         id="tspan60904">眼睛接触</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="106.78503"
+         id="tspan60906">眼睛接触之后:以大量清水洗去. 立刻联络眼科医生. 取下隐形眼镜。</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="112.18332"
+         id="tspan66316" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="117.77997"
+         id="tspan60908">食入</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="123.37662"
+         id="tspan60910">吞食之后:立即让伤者饮水(最多 2 杯). 请教医生。略。不做示例，因为打游戏去了。</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="128.7749"
+         id="tspan1835" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="134.37155"
+         id="tspan1837">皮肤接触和眼睛接触，按照如下国标选择应急喷淋器和洗眼器:</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#ff0000;stroke-width:0.264583"
+         x="39.637569"
+         y="140.07481"
+         id="tspan4159">GB/T 38144.1-2019 眼面部防护 应急喷淋和洗眼设备 第1部分：技术要求标准 。</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#ff0000;stroke-width:0.264583"
+         x="39.637569"
+         y="145.77809"
+         id="tspan3221">GB/T 38144.2-2019 眼面部防护 应急喷淋和洗眼设备 第2部分：使用指南 </tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="151.17638"
+         id="tspan74792-91" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="156.46803"
+         id="tspan74794-6" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="161.75969"
+         id="tspan10690-1-4" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="167.05136"
+         id="tspan60164-8-26" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="13.598399"
+       y="59.316841"
+       id="text62532-0-8"><tspan
+         sodipodi:role="line"
+         id="tspan62530-9-9"
+         style="font-size:4.93889px;stroke-width:0.264583"
+         x="13.598399"
+         y="59.316841">急救措施描述</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="64.99604"
+       y="157.93713"
+       id="text29670-53-2-9-0-6-3"><tspan
+         sodipodi:role="line"
+         id="tspan29668-8-6-7-0-66-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="64.99604"
+         y="157.93713">GB/T 17519-2013 3.4.2和4.2.4的要求</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="8.1795235"
+       y="157.41325"
+       id="text29670-53-2-9-1-6-5-2-5"><tspan
+         sodipodi:role="line"
+         id="tspan29668-8-6-7-5-3-2-4-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="8.1795235"
+         y="157.41325"><tspan
+           style="fill:#ff0000"
+           id="tspan85291-8-6-4-1">4.2</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="39.108395"
+       y="166.43025"
+       id="text60158-6-7-9"><tspan
+         sodipodi:role="line"
+         style="fill:#ff0000;stroke-width:0.264583"
+         x="39.108395"
+         y="166.43025"
+         id="tspan3221-6"><tspan
+   style="fill:#000000"
+   id="tspan84842">见2.2 标签要素</tspan> </tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.108395"
+         y="171.82854"
+         id="tspan74792-91-8" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.108395"
+         y="177.12019"
+         id="tspan74794-6-9" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.108395"
+         y="182.41185"
+         id="tspan10690-1-4-7" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.108395"
+         y="187.70352"
+         id="tspan60164-8-26-2" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="13.069231"
+       y="157.74187"
+       id="text62532-0-8-5"><tspan
+         sodipodi:role="line"
+         id="tspan62530-9-9-7"
+         style="font-size:4.93889px;stroke-width:0.264583"
+         x="13.069231"
+         y="157.74187">重要的症状和健康影响</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="117.71183"
+       y="177.71333"
+       id="text29670-53-2-9-0-6-3-6"><tspan
+         sodipodi:role="line"
+         id="tspan29668-8-6-7-0-66-0-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="117.71183"
+         y="177.71333">GB/T 17519-2013 3.4.3和4.2.4的要求</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="8.1795244"
+       y="178.05083"
+       id="text29670-53-2-9-1-6-5-2-5-3"><tspan
+         sodipodi:role="line"
+         id="tspan29668-8-6-7-5-3-2-4-4-6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="8.1795244"
+         y="178.05083"><tspan
+           style="fill:#ff0000"
+           id="tspan85291-8-6-4-1-4">4.3</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="39.108402"
+       y="187.06783"
+       id="text60158-6-7-9-4"><tspan
+         sodipodi:role="line"
+         style="fill:#ff0000;stroke-width:0.264583"
+         x="39.108402"
+         y="187.06783"
+         id="tspan3221-6-1"><tspan
+   style="fill:#000000"
+   id="tspan95287">无数据资料</tspan> </tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.108402"
+         y="192.46611"
+         id="tspan74792-91-8-9" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.108402"
+         y="197.75777"
+         id="tspan74794-6-9-2" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.108402"
+         y="203.04942"
+         id="tspan10690-1-4-7-6" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.108402"
+         y="208.34109"
+         id="tspan60164-8-26-2-7" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="13.069227"
+       y="178.37944"
+       id="text62532-0-8-5-1"><tspan
+         sodipodi:role="line"
+         id="tspan62530-9-9-7-6"
+         style="font-size:4.93889px;stroke-width:0.264583"
+         x="13.069227"
+         y="178.37944">及时的医疗处理和所需的特殊处理的说明和指示</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="117.71181"
+       y="199.40927"
+       id="text29670-53-2-9-0-6-3-6-5"><tspan
+         sodipodi:role="line"
+         id="tspan29668-8-6-7-0-66-0-4-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="117.71181"
+         y="199.40927">GB/T 17519-2013 3.4.4和4.2.4的要求</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="8.1795244"
+       y="199.74677"
+       id="text29670-53-2-9-1-6-5-2-5-3-1"><tspan
+         sodipodi:role="line"
+         id="tspan29668-8-6-7-5-3-2-4-4-6-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="8.1795244"
+         y="199.74677"><tspan
+           style="fill:#ff0000"
+           id="tspan85291-8-6-4-1-4-7">4.4</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="39.108414"
+       y="208.76376"
+       id="text60158-6-7-9-4-8"><tspan
+         sodipodi:role="line"
+         style="fill:#ff0000;stroke-width:0.264583"
+         x="39.108414"
+         y="208.76376"
+         id="tspan3221-6-1-0"><tspan
+   style="fill:#000000"
+   id="tspan95287-9">无数据资料</tspan> </tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.108414"
+         y="214.16205"
+         id="tspan74792-91-8-9-1" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.108414"
+         y="219.4537"
+         id="tspan74794-6-9-2-5" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.108414"
+         y="224.74536"
+         id="tspan10690-1-4-7-6-7" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.108414"
+         y="230.03703"
+         id="tspan60164-8-26-2-7-5" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="13.069222"
+       y="200.07538"
+       id="text62532-0-8-5-1-4"><tspan
+         sodipodi:role="line"
+         id="tspan62530-9-9-7-6-4"
+         style="font-size:4.93889px;stroke-width:0.264583"
+         x="13.069222"
+         y="200.07538">及时的医疗处理和所需的特殊处理的说明和指示</tspan></text>
+  </g>
+  <metadata
+     id="metadata70348">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>SDS example</dc:title>
+        <dc:date>20220202</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Roger Gong</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Free use</dc:title>
+          </cc:Agent>
+        </dc:rights>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

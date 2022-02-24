@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
-   sodipodi:docname="sdsp2header.svg"
+   sodipodi:docname="sdsp5.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -29,8 +29,8 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="1.5358305"
-     inkscape:cx="359.74022"
-     inkscape:cy="1136.5186"
+     inkscape:cx="349.3224"
+     inkscape:cy="359.74022"
      inkscape:window-width="1920"
      inkscape:window-height="1051"
      inkscape:window-x="-9"
@@ -65,6 +65,12 @@
   </sodipodi:namedview>
   <defs
      id="defs2">
+    <rect
+       x="540"
+       y="350"
+       width="280"
+       height="50"
+       id="rect32382" />
     <marker
        style="overflow:visible;"
        id="Arrow1Lend"
@@ -210,7 +216,7 @@
          id="tspan23667"
          style="stroke-width:0.264583"
          x="89.958351"
-         y="285.75">第2页，总16页</tspan></text>
+         y="285.75">第5页，总16页</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
@@ -221,7 +227,7 @@
          id="tspan23667-9"
          style="stroke-width:0.264583"
          x="166.60706"
-         y="285.57773">第2页，总16页</tspan></text>
+         y="285.57773">第5页，总16页</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -233,6 +239,190 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
          x="105.18745"
          y="279.04422">GB/T 17519-2013 4.2.3的要求: 居中，或靠右</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.264583"
+       x="60.460239"
+       y="45.114426"
+       id="text35175"><tspan
+         sodipodi:role="line"
+         id="tspan35173"
+         style="font-size:7.05556px;stroke-width:0.264583"
+         x="60.460239"
+         y="45.114426">第3部分 成分/组成信息 </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="37.554562"
+       y="58.625183"
+       id="text29670-53-2-9-0"><tspan
+         sodipodi:role="line"
+         id="tspan29668-8-6-7-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="37.554562"
+         y="58.625183">GB/T 17519-2013 3.3.1和4.2.4的要求</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="8.7086821"
+       y="57.929092"
+       id="text29670-53-2-9-1-6-5"><tspan
+         sodipodi:role="line"
+         id="tspan29668-8-6-7-5-3-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="8.7086821"
+         y="57.929092"><tspan
+           style="fill:#ff0000"
+           id="tspan85291-8-6">3.1</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="39.637569"
+       y="66.946091"
+       id="text60158-6"><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="66.946091"
+         id="tspan4804-7">不适用，因为是混合物。</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="72.344368"
+         id="tspan74792" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="77.636032"
+         id="tspan74794" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="82.927696"
+         id="tspan10690-1" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="88.21936"
+         id="tspan60164-8" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="13.598399"
+       y="58.257629"
+       id="text62532-0"><tspan
+         sodipodi:role="line"
+         id="tspan62530-9"
+         style="font-size:4.93889px;stroke-width:0.264583"
+         x="13.598399"
+         y="58.257629">物质</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text32380"
+       style="line-height:1.25;font-family:sans-serif;font-size:16px;white-space:pre;shape-inside:url(#rect32382)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="37.554562"
+       y="79.791855"
+       id="text29670-53-2-9-0-8"><tspan
+         sodipodi:role="line"
+         id="tspan29668-8-6-7-0-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="37.554562"
+         y="79.791855">GB/T 17519-2013 3.3.2和4.2.4的要求</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="8.7086821"
+       y="79.095764"
+       id="text29670-53-2-9-1-6-5-9"><tspan
+         sodipodi:role="line"
+         id="tspan29668-8-6-7-5-3-2-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="8.7086821"
+         y="79.095764"><tspan
+           style="fill:#ff0000"
+           id="tspan85291-8-6-8">3.2</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="39.637569"
+       y="88.112762"
+       id="text60158-6-1"><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="88.112762"
+         id="tspan4804-7-8">危险组分       CAS No.:        浓度      危险性分类</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="93.816032"
+         id="tspan23640">过氧化氢      7722-84-1。    50%     氧化性液体, 类别 2, </tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="99.519302"
+         id="tspan35953">                                                   皮肤腐蚀/刺激, 类别 1A</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="105.22257"
+         id="tspan35955">                                                   严重眼损伤/眼刺激, 类别 1</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="110.92584"
+         id="tspan35957">                                                   特异性靶器官毒性-一次接触, 类别 3</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="116.62911"
+         id="tspan41527">                                   （呼吸道刺激）</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="121.92078"
+         id="tspan74792-4" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="127.21243"
+         id="tspan74794-0" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="132.5041"
+         id="tspan10690-1-7" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="39.637569"
+         y="137.79576"
+         id="tspan60164-8-4" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="13.598399"
+       y="79.424301"
+       id="text62532-0-9"><tspan
+         sodipodi:role="line"
+         id="tspan62530-9-8"
+         style="font-size:4.93889px;stroke-width:0.264583"
+         x="13.598399"
+         y="79.424301">混合物</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="109.84444"
+       y="122.74197"
+       id="text47393"><tspan
+         sodipodi:role="line"
+         id="tspan47391"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Muyao-Softbrush;-inkscape-font-specification:Muyao-Softbrush;fill:#0000ff;stroke-width:0.264583"
+         x="109.84444"
+         y="122.74197">可先从危险化学品分类信息表搜索</tspan></text>
   </g>
   <metadata
      id="metadata70348">
