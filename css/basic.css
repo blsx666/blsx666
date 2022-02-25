@@ -80,7 +80,7 @@ p {
     float: left;
     width: 18%;
     margin-left: 10px;
-    display: none;
+    /* display: none; */
     /* background-color: #3919ed; */
 }
 

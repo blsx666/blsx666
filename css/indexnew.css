@@ -2,7 +2,8 @@
 
 @media only screen and (max-width: 600px) {
     .btn {
-        font-size: 8px;
+        /* font-size: 8px; */
+        font-size: 1em;
     }
     h2 {
         font-size: 1em;
@@ -12,7 +13,7 @@
         padding: bottom 1px;
         margin: 0;
         padding-left: 1px;
-        font-size: 6px;
+        font-size: 1em;
     }
     h6 {
         display: none;
@@ -22,6 +23,13 @@
     }
     .row {
         margin: 2px -2px;
+    }
+    .column {
+        float: left;
+        width: 30%;
+        margin-left: 10px;
+        /* display: none; */
+        /* background-color: #3919ed; */
     }
     .row,
     .row>.column {
