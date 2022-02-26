@@ -1,9 +1,12 @@
 /* Mobile Styles */
 
 @media only screen and (max-width: 600px) {
+    body {
+        font-size: 0.8em;
+    }
     .btn {
         /* font-size: 8px; */
-        font-size: 1em;
+        font-size: 0.8em;
     }
     h2 {
         font-size: 1em;
@@ -13,7 +16,7 @@
         padding: bottom 1px;
         margin: 0;
         padding-left: 1px;
-        font-size: 1em;
+        font-size: 0.8em;
     }
     h6 {
         display: none;

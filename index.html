@@ -1,563 +1,157 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>包罗三相</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/basic.css">
-    <link rel="stylesheet" type="text/css" href="css/indexnew.css">
-</head>
+<html lang="en">
+<title>包罗三相</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/basic.css">
+<link rel="stylesheet" type="text/css" href="css/alerts.css">
+<style>
+    .gypbutton {
+        border: none;
+        color: rgb(10, 10, 10);
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        opacity: 0.6;
+        transition: 0.3s;
+        display: inline-block;
+        text-decoration: none;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+    
+    .gypbutton:hover {
+        opacity: 1;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 20px;
+    }
+    /* .gypbutton:active {
+        box-shadow: 0 5px #9df8f1;
+        transform: translateY(4px);
+    } */
+</style>
 
 <body>
 
-    <header>
-        <!-- Navbar -->
-        <div class="w3-top">
+    <!-- Navbar -->
+    <div class="w3-top">
 
-            <div class="w3-bar w3-top w3-left-align w3-large gyp-Navbar-bgcolor">
-                <a href="index.html" class="w3-bar-item w3-button gyp-Navbar-bgcolor w3-hover-orange">home</a>
-                <!-- <a href="index.html " class="w3-bar-item w3-button w3-hide-small w3-hover-orange ">包罗三相</a> -->
-                <a href="about.html " class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange ">about</a>
-                <a href="https://blsx.readthedocs.io " class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange ">点击这里看包罗三相 第一卷</a>
-            </div>
+        <div class="w3-bar w3-top w3-left-align w3-large gyp-Navbar-bgcolor">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large gyp-Navbar-small-bgcolor" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <!-- <a href="../index.html" target="_blank" class="w3-bar-item w3-button gyp-Navbar-bgcolor">home</a>
+            <a href="../index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">包罗三相</a>
+            <a href="../about.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">about</a> -->
         </div>
-    </header>
-
-    <div class="main">
-
-        <h2>包罗三相 第二卷 可视化管理</h2>
-        <!-- <a style="font-size: 0.6em;" href="about.html ">点击这里看使用指引</a> -->
-
-        <br>
-        <br>
-        <div id="myBtnContainer">
-            <button class="btn active" onclick="filterSelection( 'all ') "> Show all</button>
-            <button class="btn" onclick="filterSelection( 'EMP') "> 应急预案</button>
-            <button class="btn" onclick="filterSelection( 'HAZ') "> 危险化学品和危险废弃物</button>
-            <button class="btn" onclick="filterSelection( 'OHS') "> 职业安全健康</button>
-            <button class="btn" onclick="filterSelection( 'ENV') "> 废水废气固废噪音</button>
-            <button class="btn" onclick="filterSelection( 'RES') "> 资源管理</button>
-            <button class="btn" onclick="filterSelection( 'PST') "> 成品监管</button>
-            <button class="btn" onclick="filterSelection( 'ISM') "> 输入流管理</button>
-            <button class="btn" onclick="filterSelection( 'MNG') "> 体系实施</button>
-            <button class="btn" onclick="filterSelection( 'CSR') "> 企业社会责任</button>
-            <button class="btn" onclick="filterSelection( 'LGC') "> 合规管理</button>
-            <button class="btn" onclick="filterSelection( 'BLS') "> 规则解释</button>
-        </div>
-        <div id="gypHeader">
-            <p style="display: block;">每行几张图片，我要自己放啦。</p>
-            <button class="btn" onclick="one()">1</button>
-            <button class="btn" onclick="two()">2</button>
-            <button class="btn gypactive" onclick="three()">3</button>
-            <button class="btn" onclick="four()">4</button>
-            <button class="btn" onclick="five()">5</button>
-        </div>
-
-        <div class="row ">
-            <!-- type after here -->
-
-            <div class="column EMP ">
-                <div class="content ">
-                    <a href="1306/1306.html ">
-                        <img src="image/forward yes.png" style="width:88% ">
-                        <h4>交通标志</h4>
-                        <h6>思考</h6>
-                        <p>why<br>城市道路交通标志要标准化？</p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="column OHS ">
-                <div class="content ">
-                    <a href="1108/110800.html ">
-                        <img src="image/heat stress.png" style="width:88% ">
-                        <h4>高温作业场所</h4>
-                        <h6> 强标</h6>
-                        <p>how to<br>找到正确的高温作业场所标志.</p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="column OHS ">
-                <div class="content ">
-                    <a href="1108/110801.html ">
-                        <img src="image/hot surface.png" style="width:88% ">
-                        <h4>当心高温表面</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的当心高温表面标志.</p>
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="column OHS ">
-                <div class="content ">
-                    <a href="1108/110802.html ">
-                        <img src="image/electric shock.png" style="width:88% ">
-                        <h4>当心触电</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的当心触电标志.</p>
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="column OHS ">
-                <div class="content ">
-                    <a href="1108/110803.html ">
-                        <img src="image/noise.png" style="width:88% ">
-                        <h4>当心噪音</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的当心噪音标志.</p>
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="column OHS ">
-                <div class="content ">
-                    <a href="1108/110804.html ">
-                        <img src="image/dust.png" style="width:88% ">
-                        <h4>注意粉尘</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的注意粉尘标志.</p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="column HAZ ">
-                <div class="content ">
-                    <a href="1226/122600.html ">
-                        <img src="image/hazadous wast storage area.png" style="width:88% ">
-                        <h4>危废贮存场</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的危险废物贮存标志.</p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="column EMP ">
-                <div class="content ">
-                    <a href="1306/130606.html ">
-                        <img src="image/GB 13495.1-2015 3-30.png" style="width:88% ">
-                        <h4>灭火设备方位</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的灭火设备的方位标志.</p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="column EMP ">
-                <div class="content ">
-                    <a href="1306/130607.html ">
-                        <img src="image/E005 Direction arrow (90 angle).png " style="width:88% ">
-                        <h4>疏散方向箭头</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的疏散方向箭头标志.</p>
-                    </a>
-                </div>
-            </div>
-            <div class="column EMP ">
-                <div class="content ">
-                    <a href="1306/130600.html ">
-                        <img src="image/E007 Evacuation assembly point.png " style="width:88% ">
-                        <h4>紧急集合点</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的紧急集合点标志...</p>
-                    </a>
-                </div>
-            </div>
-            <div class="column EMP ">
-                <div class="content ">
-                    <a href="1306/130612.html ">
-                        <img src="image/E003 First aid.png " style="width:88% ">
-                        <h4>急救点</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的急救点标志...</p>
-                    </a>
-                </div>
-            </div>
-            <div class="column EMP ">
-                <div class="content ">
-                    <a href="1306/130613.html ">
-                        <img src="image/E004 Emergency telephone.png " style="width:88% ">
-                        <h4>应急电话</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的应急电话标志...</p>
-                    </a>
-                </div>
-            </div>
-            <div class="column EMP ">
-                <div class="content ">
-                    <a href="1306/130614.html ">
-                        <img src="image/E011 eyewash station.png " style="width:88% ">
-                        <h4>洗眼器</h4>
-                        <h6>ISO标</h6>
-                        <p>how to<br>找到正确的洗眼器标志...</p>
-                    </a>
-                </div>
-            </div>
-            <div class="column EMP ">
-                <div class="content ">
-                    <a href="1306/130615.html ">
-                        <img src="image/E012 safety shower.png " style="width:88% ">
-                        <h4>应急喷淋器</h4>
-                        <h6>ISO标</h6>
-                        <p>how to<br>找到正确的应急喷淋器标志...</p>
-                    </a>
-                </div>
-            </div>
-            <div class="column EMP ">
-                <div class="content ">
-                    <a href="1306/130616.html ">
-                        <img src="image/E010 Automated external heart defibrillator.png " style="width:88% ">
-                        <h4>自动体外除颤器</h4>
-                        <h6>ISO标</h6>
-                        <p>how to<br>找到正确的自动体外除颤器标志...</p>
-                    </a>
-                </div>
-            </div>
-            <div class="column EMP ">
-                <div class="content ">
-                    <a href="1306/130617.html ">
-                        <img src="image/F006 Fire emergency telephone.png " style="width:88% ">
-                        <h4>消防电话</h4>
-                        <h6>国标</h6>
-                        <p>how to<br>找到正确的消防电话标志...</p>
-                    </a>
-                </div>
-            </div>
-            <div class="column EMP ">
-                <div class="content ">
-                    <a href="1306/130618.html ">
-                        <img src="image/F007 Fire protection door.png " style="width:88% ">
-                        <h4>消防防火门</h4>
-                        <h6>ISO标</h6>
-                        <p>how to<br>找到正确的消防防火门标志...</p>
-                    </a>
-                </div>
-            </div>
-            <div class="column EMP ">
-                <div class="content ">
-                    <a href="1306/130609.html ">
-                        <img src="image/F005 Fire alarm call pointGB.png " style="width:88% ">
-                        <h4>消防按钮</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的消防按钮标志...</p>
-                    </a>
-                </div>
-            </div>
-            <div class="column EMP ">
-                <div class="content ">
-                    <a href="1306/130608.html ">
-                        <img src="image/E001 Emergency exit (left hand).png " style="width:88% ">
-                        <h4>安全出口</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的安全出口标志...</p>
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="column EMP ">
-                <div class="content ">
-                    <a href="1306/130610.html ">
-                        <img src="image/F001 Fire extinguisher.png " style="width:88% ">
-                        <h4>手提式灭火器</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的手提式灭火器标志...</p>
-                    </a>
-                </div>
-            </div>
-            <div class="column EMP ">
-                <div class="content ">
-                    <a href="1306/130611.html ">
-                        <img src="image/F002 Fire hose reelGB.png " style="width:88% ">
-                        <h4>消防软管卷盘</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的消防软管卷盘标志...</p>
-                    </a>
-                </div>
-            </div>
-            <div class="column HAZ ">
-                <div class="content ">
-                    <a href="1226/122601.html ">
-                        <img src="image/skull.gif " style="width:88% ">
-                        <h4>骷髅和交叉骨</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的骷髅和交叉骨标志...</p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="column HAZ ">
-                <div class="content ">
-                    <a href="1226/122602.html ">
-                        <img src="image/rondflam.gif " style="width:88% ">
-                        <h4>圆圈上方火焰</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的圆圈上方火焰标志...</p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="column HAZ ">
-                <div class="content ">
-                    <a href="1226/122603.html ">
-                        <img src="image/flamme.gif " style="width:88% ">
-                        <h4>火焰</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的火焰标志...</p>
-                    </a>
-                </div>
-            </div>
-            <div class="column HAZ ">
-                <div class="content ">
-                    <a href="1226/122604.html ">
-                        <img src="image/explos.gif " style="width:88% ">
-                        <h4>爆炸弹</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的爆炸弹标志...</p>
-                    </a>
-                </div>
-            </div>
-            <div class="column HAZ ">
-                <div class="content ">
-                    <a href="1226/122605.html ">
-                        <img src="image/exclam.gif " style="width:88% ">
-                        <h4>感叹号</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的感叹号标志...</p>
-                    </a>
-                </div>
-            </div>
-
-
-
-            <div class="column HAZ ">
-                <div class="content ">
-                    <a href="1226/122606.html ">
-                        <img src="image/bottle.gif " style="width:88% ">
-                        <h4>高压气瓶</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的高压气瓶标志...</p>
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="column HAZ ">
-                <div class="content ">
-                    <a href="1226/122607.html ">
-                        <img src="image/silhouete.gif " style="width:88% ">
-                        <h4>健康危害</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的健康危害标志...</p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="column HAZ ">
-                <div class="content ">
-                    <a href="1226/122608.html ">
-                        <img src="image/Aquatic-pollut-red.gif " style="width:88% ">
-                        <h4>环境</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的环境标志...</p>
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="column HAZ ">
-                <div class="content ">
-                    <a href="1226/122609.html ">
-                        <img src="image/acid_red.gif " style="width:88% ">
-                        <h4>腐蚀</h4>
-                        <h6>强标</h6>
-                        <p>how to<br>找到正确的腐蚀标志...</p>
-                    </a>
-                </div>
-            </div>
-
-
-
-            <div class="column LGC ">
-                <div class="content ">
-                    <a href="0151/015100.html ">
-                        <img src="image/drawing.svg " style="width:88% ">
-                        <h4>证照齐全</h4>
-                        <h6> 必备 </h6>
-                        <p>how to<br>充分地展现证照齐全，资质完备...</p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="column LGC ">
-                <div class="content ">
-                    <a href="0158/015800.html ">
-                        <img src="image/drawing.svg " style="width:88% ">
-                        <h4>获取识别法规</h4>
-                        <h6> 必备 </h6>
-                        <p>how to<br>建立适当的获取识别法规SOP...</p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="column MNG ">
-                <div class="content ">
-                    <a href="0210/021000.html ">
-                        <img src="image/jd bswindow.svg " style="width:88% ">
-                        <h4>蓝标窗口</h4>
-                        <h6> 必备 </h6>
-                        <p>how to<br>建立适当的蓝标窗口岗位职责说明书...</p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="column BLS ">
-                <div class="content ">
-                    <a href="bslxpopularization/mainpage.html">
-                        <img src="image/drawing.svg " style="width:88% ">
-                        <h4>蓝标规则速成</h4>
-                        <h6> 速成 </h6>
-                        <p>how to<br>蓝标规则速成...</p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="column ISM ">
-                <div class="content ">
-                    <a href="0522/052200.html">
-                        <img src="image/drawing.svg " style="width:88% ">
-                        <h4>SDS速成</h4>
-                        <h6> 必备 </h6>
-                        <p>how to<br>SDS速成...</p>
-                    </a>
-                </div>
-            </div>
-
-
-            <!-- type before here -->
-        </div>
-        <!-- end of content -->
     </div>
 
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-collapse w3-animate-left" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+        </a>
+        <a class="w3-bar-item w3-button w3-hover-orange" href="index.html">包罗三相</a>
+        <a class="w3-bar-item w3-button w3-hover-orange" href="#usefulhomepages">常用网站</a>
+        <!-- <details>
+            <summary>常用网站</summary>
+            <ol>
+                <li><a class="w3-bar-item w3-button w3-hover-orange" href="#news">蓝标网站</a></li>
+                <li><a class="w3-bar-item w3-button w3-hover-orange" href="#contact">政府网站</a></li>
+                <li>
+                    <a class="w3-bar-item w3-button w3-hover-orange" href="#about"></a>
+                </li>
+            </ol>
+        </details> -->
+
+        <details>
+            <summary>常用标准</summary>
+            <ol>
+                <li><a class="w3-bar-item w3-button w3-hover-orange" href="#news">国家标准</a></li>
+                <li><a class="w3-bar-item w3-button w3-hover-orange" href="#contact">国际标准</a></li>
+                <li><a class="w3-bar-item w3-button w3-hover-orange" href="#about">国外先进标准</a></li>
+                <li><a class="w3-bar-item w3-button w3-hover-orange" href="#contact">地方标准</a></li>
+                <li><a class="w3-bar-item w3-button w3-hover-orange" href="#about">企业标准</a></li>
+            </ol>
+        </details>
+
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:220px">
+        <!-- 这里开写正文 -->
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+                <!-- <h1 class="w3-text-teal">how to <mark class="floatnoteG">找到</mark><mark class="floatnoteV">正确的</mark>消防防火门标志？</h1> -->
+                <div class="summaryIndex" id="#blsx">包罗三相</div>
+
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://blsx.readthedocs.io">第一卷 基本功 温故而知新 与时俱进</a>
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://blsx666.github.io/blsxvol2">第二卷 可视化 一图胜千言 表情包好</a>
+                <a class="w3-bar-item w3-button w3-hover-orange">没有啦。</a>
+
+                <div class="summaryIndex" id="#usefulhomepages">常用网站</div>
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="www.bluesign.com">蓝标官网</a>
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://finder.bluesign.com/">finder直通车(免费注册,免费使用,用手机打开,最佳.)</a>
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://cube.bluesign.com/lm_auth_proxy?DoLMLogin?curl=L2fbluesysL2f&curlid=3511064398-2056274239&curlmode=0">guide直通车（需要会员账号）</a>
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://cube.bluesign.com/lm_auth_proxy?DoLMLogin?curl=L2fbluesysL2f&curlid=3511064398-2056274239&curlmode=0">CUBE直通车（需要会员账号）</a>
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://cube.bluesign.com/lm_auth_proxy?DoLMLogin?curl=L2fbluesysL2f&curlid=3511064398-2056274239&curlmode=0">tool直通车（需要会员账号）</a>
+                <div class="summaryIndex" id="#usefulhomepages2">常用网站</div>
+
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="http://openstd.samr.gov.cn/bzgk/gb/index">国家标准全文公开系统官网</a>
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="http://permit.mee.gov.cn/permitExt/defaults/default-index!getInformation.action">全国排污许可证管理信息平台公开端官网</a>
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="http://jsgsj.gov.cn:58888/ecipplatform/login.html">国家企业信用信息公示系统官网</a>
+                <!-- <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://www.creditchina.gov.cn/">信用中国官网</a> -->
+
+                <div class="summaryIndex" id="#usefulhomepages3">常用网站</div>
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://unece.org/about-ghs">联合国GHS官网</a>
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://www.napofilm.net/en">GHS培训-NAPO视频</a>
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="http://www.gcchina.org.cn/">联合国全球契约十项原则官网</a>
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="http://cn.unglobalcompact.org/aboutUs.html@tenitem">联合国全球契约十项原则官网2</a>
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://www.ilo.org/beijing/lang--zh/index.htm">国际劳工组织北京局官网</a>
+
+                <div class="summaryIndex" id="#usefulhomepages4">常用网站</div>
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="http://www.ipe.org.cn/">公众环境研究中心官网</a>
+
+                <!-- end of content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- https://www.w3schools.com/ -->
+    <footer>
+        <object data="footer.html" width="100%" height="200px" type="text/html">
+       </object>
+    </footer>
 
     <script>
-        filterSelection("all ")
+        // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
 
-        function filterSelection(c) {
-            var x, i;
-            x = document.getElementsByClassName("column ");
-            if (c == "all ") c = " ";
-            for (i = 0; i < x.length; i++) {
-                w3RemoveClass(x[i], "show ");
-                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show ");
+        // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+
+        // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+                overlayBg.style.display = "none";
+            } else {
+                mySidebar.style.display = 'block';
+                overlayBg.style.display = "block";
             }
         }
 
-        function w3AddClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-                if (arr1.indexOf(arr2[i]) == -1) {
-                    element.className += " " + arr2[i];
-                }
-            }
-        }
-
-        function w3RemoveClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-                while (arr1.indexOf(arr2[i]) > -1) {
-                    arr1.splice(arr1.indexOf(arr2[i]), 1);
-                }
-            }
-            element.className = arr1.join(" ");
-        }
-        three()
-
-        // Full-width images
-        function one() {
-            var elements = document.getElementsByClassName("column ");
-            var i;
-            for (i = 0; i < elements.length; i++) {
-                elements[i].style.width = "100%";
-            }
-        }
-
-        // Two images side by side
-        function two() {
-            var elements = document.getElementsByClassName("column ");
-            var i;
-            for (i = 0; i < elements.length; i++) {
-                elements[i].style.width = "40%";
-            }
-        }
-
-        // Three images side by side
-        function three() {
-            var elements = document.getElementsByClassName("column ");
-            var i;
-            for (i = 0; i < elements.length; i++) {
-                elements[i].style.width = "30%";
-            }
-        }
-
-        // Four images side by side
-        function four() {
-            var elements = document.getElementsByClassName("column ");
-            var i;
-            for (i = 0; i < elements.length; i++) {
-                elements[i].style.width = "22%";
-            }
-        }
-
-
-        // Five images side by side
-        function five() {
-            var elements = document.getElementsByClassName("column ");
-            var i;
-            for (i = 0; i < elements.length; i++) {
-                elements[i].style.width = "18%";
-            }
-        }
-
-
-        // Add active class to the current button (highlight it)
-        var btnContainer = document.getElementById("myBtnContainer");
-        var btns2 = btnContainer.getElementsByClassName("btn");
-        for (var i = 0; i < btns2.length; i++) {
-            btns2[i].addEventListener("click", function() {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-            });
-        }
-
-        // Add active class to the current button (highlight it)
-        var header = document.getElementById("gypHeader");
-        var btns1 = header.getElementsByClassName("btn");
-        for (var i = 0; i < btns1.length; i++) {
-            btns1[i].addEventListener("click", function() {
-                var current = document.getElementsByClassName("gypactive");
-                current[0].className = current[0].className.replace(" gypactive", "");
-                this.className += " gypactive";
-            });
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+            overlayBg.style.display = "none";
         }
     </script>
-
-    <footer>
-        <!-- <object data="footer.html " width="88% " height="200px " type="text/html ">
-       </object> -->
-    </footer>
 
 </body>
 
