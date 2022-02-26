@@ -35,7 +35,6 @@ body {
     padding-top: 60px;
     margin-left: 20px;
     max-width: 99%;
-    /* background-color: #CCFF66; */
 }
 
 h2 {
@@ -80,8 +79,7 @@ p {
     float: left;
     width: 18%;
     margin-left: 10px;
-    /* display: none; */
-    /* background-color: #3919ed; */
+    display: none;
 }
 
 .row:after {
@@ -114,6 +112,7 @@ p {
     background-color: #ddd;
 }
 
+.btn.gypactive,
 .btn.active {
     background-color: #FFA500;
     color: white;

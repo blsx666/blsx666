@@ -26,27 +26,36 @@
         </div>
     </header>
 
-    <div class="main ">
+    <div class="main">
 
         <h2>包罗三相 第二卷 可视化管理</h2>
         <!-- <a style="font-size: 0.6em;" href="about.html ">点击这里看使用指引</a> -->
 
         <br>
         <br>
-        <div id="myBtnContainer ">
-            <button class="btn active " onclick="filterSelection( 'all ') "> Show all</button>
-            <button class="btn " onclick="filterSelection( 'EMP') "> 应急预案</button>
-            <button class="btn " onclick="filterSelection( 'HAZ') "> 危险化学品和危险废弃物</button>
-            <button class="btn " onclick="filterSelection( 'OHS') "> 职业安全健康</button>
-            <button class="btn " onclick="filterSelection( 'ENV') "> 废水废气固废噪音</button>
-            <button class="btn " onclick="filterSelection( 'RES') "> 资源管理</button>
-            <button class="btn " onclick="filterSelection( 'PST') "> 成品监管</button>
-            <button class="btn " onclick="filterSelection( 'ISM') "> 输入流管理</button>
-            <button class="btn " onclick="filterSelection( 'MNG') "> 体系实施</button>
-            <button class="btn " onclick="filterSelection( 'CSR') "> 企业社会责任</button>
-            <button class="btn " onclick="filterSelection( 'LGC') "> 合规管理</button>
-            <button class="btn " onclick="filterSelection( 'BLS') "> 规则解释</button>
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection( 'all ') "> Show all</button>
+            <button class="btn" onclick="filterSelection( 'EMP') "> 应急预案</button>
+            <button class="btn" onclick="filterSelection( 'HAZ') "> 危险化学品和危险废弃物</button>
+            <button class="btn" onclick="filterSelection( 'OHS') "> 职业安全健康</button>
+            <button class="btn" onclick="filterSelection( 'ENV') "> 废水废气固废噪音</button>
+            <button class="btn" onclick="filterSelection( 'RES') "> 资源管理</button>
+            <button class="btn" onclick="filterSelection( 'PST') "> 成品监管</button>
+            <button class="btn" onclick="filterSelection( 'ISM') "> 输入流管理</button>
+            <button class="btn" onclick="filterSelection( 'MNG') "> 体系实施</button>
+            <button class="btn" onclick="filterSelection( 'CSR') "> 企业社会责任</button>
+            <button class="btn" onclick="filterSelection( 'LGC') "> 合规管理</button>
+            <button class="btn" onclick="filterSelection( 'BLS') "> 规则解释</button>
         </div>
+        <div id="gypHeader">
+            <p style="display: block;">每行几张图片，我要自己放啦。</p>
+            <button class="btn" onclick="one()">1</button>
+            <button class="btn" onclick="two()">2</button>
+            <button class="btn gypactive" onclick="three()">3</button>
+            <button class="btn" onclick="four()">4</button>
+            <button class="btn" onclick="five()">5</button>
+        </div>
+
         <div class="row ">
             <!-- type after here -->
 
@@ -56,7 +65,7 @@
                         <img src="image/forward yes.png" style="width:88% ">
                         <h4>交通标志</h4>
                         <h6>思考</h6>
-                        <p>why<br>城市道路交通标志要全国统一？</p>
+                        <p>why<br>城市道路交通标志要标准化？</p>
                     </a>
                 </div>
             </div>
@@ -473,23 +482,81 @@
             }
             element.className = arr1.join(" ");
         }
+        three()
+
+        // Full-width images
+        function one() {
+            var elements = document.getElementsByClassName("column ");
+            var i;
+            for (i = 0; i < elements.length; i++) {
+                elements[i].style.width = "100%";
+            }
+        }
+
+        // Two images side by side
+        function two() {
+            var elements = document.getElementsByClassName("column ");
+            var i;
+            for (i = 0; i < elements.length; i++) {
+                elements[i].style.width = "40%";
+            }
+        }
+
+        // Three images side by side
+        function three() {
+            var elements = document.getElementsByClassName("column ");
+            var i;
+            for (i = 0; i < elements.length; i++) {
+                elements[i].style.width = "30%";
+            }
+        }
+
+        // Four images side by side
+        function four() {
+            var elements = document.getElementsByClassName("column ");
+            var i;
+            for (i = 0; i < elements.length; i++) {
+                elements[i].style.width = "22%";
+            }
+        }
+
+
+        // Five images side by side
+        function five() {
+            var elements = document.getElementsByClassName("column ");
+            var i;
+            for (i = 0; i < elements.length; i++) {
+                elements[i].style.width = "18%";
+            }
+        }
 
 
         // Add active class to the current button (highlight it)
         var btnContainer = document.getElementById("myBtnContainer");
-        var btns = btnContainer.getElementsByClassName("btn ");
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click ", function() {
-                var current = document.getElementsByClassName("active ");
-                current[0].className = current[0].className.replace(" active ", " ");
-                this.className += " active ";
+        var btns2 = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns2.length; i++) {
+            btns2[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("gypHeader");
+        var btns1 = header.getElementsByClassName("btn");
+        for (var i = 0; i < btns1.length; i++) {
+            btns1[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("gypactive");
+                current[0].className = current[0].className.replace(" gypactive", "");
+                this.className += " gypactive";
             });
         }
     </script>
 
     <footer>
-        <object data="footer.html " width="88% " height="200px " type="text/html ">
-       </object>
+        <!-- <object data="footer.html " width="88% " height="200px " type="text/html ">
+       </object> -->
     </footer>
 
 </body>

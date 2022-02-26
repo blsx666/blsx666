@@ -24,13 +24,12 @@
     .row {
         margin: 2px -2px;
     }
-    .column {
+    /* .column {
         float: left;
         width: 30%;
         margin-left: 10px;
-        /* display: none; */
-        /* background-color: #3919ed; */
-    }
+        display: none;
+    } */
     .row,
     .row>.column {
         padding: 2px;
