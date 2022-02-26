@@ -9,6 +9,10 @@
 <link rel="stylesheet" type="text/css" href="css/basic.css">
 <link rel="stylesheet" type="text/css" href="css/alerts.css">
 <style>
+    body {
+        background-color: whitesmoke;
+    }
+    
     .gypbutton {
         border: none;
         color: rgb(10, 10, 10);
@@ -22,6 +26,7 @@
         text-decoration: none;
         cursor: pointer;
         border-radius: 20px;
+        background-color: white;
     }
     
     .gypbutton:hover {
@@ -33,6 +38,60 @@
         box-shadow: 0 5px #9df8f1;
         transform: translateY(4px);
     } */
+    
+    .gypcard {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        width: 80px;
+        height: 100px;
+    }
+    
+    .gypcard:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    .gypcontainer {
+        padding: 2px 16px;
+    }
+    
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+    }
+    
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    
+    .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+    }
+    
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
 </style>
 
 <body>
@@ -55,11 +114,11 @@
         </a>
         <a class="w3-bar-item w3-button w3-hover-orange" href="index.html">包罗三相</a>
         <a class="w3-bar-item w3-button w3-hover-orange" href="#usefulhomepages">常用网站</a>
-        <a class="w3-bar-item w3-button w3-hover-orange" href="#news">国家标准</a>
-        <a class="w3-bar-item w3-button w3-hover-orange" href="#contact">国际标准</a>
-        <a class="w3-bar-item w3-button w3-hover-orange" href="#about">国外先进标准</a>
-        <a class="w3-bar-item w3-button w3-hover-orange" href="#contact">地方标准</a>
-        <a class="w3-bar-item w3-button w3-hover-orange" href="#about">企业标准</a>
+        <a class="w3-bar-item w3-button w3-hover-orange" href="">国家标准</a>
+        <a class="w3-bar-item w3-button w3-hover-orange" href="">国际标准</a>
+        <a class="w3-bar-item w3-button w3-hover-orange" href="">国外先进标准</a>
+        <a class="w3-bar-item w3-button w3-hover-orange" href="">地方标准</a>
+        <a class="w3-bar-item w3-button w3-hover-orange" href="">企业标准</a>
         <!-- <details>
             <summary>常用网站</summary>
             <ol>
@@ -94,24 +153,32 @@
             <div class="w3-twothird w3-container">
                 <!-- <h1 class="w3-text-teal">how to <mark class="floatnoteG">找到</mark><mark class="floatnoteV">正确的</mark>消防防火门标志？</h1> -->
                 <div class="summaryIndex" id="#blsx">包罗三相</div>
-                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://blsx.readthedocs.io">第一卷 基本功 温故而知新 与时俱进</a>
-                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://blsx666.github.io/blsxvol2">第二卷 可视化 一图胜千言 表情包好</a>
-                <a class="w3-bar-item w3-button w3-hover-orange">没有啦。</a>
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton fas fa-angle-double-right" href="https://blsx.readthedocs.io"> 第一卷 基本功 温故而知新 与时俱进</a>
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton fas fa-angle-double-right" href="https://blsx666.github.io/blsxvol2"> 第二卷 可视化 一图胜千言 表情包全</a>
 
-                <div class="summaryIndex" id="#usefulhomepages">常用网站</div>
+                <!-- <div class="gypcard">
+                    <img src="image/241.png" alt="Avatar" style="width:100%">
+                    <div class="gypcontainer">
+                        <h4><b>John Doe</b></h4>
+                        <p>Architect & Engineer</p>
+                    </div>
+                </div> -->
+                <!-- <a class="w3-bar-item w3-button w3-hover-orange">没有啦。</a> -->
+
+                <div class="summaryIndex" id="#usefulhomepages">常用网站1</div>
                 <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="www.bluesign.com">蓝标官网</a>
-                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://finder.bluesign.com/">finder直通车(免费注册,免费使用,用手机打开,最佳.)</a>
-                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://cube.bluesign.com/lm_auth_proxy?DoLMLogin?curl=L2fbluesysL2f&curlid=3511064398-2056274239&curlmode=0">guide直通车（需要会员账号）</a>
-                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://cube.bluesign.com/lm_auth_proxy?DoLMLogin?curl=L2fbluesysL2f&curlid=3511064398-2056274239&curlmode=0">CUBE直通车（需要会员账号）</a>
-                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://cube.bluesign.com/lm_auth_proxy?DoLMLogin?curl=L2fbluesysL2f&curlid=3511064398-2056274239&curlmode=0">tool直通车（需要会员账号）</a>
-                <div class="summaryIndex" id="#usefulhomepages2">常用网站</div>
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://finder.bluesign.com/" title="免费注册,免费使用,用手机打开,最佳.">finder直达 免费使用</a>
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://cube.bluesign.com/lm_auth_proxy?DoLMLogin?curl=L2fbluesysL2f&curlid=3511064398-2056274239&curlmode=0" title="需要会员账号">guide直达</a>
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://cube.bluesign.com/lm_auth_proxy?DoLMLogin?curl=L2fbluesysL2f&curlid=3511064398-2056274239&curlmode=0" title="需要会员账号">CUBE直达</a>
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://cube.bluesign.com/lm_auth_proxy?DoLMLogin?curl=L2fbluesysL2f&curlid=3511064398-2056274239&curlmode=0" title="需要会员账号">tool直达</a>
+                <div class="summaryIndex" id="#usefulhomepages2">常用网站2</div>
 
                 <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="http://openstd.samr.gov.cn/bzgk/gb/index">国家标准全文公开系统官网</a>
                 <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="http://permit.mee.gov.cn/permitExt/defaults/default-index!getInformation.action">全国排污许可证管理信息平台公开端官网</a>
                 <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="http://jsgsj.gov.cn:58888/ecipplatform/login.html">国家企业信用信息公示系统官网</a>
                 <!-- <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://www.creditchina.gov.cn/">信用中国官网</a> -->
 
-                <div class="summaryIndex" id="#usefulhomepages3">常用网站</div>
+                <div class="summaryIndex" id="#usefulhomepages3">常用网站3</div>
                 <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://www.iso.org/home.html ">ISO官网</a>
                 <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://sdc.org.uk/">英国SDC官网</a>
                 <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://aatcc.org/">美国AATCC官网</a>
@@ -123,7 +190,7 @@
                 <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="http://cn.unglobalcompact.org/aboutUs.html@tenitem">联合国全球契约十项原则官网2</a>
                 <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://www.ilo.org/beijing/lang--zh/index.htm">国际劳工组织北京局官网</a>
 
-                <div class="summaryIndex" id="#usefulhomepages4">常用网站</div>
+                <div class="summaryIndex" id="#usefulhomepages4">常用网站4</div>
                 <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="http://www.ipe.org.cn/">公众环境研究中心官网</a>
                 <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://higg.com/">HIGG官网</a>
                 <!-- <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="http://www.ipe.org.cn/">公众环境研究中心官网</a>
@@ -138,10 +205,14 @@
 
     <!-- https://www.w3schools.com/ -->
     <footer>
-        <object data="footer.html" width="100%" height="200px" type="text/html">
-       </object>
-    </footer>
+        <!-- <object data="footer.html" width="100%" height="200px" type="text/html">
+       </object> -->
+        <hr style="border-top:1px dotted #ccc;" />
+        <div id="result"></div>
+        <div id="website-counter"></div>
 
+
+    </footer>
     <script>
         // Get the Sidebar
         var mySidebar = document.getElementById("mySidebar");
@@ -165,6 +236,85 @@
             mySidebar.style.display = "none";
             overlayBg.style.display = "none";
         }
+    </script>
+
+    <script language="JavaScript">
+        var caution = false
+
+        function setCookie(name, value, expires, path, domain, secure) {
+            var curCookie = name + "=" + escape(value) +
+                ((expires) ? "; expires=" + expires.toGMTString() : "") +
+                ((path) ? "; path=" + path : "") +
+                ((domain) ? "; domain=" + domain : "") +
+                ((secure) ? "; secure" : "")
+            if (!caution || (name + "=" + escape(value)).length <= 4000)
+                document.cookie = curCookie
+            else
+            if (confirm("Cookie exceeds 4KB and will be cut!"))
+                document.cookie = curCookie
+        }
+
+        function getCookie(name) {
+            var prefix = name + "="
+            var cookieStartIndex = document.cookie.indexOf(prefix)
+            if (cookieStartIndex == -1)
+                return null
+            var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length)
+            if (cookieEndIndex == -1)
+                cookieEndIndex = document.cookie.length
+            return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
+        }
+
+        function deleteCookie(name, path, domain) {
+            if (getCookie(name)) {
+                document.cookie = name + "=" +
+                    ((path) ? "; path=" + path : "") +
+                    ((domain) ? "; domain=" + domain : "") +
+                    "; expires=Thu, 01-Jan-70 00:00:01 GMT"
+            }
+        }
+
+        function fixDate(date) {
+            var base = new Date(0)
+            var skew = base.getTime()
+            if (skew > 0)
+                date.setTime(date.getTime() - skew)
+        }
+        var now = new Date()
+        fixDate(now)
+        now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000)
+        var visits = getCookie("counter")
+        if (!visits)
+            visits = 1
+        else
+            visits = parseInt(visits) + 1
+        setCookie("counter", visits, now)
+            // document.write("您是到访的第" + visits + "位用户！")
+
+        document.getElementById('result').innerHTML = "<center><h6>欢迎，您是到访的第 <label style='font-size:12px;' class='text-info'>" + visits + "</label> 位访客！烦请放心浏览，不会搜集任何点击偏好以及个人信息。</h6></center>";
+    </script>
+
+    <script>
+        var counterContainer = document.getElementById("website-counter");
+        var resetButton = document.querySelector("#reset");
+        var visitCount = localStorage.getItem("page_view");
+
+        // Check if page_view entry is present
+        if (visitCount) {
+            visitCount = Number(visitCount) + 1;
+            localStorage.setItem("page_view", visitCount);
+        } else {
+            visitCount = 1;
+            localStorage.setItem("page_view", 1);
+        }
+        counterContainer.innerHTML = "<center><h6>所有访客的访问次数总和: <label style='font-size:12px;' class='text-info'>" + visitCount + "</label>，</h6></center>";
+
+        // // Adding onClick event listener
+        // resetButton.addEventListener("click", () => {
+        //     visitCount = 1;
+        //     localStorage.setItem("page_view", 1);
+        //     // counterContainer.innerHTML = "所有访客的访问次数总和: " + visitCount;
+        // });
     </script>
 
 </body>
