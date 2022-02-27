@@ -1,0 +1,106 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+nav,
+section {
+    display: block;
+}
+
+body {
+    background: #9684a3 none repeat scroll 0 0;
+    color: #222;
+    font-family: "Raleway", sans-serif;
+    font-size: 100%;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    float: left;
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 0em;
+}
+
+
+/* ******************************************************
+	Circular Navigation Menu
+*********************************************************/
+
+.CircularNavigation {
+    width: 600px;
+    height: 390px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.circleNavi {
+    width: 550px;
+    height: 400px;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.4s ease-out;
+    position: relative;
+    float: left;
+    /* right: 105px;
+    bottom: 90px; */
+}
+
+.circleNavi a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    height: 80px;
+    width: 60px;
+    line-height: 40px;
+    margin-left: -20px;
+    margin-top: -20px;
+    position: absolute;
+    text-align: center;
+}
+
+.circleNavi a:hover {
+    color: #eef;
+}
+
+.circleNavi i.fa {
+    border: 1px solid #4c1b6f;
+    border-radius: 50%;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    padding: 12px;
+}
+
+.open.circleNavi {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.navbtn {
+    background: #6d438b none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #fff;
+    display: block;
+    height: 100px;
+    left: calc(50% - 66px);
+    line-height: 40px;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    top: calc(50% - 50px);
+    width: 100px;
+}
+
+.navbtn:hover {
+    background-color: #4c1b6f;
+}

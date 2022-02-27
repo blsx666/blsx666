@@ -195,8 +195,8 @@ footer p {
 }
 
 .summaryIndex {
-    font-size: 120%;
-    color: #808080;
+    /* font-size: 100%; */
+    /* color: #808080; */
     margin: 20px 0px 20px 0px;
     border-left: 2px solid #66CCCC;
     /* border-right: 6px solid #66CCCC; */
@@ -245,6 +245,20 @@ footer p {
     content: "大家好Greeting，我是安全经理 XS，姓三，名相。";
 }
 
+.summaryXL {
+    font-size: 1rem;
+    color: #808080;
+    margin: 20px 0px 20px 0px;
+    border-left: 5px solid #ED1951;
+    padding-left: 10px;
+}
+
+.summaryXL:before {
+    /* content: "大家好Greeting，我是安全经理 XS，姓三，名相。我的座右铭是：安全不规范，三相两行泪。安全要规范，全靠你管我。"; */
+    /* font-weight: bold; */
+    content: "大家好Greeting，我是环境经理 XL，姓罗，名相。";
+}
+
 .simple {
     font-size: 1.2em;
 }
@@ -266,6 +280,34 @@ footer p {
 .floatnoteV {
     border-radius: 150px;
     background-color: #FF99CC;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted rgb(199, 30, 221);
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(199, 30, 221);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
 
 
