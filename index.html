@@ -4,13 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/basic.css">
 <link rel="stylesheet" type="text/css" href="css/alerts.css">
 <style>
+     :root {
+        --maincolor: white;
+        --secondarycolor: whitesmoke;
+        --white2: #64f7f7;
+        --textcolor: #808080;
+        --white: #f1f1f1;
+    }
+    
     body {
-        background-color: whitesmoke;
+        background-color: --secondarycolor;
     }
     
     .gypbutton {
@@ -26,7 +34,7 @@
         text-decoration: none;
         cursor: pointer;
         border-radius: 20px;
-        background-color: white;
+        background-color: --maincolor;
     }
     
     .gypbutton:hover {
@@ -116,6 +124,7 @@
 <!-- 统计网站访问量 -->
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
+<!-- <script src="../js/getrandomcolor.js"></script> -->
 
 <body>
     <header>
@@ -125,7 +134,7 @@
             <div class="w3-bar w3-top w3-left-align w3-large">
                 <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-orange w3-large" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
                 <a href="../index.html" class="w3-bar-item w3-button w3-hover-orange">home</a>
-                <button class="w3-button w3-hover-orange " onclick="getramdoncolor()">颜色自由</button>
+                <!-- <button class="w3-button w3-hover-orange " onclick="getramdoncolor()">颜色自由</button> -->
                 <!-- <a href="index.html " class="w3-bar-item w3-button w3-hide-small w3-hover-orange ">包罗三相</a>
                 <a href="about.html " class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange ">about</a>
                 <a href="https://blsx.readthedocs.io " class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange ">点击这里看包罗三相 第一卷</a>
@@ -182,11 +191,11 @@
         <!-- 这里开写正文 -->
         <div class="w3-row w3-padding-64" style="width: 98%;">
             <div class="w3-twothird w3-container" style="width: 78%;">
-                <div class="w3-text-teal" style="text-align:left;font-size:xx-small;"><mark class="floatnoteG"> 你来啦， </mark><mark class="floatnoteV"> 随便看呐。 </mark><br>用浏览器<mark class="floatnoteH"> Edge </mark>来看，显示效果最佳。部分按钮有<mark class="floatnoteH"> 文字说明 </mark>，需在<mark class="floatnoteH"> 电脑里看 </mark>。<br> 记得要看页脚的免责声明。另外，不会收集任何个人信息和点击偏好。<br>感谢。</div>
+                <div class="w3-text-teal" style="text-align:left;font-size:xx-small;width:100%;"><mark class="floatnoteG"> 你来啦， </mark><mark class="floatnoteV"> 随便看呐。 </mark><br>用浏览器<mark class="floatnoteH"> Edge </mark>来看，显示效果最佳。部分按钮有<mark class="floatnoteH"> 文字说明 </mark>，需在<mark class="floatnoteH"> 电脑里看 </mark>。<br> 记得要看页脚的免责声明。另外，不会收集任何个人信息和点击偏好。<br>感谢。</div>
                 <div class="summaryIndex" id="#blsx">包罗三相</div>
                 <a class="w3-bar-item w3-button w3-hover-orange gypbutton fas fa-angle-double-right fa-paw" href="https://blsx.readthedocs.io" title="温故而知新，与时俱进。老观念，新观念，效益优先。"> 第一卷 基本功 温故而知新 与时俱进</a>
                 <a class="w3-bar-item w3-button w3-hover-orange gypbutton fas fa-angle-double-right fa-user" href="https://blsx666.github.io/blsxvol2" title="一图胜千言， 表情包全。表情，包全，表情包，全。"> 第二卷 可视化 一图胜千言 表情包全</a>
-                <a class="w3-bar-item w3-button" href="" title="不会写出来，为什么要说有第三卷？因为怕你误解只有基本功和可视化，都没有什么价值含量。"> 第三卷 可持续 {注：不会写，仅展示体系的完整。}</a>
+                <div class="w3-bar-item w3-button" title="不会写出来，为什么要说有第三卷？因为怕你误解只有基本功和可视化，都没有什么价值含量。"> 第三卷 可持续 {注：不会写，仅展示体系的完整。}</div>
 
                 <!-- <div class="gypcard">
                     <img src="image/241.png" alt="Avatar" style="width:100%">
