@@ -17,10 +17,6 @@
         --white: #f1f1f1;
     }
     
-    body {
-        background-color: --secondarycolor;
-    }
-    
     .gypbutton {
         border: none;
         color: rgb(10, 10, 10);
@@ -50,7 +46,7 @@
     .gypcard {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         transition: 0.3s;
-        width: 80px;
+        width: 120px;
         height: 100px;
     }
     
@@ -60,45 +56,6 @@
     
     .gypcontainer {
         padding: 2px 16px;
-    }
-    
-    .tooltip {
-        position: relative;
-        display: inline-block;
-        border-bottom: 1px dotted black;
-    }
-    
-    .tooltip .tooltiptext {
-        visibility: hidden;
-        width: 120px;
-        background-color: #555;
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 5px 0;
-        position: absolute;
-        z-index: 1;
-        bottom: 125%;
-        left: 50%;
-        margin-left: -60px;
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-    
-    .tooltip .tooltiptext::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: #555 transparent transparent transparent;
-    }
-    
-    .tooltip:hover .tooltiptext {
-        visibility: visible;
-        opacity: 1;
     }
     
     details>summary {
@@ -121,10 +78,10 @@
         box-shadow: 3px 3px 4px black;
     } */
 </style>
+
 <!-- 统计网站访问量 -->
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
-<!-- <script src="../js/getrandomcolor.js"></script> -->
 
 <body>
     <header>
@@ -135,11 +92,9 @@
                 <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-orange w3-large" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
                 <a href="../index.html" class="w3-bar-item w3-button w3-hover-orange">home</a>
                 <!-- <button class="w3-button w3-hover-orange " onclick="getramdoncolor()">颜色自由</button> -->
-                <!-- <a href="index.html " class="w3-bar-item w3-button w3-hide-small w3-hover-orange ">包罗三相</a>
+                <!-- <a href="index.html " class="w3-bar-item w3-button w3-hide-small w3-hover-orange ">包罗三相</a> -->
                 <a href="about.html " class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange ">about</a>
-                <a href="https://blsx.readthedocs.io " class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange ">点击这里看包罗三相 第一卷</a>
-                <button class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange " onclick="myFunction()">颜色自由</button> -->
-                <!-- <button class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange " onclick="getramdoncolor()">颜色自由2</button> -->
+                <!-- <a href="https://blsx.readthedocs.io " class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange ">点击这里看包罗三相 第一卷</a> -->
             </div>
         </div>
     </header>
@@ -192,21 +147,24 @@
         <div class="w3-row w3-padding-64" style="width: 98%;">
             <div class="w3-twothird w3-container" style="width: 78%;">
                 <div class="w3-text-teal" style="text-align:left;font-size:xx-small;width:100%;"><mark class="floatnoteG"> 你来啦， </mark><mark class="floatnoteV"> 随便看呐。 </mark><br>用浏览器<mark class="floatnoteH"> Edge </mark>来看，显示效果最佳。部分按钮有<mark class="floatnoteH"> 文字说明 </mark>，需在<mark class="floatnoteH"> 电脑里看 </mark>。<br> 记得要看页脚的免责声明。另外，不会收集任何个人信息和点击偏好。<br>感谢。</div>
-                <div class="summaryIndex" id="#blsx">包罗三相</div>
-                <a class="w3-bar-item w3-button w3-hover-orange gypbutton fas fa-angle-double-right fa-paw" href="https://blsx.readthedocs.io" title="温故而知新，与时俱进。老观念，新观念，效益优先。"> 第一卷 基本功 温故而知新 与时俱进</a>
+                <div class="summaryIndex" id="#blsx">包罗三相 </div>
+                <a class="w3-bar-item w3-button w3-hover-orange gypbutton fas fa-angle-double-right fa-paw" href="https://blsx.readthedocs.io" title="温故而知新，与时俱进。老观念，新观念，效益优先。">
+                    第一卷 基本功 温故而知新 与时俱进
+                </a>
                 <a class="w3-bar-item w3-button w3-hover-orange gypbutton fas fa-angle-double-right fa-user" href="https://blsx666.github.io/blsxvol2" title="一图胜千言， 表情包全。表情，包全，表情包，全。"> 第二卷 可视化 一图胜千言 表情包全</a>
                 <div class="w3-bar-item w3-button" title="不会写出来，为什么要说有第三卷？因为怕你误解只有基本功和可视化，都没有什么价值含量。"> 第三卷 可持续 {注：不会写，仅展示体系的完整。}</div>
 
-                <!-- <div class="gypcard">
-                    <img src="image/241.png" alt="Avatar" style="width:100%">
-                    <div class="gypcontainer">
-                        <h4><b></b></h4>
-                        <p></p>
+                <!-- <div class="gypcard"> -->
+                <!-- <img src="image/241.png" alt="Avatar" style="width:100%"> -->
+                <!-- <div class="gypcontainer">
+                        <h4>温故而知新 与时俱进</h4>
+                        <p>第一卷 基本功</p>
                     </div>
                 </div> -->
 
                 <details id="usefulhomepages">
-                    <summary class="summaryIndex fa fa-angle-double-right"> 常用网站一层 </summary><br>
+                    <summary class="summaryIndex fa fa-angle-double-right"> <span class="tooltip">常用网站一层<span class="tooltiptext">鼠标右键，单击打开或收起。</span></span>
+                    </summary><br>
                     <!-- <div class="summaryIndex" id="usefulhomepages">常用网站一层</div> -->
                     <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="www.bluesign.com">蓝标官网</a>
                     <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://finder.bluesign.com/" title="免费注册，免费使用，用手机打开，最佳。" style="color: rgb(7, 40, 224);">finder直达 免费使用</a>

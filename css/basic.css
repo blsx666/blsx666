@@ -285,29 +285,27 @@ footer p {
 .tooltip {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted rgb(199, 30, 221);
+    border-bottom: 1px dotted black;
 }
 
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 300px;
-    background-color: rgb(199, 30, 221);
-    color: #fff;
+    width: 180px;
+    background-color: #FFA500;
+    color: #808080;
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
+    /* 定位 */
     position: absolute;
-    z-index: 1;
-    bottom: 100%;
+    margin-left: -90px;
+    bottom: 120%;
     left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 1s;
+    /* z-index: 1; */
 }
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
-    opacity: 1;
 }
 
 

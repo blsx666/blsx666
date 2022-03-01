@@ -19,8 +19,31 @@
             --white: #350c36;
         }
         
-        body {
-            height: 1000px;
+        .tooltipright {
+            position: relative;
+            display: inline-block;
+            border-bottom: 2px dotted blue;
+        }
+        
+        .tooltipright .toolttext {
+            /* opacity: 0; */
+            visibility: hidden;
+            width: 300px;
+            background-color: lightsalmon;
+            color: black;
+            text-align: center;
+            border-radius: 4px;
+            padding: 8px;
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 0;
+            left: 110%;
+            font-size: xx-small;
+        }
+        
+        .tooltipright:hover .tooltiptext {
+            /* opacity: 1; */
+            visibility: visible;
         }
     </style>
 
@@ -95,19 +118,25 @@
             <div class="w3-row w3-padding-64 gyp-main">
 
                 <h1 class="w3-text-teal gyp-textcolor">涤纶坯纱携带有毒有害物质？</h1>
+                <a style="padding-top:28px;"> <span class="tooltipright">涤纶坯纱
+                    <span class="toolttext">点击我,来发现我携带哪些有毒有害物质!</span>
+                    </span>
+                </a>
                 <!-- <p>手机横屏看本节，效果最佳。 </p> -->
                 <div class="summaryXB">今天我开始自学管控涤纶坯纱上的有毒有害物质。</div>
                 <section class="contentSection">
                     <nav class="CircularNavigation">
                         <div class="circleNavi">
-                            <a href=""><i class="w3-bar-item w3-button w3-hover-orange fa" title="我是APEO, 我的梦想就是祸害. 我无处不在, 喜欢潜伏在涤纶坯纱.">APEO</i></a>
-                            <a href=""><i class="w3-bar-item w3-button w3-hover-orange fa" title="我是锑, 英文名是SB, 我没有梦想, 人类把我遗留在涤纶坯纱.">锑</i></a>
+                            <a><i class="w3-bar-item w3-button w3-hover-orange fa" title="我是APEO, 我的梦想就是祸害. 我无处不在, 喜欢潜伏在涤纶坯纱.">APEO</i></a>
+                            <a><i class="w3-bar-item w3-button w3-hover-orange fa" title="我是锑, 英文名是SB, 我没有梦想, 人类把我遗留在涤纶坯纱.">锑</i></a>
                         </div>
-                        <a href="" class="navbtn" style="padding-top:28px;"> <span class="tooltip">涤纶坯纱 <span class="tooltiptext">点我,来发现我携带哪些有毒有害物质!</span></span>
+                        <a class="navbtn" style="padding-top:28px;"> <span class="tooltipright">涤纶坯纱
+                            <span class="toolttext">点击我,来发现我携带哪些有毒有害物质!</span>
+                            </span>
                         </a>
+
                     </nav>
                 </section>
-
 
                 <div class="admonition note">
                     <p class="admonition-title  gyp-textcolor">
