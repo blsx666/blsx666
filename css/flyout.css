@@ -101,9 +101,10 @@ section {
     width: 100px;
 }
 
-.navbtn:hover {
+
+/* .navbtn:hover {
     background-color: #4c1b6f;
-}
+} */
 
 @media only screen and (max-width: 600px) {
     .CircularNavigation {

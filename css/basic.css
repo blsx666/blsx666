@@ -140,7 +140,7 @@ abbr {
     font-weight: 100;
 }
 
-h6specific {
+.h6specific {
     float: right;
     font-size: 0.4em;
     padding-top: 20px;
@@ -282,30 +282,39 @@ footer p {
     background-color: #FF99CC;
 }
 
-.tooltip {
+:root {
+    --maincolor: #3a0b3b;
+    --secondarycolor: #5e2a6e;
+    --white2: #230624;
+    --textcolor: #f5f1f1;
+    --white: #350c36;
+}
+
+.tooltipright {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black;
 }
 
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 180px;
-    background-color: #FFA500;
-    color: #808080;
+.tooltipright .toolttext {
+    /* opacity: 0; */
+    /* visibility: hidden; */
+    width: 240px;
+    background-color: lightsalmon;
+    color: black;
     text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    /* 定位 */
+    border-radius: 4px;
+    padding: 2px;
+    /* Position the tooltip */
     position: absolute;
-    margin-left: -90px;
-    bottom: 120%;
-    left: 50%;
-    /* z-index: 1; */
+    z-index: 0;
+    top: 110%;
+    left: -50%;
+    font-size: xx-small;
 }
 
-.tooltip:hover .tooltiptext {
-    visibility: visible;
+.tooltipright:hover .toolttext {
+    opacity: 0;
+    visibility: hidden;
 }
 
 
