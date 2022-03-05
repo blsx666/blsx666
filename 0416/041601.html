@@ -12,9 +12,32 @@
     <link rel="stylesheet" type="text/css" href="../css/alerts.css" />
     <script src="https://www.w3schools.com/lib/w3color.js"></script>
     <script src="../js/getrandomcolor.js"></script>
-    <script src="readyonopen.js"></script>
+    <!-- <script src="readyonopen.js"></script> -->
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 </head>
+<script>
+    $(document).ready(function() {
+        // var xhttp = new XMLHttpRequest();
+        // xhttp.onreadystatechange = function() {
+        //     if (this.readyState == 4 && this.status == 200) {
+        //         document.getElementById("demo").innerHTML =
+        //             this.responseText;
+        //     }
+        // };
+        // xhttp.open("GET", "toc.txt", true);
+        // xhttp.send();
+
+        var items = document.querySelectorAll('.circleNavi a');
+        for (var i = 0, l = items.length; i < l; i++) {
+            items[i].style.left = (50 - 35 * Math.cos(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+            items[i].style.top = (50 + 35 * Math.sin(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+        }
+        document.querySelector('.navbtn').onclick = function(e) {
+            e.preventDefault();
+            document.querySelector('.circleNavi').classList.toggle('open');
+        }
+    })(jQuery);
+</script>
 
 <body>
     <header>
@@ -40,8 +63,8 @@
             <i class="fa fa-remove"></i>
         </a>
         <h5 id="demo" class="w3-bar-item w3-small">目录</h5>
-        <!-- <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="041600.html">0416 00 涤纶坯纱</a>
-        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="041601.html">0416 01 回收涤纶坯纱</a> -->
+        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="041600.html">0416 00 涤纶坯纱</a>
+        <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="041601.html">0416 01 回收涤纶坯纱</a>
         <!-- <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="041602.html">0416 02 原液着色涤纶色纱</a>
         <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="041603.html">0416 03 常规染色涤纶色纱</a>
         <a class="w3-bar-item w3-button w3-hover-orange gyp-textcolor" href="041604.html">0416 04 涤纶线</a>
