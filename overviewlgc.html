@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>适用法律法规标准及其其他要求获取清单</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/basic.css">
+    <link rel="stylesheet" type="text/css" href="css/alerts.css">
+    <style>
+        table {
+            width: 80%;
+            margin: 10px auto;
+            margin-top: 10px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        
+        td,
+        th {
+            border: 1px solid #333;
+        }
+        
+        thead tr {
+            width: fit-content;
+            height: 40px;
+            background-color: #ccc;
+        }
+        
+        tr:hover {
+            /* box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); */
+            background-color: #FFA500;
+        }
+        
+        .closebtn {
+            float: right;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }
+        
+        @media screen and (max-width: 600px) {
+            table {
+                width: 100%;
+                display: block;
+                margin: 2px;
+                font-size: 0.25rem;
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <div class="w3-top">
+
+            <div class="w3-bar w3-top w3-left-align w3-large gyp-Navbar-bgcolor">
+                <a href="index.html" class="w3-bar-item w3-button gyp-Navbar-bgcolor w3-hover-orange">home</a>
+                <a href="blsxvol1.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange active">第一卷</a>
+                <a href="blsxvol2.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange ">第二卷</a>
+                <a href="about.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange ">about</a>
+                <a href="https://blsx.readthedocs.io " class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange ">第一卷(旧版)</a>
+            </div>
+        </div>
+    </header>
+    <div style="padding-top:40px;color:white;display:block;background:#04AA6D;font-size:1.5em;">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn" title="点击关闭。刷新网页可以重新打开。">&times;</span>
+        <h5 style="text-align:center;margin: 0;padding:0;padding-top: 20px;">辛笑笑特种化学品科技有限公司</h5>
+        <h1 style="text-align:center;margin: 0;padding:0;padding-bottom:20px;">适用法律法规标准及其他要求获取清单</h1>
+    </div>
+    <h4></h4>
+    <h2></h2>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>文件号</th>
+                <th>文件名称</th>
+                <th>实施日期</th>
+                <th>获取日期</th>
+                <th>获取人</th>
+                <th>发放日期</th>
+                <th>是否回签</th>
+                <!-- <th>评价日期</th>
+                <th>评价人</th>
+                <th>是否合规</th>
+                <th>隐患完成</th> -->
+
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        var datas = [{
+            id: '001',
+            refno: 'GB 4287-2012',
+            name: '纺织染整工业水污染物排放标准',
+            link: 'https://www.mee.gov.cn/ywgz/fgbz/bz/bzwb/shjbh/swrwpfbz/201211/t20121109_241788.htm',
+            effectivedate: '20120818',
+            trackdate: '20120606',
+            trackperson: 'gor',
+            circulatedate: '20120610',
+            signoffdate: 'done',
+            // evaluationdate: '',
+            // evaluationperson: '',
+            // ifcompliance: '',
+            // ifcorrected: '',
+        }, {
+            id: '002',
+            refno: 'GB 4287-2012 修改单一',
+            name: '纺织染整工业水污染物排放标准 修改单一',
+            link: 'http://www.mee.gov.cn/gkml/hbb/bgg/201504/t20150407_298669.htm',
+            effectivedate: '20120818',
+            trackdate: '20120606',
+            trackperson: 'gor',
+            circulatedate: '20120610',
+            signoffdate: 'done',
+            // evaluationdate: '',
+            // evaluationperson: '',
+            // ifcompliance: '',
+            // ifcorrected: '',
+        }, {
+            id: '003',
+            refno: 'GB 4287-2012 修改单二',
+            name: '纺织染整工业水污染物排放标准 修改单二',
+            link: 'http://www.mee.gov.cn/gkml/hbb/bgg/201506/t20150619_304110.htm',
+            effectivedate: '20120818',
+            trackdate: '20120606',
+            trackperson: 'gor',
+            circulatedate: '20120610',
+            signoffdate: 'done',
+            // evaluationdate: '',
+            // evaluationperson: '',
+            // ifcompliance: '',
+            // ifcorrected: '',
+        }]
+
+        var tbody = document.querySelector('tbody');
+
+        for (var i = 0; i < datas.length; i++) {
+            var tr = document.createElement('tr');
+            var j = 0;
+            tbody.appendChild(tr);
+            for (var k in datas[i]) {
+                var td = document.createElement('td');
+                j = j + 1
+                if (j == 3) {
+                    td.innerHTML = "<a href='" + datas[i]['link'] + "'>" + datas[i][k] + "</a>";
+                    tr.appendChild(td);
+
+                } else if (k != "link") {
+                    td.innerHTML = datas[i][k];
+                    tr.appendChild(td);
+                }
+            }
+            // var td = document.createElement('td');
+            // td.innerHTML = "<a href='javascript:;'>删除</ a>";
+            // tr.appendChild(td);
+        }
+        // var as = document.querySelectorAll('a');
+        // for (var i = 0; i < as.length; i++) {
+        //     as[i].onclick = function() {
+        //         tbody.removeChild(this.parentNode.parentNode);
+        //     }
+        // }
+    </script>
+</body>
+
+</html>
