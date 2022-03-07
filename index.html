@@ -132,6 +132,56 @@
             display: none;
         }
         
+        .subnav {
+            float: left;
+            overflow: hidden;
+        }
+        
+        .subnav .subnavbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        
+        .subnav:hover .subnavbtn {
+            background-color: red;
+        }
+        
+        .subnav-content {
+            display: none;
+            position: absolute;
+            left: 8px;
+            background-color: red;
+            /* width: 100%; */
+            z-index: 1;
+            right: 8px;
+            color: white;
+            /* display: block; */
+            background: #04AA6D;
+            font-size: 1.5em;
+            height: 320px;
+        }
+        
+        .subnav-content a {
+            float: left;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .subnav-content a:hover {
+            background-color: #eee;
+            color: black;
+        }
+        
+        .subnav:hover .subnav-content {
+            display: block;
+        }
+        
         @media screen and (max-width: 600px) {
             .topnav a:not(:first-child) {
                 display: none;
@@ -140,9 +190,6 @@
                 float: right;
                 display: block;
             }
-        }
-        
-        @media screen and (max-width: 600px) {
             .topnav.responsive {
                 position: relative;
             }
@@ -169,9 +216,36 @@
             <a href="blsxvol1.html">第一卷</a>
             <a href="blsxvol2.html">第二卷</a>
             <a href="about.html">about</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
+            <a href="overviewlgc.html"><i class="fas fa-atom" style="font-size:1em;"></i> 规章标准</a>
+            <!-- <a href="overviewsites.html">
+                <i class="fas fa-landmark" style="font-size:1em;"></i>常用网站
+
+            </a> -->
+            <div class="subnav">
+                <button class="subnavbtn"><i class="fas fa-landmark" style="font-size:1em;"></i> 常用网站 <i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                    <!-- <a href="#company">Company</a>
+                    <a href="#team">Team</a>
+                    <a href="#careers">Careers</a> -->
+                    <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="www.bluesign.com">蓝标官网</a>
+                    <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://finder.bluesign.com/" title="免费注册，免费使用，用手机打开，最佳。" style="color: rgb(7, 40, 224);">finder直达 免费使用</a>
+                    <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://cube.bluesign.com/lm_auth_proxy?DoLMLogin?curl=L2fbluesysL2f&curlid=3511064398-2056274239&curlmode=0" title="需要会员账号">guide直达 会员可用</a>
+                    <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://cube.bluesign.com/lm_auth_proxy?DoLMLogin?curl=L2fbluesysL2f&curlid=3511064398-2056274239&curlmode=0" title="需要会员账号">CUBE直达 会员可用</a>
+                    <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://cube.bluesign.com/lm_auth_proxy?DoLMLogin?curl=L2fbluesysL2f&curlid=3511064398-2056274239&curlmode=0" title="需要会员账号">tool直达 会员可用</a>
+
+                    <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="http://openstd.samr.gov.cn/bzgk/gb/index">国家标准全文公开系统官网</a>
+                    <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="http://permit.mee.gov.cn/permitExt/defaults/default-index!getInformation.action">全国排污许可证管理信息平台公开端官网</a>
+                    <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="http://jsgsj.gov.cn:58888/ecipplatform/login.html">国家企业信用信息公示系统官网</a>
+
+                    <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://echa.europa.eu/">ECHA官网</a>
+                    <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://unece.org/about-ghs">联合国GHS官网</a>
+
+                    <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="http://www.ipe.org.cn/">公众环境研究中心官网</a>
+
+                    <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="overviewsites.html">更多</a>
+                </div>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i> </a>
         </div>
 
         <script>
