@@ -37,6 +37,28 @@
             cursor: pointer;
         }
         
+        .gypbutton {
+            border: none;
+            color: rgb(10, 10, 10);
+            padding: 16px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            opacity: 0.6;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 20px;
+            background-color: white;
+        }
+        
+        .gypbutton:hover {
+            opacity: 1;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 20px;
+        }
+        
         #myInput {
             background-image: url('image/searchicon.png');
             background-position: 10px 10px;
@@ -123,17 +145,44 @@
 
         </table>
     </div>
-
     <script>
         var datas = [{
-            id: '003',
-            refno: 'GB 4287-2012',
-            name: '纺织染整工业水污染物排放标准',
-            link: 'https://www.mee.gov.cn/ywgz/fgbz/bz/bzwb/shjbh/swrwpfbz/201211/t20121109_241788.htm',
-            effectivedate: '20120818',
-            trackdate: '20120606',
-            trackperson: 'gor',
-            circulatedate: '20120610',
+            id: '006',
+            refno: 'GB 31701-2015',
+            name: '婴幼儿及儿童纺织产品安全技术规范',
+            link: 'http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=1698157554F00EED2E79EC6BFF7F4DF0',
+            effectivedate: '20160601',
+            trackdate: '20150601',
+            trackperson: 'XB',
+            circulatedate: '20150701',
+            signoffdate: 'done',
+            // evaluationdate: '',
+            // evaluationperson: '',
+            // ifcompliance: '',
+            // ifcorrected: '',
+        }, {
+            id: '005',
+            refno: 'GB 18401-2010',
+            name: '国家纺织产品基本安全技术规范',
+            link: 'http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=52C1F4CBDE863F5095D7C9D17F8E3F71',
+            effectivedate: '20110801',
+            trackdate: '20110401',
+            trackperson: 'XB',
+            circulatedate: '20110401',
+            signoffdate: 'done',
+            // evaluationdate: '',
+            // evaluationperson: '',
+            // ifcompliance: '',
+            // ifcorrected: '',
+        }, {
+            id: '004',
+            refno: 'GB 16297-1996',
+            name: '大气污染物综合排放标准',
+            link: 'https://www.mee.gov.cn/ywgz/fgbz/bz/bzwb/dqhjbh/dqgdwrywrwpfbz/199701/t19970101_67504.shtml',
+            effectivedate: '19970101',
+            trackdate: '19960901',
+            trackperson: 'XB',
+            circulatedate: '19960901',
             signoffdate: 'done',
             // evaluationdate: '',
             // evaluationperson: '',
@@ -141,55 +190,13 @@
             // ifcorrected: '',
         }, {
             id: '003',
-            refno: 'GB 4287-2012',
-            name: '纺织染整工业水污染物排放标准',
-            link: 'https://www.mee.gov.cn/ywgz/fgbz/bz/bzwb/shjbh/swrwpfbz/201211/t20121109_241788.htm',
-            effectivedate: '20120818',
-            trackdate: '20120606',
-            trackperson: 'gor',
-            circulatedate: '20120610',
-            signoffdate: 'done',
-            // evaluationdate: '',
-            // evaluationperson: '',
-            // ifcompliance: '',
-            // ifcorrected: '',
-        }, {
-            id: '003',
-            refno: 'GB 4287-2012',
-            name: '纺织染整工业水污染物排放标准',
-            link: 'https://www.mee.gov.cn/ywgz/fgbz/bz/bzwb/shjbh/swrwpfbz/201211/t20121109_241788.htm',
-            effectivedate: '20120818',
-            trackdate: '20120606',
-            trackperson: 'gor',
-            circulatedate: '20120610',
-            signoffdate: 'done',
-            // evaluationdate: '',
-            // evaluationperson: '',
-            // ifcompliance: '',
-            // ifcorrected: '',
-        }, {
-            id: '003',
-            refno: 'GB 4287-2012',
-            name: '纺织染整工业水污染物排放标准',
-            link: 'https://www.mee.gov.cn/ywgz/fgbz/bz/bzwb/shjbh/swrwpfbz/201211/t20121109_241788.htm',
-            effectivedate: '20120818',
-            trackdate: '20120606',
-            trackperson: 'gor',
-            circulatedate: '20120610',
-            signoffdate: 'done',
-            // evaluationdate: '',
-            // evaluationperson: '',
-            // ifcompliance: '',
-            // ifcorrected: '',
-        }, {
-            id: '003',
-            refno: 'GB 4287-2012',
-            name: '纺织染整工业水污染物排放标准',
-            link: 'https://www.mee.gov.cn/ywgz/fgbz/bz/bzwb/shjbh/swrwpfbz/201211/t20121109_241788.htm',
-            effectivedate: '20120818',
-            trackdate: '20120606',
-            trackperson: 'gor',
-            circulatedate: '20120610',
+            refno: 'GB 4287-2012 修改单二',
+            name: '纺织染整工业水污染物排放标准 修改单二',
+            link: 'http://www.mee.gov.cn/gkml/hbb/bgg/201506/t20150619_304110.htm',
+            effectivedate: '20150617',
+            trackdate: '20150618',
+            trackperson: 'XB',
+            circulatedate: '20150618',
             signoffdate: 'done',
             // evaluationdate: '',
             // evaluationperson: '',
@@ -200,10 +207,10 @@
             refno: 'GB 4287-2012 修改单一',
             name: '纺织染整工业水污染物排放标准 修改单一',
             link: 'http://www.mee.gov.cn/gkml/hbb/bgg/201504/t20150407_298669.htm',
-            effectivedate: '20120818',
-            trackdate: '20120606',
-            trackperson: 'gor',
-            circulatedate: '20120610',
+            effectivedate: '20150327',
+            trackdate: '20150406',
+            trackperson: 'XB',
+            circulatedate: '20150406',
             signoffdate: 'done',
             // evaluationdate: '',
             // evaluationperson: '',
@@ -211,13 +218,13 @@
             // ifcorrected: '',
         }, {
             id: '001',
-            refno: 'GB 4287-2012 修改单二',
-            name: '纺织染整工业水污染物排放标准 修改单二',
-            link: 'http://www.mee.gov.cn/gkml/hbb/bgg/201506/t20150619_304110.htm',
-            effectivedate: '20120818',
-            trackdate: '20120606',
-            trackperson: 'gor',
-            circulatedate: '20120610',
+            refno: 'GB 4287-2012',
+            name: '纺织染整工业水污染物排放标准',
+            link: 'https://www.mee.gov.cn/ywgz/fgbz/bz/bzwb/shjbh/swrwpfbz/201211/t20121109_241788.htm',
+            effectivedate: '20130101',
+            trackdate: '20121206',
+            trackperson: 'XB',
+            circulatedate: '20121210',
             signoffdate: 'done',
             // evaluationdate: '',
             // evaluationperson: '',
