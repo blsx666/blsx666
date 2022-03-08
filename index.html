@@ -183,9 +183,6 @@
         }
         
         @media screen and (max-width: 600px) {
-            .topnav a:not(:first-child) {
-                display: none;
-            }
             .topnav a.icon {
                 float: right;
                 display: block;
@@ -203,8 +200,15 @@
                 display: block;
                 text-align: left;
             }
+            #my2,
+            #my3,
+            #my4,
+            #my5 {
+                display: none;
+            }
         }
     </style>
+
     <script src="_static/jquery.js"></script>
     <script type="text/javascript" src="love.js"></script>
 </head>
@@ -213,10 +217,10 @@
     <header>
         <div class="topnav" id="myTopnav">
             <a href="index.html" class="active">Home</a>
-            <a href="blsxvol1.html">第一卷</a>
-            <a href="blsxvol2.html">第二卷</a>
-            <a href="about.html">about</a>
-            <a href="overviewlgc.html"><i class="fas fa-atom" style="font-size:1em;"></i> 规章标准</a>
+            <a id="my2" href="blsxvol1.html">第一卷</a>
+            <a id="my3" href="blsxvol2.html">第二卷</a>
+            <a id="my4" href="about.html">about</a>
+            <a id="my5" href="overviewlgc.html"><i class="fas fa-atom" style="font-size:1em;"></i> 规章标准</a>
             <!-- <a href="overviewsites.html">
                 <i class="fas fa-landmark" style="font-size:1em;"></i>常用网站
 
@@ -232,16 +236,12 @@
                     <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://cube.bluesign.com/lm_auth_proxy?DoLMLogin?curl=L2fbluesysL2f&curlid=3511064398-2056274239&curlmode=0" title="需要会员账号">guide直达 会员可用</a>
                     <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://cube.bluesign.com/lm_auth_proxy?DoLMLogin?curl=L2fbluesysL2f&curlid=3511064398-2056274239&curlmode=0" title="需要会员账号">CUBE直达 会员可用</a>
                     <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://cube.bluesign.com/lm_auth_proxy?DoLMLogin?curl=L2fbluesysL2f&curlid=3511064398-2056274239&curlmode=0" title="需要会员账号">tool直达 会员可用</a>
-
+                    <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://echa.europa.eu/">ECHA官网</a>
+                    <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://unece.org/about-ghs">GHS官网</a>
                     <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="http://openstd.samr.gov.cn/bzgk/gb/index">国家标准全文公开系统官网</a>
                     <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="http://permit.mee.gov.cn/permitExt/defaults/default-index!getInformation.action">全国排污许可证管理信息平台公开端官网</a>
                     <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="http://jsgsj.gov.cn:58888/ecipplatform/login.html">国家企业信用信息公示系统官网</a>
-
-                    <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://echa.europa.eu/">ECHA官网</a>
-                    <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="https://unece.org/about-ghs">联合国GHS官网</a>
-
-                    <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="http://www.ipe.org.cn/">公众环境研究中心官网</a>
-
+                    <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="http://www.ipe.org.cn/">公众环境研究中心IPE官网</a>
                     <a class="w3-bar-item w3-button w3-hover-orange gypbutton" href="overviewsites.html">更多</a>
                 </div>
             </div>
