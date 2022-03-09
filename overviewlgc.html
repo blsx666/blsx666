@@ -95,6 +95,78 @@
                 margin-bottom: 12px;
             }
         }
+        /* Create four equal columns that floats next to each other */
+        
+        .columnlgc {
+            float: left;
+            width: 20%;
+            padding: 5px;
+            height: 100px;
+            /* Should be removed. Only for demonstration */
+        }
+        /* Clear floats after the columns */
+        
+        .rowlgc:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width: 600px) {
+            .columnlgc {
+                width: 100%;
+            }
+        }
+        /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+        
+        .flip-card {
+            background-color: transparent;
+            width: 100%;
+            height: 100%;
+            /* border: 1px solid #f1f1f1; */
+            perspective: 1000px;
+            /* Remove this if you don't want the 3D effect */
+        }
+        /* This container is needed to position the front and back side */
+        
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        /* Do an horizontal flip when you move the mouse over the flip box container */
+        
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        /* Position the front and back side */
+        
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+        }
+        /* Style the front side (fallback if image is missing) */
+        
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+        /* Style the back side */
+        
+        .flip-card-back {
+            background-color: dodgerblue;
+            color: white;
+            transform: rotateY(180deg);
+        }
     </style>
 </head>
 
@@ -119,6 +191,77 @@
     </div>
     <h4></h4>
     <h2></h2>
+
+
+    <!-- <div class="rowlgc">
+        <div class="columnlgc">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4>获取</h4>
+                        <p>第一步</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>制定计划，定期从官方网站获取可能适用的法律法规标准及其其他要求。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columnlgc">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4>发放</h4>
+                        <p>第二步</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>制定计划，定期从官方网站获取可能适用的法律法规标准及其其他要求。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columnlgc">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4>评价</h4>
+                        <p>第三步</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>制定计划，定期从官方网站获取可能适用的法律法规标准及其其他要求。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columnlgc">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4>实施</h4>
+                        <p>第四步</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>制定计划，定期从官方网站获取可能适用的法律法规标准及其其他要求。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columnlgc">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4>汇总</h4>
+                        <p>第五步</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>制定计划，定期从官方网站获取可能适用的法律法规标准及其其他要求。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
     <input type="text" id="myInput" onkeyup="searchtable()" placeholder="Search for ..." title="Type in a keyward">
 
     <div style="overflow-x:auto;">
@@ -132,7 +275,8 @@
                     <th>获取日期</th>
                     <th>获取人</th>
                     <th>发放日期</th>
-                    <th>是否回签</th>
+                    <th>回签</th>
+                    <th title="点击删除,来删除那些不适用的法规标准,复制粘贴,形成自己工厂的适用法规标准清单.">定制</th>
                     <!-- <th>评价日期</th>
                 <th>评价人</th>
                 <th>是否合规</th>
@@ -147,6 +291,76 @@
     </div>
     <script>
         var datas = [{
+            id: '011',
+            refno: 'GB 39800.x-2020',
+            name: '个体防护装备配备规范 4个标准',
+            link: 'http://openstd.samr.gov.cn/bzgk/gb/std_list?p.p1=0&p.p90=circulation_date&p.p91=desc&p.p2=39800',
+            effectivedate: '20220101',
+            trackdate: '20201224',
+            trackperson: 'XB',
+            circulatedate: '20201224',
+            signoffdate: 'done',
+            // evaluationdate: '',
+            // evaluationperson: '',
+            // ifcompliance: '',
+            // ifcorrected: '',
+        }, {
+            id: '010',
+            refno: 'GB 30000.xx-2013',
+            name: '化学品分类和标签规范 28个标准',
+            link: 'http://openstd.samr.gov.cn/bzgk/gb/std_list?p.p1=0&p.p90=circulation_date&p.p91=desc&p.p2=30000',
+            effectivedate: '20131010',
+            trackdate: '20131010',
+            trackperson: 'XB',
+            circulatedate: '20131010',
+            signoffdate: 'done',
+            // evaluationdate: '',
+            // evaluationperson: '',
+            // ifcompliance: '',
+            // ifcorrected: '',
+        }, {
+            id: '009',
+            refno: 'GB 7231-2003',
+            name: '工业管道的基本识别色、识别符号和安全标识',
+            link: 'http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=4B7A85DB38EEF31F2BD0E38FD5DF403B',
+            effectivedate: '20031001',
+            trackdate: '20030313',
+            trackperson: 'XB',
+            circulatedate: '20030313',
+            signoffdate: 'done',
+            // evaluationdate: '',
+            // evaluationperson: '',
+            // ifcompliance: '',
+            // ifcorrected: '',
+        }, {
+            id: '008',
+            refno: 'GB/T 17519-2013',
+            name: '化学品安全技术说明书编写指南',
+            link: 'http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=0DF24B277B29E2F0B39D13D0F2B7BA07',
+            effectivedate: '20140131',
+            trackdate: '20130906',
+            trackperson: 'XB',
+            circulatedate: '20130906',
+            signoffdate: 'done',
+            // evaluationdate: '',
+            // evaluationperson: '',
+            // ifcompliance: '',
+            // ifcorrected: '',
+        }, {
+            id: '007',
+            refno: 'GB/T 16483-2008',
+            name: '化学品安全技术说明书 内容和项目顺序',
+            link: 'http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=67992CA972A4CF9222095CA06064724A',
+            effectivedate: '20090201',
+            trackdate: '20080618',
+            trackperson: 'XB',
+            circulatedate: '20080618',
+            signoffdate: 'done',
+            // evaluationdate: '',
+            // evaluationperson: '',
+            // ifcompliance: '',
+            // ifcorrected: '',
+        }, {
             id: '006',
             refno: 'GB 31701-2015',
             name: '婴幼儿及儿童纺织产品安全技术规范',
@@ -250,16 +464,16 @@
                     tr.appendChild(td);
                 }
             }
-            // var td = document.createElement('td');
-            // td.innerHTML = "<a href='javascript:;'>删除</ a>";
-            // tr.appendChild(td);
+            var td = document.createElement('td');
+            td.innerHTML = "<a href='javascript:;'>删除</ a>";
+            tr.appendChild(td);
         }
-        // var as = document.querySelectorAll('a');
-        // for (var i = 0; i < as.length; i++) {
-        //     as[i].onclick = function() {
-        //         tbody.removeChild(this.parentNode.parentNode);
-        //     }
-        // }
+        var as = document.querySelectorAll('a');
+        for (var i = 0; i < as.length; i++) {
+            as[i].onclick = function() {
+                tbody.removeChild(this.parentNode.parentNode);
+            }
+        }
     </script>
 
     <script>
@@ -311,11 +525,13 @@
                     if (td1.innerHTML.toUpperCase().indexOf(filter) > -1) {
                         is_present = 1
                     }
-                } else if (td2) {
+                }
+                if (td2) {
                     if (td2.innerHTML.toUpperCase().indexOf(filter) > -1) {
                         is_present = 1
                     }
-                } else if (td3) {
+                }
+                if (td3) {
                     if (td3.innerHTML.toUpperCase().indexOf(filter) > -1) {
                         is_present = 1
                     }
