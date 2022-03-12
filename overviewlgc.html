@@ -102,9 +102,7 @@
             width: 20%;
             padding: 5px;
             height: 100px;
-            /* Should be removed. Only for demonstration */
         }
-        /* Clear floats after the columns */
         
         .rowlgc:after {
             content: "";
@@ -124,9 +122,7 @@
             background-color: transparent;
             width: 100%;
             height: 100%;
-            /* border: 1px solid #f1f1f1; */
             perspective: 1000px;
-            /* Remove this if you don't want the 3D effect */
         }
         /* This container is needed to position the front and back side */
         
@@ -150,9 +146,9 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            -webkit-backface-visibility: hidden;
-            /* Safari */
             backface-visibility: hidden;
+            border-radius: 50px;
+            padding-top: 28px;
         }
         /* Style the front side (fallback if image is missing) */
         
@@ -291,6 +287,132 @@
     </div>
     <script>
         var datas = [{
+            id: '020',
+            refno: 'HJ 2546-2016',
+            name: '环境标志产品技术要求 纺织产品',
+            link: 'https://www.mee.gov.cn/ywgz/fgbz/bz/bzwb/other/hjbz/201612/t20161202_368506.shtml',
+            effectivedate: '20170101',
+            trackdate: '20220310',
+            trackperson: 'XB',
+            circulatedate: '20220310',
+            signoffdate: 'ongoing',
+            // evaluationdate: '',
+            // evaluationperson: '',
+            // ifcompliance: '',
+            // ifcorrected: '',
+        }, {
+            id: '019',
+            refno: 'GB 25463-2010',
+            name: '油墨工业水污染物排放标准',
+            link: 'http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=EDD93E75881E1A25A3881F8B469CA236',
+            effectivedate: '20101001',
+            trackdate: '20220310',
+            trackperson: 'XB',
+            circulatedate: '20220310',
+            signoffdate: 'ongoing',
+            // evaluationdate: '',
+            // evaluationperson: '',
+            // ifcompliance: '',
+            // ifcorrected: '',
+        }, {
+            id: '018',
+            refno: '出口商品技术指南',
+            name: '出口商品技术指南',
+            link: 'http://www.mofcom.gov.cn/article/ckzn/index.shtml',
+            effectivedate: '-',
+            trackdate: '20220310',
+            trackperson: 'XB',
+            circulatedate: '20220310',
+            signoffdate: 'ongoing',
+            // evaluationdate: '',
+            // evaluationperson: '',
+            // ifcompliance: '',
+            // ifcorrected: '',
+        }, {
+            id: '017',
+            refno: 'GB/T 18885-2020',
+            name: '生态纺织品技术要求',
+            link: 'http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=12CD489F7C99BE5309ED6EA6B7CCFDA5',
+            effectivedate: '20210501',
+            trackdate: '20220310',
+            trackperson: 'XB',
+            circulatedate: '20220310',
+            signoffdate: 'ongoing',
+            // evaluationdate: '',
+            // evaluationperson: '',
+            // ifcompliance: '',
+            // ifcorrected: '',
+        }, {
+            id: '016',
+            refno: '欧盟BPR',
+            name: 'the list of active substances and suppliers - Biocidal Products Regulation',
+            link: 'https://www.echa.europa.eu/information-on-chemicals/active-substance-suppliers',
+            effectivedate: '20150901',
+            trackdate: '20220309',
+            trackperson: 'XB',
+            circulatedate: '20220309',
+            signoffdate: 'ongoing',
+            // evaluationdate: '',
+            // evaluationperson: '',
+            // ifcompliance: '',
+            // ifcorrected: '',
+        }, {
+            id: '015',
+            refno: '欧盟高度关注物质SVHC',
+            name: 'Four hazardous chemicals added to the Candidate List',
+            link: 'https: //echa.europa.eu/-/four-hazardous-chemicals-added-to-the-candidate-list',
+            effectivedate: '20220117',
+            trackdate: '20220309',
+            trackperson: 'XB',
+            circulatedate: '20220309',
+            signoffdate: 'ongoing',
+            // evaluationdate: '',
+            // evaluationperson: '',
+            // ifcompliance: '',
+            // ifcorrected: '',
+        }, {
+            id: '014',
+            refno: '欧盟高度关注物质SVHC',
+            name: 'Candidate List of substances of very high concern for Authorisation',
+            link: 'https://www.echa.europa.eu/candidate-list-table',
+            effectivedate: '20220117',
+            trackdate: '20220309',
+            trackperson: 'XB',
+            circulatedate: '20220309',
+            signoffdate: 'ongoing',
+            // evaluationdate: '',
+            // evaluationperson: '',
+            // ifcompliance: '',
+            // ifcorrected: '',
+        }, {
+            id: '013',
+            refno: '欧盟POP法规',
+            name: 'List of substances proposed as POPs',
+            link: 'https://echa.europa.eu/substances-restricted-under-reach',
+            effectivedate: '20220210',
+            trackdate: '20220309',
+            trackperson: 'XB',
+            circulatedate: '20220309',
+            signoffdate: 'ongoing',
+            // evaluationdate: '',
+            // evaluationperson: '',
+            // ifcompliance: '',
+            // ifcorrected: '',
+        }, {
+            id: '012',
+            refno: 'reach法规附录XVII',
+            name: 'reach法规附录XVII',
+            link: 'https://echa.europa.eu/substances-restricted-under-reach',
+            effectivedate: '20220210',
+            trackdate: '20220309',
+            trackperson: 'XB',
+            circulatedate: '20220309',
+            signoffdate: 'ongoing',
+            // evaluationdate: '',
+            // evaluationperson: '',
+            // ifcompliance: '',
+            // ifcorrected: '',
+        }, {
             id: '011',
             refno: 'GB 39800.x-2020',
             name: '个体防护装备配备规范 4个标准',
