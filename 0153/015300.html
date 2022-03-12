@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>包罗三相</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/basic.css">
+<link rel="stylesheet" type="text/css" href="../css/alerts.css">
+<link rel="stylesheet" type="text/css" href="../css/chat.css">
+<style>
+    .chatcontainer {
+        border: 2px solid #dedede;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+        /* padding: 10px;
+        margin: 10px 0; */
+        width: 50%;
+        margin-left: 25%;
+    }
+    
+    .chatdarker {
+        border-color: #ccc;
+        background-color: #ddd;
+    }
+    
+    .chatcontainer::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    .chatcontainer img {
+        float: left;
+        max-width: 60px;
+        width: 100%;
+        margin-left: 4px;
+        margin-top: 4px;
+        margin-right: 20px;
+        border-radius: 50%;
+    }
+    
+    .chatcontainer img.right {
+        float: right;
+        margin-left: 20px;
+        margin-right: 4px;
+        margin-top: 4px;
+    }
+    
+    .chat-p-right {
+        text-align: justify-all;
+    }
+    
+    .chat-p-right-name {
+        text-align: right;
+        font-size: 0.28em;
+        margin-right: 88px;
+    }
+    
+    .chat-p-left {
+        font-size: 0.28em;
+        margin-left: 78px;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .chatcontainer {
+            width: 75%;
+            margin-left: 12.5%;
+        }
+    }
+</style>
+
+
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+
+        <div class="w3-bar w3-top w3-left-align w3-large gyp-Navbar-bgcolor">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large gyp-Navbar-small-bgcolor" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a href="../index.html" target="_blank" class="w3-bar-item w3-button gyp-Navbar-bgcolor">home</a>
+            <!-- <a href="../index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">包罗三相</a> -->
+            <a href="../about.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">about</a>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-collapse w3-animate-left" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+        </a>
+        <h5 class="w3-bar-item w3-small">目录</h5>
+        <a class="w3-bar-item w3-button" href="015300.html">015300 首页</a>
+        <a class="w3-bar-item w3-button" href="015301.html">015301 GB 18401-2010</a>
+        <a class="w3-bar-item w3-button" href="015302.html">015302 GB 31701-2015</a>
+        <a class="w3-bar-item w3-button" href="015303.html">015303 GB/T 18885-2020</a>
+        <!-- <a class="w3-bar-item w3-button" href="015304.html">015304 安全生产考核合格证书 (二)</a>
+        <a class="w3-bar-item w3-button" href="015305.html">015305 锅炉使用许可证</a>
+        <a class="w3-bar-item w3-button" href="015306.html">015306 锅炉操作证</a>
+        <a class="w3-bar-item w3-button" href="015307.html">015307 废气处理工证</a>
+        <a class="w3-bar-item w3-button" href="015308.html">015308 废水处理工证</a>
+        <a class="w3-bar-item w3-button" href="015309.html">015309 电工证</a>
+        <a class="w3-bar-item w3-button" href="015310.html">015310 电焊证</a>
+        <a class="w3-bar-item w3-button" href="015311.html">015311 叉车使用证</a>
+        <a class="w3-bar-item w3-button" href="015312.html">015312 叉车操作证</a>
+        <a class="w3-bar-item w3-button" href="015313.html">015313 电梯使用证</a>
+        <a class="w3-bar-item w3-button" href="015314.html">015314 电梯操作证</a>
+        <a class="w3-bar-item w3-button" href="015315.html">015315 电梯操作证</a>
+        <a class="w3-bar-item w3-button" href="015316.html">015316 急救员证</a>
+        <a class="w3-bar-item w3-button" href="015317.html">015317 危险化学品登记证</a>
+        <a class="w3-bar-item w3-button" href="015318.html">015318 危险化学品安全使用许可证</a>
+        <a class="w3-bar-item w3-button" href="015319.html">015319 危险化学品经营许可证</a>
+        <a class="w3-bar-item w3-button" href="015320.html">015320 安全生产许可证</a>
+        <a class="w3-bar-item w3-button" href="015321.html">015321 易制毒化学品购买申请表</a>
+        <a class="w3-bar-item w3-button" href="015322.html">015322 易制毒化学品备案证明</a>
+        <a class="w3-bar-item w3-button" href="015323.html">015323 易制毒化学品运输证明</a>
+        <a class="w3-bar-item w3-button" href="015324.html">015324 环境影响评价</a>
+        <a class="w3-bar-item w3-button" href="015325.html">015325 竣工验收批复</a>
+        <a class="w3-bar-item w3-button" href="015326.html">015326 压力容器使用许可证</a>
+        <a class="w3-bar-item w3-button" href="015327.html">015327 压力容器操作许可证</a>  -->
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:220px">
+        <!-- 这里开写正文 -->
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+                <h1 class="w3-text-teal">how to <mark class="floatnoteG"> 展现</mark><mark class="floatnoteV"> 充分了解 </mark>，国内外生态纺织品技术法规和标准？</h1>
+
+                <div>
+                    <!-- <p>
+                        手机横屏看本节，效果最佳。
+                    </p> -->
+                    <div class="summaryXB">
+                        <br>
+                        <br> 相,
+                        <br> 是相亲的相，
+                        <br> 指不得不自己亲自去干活，
+                        <br> 来完成老板交代的工作的人。
+                    </div>
+                    <div>
+                        <h4><br><br></h4>
+
+                        <h4>今天，照例，要先有微信截图。</h4>
+                        <!-- Notice/Center -->
+                        <!-- <div style="margin-right:50px;margin-left:50px;margin-bottom:10px;width:86%;height:50px;line-height:50px;background-color:#FFA500;float:left;text-align:center">包罗三只同命鸟(3)</div> -->
+                        <br><br>
+                        <div class="middle-timetag">
+                            <span>2016年05月09日 08:28</span>
+                        </div>
+
+
+                        <!-- left -->
+                        <div class="L-side">
+                            <div class="L-icon">
+                                <h1 class="R-name">XB</h1>
+                            </div>
+                            <div>包相XB Bao</div>
+                            <div>
+                                <div class="L-side_sign"></div>
+                                <span>我们工厂熟悉目标市场对生态纺织品的标准和技术法规吗？</span>
+                            </div>
+                        </div>
+
+                        <!-- right -->
+                        <div class="R-side">
+                            <div class="R-icon">
+                                <h1 class="R-name">!!!!</h1>
+                            </div>
+                            <div>一个声音@3X的面料供应商</div>
+                            <div>
+                                <div class="R-side_sign"></div>
+                                <span>Keep things simple. 烦请可否说中文？</span>
+                            </div>
+                        </div>
+
+                        <!-- left -->
+                        <div class="L-side">
+                            <div class="L-icon">
+                                <h1 class="R-name">XB</h1>
+                            </div>
+                            <div>包相XB Bao</div>
+                            <div>
+                                <div class="L-side_sign"></div>
+                                <span>比如面料在中国销售，要符合限用禁用物质的标准，我们知道嘛？</span>
+                            </div>
+                        </div>
+                        <!-- right -->
+                        <div class="R-side">
+                            <div class="R-icon">
+                                <h1 class="R-name">!!!!</h1>
+                            </div>
+                            <div>一个声音@3X的面料供应商</div>
+                            <div>
+                                <div class="R-side_sign"></div>
+                                <span>Keep things simple. 你们是客户，我们照你们的要求.</span>
+                            </div>
+                        </div>
+                        <!-- <div class="middle-timetag-end">
+                            <span>注：这个问题的审核到这里已经完成。应避免以下多余对话。</span>
+                        </div> -->
+                        <!-- left -->
+                        <div class="L-side">
+                            <div class="L-icon">
+                                <h1 class="R-name">XB</h1>
+                            </div>
+                            <div>包相XB Bao</div>
+                            <div>
+                                <div class="L-side_sign"></div>
+                                <span>如果你们也了解和掌握国内外生态纺织品标准和技术法规，可以进一步减少或避免因对国内外法规掌握不够造成的风险甚至损失，从而提升供应链的合规</span>
+                            </div>
+                        </div>
+                        <!-- right -->
+                        <div class="R-side">
+                            <div class="R-icon">
+                                <h1 class="R-name">!!!!</h1>
+                            </div>
+                            <div>一个声音@3X的面料供应商</div>
+                            <div>
+                                <div class="R-side_sign"></div>
+                                <span>Keep things simple. 理是这个理. 可是订单都没有，掌握了也用处不大.</span>
+                            </div>
+                        </div>
+
+                        <!-- left -->
+                        <div class="L-side">
+                            <div class="L-icon">
+                                <h1 class="R-name">XB</h1>
+                            </div>
+                            <div>包相XB Bao</div>
+                            <div>
+                                <div class="L-side_sign"></div>
+                                <span>向客户展示这个<a href="../overviewlgc.html">适用法律法规标准及其其他要求清单</a>，展示我们工厂熟知国内外生态纺织品标准和技术法规，会不会增加接单能力？</span>
+                            </div>
+                        </div>
+
+                        <!-- right -->
+                        <div class="R-side">
+                            <div class="R-icon">
+                                <h1 class="R-name">!!!!</h1>
+                            </div>
+                            <div>一个声音@3X的面料供应商</div>
+                            <div>
+                                <div class="R-side_sign"></div>
+                                <span>Keep things simple. 做这些, 没用.</span>
+                            </div>
+                        </div>
+
+                        <!-- Notice/Center  -->
+                        <div class="middle-timetag-end">
+                            <span>2016年05月09日 09:08</span>
+                        </div>
+
+                        <h4>掌握国内外生态纺织品技术法规和标准，到底有什么用？</h4>
+                        <h4>看商务部发布的<a href="http://www.mofcom.gov.cn/article/ckzn/index.shtml">出口商品技术指南</a></h4>
+                        <ol>
+                            <li>目前，我国多数企业尤其是中小企业，应对国外技术性贸易措施的主要难题之一是信息不畅，因而对目标市场准入条件的变化不敏感</li>
+                            <li>对于单一企业来说，跟踪、研究这些技术性贸易措施的最新信息难度大、成本高，但若不跟踪、不应对则会对其经营产生严重影响。</li>
+                            <li>不定期更新《出口商品技术指南》，帮助企业尽快了解和掌握国外市场的标准、技术法规、认证检验等市场准入要求，跨越国外技术壁垒，引导企业主动提升自身技术水平和国际竞争力。</li>
+                            <li>来源：中华人民共和国商务部</li>
+                        </ol>
+                        <br><br>
+                        <h4>掌握国内外生态纺织品技术法规和标准,一个工厂需要<mark class="floatnoteG"> 展现 </mark>哪些呢？</h4>
+                        <h4>目录:</h4>
+                        <ul>
+                            <!-- <li><a href="015301.html">015301 GB 18401-2010</a></li> -->
+
+                            <li><a href="015301.html">015301 GB 18401-2010</a></li>
+                            <li><a href="015302.html">015302 GB 31701-2015</a></li>
+                            <li><a href="015303.html">015303 GB/T 18885-2020</a></li>
+                            <!--<li><a href="015305.html">015305 锅炉使用许可证</a></li>
+                            <li><a href="015306.html">015306 锅炉操作证</a></li>
+                            <li><a href="015307.html">015307 废气处理工证</a></li>
+                            <li><a href="015308.html">015308 废水处理工证</a></li>
+                            <li><a href="015309.html">015309 电工证</a></li>
+                            <li><a href="015310.html">015310 电焊证</a></li>
+                            <li><a href="015311.html">015311 叉车使用证</a></li>
+                            <li><a href="015312.html">015312 叉车操作证</a></li>
+                            <li><a href="015313.html">015313 电梯使用证</a></li>
+                            <li><a href="015314.html">015314 电梯操作证</a></li>
+                            <li><a href="015315.html">015315 电梯操作证</a></li>
+                            <li><a href="015316.html">015316 急救员证</a></li>
+                            <li><a href="015317.html">015317 危险化学品登记证</a></li>
+                            <li><a href="015318.html">015318 危险化学品安全使用许可证</a></li>
+                            <li><a href="015319.html">015319 危险化学品经营许可证</a></li>
+                            <li><a href="015320.html">015320 安全生产许可证</a></li>
+                            <li><a href="015321.html">015321 易制毒化学品购买申请表</a></li>
+                            <li><a href="015322.html">015322 易制毒化学品备案证明</a></li>
+                            <li><a href="015323.html">015323 易制毒化学品运输证明</a></li>
+                            <li><a href="015324.html">015324 环境影响评价</a></li>
+                            <li><a href="015325.html">015325 竣工验收批复</a></li>
+                            <li><a href="015326.html">015326 压力容器使用许可证</a></li>
+                            <li><a href="015327.html">015327 压力容器操作许可证</a></li> -->
+                        </ul>
+
+                        <br/>
+                        <p>更多国内外生态纺织品标准和技术规范陆续添加中。如果你刚好知道一些，上面没有列入，烦请微信留言。</p>
+
+
+                    </div>
+                </div>
+                <div class="admonition note">
+                    <p class="admonition-title">
+                        <i>XB 学习笔记 20160509 17:00 Sunny</i>
+                    </p>
+                    <ul class="simple">
+                        <li>
+                            <p>今天，整理了各类国内外生态纺织品标准额技术规范，用时8h。</p>
+                        </li>
+                        <li>
+                            <p>这么多国内外生态纺织品标准额技术规范，是不是<mark class="floatnoteV"> <a href="#"> 建立国内外生态纺织品标准额技术规范清单 </a> </mark>，便于日常更新维护？</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr />
+                <p>Creation date: 20220312 Revision date: - Version: 0.1.0</p>
+                <p>免责声明
+                    <br>- 这个电子书是Free免费的, 也是Free自由的。
+                    <br>- 这个电子书是个人对工作的云端自学记录，内容聚合自元宇宙, 整理自过往的朋友圈。
+                    <br>- 这个电子书中的外部文章，外部链接，外部数据，外部图片等等的版权归原作者所有。
+                </p>
+
+
+                <!-- /#main -->
+            </div>
+        </div>
+    </div>>
+    <footer>
+        <object data="footer.html" width="100%" height="200px" type="text/html">
+       </object>
+    </footer>
+
+    <script>
+        // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+
+        // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+
+        // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+                overlayBg.style.display = "none";
+            } else {
+                mySidebar.style.display = 'block';
+                overlayBg.style.display = "block";
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+            overlayBg.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
