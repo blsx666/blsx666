@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>化学品档案</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/basic.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/alerts.css"> -->
+    <style>
+        table {
+            width: 120%;
+            /* margin: 10px auto; */
+            border-collapse: collapse;
+            border-spacing: 0px;
+            text-align: center;
+            font-size: 0.7rem;
+            /* table-layout: fixed; */
+            /* margin-left: 80px; */
+        }
+        
+        thead tr {
+            height: 68px;
+            background-color: #ccc;
+            /* text-align: justify-all; */
+            /* overflow: hidden; */
+            /* white-space: nowrap; */
+            /* width: 100%; */
+            /* text-overflow: ellipsis; */
+            /* width: fit-content; */
+            /* text-size-adjust: auto; */
+            /* text-overflows：clip | ellipsis */
+        }
+        
+        th,
+        td {
+            /* white-space: nowrap; */
+            height: 40px;
+        }
+        /* th:nth-child(1),
+        td:nth-child(1) {
+            position: sticky;
+            left: 0;
+            z-index: 10;
+            background-color: #04AA6D;
+        }
+        
+        th:nth-child(2),
+        td:nth-child(2) {
+            position: sticky;
+            left: 30px;
+            background-color: #04AA6D;
+            z-index: 10;
+        }
+         */
+        
+        tr:nth-child(even) {
+            background-color: whitesmoke;
+            z-index: -1;
+        }
+        
+        tr:hover {
+            /* box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); */
+            background-color: #FFA500;
+        }
+        
+        .closebtn {
+            float: right;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }
+        
+        .gypbutton {
+            border: none;
+            color: rgb(10, 10, 10);
+            padding: 16px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            opacity: 0.6;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 20px;
+            background-color: white;
+        }
+        
+        .gypbutton:hover {
+            opacity: 1;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 20px;
+        }
+        
+        #myInput {
+            background-image: url('../image/searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            width: 90%;
+            font-size: 16px;
+            margin-left: 2%;
+            padding: 12px 20px 12px 40px;
+            margin-top: 50px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+        
+        @media screen and (max-width: 600px) {
+            table {
+                width: 100%;
+                display: block;
+                margin: 2px;
+                font-size: 0.25rem;
+                /* width: fit-content; */
+            }
+            th,
+            td {
+                text-align: left;
+                padding: 8px;
+                white-space: nowrap;
+            }
+            #myInput {
+                width: 100%;
+                font-size: 0.25rem;
+                margin: 2px;
+                padding: 12px 20px 12px 40px;
+                margin-top: 50px;
+                border: 1px solid #ddd;
+                margin-bottom: 12px;
+            }
+        }
+        /* Create four equal columns that floats next to each other */
+        
+        .columnlgc {
+            float: left;
+            width: 20%;
+            padding: 5px;
+            height: 100px;
+        }
+        
+        .rowlgc:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width: 600px) {
+            .columnlgc {
+                width: 100%;
+            }
+        }
+        /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+        
+        .flip-card {
+            background-color: transparent;
+            width: 100%;
+            height: 100%;
+            perspective: 1000px;
+        }
+        /* This container is needed to position the front and back side */
+        
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        /* Do an horizontal flip when you move the mouse over the flip box container */
+        
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        /* Position the front and back side */
+        
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 50px;
+            padding-top: 28px;
+        }
+        /* Style the front side (fallback if image is missing) */
+        
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+        /* Style the back side */
+        
+        .flip-card-back {
+            background-color: dodgerblue;
+            color: white;
+            transform: rotateY(180deg);
+        }
+        
+        .gypWinclass {
+            color: teal;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <div class="w3-top">
+
+            <div class="w3-bar w3-top w3-left-align w3-large gyp-Navbar-bgcolor">
+                <a href="index.html" class="w3-bar-item w3-button gyp-Navbar-bgcolor w3-hover-orange">home</a>
+                <a href="blsxvol1.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange active">第一卷</a>
+                <a href="blsxvol2.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange ">第二卷</a>
+                <a href="about.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange ">about</a>
+                <a href="https://blsx.readthedocs.io " class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange ">第一卷(旧版)</a>
+            </div>
+        </div>
+    </header>
+    <div style="padding-top:40px;color:white;display:block;background:#04AA6D;font-size:1.5em;">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn" title="点击关闭。刷新网页可以重新打开。">&times;</span>
+        <h5 style="text-align:center;margin: 0;padding:0;padding-top: 20px;">辛笑笑特种化学品科技有限公司</h5>
+        <h1 style="text-align:center;margin: 0;padding:0;padding-bottom:20px;">化学品档案一 基本信息</h1>
+    </div>
+    <h4></h4>
+    <h2></h2>
+
+
+    <input type="text" id="myInput" onkeyup="searchtable()" placeholder="Search for ..." title="Type in a keyword">
+
+    <div style="height:400px; overflow-y: auto;overflow-x:auto;margin-left:2%;">
+        <table id="myTable" cellspacing="0">
+            <thead style="position:sticky;top: 0;">
+                <tr>
+                    <th style="width:30px;white-space: nowrap;background-color:#04AA6D;position:sticky;left: 0;z-index:999!important;">编号</th>
+                    <th style="background-color:#04AA6D;position:sticky;left: 30px;z-index:999!important;">物料中文商品名称</th>
+                    <th>物料英文商品名称</th>
+                    <th>EPR物料代码</th>
+                    <th style="width:68px;" title="收到的中文sds要3年内编制或修订。这列填写sds的编制或修订日期。">sds中文版</th>
+                    <th style="width:68px;" title="收到的中文sds内编制或修订日期加2.5年。">下次索取</th>
+                    <th style="width:68px;">sds英文版</th>
+                    <th style="width:30px;">tds中文版</th>
+                    <th style="width:30px;">tds英文版</th>
+                    <th>供应商中文公司全称</th>
+                    <th>供应商英文公司全称</th>
+                    <th style="width:30px;" title="公司 名称如与sds一致，填写Y，否则填写N，同时货物和sds退回供应商。">与sds</th>
+                    <th style="width:30px;" title="公司名称如与外包装标签一致，填写Y，否则填写N，同时货物退回供应商。">与包装</th>
+                    <th style="width:30px;" title="如走代理商，填写Y，否则填写N。">走代理</th>
+                    <th title="如走代理商，填写代理商公司全称，中文或英文皆可。">代理商公司全称</th>
+                    <th style="width:72px;" title="如走代理商，填写代理商公司资质的起始日期。酸碱盐可不用考虑。">代理商资质从</th>
+                    <th style="width:72px;" title="如走代理商，填写代理商公司资质的失效日期。酸碱盐可不用考虑。">代理商资质到</th>
+                    <th style="width:68px;">更新日期</th>
+                    <th style="width:72px;">更新人</th>
+                    <th style="width:30px;" title="sds正确后，看sds第二部分。如生产厂家分类为危险化学品，填写Y；如无，填写N。">危险化学品</th>
+                    <th style="width:30px;" title="点击删除,来删除那些不用的化学品,复制粘贴,形成自己工厂的化学品档案。">定制</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+
+        </table>
+    </div>
+
+    <!-- <div id="gypWin" title="basic dialog" style="background-color:red;color: #000;">gyp
+    </div>
+    <script>
+        $(function() {
+            $(".gypWinclass").click(function() {
+                $('#gypWin').html($(this).html());
+                // $('#gypWin').dialog();
+            });
+        });
+    </script> -->
+    <script>
+        var datas = [{
+            id: '010',
+            cnname: '醋酸',
+            enname: 'acetic acid',
+            erpno: '800012340001',
+            sds中文版: '20210225',
+            sds下次索取日期: '20230825',
+            sds英文版: '20210225',
+            tds中文版: 'Y',
+            tds英文版: 'N',
+            供应商中文公司全称: 'XX化工有限公司',
+            供应商英文公司全称: 'XX Chemical Co.,Ltd.',
+            与sds一致: 'Y',
+            与外包装标签一致: 'Y',
+            是否走代理商: 'Y',
+            代理商公司全称: 'YY化工门市部',
+            代理商资质从: '20220101',
+            代理商资质到: '20221231',
+            更新日期: '20220311',
+            更新人: 'gor',
+            危险化学品: 'Y',
+        }, {
+            id: '009',
+            cnname: '醋酸',
+            enname: 'acetic acid',
+            erpno: '800012340001',
+            sds中文版: '20210225',
+            sds下次索取日期: '20230825',
+            sds英文版: '20210225',
+            tds中文版: 'Y',
+            tds英文版: 'N',
+            供应商中文公司全称: 'XX化工有限公司',
+            供应商英文公司全称: 'XX Chemical Co.,Ltd.',
+            与sds一致: 'Y',
+            与外包装标签一致: 'Y',
+            是否走代理商: 'Y',
+            代理商公司全称: 'YY化工门市部',
+            代理商资质从: '20220101',
+            代理商资质到: '20221231',
+            更新日期: '20220311',
+            更新人: 'gor',
+            危险化学品: 'Y',
+        }, {
+            id: '008',
+            cnname: '醋酸',
+            enname: 'acetic acid',
+            erpno: '800012340001',
+            sds中文版: '20210225',
+            sds下次索取日期: '20230825',
+            sds英文版: '20210225',
+            tds中文版: 'Y',
+            tds英文版: 'N',
+            供应商中文公司全称: 'XX化工有限公司',
+            供应商英文公司全称: 'XX Chemical Co.,Ltd.',
+            与sds一致: 'Y',
+            与外包装标签一致: 'Y',
+            是否走代理商: 'Y',
+            代理商公司全称: 'YY化工门市部',
+            代理商资质从: '20220101',
+            代理商资质到: '20221231',
+            更新日期: '20220311',
+            更新人: 'gor',
+            危险化学品: 'Y',
+        }, {
+            id: '007',
+            cnname: '醋酸',
+            enname: 'acetic acid',
+            erpno: '800012340001',
+            sds中文版: '20210225',
+            sds下次索取日期: '20230825',
+            sds英文版: '20210225',
+            tds中文版: 'Y',
+            tds英文版: 'N',
+            供应商中文公司全称: 'XX化工有限公司',
+            供应商英文公司全称: 'XX Chemical Co.,Ltd.',
+            与sds一致: 'Y',
+            与外包装标签一致: 'Y',
+            是否走代理商: 'Y',
+            代理商公司全称: 'YY化工门市部',
+            代理商资质从: '20220101',
+            代理商资质到: '20221231',
+            更新日期: '20220311',
+            更新人: 'gor',
+            危险化学品: 'Y',
+        }, {
+            id: '006',
+            cnname: '醋酸',
+            enname: 'acetic acid',
+            erpno: '800012340001',
+            sds中文版: '20210225',
+            sds下次索取日期: '20230825',
+            sds英文版: '20210225',
+            tds中文版: 'Y',
+            tds英文版: 'N',
+            供应商中文公司全称: 'XX化工有限公司',
+            供应商英文公司全称: 'XX Chemical Co.,Ltd.',
+            与sds一致: 'Y',
+            与外包装标签一致: 'Y',
+            是否走代理商: 'Y',
+            代理商公司全称: 'YY化工门市部',
+            代理商资质从: '20220101',
+            代理商资质到: '20221231',
+            更新日期: '20220311',
+            更新人: 'gor',
+            危险化学品: 'Y',
+        }, {
+            id: '005',
+            cnname: '醋酸',
+            enname: 'acetic acid',
+            erpno: '800012340001',
+            sds中文版: '20210225',
+            sds下次索取日期: '20230825',
+            sds英文版: '20210225',
+            tds中文版: 'Y',
+            tds英文版: 'N',
+            供应商中文公司全称: 'XX化工有限公司',
+            供应商英文公司全称: 'XX Chemical Co.,Ltd.',
+            与sds一致: 'Y',
+            与外包装标签一致: 'Y',
+            是否走代理商: 'Y',
+            代理商公司全称: 'YY化工门市部',
+            代理商资质从: '20220101',
+            代理商资质到: '20221231',
+            更新日期: '20220311',
+            更新人: 'gor',
+            危险化学品: 'Y',
+        }, {
+            id: '004',
+            cnname: '醋酸',
+            enname: 'acetic acid',
+            erpno: '800012340001',
+            sds中文版: '20210225',
+            sds下次索取日期: '20230825',
+            sds英文版: '20210225',
+            tds中文版: 'Y',
+            tds英文版: 'N',
+            供应商中文公司全称: 'XX化工有限公司',
+            供应商英文公司全称: 'XX Chemical Co.,Ltd.',
+            与sds一致: 'Y',
+            与外包装标签一致: 'Y',
+            是否走代理商: 'Y',
+            代理商公司全称: 'YY化工门市部',
+            代理商资质从: '20220101',
+            代理商资质到: '20221231',
+            更新日期: '20220311',
+            更新人: 'gor',
+            危险化学品: 'Y',
+        }, {
+            id: '003',
+            cnname: '醋酸',
+            enname: 'acetic acid',
+            erpno: '800012340001',
+            sds中文版: '20210225',
+            sds下次索取日期: '20230825',
+            sds英文版: '20210225',
+            tds中文版: 'Y',
+            tds英文版: 'N',
+            供应商中文公司全称: 'XX化工有限公司',
+            供应商英文公司全称: 'XX Chemical Co.,Ltd.',
+            与sds一致: 'Y',
+            与外包装标签一致: 'Y',
+            是否走代理商: 'Y',
+            代理商公司全称: 'YY化工门市部',
+            代理商资质从: '20220101',
+            代理商资质到: '20221231',
+            更新日期: '20220311',
+            更新人: 'gor',
+            危险化学品: 'Y',
+        }, {
+            id: '002',
+            cnname: '醋酸',
+            enname: 'acetic acid',
+            erpno: '800012340001',
+            sds中文版: '20210225',
+            sds下次索取日期: '20230825',
+            sds英文版: '20210225',
+            tds中文版: 'Y',
+            tds英文版: 'N',
+            供应商中文公司全称: 'XX化工有限公司',
+            供应商英文公司全称: 'XX Chemical Co.,Ltd.',
+            与sds一致: 'Y',
+            与外包装标签一致: 'Y',
+            是否走代理商: 'Y',
+            代理商公司全称: 'YY化工门市部',
+            代理商资质从: '20220101',
+            代理商资质到: '20221231',
+            更新日期: '20220311',
+            更新人: 'gor',
+            危险化学品: 'Y',
+        }, {
+            id: '010',
+            cnname: '醋酸',
+            enname: 'acetic acid',
+            erpno: '800012340001',
+            sds中文版: '20210225',
+            sds下次索取日期: '20230825',
+            sds英文版: '20210225',
+            tds中文版: 'Y',
+            tds英文版: 'N',
+            供应商中文公司全称: 'XX化工有限公司',
+            供应商英文公司全称: 'XX Chemical Co.,Ltd.',
+            与sds一致: 'Y',
+            与外包装标签一致: 'Y',
+            是否走代理商: 'Y',
+            代理商公司全称: 'YY化工门市部',
+            代理商资质从: '20220101',
+            代理商资质到: '20221231',
+            更新日期: '20220311',
+            更新人: 'gor',
+            危险化学品: 'Y',
+        }, {
+            id: '009',
+            cnname: '醋酸',
+            enname: 'acetic acid',
+            erpno: '800012340001',
+            sds中文版: '20210225',
+            sds下次索取日期: '20230825',
+            sds英文版: '20210225',
+            tds中文版: 'Y',
+            tds英文版: 'N',
+            供应商中文公司全称: 'XX化工有限公司',
+            供应商英文公司全称: 'XX Chemical Co.,Ltd.',
+            与sds一致: 'Y',
+            与外包装标签一致: 'Y',
+            是否走代理商: 'Y',
+            代理商公司全称: 'YY化工门市部',
+            代理商资质从: '20220101',
+            代理商资质到: '20221231',
+            更新日期: '20220311',
+            更新人: 'gor',
+            危险化学品: 'Y',
+        }, {
+            id: '008',
+            cnname: '醋酸',
+            enname: 'acetic acid',
+            erpno: '800012340001',
+            sds中文版: '20210225',
+            sds下次索取日期: '20230825',
+            sds英文版: '20210225',
+            tds中文版: 'Y',
+            tds英文版: 'N',
+            供应商中文公司全称: 'XX化工有限公司',
+            供应商英文公司全称: 'XX Chemical Co.,Ltd.',
+            与sds一致: 'Y',
+            与外包装标签一致: 'Y',
+            是否走代理商: 'Y',
+            代理商公司全称: 'YY化工门市部',
+            代理商资质从: '20220101',
+            代理商资质到: '20221231',
+            更新日期: '20220311',
+            更新人: 'gor',
+            危险化学品: 'Y',
+        }, {
+            id: '007',
+            cnname: '醋酸',
+            enname: 'acetic acid',
+            erpno: '800012340001',
+            sds中文版: '20210225',
+            sds下次索取日期: '20230825',
+            sds英文版: '20210225',
+            tds中文版: 'Y',
+            tds英文版: 'N',
+            供应商中文公司全称: 'XX化工有限公司',
+            供应商英文公司全称: 'XX Chemical Co.,Ltd.',
+            与sds一致: 'Y',
+            与外包装标签一致: 'Y',
+            是否走代理商: 'Y',
+            代理商公司全称: 'YY化工门市部',
+            代理商资质从: '20220101',
+            代理商资质到: '20221231',
+            更新日期: '20220311',
+            更新人: 'gor',
+            危险化学品: 'Y',
+        }, {
+            id: '006',
+            cnname: '醋酸',
+            enname: 'acetic acid',
+            erpno: '800012340001',
+            sds中文版: '20210225',
+            sds下次索取日期: '20230825',
+            sds英文版: '20210225',
+            tds中文版: 'Y',
+            tds英文版: 'N',
+            供应商中文公司全称: 'XX化工有限公司',
+            供应商英文公司全称: 'XX Chemical Co.,Ltd.',
+            与sds一致: 'Y',
+            与外包装标签一致: 'Y',
+            是否走代理商: 'Y',
+            代理商公司全称: 'YY化工门市部',
+            代理商资质从: '20220101',
+            代理商资质到: '20221231',
+            更新日期: '20220311',
+            更新人: 'gor',
+            危险化学品: 'Y',
+        }, {
+            id: '005',
+            cnname: '醋酸',
+            enname: 'acetic acid',
+            erpno: '800012340001',
+            sds中文版: '20210225',
+            sds下次索取日期: '20230825',
+            sds英文版: '20210225',
+            tds中文版: 'Y',
+            tds英文版: 'N',
+            供应商中文公司全称: 'XX化工有限公司',
+            供应商英文公司全称: 'XX Chemical Co.,Ltd.',
+            与sds一致: 'Y',
+            与外包装标签一致: 'Y',
+            是否走代理商: 'Y',
+            代理商公司全称: 'YY化工门市部',
+            代理商资质从: '20220101',
+            代理商资质到: '20221231',
+            更新日期: '20220311',
+            更新人: 'gor',
+            危险化学品: 'Y',
+        }, {
+            id: '004',
+            cnname: '醋酸',
+            enname: 'acetic acid',
+            erpno: '800012340001',
+            sds中文版: '20210225',
+            sds下次索取日期: '20230825',
+            sds英文版: '20210225',
+            tds中文版: 'Y',
+            tds英文版: 'N',
+            供应商中文公司全称: 'XX化工有限公司',
+            供应商英文公司全称: 'XX Chemical Co.,Ltd.',
+            与sds一致: 'Y',
+            与外包装标签一致: 'Y',
+            是否走代理商: 'Y',
+            代理商公司全称: 'YY化工门市部',
+            代理商资质从: '20220101',
+            代理商资质到: '20221231',
+            更新日期: '20220311',
+            更新人: 'gor',
+            危险化学品: 'Y',
+        }, {
+            id: '003',
+            cnname: '醋酸',
+            enname: 'acetic acid',
+            erpno: '800012340001',
+            sds中文版: '20210225',
+            sds下次索取日期: '20230825',
+            sds英文版: '20210225',
+            tds中文版: 'Y',
+            tds英文版: 'N',
+            供应商中文公司全称: 'XX化工有限公司',
+            供应商英文公司全称: 'XX Chemical Co.,Ltd.',
+            与sds一致: 'Y',
+            与外包装标签一致: 'Y',
+            是否走代理商: 'Y',
+            代理商公司全称: 'YY化工门市部',
+            代理商资质从: '20220101',
+            代理商资质到: '20221231',
+            更新日期: '20220311',
+            更新人: 'gor',
+            危险化学品: 'Y',
+        }, {
+            id: '002',
+            cnname: '醋酸',
+            enname: 'acetic acid',
+            erpno: '800012340001',
+            sds中文版: '20210225',
+            sds下次索取日期: '20230825',
+            sds英文版: '20210225',
+            tds中文版: 'Y',
+            tds英文版: 'N',
+            供应商中文公司全称: 'XX化工有限公司',
+            供应商英文公司全称: 'XX Chemical Co.,Ltd.',
+            与sds一致: 'Y',
+            与外包装标签一致: 'Y',
+            是否走代理商: 'Y',
+            代理商公司全称: 'YY化工门市部',
+            代理商资质从: '20220101',
+            代理商资质到: '20221231',
+            更新日期: '20220311',
+            更新人: 'gor',
+            危险化学品: 'Y',
+        }, {
+            id: '001',
+            cnname: '醋酸',
+            enname: 'acetic acid',
+            erpno: '800012340001',
+            sds中文版: '20210225',
+            sds下次索取日期: '20230825',
+            sds英文版: '20210225',
+            tds中文版: 'Y',
+            tds英文版: 'N',
+            供应商中文公司全称: 'XX化工有限公司',
+            供应商英文公司全称: 'XX Chemical Co.,Ltd.',
+            与sds一致: 'Y',
+            与外包装标签一致: 'Y',
+            是否走代理商: 'Y',
+            代理商公司全称: 'YY化工门市部',
+            代理商资质从: '20220101',
+            代理商资质到: '20221231',
+            更新日期: '20220311',
+            更新人: 'gor',
+            危险化学品: 'Y',
+        }]
+
+        var tbody = document.querySelector('tbody');
+
+        for (var i = 0; i < datas.length; i++) {
+            var tr = document.createElement('tr');
+            var j = 0;
+            tbody.appendChild(tr);
+            for (var k in datas[i]) {
+                var td = document.createElement('td');
+                // td.innerHTML = datas[i][k];
+                // tr.appendChild(td);
+                j = j + 1
+                if (j == 2) {
+                    // td.innerHTML = "<a href='" + datas[i]['link'] + "'>" + datas[i][k] + "</a>";
+                    td.innerHTML = "<a href='summarypage.html' onclick='return popup(this, 'notes')'>" + datas[i][k] + "</a>";
+                    tr.appendChild(td);
+
+                } else if (k != "link") {
+                    td.innerHTML = "<span class='gypWinclass'>" + datas[i][k] + "</span>";
+                    tr.appendChild(td);
+                }
+            }
+            var td = document.createElement('td');
+            td.innerHTML = "<a href='javascript:;'>删除</ a>";
+            tr.appendChild(td);
+        }
+        var as = document.querySelectorAll('a');
+        for (var i = 0; i < as.length; i++) {
+            as[i].onclick = function() {
+                tbody.removeChild(this.parentNode.parentNode);
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        function popup(mylink, windowname) {
+            if (!window.focus) return true;
+            var href;
+            if (typeof(mylink) == 'string') href = mylink;
+            else href = mylink.href;
+            window.open(href, windowname, 'width=400,height=200,scrollbars=yes');
+            return false;
+        }
+    </script>
+
+    <script>
+        function searchtable0() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                // td = tr[i].getElementsByTagName("td")[0];
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+
+
+
+    <script>
+        function searchtable() {
+            // Declare variables
+            var input, filter, table, tr, td, td1, td2, td3, i;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 1; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                td1 = tr[i].getElementsByTagName("td")[1];
+                td2 = tr[i].getElementsByTagName("td")[2];
+                td3 = tr[i].getElementsByTagName("td")[3];
+
+                is_present = 0;
+
+                if (td) {
+                    if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        is_present = 1
+                    }
+                }
+                if (td1) {
+                    if (td1.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        is_present = 1
+                    }
+                }
+                if (td2) {
+                    if (td2.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        is_present = 1
+                    }
+                }
+                if (td3) {
+                    if (td3.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        is_present = 1
+                    }
+                }
+
+                if (is_present == 1) {
+                    tr[i].style.display = "";
+
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

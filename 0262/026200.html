@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>可溯源</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/basic.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/alerts.css"> -->
+    <style>
+        table {
+            width: 97%;
+            /* margin: 10px auto; */
+            border-collapse: collapse;
+            border-spacing: 0px;
+            text-align: center;
+            font-size: 0.7rem;
+            /* table-layout: fixed; */
+            /* margin-left: 80px; */
+        }
+        
+        thead tr {
+            height: 68px;
+            background-color: #ccc;
+            /* text-align: justify-all; */
+            /* overflow: hidden; */
+            /* white-space: nowrap; */
+            /* width: 100%; */
+            /* text-overflow: ellipsis; */
+            /* width: fit-content; */
+            /* text-size-adjust: auto; */
+            /* text-overflows：clip | ellipsis */
+        }
+        
+        th,
+        td {
+            /* white-space: nowrap; */
+            height: 40px;
+        }
+        /* th:nth-child(1),
+        td:nth-child(1) {
+            position: sticky;
+            left: 0;
+            z-index: 10;
+            background-color: #04AA6D;
+        }
+        
+        th:nth-child(2),
+        td:nth-child(2) {
+            position: sticky;
+            left: 30px;
+            background-color: #04AA6D;
+            z-index: 10;
+        }
+         */
+        
+        tr:nth-child(even) {
+            background-color: whitesmoke;
+            z-index: -1;
+        }
+        
+        tr:hover {
+            /* box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); */
+            background-color: #FFA500;
+        }
+        
+        .closebtn {
+            float: right;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }
+        
+        .gypbutton {
+            border: none;
+            color: rgb(10, 10, 10);
+            padding: 16px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            opacity: 0.6;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 20px;
+            background-color: white;
+        }
+        
+        .gypbutton:hover {
+            opacity: 1;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 20px;
+        }
+        
+        #myInput {
+            background-image: url('../image/searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            width: 94%;
+            font-size: 16px;
+            margin-left: 2%;
+            padding: 12px 20px 12px 40px;
+            margin-top: 50px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+        
+        @media screen and (max-width: 600px) {
+            table {
+                width: 100%;
+                display: block;
+                margin: 2px;
+                font-size: 0.25rem;
+                /* width: fit-content; */
+            }
+            th,
+            td {
+                text-align: left;
+                padding: 8px;
+                white-space: nowrap;
+            }
+            #myInput {
+                width: 100%;
+                font-size: 0.25rem;
+                margin: 2px;
+                padding: 12px 20px 12px 40px;
+                margin-top: 50px;
+                border: 1px solid #ddd;
+                margin-bottom: 12px;
+            }
+        }
+        /* Create four equal columns that floats next to each other */
+        
+        .columnlgc {
+            float: left;
+            width: 20%;
+            padding: 5px;
+            height: 100px;
+        }
+        
+        .rowlgc:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width: 600px) {
+            .columnlgc {
+                width: 100%;
+            }
+        }
+        /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+        
+        .flip-card {
+            background-color: transparent;
+            width: 100%;
+            height: 100%;
+            perspective: 1000px;
+        }
+        /* This container is needed to position the front and back side */
+        
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        /* Do an horizontal flip when you move the mouse over the flip box container */
+        
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        /* Position the front and back side */
+        
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 50px;
+            padding-top: 28px;
+        }
+        /* Style the front side (fallback if image is missing) */
+        
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+        /* Style the back side */
+        
+        .flip-card-back {
+            background-color: dodgerblue;
+            color: white;
+            transform: rotateY(180deg);
+        }
+        
+        .gypWinclass {
+            color: teal;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <div class="w3-top">
+
+            <div class="w3-bar w3-top w3-left-align w3-large gyp-Navbar-bgcolor">
+                <a href="index.html" class="w3-bar-item w3-button gyp-Navbar-bgcolor w3-hover-orange">home</a>
+                <a href="blsxvol1.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange active">第一卷</a>
+                <a href="blsxvol2.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange ">第二卷</a>
+                <a href="about.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange ">about</a>
+                <a href="https://blsx.readthedocs.io " class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-orange ">第一卷(旧版)</a>
+            </div>
+        </div>
+    </header>
+    <div style="padding-top:40px;color:white;display:block;background:#04AA6D;font-size:1.5em;">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn" title="点击关闭。刷新网页可以重新打开。">&times;</span>
+        <h5 style="text-align:center;margin: 0;padding:0;padding-top: 20px;">辛笑笑特种化学品科技有限公司</h5>
+        <h1 style="text-align:center;margin: 0;padding:0;padding-bottom:20px;">工艺单 - 可溯源，成品限用禁用物质管控，职业病危害告知</h1>
+    </div>
+
+
+
+    <input type="text" id="myInput" onkeyup="searchtable()" placeholder="Search for ..." title="Type in a keyword">
+
+    <div style="height:400px; overflow-y: auto;overflow-x:auto;margin-left:2%;">
+        <h6>订单号: XXX22ML0001 客户号: XXX666 客户名称: 人生就是大闹一场.</h6>
+        <h6>流转卡号: ML20220309 批号: ML20220309066 日期: 20220309</h6>
+        <h6>备注: 各种交货期，色牢度等等</h6>
+        <h6>安全信息1: 本订单的前处理和染色，因使用醋酸和烧碱产生职业病危害，前处理和染色员工必须按照上墙的职业危害告知卡执行。</h6>
+        <h6>安全信息2: 本订单的后整理做抗皱整理。抗皱剂含甲醛，后整理员工必须按照上墙的抗皱剂的职业危害告知卡执行。</h6>
+        <table id="myTable" cellspacing="0">
+            <thead style="position:sticky;top: 0;">
+                <tr>
+                    <th style="width:30px;white-space: nowrap;background-color:#04AA6D;position:sticky;left: 0;z-index:999!important;">行号</th>
+                    <th style="background-color:#04AA6D;position:sticky;left: 30px;z-index:999!important;">工艺编号</th>
+                    <th>工艺</th>
+                    <th style="width:68px;" title="收到的中文sds内编制或修订日期加2.5年。">物料代码</th>
+                    <th style="width:128px;">物料全称</th>
+                    <th style="width:68px;">限用禁用物质</th>
+                    <th style="width:68px;">职业危害告知</th>
+                    <th>物料批号</th>
+                    <th style="width:68px;">卷号/箱号/桶号</th>
+                    <th style="width:68px;">布车号/转盘号</th>
+                    <th>米数/配方</th>
+                    <th>单位</th>
+                    <th>开单用量</th>
+                    <th>单位</th>
+                    <th style="width:72px;" title="如走代理商，填写代理商公司资质的起始日期。酸碱盐可不用考虑。">开单时间</th>
+                    <th>实际称量</th>
+                    <th>单位</th>
+                    <th style="width:72px;" title="如走代理商，填写代理商公司资质的起始日期。酸碱盐可不用考虑。">操作时间</th>
+                    <th title="公司 名称如与sds一致，填写Y，否则填写N，同时货物和sds退回供应商。">允差</th>
+                    <th title="公司名称如与外包装标签一致，填写Y，否则填写N，同时货物退回供应商。">本次差异</th>
+                    <th title="如走代理商，填写Y，否则填写N。">判定</th>
+                    <th>操作人员</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        var datas = [{
+            id: '001',
+            工艺编号: '01P0',
+            工艺: '配锅/解坯',
+            物料代码: '800043219001',
+            物料全称: '100%涤纶春亚纺坯布',
+            限用禁用物质: 'APEO,锑',
+            职业危害告知: '粉尘',
+            物料批号: 'PB2022030501',
+            物料卷号箱号桶号: '01-04卷',
+            布车号转盘位置: '666布车',
+            米数配方: '688',
+            单位1: '米',
+            开单用量: '212.22',
+            单位2: 'kg',
+            开单时间: '20220309095501',
+            实际称量: '212.22',
+            单位3: 'kg',
+            操作时间: '20220309150009',
+            允差: '-',
+            本次差异: '-',
+            判定: '-',
+            操作人员: 'gor',
+
+        }, {
+            id: '002',
+            工艺编号: '02Q0',
+            工艺: '无张力退浆BO',
+            物料代码: '800043219001',
+            物料全称: '100%涤纶春亚纺坯布',
+            限用禁用物质: 'APEO,锑',
+            职业危害告知: '粉尘',
+            物料批号: 'PB2022030501',
+            物料卷号箱号桶号: '01-04卷',
+            布车号转盘位置: '666布车',
+            米数配方: '688',
+            单位1: '米',
+            开单用量: '212.22',
+            单位2: 'kg',
+            开单时间: '20220309095501',
+            实际称量: '-',
+            单位3: '-',
+            操作时间: '20220309202020',
+            允差: '-',
+            本次差异: '-',
+            判定: '-',
+            操作人员: 'gor',
+
+        }, {
+            id: '003',
+            工艺编号: '02Q0',
+            工艺: '无张力退浆BO',
+            物料代码: '800012340001',
+            物料全称: '烧碱',
+            限用禁用物质: '汞，铅，镍',
+            职业危害告知: '烧碱',
+            物料批号: 'SJ2201',
+            物料卷号箱号桶号: '10桶',
+            布车号转盘位置: 'Y001',
+            米数配方: '20',
+            单位1: 'g/L',
+            开单用量: '80',
+            单位2: 'kg',
+            开单时间: '20220301070101',
+            实际称量: '80.2',
+            单位3: 'kg',
+            操作时间: '20220301080001',
+            允差: '+/-2%',
+            本次差异: '+0.025%',
+            判定: '称料成功',
+            操作人员: 'gor',
+
+        }, {
+            id: '004',
+            工艺编号: '02Q0',
+            工艺: '无张力退浆BO',
+            物料代码: '800012340002',
+            物料全称: '高效皂洗剂ko-bs',
+            限用禁用物质: '无，因蓝标认证。',
+            职业危害告知: '无',
+            物料批号: 'ZXXZ220106',
+            物料卷号箱号桶号: '18桶',
+            布车号转盘位置: 'Y002',
+            米数配方: '5',
+            单位1: 'g/L',
+            开单用量: '20',
+            单位2: 'kg',
+            开单时间: '20220301070101',
+            实际称量: '20.2',
+            单位3: 'kg',
+            操作时间: '20220301080600',
+            允差: '+/-2%',
+            本次差异: '+1%',
+            判定: '称料成功',
+            操作人员: 'gor',
+
+        }, {
+            id: '005',
+            工艺编号: '02Q0',
+            工艺: '无张力退浆BO',
+            物料代码: '800012340003',
+            物料全称: '精炼剂a-bs',
+            限用禁用物质: '无，因蓝标认证。',
+            职业危害告知: '无',
+            物料批号: 'JLJ2202XA01',
+            物料卷号箱号桶号: '01桶',
+            布车号转盘位置: 'Y003',
+            米数配方: '1',
+            单位1: 'g/L',
+            开单用量: '4',
+            单位2: 'kg',
+            开单时间: '20220301070101',
+            实际称量: '4.0',
+            单位3: 'kg',
+            操作时间: '20220301081200',
+            允差: '+/-2%',
+            本次差异: '+0%',
+            判定: '称料成功',
+            操作人员: 'gor',
+
+        }, {
+            id: '006',
+            工艺编号: '02Q1',
+            工艺: '连续退浆OS',
+            物料代码: '800043219001',
+            物料全称: '100%涤纶春亚纺坯布',
+            限用禁用物质: 'APEO,锑',
+            职业危害告知: '无',
+            物料批号: 'PB2022030501',
+            物料卷号箱号桶号: '01-04卷',
+            布车号转盘位置: '666布车',
+            米数配方: '688',
+            单位1: '米',
+            开单用量: '212.22',
+            单位2: 'kg',
+            开单时间: '20220309095501',
+            实际称量: '-',
+            单位3: '-',
+            操作时间: '20220310042018',
+            允差: '-',
+            本次差异: '-',
+            判定: '-',
+            操作人员: 'gor',
+
+        }, {
+            id: '007',
+            工艺编号: '02Q1',
+            工艺: '连续退浆OS',
+            物料代码: '800012340004',
+            物料全称: '精炼剂os-bs',
+            职业危害告知: '无',
+            限用禁用物质: '无，因蓝标认证。',
+            物料批号: 'JLJ22OS01',
+            物料卷号箱号桶号: '01桶',
+            布车号转盘位置: 'Y004',
+            米数配方: '10',
+            单位1: 'g/L',
+            开单用量: '2.1',
+            单位2: 'kg',
+            开单时间: '20220309160008',
+            实际称量: '2.08',
+            单位3: 'kg',
+            操作时间: '20220309161212',
+            允差: '+/-2%',
+            本次差异: '-0.1%',
+            判定: '称料成功',
+            操作人员: 'gor',
+
+        }, {
+            id: '008',
+            工艺编号: '02Q1',
+            工艺: '连续退浆OS',
+            物料代码: '800012340001',
+            物料全称: '烧碱',
+            限用禁用物质: '汞，铅，镍',
+            职业危害告知: '烧碱',
+            物料批号: 'SJ2201',
+            物料卷号箱号桶号: '10桶',
+            布车号转盘位置: 'Y001',
+            米数配方: '10',
+            单位1: 'g/L',
+            开单用量: '2.1',
+            单位2: 'kg',
+            开单时间: '20220309160008',
+            实际称量: '2.1',
+            单位3: 'kg',
+            操作时间: '20220309161608',
+            允差: '+/-2%',
+            本次差异: '+0%',
+            判定: '称料成功',
+            操作人员: 'gor',
+
+
+        }, {
+            id: '009',
+            工艺编号: '05D0',
+            工艺: '苹果机染色',
+            物料代码: '800043219001',
+            物料全称: '100%涤纶春亚纺坯布',
+            限用禁用物质: 'APEO,锑',
+            职业危害告知: '粉尘',
+            物料批号: 'PB2022030501',
+            物料卷号箱号桶号: '01-04卷',
+            布车号转盘位置: '666布车',
+            米数配方: '688',
+            单位1: '米',
+            开单用量: '212.22',
+            单位2: 'kg',
+            开单时间: '20220309095501',
+            实际称量: '212.22',
+            单位3: 'kg',
+            操作时间: '20220310080808',
+            允差: '-',
+            本次差异: '-',
+            判定: '-',
+            操作人员: 'gor',
+        }, {
+            id: '010',
+            工艺编号: '05D0',
+            工艺: '苹果机染色',
+            物料代码: '800012340005',
+            物料全称: '醋酸88%',
+            限用禁用物质: '铅',
+            职业危害告知: '醋酸',
+            物料批号: 'XXX22CS1802',
+            物料卷号箱号桶号: '22桶',
+            布车号转盘位置: 'Y005',
+            米数配方: '1',
+            单位1: '%',
+            开单用量: '2.12',
+            单位2: 'kg',
+            开单时间: '20220310060606',
+            实际称量: '2.35',
+            单位3: 'kg',
+            操作时间: '20220310065050',
+            允差: '+/-1%',
+            本次差异: '+0.01%',
+            判定: '称料预警',
+            操作人员: 'gor',
+        }, {
+            id: '011',
+            工艺编号: '05D0',
+            工艺: '苹果机染色',
+            物料代码: '800012340101',
+            物料全称: '龙盛牌分散黄棕EE 300%',
+            限用禁用物质: '无，因蓝标认证。',
+            职业危害告知: '粉尘',
+            物料批号: 'LSZ0012201',
+            物料卷号箱号桶号: '01箱',
+            布车号转盘位置: 'D001',
+            米数配方: '2',
+            单位1: '%',
+            开单用量: '4.240',
+            单位2: 'kg',
+            开单时间: '20220310060606',
+            实际称量: '4.250',
+            单位3: 'kg',
+            操作时间: '20220310065050',
+            允差: '+/-1%',
+            本次差异: '+0.002%',
+            判定: '称料成功',
+            操作人员: 'gor',
+        }, {
+            id: '012',
+            工艺编号: '05D0',
+            工艺: '苹果机染色',
+            物料代码: '800012340102',
+            物料全称: '龙盛牌分散红玉EE 300%',
+            限用禁用物质: '无，因蓝标认证。',
+            职业危害告知: '粉尘',
+            物料批号: 'LSH0012202',
+            物料卷号箱号桶号: '03箱',
+            布车号转盘位置: 'D002',
+            米数配方: '2',
+            单位1: '%',
+            开单用量: '4.240',
+            单位2: 'kg',
+            开单时间: '20220310060606',
+            实际称量: '4.250',
+            单位3: 'kg',
+            操作时间: '20220310065250',
+            允差: '+/-1%',
+            本次差异: '+0.002%',
+            判定: '称料成功',
+            操作人员: 'gor',
+        }, {
+            id: '013',
+            工艺编号: '05D0',
+            工艺: '苹果机染色',
+            物料代码: '800012340103',
+            物料全称: '龙盛牌分散藏青EE 300%',
+            限用禁用物质: '无，因蓝标认证。',
+            职业危害告知: '粉尘',
+            物料批号: 'LSQ0032208',
+            物料卷号箱号桶号: '12箱',
+            布车号转盘位置: 'D003',
+            米数配方: '2',
+            单位1: '%',
+            开单用量: '4.240',
+            单位2: 'kg',
+            开单时间: '20220310060606',
+            实际称量: '4.250',
+            单位3: 'kg',
+            操作时间: '20220310065550',
+            允差: '+/-1%',
+            本次差异: '+0.002%',
+            判定: '称料成功',
+            操作人员: 'gor',
+        }, {
+            id: '014',
+            工艺编号: '05D0',
+            工艺: '苹果机染色',
+            物料代码: '800012340609',
+            物料全称: '匀染剂jet-bs',
+            限用禁用物质: '无，因蓝标认证。',
+            职业危害告知: '无',
+            物料批号: 'YRJ0922P02',
+            物料卷号箱号桶号: '7桶',
+            布车号转盘位置: 'R028',
+            米数配方: '1',
+            单位1: '%',
+            开单用量: '2.12',
+            单位2: 'kg',
+            开单时间: '20220310060606',
+            实际称量: '2.12',
+            单位3: 'kg',
+            操作时间: '20220310065950',
+            允差: '+/-1%',
+            本次差异: '+0.0%',
+            判定: '称料成功',
+            操作人员: 'gor',
+        }, {
+            id: '015',
+            工艺编号: '06K0',
+            工艺: '开福脱水',
+            物料代码: '800043219001',
+            物料全称: '100%涤纶春亚纺坯布',
+            限用禁用物质: 'APEO,锑',
+            职业危害告知: '无',
+            物料批号: 'PB2022030501',
+            物料卷号箱号桶号: '01-04卷',
+            布车号转盘位置: '666布车',
+            米数配方: '688',
+            单位1: '米',
+            开单用量: '212.22',
+            单位2: 'kg',
+            开单时间: '20220309095501',
+            实际称量: '-',
+            单位3: '-',
+            操作时间: '20220310120018',
+            允差: '-',
+            本次差异: '-',
+            判定: '-',
+            操作人员: 'gor',
+        }, {
+            id: '016',
+            工艺编号: '09X0',
+            工艺: '抗皱整理',
+            物料代码: '800043219001',
+            物料全称: '100%涤纶春亚纺坯布',
+            限用禁用物质: 'APEO,锑',
+            职业危害告知: '无',
+            物料批号: 'PB2022030501',
+            物料卷号箱号桶号: '01-04卷',
+            布车号转盘位置: '666布车',
+            米数配方: '688',
+            单位1: '米',
+            开单用量: '212.22',
+            单位2: 'kg',
+            开单时间: '20220309095501',
+            实际称量: '-',
+            单位3: '-',
+            操作时间: '20220310141020',
+            允差: '-',
+            本次差异: '-',
+            判定: '-',
+            操作人员: 'gor',
+        }, {
+            id: '017',
+            工艺编号: '09X0',
+            工艺: '抗皱整理',
+            物料代码: '800012340801',
+            物料全称: '低甲醛抗皱剂ho-bs',
+            限用禁用物质: '甲醛，虽然是蓝标认证。严格工艺控制。残液回用。',
+            职业危害告知: '甲醛',
+            物料批号: 'KZ0922ER09',
+            物料卷号箱号桶号: '19桶',
+            布车号转盘位置: 'H009',
+            米数配方: '1',
+            单位1: '%',
+            开单用量: '2.12',
+            单位2: 'kg',
+            开单时间: '20220310152000',
+            实际称量: '2.50',
+            单位3: 'kg',
+            操作时间: '20220310180000',
+            允差: '-',
+            本次差异: '-',
+            判定: '-',
+            操作人员: 'gor',
+        }, {
+            id: '018',
+            工艺编号: '10J0',
+            工艺: '成品经验',
+            物料代码: '800043219001',
+            物料全称: '100%涤纶春亚纺坯布',
+            限用禁用物质: 'APEO,锑',
+            职业危害告知: '无',
+            物料批号: 'PB2022030501',
+            物料卷号箱号桶号: '01-04卷',
+            布车号转盘位置: '666布车',
+            米数配方: '688',
+            单位1: '米',
+            开单用量: '212.22',
+            单位2: 'kg',
+            开单时间: '20220309095501',
+            实际称量: '206.80',
+            单位3: 'kg',
+            操作时间: '20220311080000',
+            允差: '+/-3%',
+            本次差异: '-2.88',
+            判定: '损耗达成',
+            操作人员: 'gor',
+        }, {
+            id: '019',
+            工艺编号: '10J0',
+            工艺: '成品经验',
+            物料代码: '900043210001',
+            物料全称: '100%涤纶春亚纺面料',
+            限用禁用物质: 'APEO,锑,甲醛,pH,色牢度',
+            职业危害告知: '粉尘,甲醛',
+            物料批号: 'ML20220309066',
+            物料卷号箱号桶号: '01卷',
+            布车号转盘位置: '-',
+            米数配方: '120',
+            单位1: '米',
+            开单用量: '-',
+            单位2: '-',
+            开单时间: '20220311080000',
+            实际称量: '39.2',
+            单位3: 'kg',
+            操作时间: '20220311081700',
+            允差: '+/-3%',
+            本次差异: '+0%',
+            判定: '打卷达成',
+            操作人员: 'gor',
+        }, {
+            id: '020',
+            工艺编号: '10J0',
+            工艺: '成品经验',
+            物料代码: '900043210001',
+            物料全称: '100%涤纶春亚纺面料',
+            限用禁用物质: 'APEO,锑,甲醛,pH,色牢度',
+            职业危害告知: '粉尘,甲醛',
+            物料批号: 'ML20220309066',
+            物料卷号箱号桶号: '02卷',
+            布车号转盘位置: '-',
+            米数配方: '168',
+            单位1: '米',
+            开单用量: '-',
+            单位2: '-',
+            开单时间: '20220311080000',
+            实际称量: '55.2',
+            单位3: 'kg',
+            操作时间: '20220311082800',
+            允差: '+/-3%',
+            本次差异: '+0%',
+            判定: '打卷达成',
+            操作人员: 'gor',
+        }, {
+            id: '021',
+            工艺编号: '10J0',
+            工艺: '成品经验',
+            物料代码: '900043210001',
+            物料全称: '100%涤纶春亚纺面料',
+            限用禁用物质: 'APEO,锑,甲醛,pH,色牢度',
+            职业危害告知: '粉尘,甲醛',
+            物料批号: 'ML20220309066',
+            物料卷号箱号桶号: '03卷',
+            布车号转盘位置: '-',
+            米数配方: '180',
+            单位1: '米',
+            开单用量: '-',
+            单位2: '-',
+            开单时间: '20220311080000',
+            实际称量: '51.2',
+            单位3: 'kg',
+            操作时间: '20220311083900',
+            允差: '+/-3%',
+            本次差异: '+0%',
+            判定: '打卷达成',
+            操作人员: 'gor',
+        }, {
+            id: '022',
+            工艺编号: '10J0',
+            工艺: '成品经验',
+            物料代码: '900043210001',
+            物料全称: '100%涤纶春亚纺面料',
+            限用禁用物质: 'APEO,锑,甲醛,pH,色牢度',
+            职业危害告知: '粉尘,甲醛',
+            物料批号: 'ML20220309066',
+            物料卷号箱号桶号: '04卷',
+            布车号转盘位置: '-',
+            米数配方: '180',
+            单位1: '米',
+            开单用量: '-',
+            单位2: '-',
+            开单时间: '20220311080000',
+            实际称量: '55.1',
+            单位3: 'kg',
+            操作时间: '20220311085200',
+            允差: '+/-3%',
+            本次差异: '+0%',
+            判定: '打卷达成',
+            操作人员: 'gor',
+        }]
+
+        var tbody = document.querySelector('tbody');
+
+        for (var i = 0; i < datas.length; i++) {
+            var tr = document.createElement('tr');
+            var j = 0;
+            tbody.appendChild(tr);
+            for (var k in datas[i]) {
+                var td = document.createElement('td');
+                td.innerHTML = datas[i][k];
+                tr.appendChild(td);
+                // j = j + 1
+                // if (j == 2) {
+                //     // td.innerHTML = "<a href='" + datas[i]['link'] + "'>" + datas[i][k] + "</a>";
+                //     td.innerHTML = "<a href='summarypage.html' onclick='return popup(this, 'notes')'>" + datas[i][k] + "</a>";
+                //     tr.appendChild(td);
+
+                // } else if (k != "link") {
+                //     td.innerHTML = "<span class='gypWinclass'>" + datas[i][k] + "</span>";
+                //     tr.appendChild(td);
+                // }
+            }
+            // var td = document.createElement('td');
+            // td.innerHTML = "<a href='javascript:;'>删除</ a>";
+            // tr.appendChild(td);
+        }
+        // var as = document.querySelectorAll('a');
+        // for (var i = 0; i < as.length; i++) {
+        //     as[i].onclick = function() {
+        //         tbody.removeChild(this.parentNode.parentNode);
+        //     }
+        // }
+    </script>
+
+    <script type="text/javascript">
+        function popup(mylink, windowname) {
+            if (!window.focus) return true;
+            var href;
+            if (typeof(mylink) == 'string') href = mylink;
+            else href = mylink.href;
+            window.open(href, windowname, 'width=400,height=200,scrollbars=yes');
+            return false;
+        }
+    </script>
+
+    <script>
+        function searchtable0() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                // td = tr[i].getElementsByTagName("td")[0];
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+
+
+
+    <script>
+        function searchtable() {
+            // Declare variables
+            var input, filter, table, tr, td, td1, td2, td3, i;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 1; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                td1 = tr[i].getElementsByTagName("td")[1];
+                td2 = tr[i].getElementsByTagName("td")[2];
+                td3 = tr[i].getElementsByTagName("td")[3];
+
+                is_present = 0;
+
+                if (td) {
+                    if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        is_present = 1
+                    }
+                }
+                if (td1) {
+                    if (td1.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        is_present = 1
+                    }
+                }
+                if (td2) {
+                    if (td2.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        is_present = 1
+                    }
+                }
+                if (td3) {
+                    if (td3.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        is_present = 1
+                    }
+                }
+
+                if (is_present == 1) {
+                    tr[i].style.display = "";
+
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

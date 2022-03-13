@@ -35,15 +35,17 @@ section {
 	Circular Navigation Menu
 *********************************************************/
 
-.CircularNavigation {
-    width: 600px;
-    height: 390px;
+.CircularNavigation,
+.CircularNavigationL2 {
+    width: 800px;
+    height: 800px;
     margin: 0 auto;
     position: relative;
 }
 
-.circleNavi {
-    width: 550px;
+.circleNavi,
+.circleNaviL2 {
+    width: 400px;
     height: 400px;
     opacity: 0;
     transform: scale(0);
@@ -54,20 +56,33 @@ section {
     bottom: 90px; */
 }
 
-.circleNavi a {
+.circleNavi .aL1 {
     text-decoration: none;
     color: white;
     display: block;
     height: 80px;
     width: 60px;
     line-height: 40px;
-    margin-left: -20px;
-    margin-top: -20px;
+    margin-left: 180px;
+    margin-top: 200px;
     position: absolute;
     text-align: center;
 }
 
-.circleNavi a:hover {
+.circleNaviL2 .aL2 {
+    text-decoration: none;
+    color: white;
+    display: block;
+    height: 80px;
+    width: 60px;
+    line-height: 40px;
+    margin-left: 120px;
+    margin-top: 60px;
+    position: absolute;
+    text-align: center;
+}
+
+.circleNavi .aL1:hover {
     color: #eef;
 }
 
@@ -80,24 +95,26 @@ section {
     padding: 12px;
 }
 
-.open.circleNavi {
+.open.circleNavi,
+.open.circleNaviL2 {
     opacity: 1;
     transform: scale(1);
 }
 
-.navbtn {
+.navbtn,
+.navbtnL2 {
     background: #6d438b none repeat scroll 0 0;
     border-radius: 50%;
     color: #fff;
     display: block;
     height: 100px;
-    left: calc(50% - 66px);
+    left: calc(50% - 266px);
     line-height: 40px;
     padding: 10px;
     position: absolute;
     text-align: center;
     text-decoration: none;
-    top: calc(50% - 50px);
+    top: calc(50% - 150px);
     width: 100px;
 }
 

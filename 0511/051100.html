@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>包罗三相</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/basic.css">
+<link rel="stylesheet" type="text/css" href="../css/alerts.css">
+<link rel="stylesheet" type="text/css" href="../css/chat.css">
+<style>
+    .chatcontainer {
+        border: 2px solid #dedede;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+        /* padding: 10px;
+        margin: 10px 0; */
+        width: 50%;
+        margin-left: 25%;
+    }
+    
+    .chatdarker {
+        border-color: #ccc;
+        background-color: #ddd;
+    }
+    
+    .chatcontainer::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    .chatcontainer img {
+        float: left;
+        max-width: 60px;
+        width: 100%;
+        margin-left: 4px;
+        margin-top: 4px;
+        margin-right: 20px;
+        border-radius: 50%;
+    }
+    
+    .chatcontainer img.right {
+        float: right;
+        margin-left: 20px;
+        margin-right: 4px;
+        margin-top: 4px;
+    }
+    
+    .chat-p-right {
+        text-align: justify-all;
+    }
+    
+    .chat-p-right-name {
+        text-align: right;
+        font-size: 0.28em;
+        margin-right: 88px;
+    }
+    
+    .chat-p-left {
+        font-size: 0.28em;
+        margin-left: 78px;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .chatcontainer {
+            width: 75%;
+            margin-left: 12.5%;
+        }
+    }
+</style>
+
+
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+
+        <div class="w3-bar w3-top w3-left-align w3-large gyp-Navbar-bgcolor">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large gyp-Navbar-small-bgcolor" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a href="../index.html" target="_blank" class="w3-bar-item w3-button gyp-Navbar-bgcolor">home</a>
+            <!-- <a href="../index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">包罗三相</a> -->
+            <a href="../about.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">about</a>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-collapse w3-animate-left" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+        </a>
+        <h5 class="w3-bar-item w3-small">目录</h5>
+        <a class="w3-bar-item w3-button" href="051100.html">051100 首页</a>
+        <a class="w3-bar-item w3-button" href="051101.html">051101 化学品档案 基本信息</a>
+        <a class="w3-bar-item w3-button" href="051102.html">051102 化学品档案 危险特性</a>
+        <a class="w3-bar-item w3-button" href="051103.html">051103 化学品档案 职业安全健康</a>
+        <!-- <a class="w3-bar-item w3-button" href="051104.html">051104 安全生产考核合格证书 (二)</a>
+        <a class="w3-bar-item w3-button" href="051105.html">051105 锅炉使用许可证</a>
+        <a class="w3-bar-item w3-button" href="051106.html">051106 锅炉操作证</a>
+        <a class="w3-bar-item w3-button" href="051107.html">051107 废气处理工证</a>
+        <a class="w3-bar-item w3-button" href="051108.html">051108 废水处理工证</a>
+        <a class="w3-bar-item w3-button" href="051109.html">051109 电工证</a>
+        <a class="w3-bar-item w3-button" href="051110.html">051110 电焊证</a>
+        <a class="w3-bar-item w3-button" href="051111.html">051111 叉车使用证</a>
+        <a class="w3-bar-item w3-button" href="051112.html">051112 叉车操作证</a>
+        <a class="w3-bar-item w3-button" href="051113.html">051113 电梯使用证</a>
+        <a class="w3-bar-item w3-button" href="051114.html">051114 电梯操作证</a>
+        <a class="w3-bar-item w3-button" href="051115.html">051115 电梯操作证</a>
+        <a class="w3-bar-item w3-button" href="051116.html">051116 急救员证</a>
+        <a class="w3-bar-item w3-button" href="051117.html">051117 危险化学品登记证</a>
+        <a class="w3-bar-item w3-button" href="051118.html">051118 危险化学品安全使用许可证</a>
+        <a class="w3-bar-item w3-button" href="051119.html">051119 危险化学品经营许可证</a>
+        <a class="w3-bar-item w3-button" href="051120.html">051120 安全生产许可证</a>
+        <a class="w3-bar-item w3-button" href="051121.html">051121 易制毒化学品购买申请表</a>
+        <a class="w3-bar-item w3-button" href="051122.html">051122 易制毒化学品备案证明</a>
+        <a class="w3-bar-item w3-button" href="051123.html">051123 易制毒化学品运输证明</a>
+        <a class="w3-bar-item w3-button" href="051124.html">051124 环境影响评价</a>
+        <a class="w3-bar-item w3-button" href="051125.html">051125 竣工验收批复</a>
+        <a class="w3-bar-item w3-button" href="051126.html">051126 压力容器使用许可证</a>
+        <a class="w3-bar-item w3-button" href="051127.html">051127 压力容器操作许可证</a>  -->
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:220px">
+        <!-- 这里开写正文 -->
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+                <h1 class="w3-text-teal">how to <mark class="floatnoteG"> 建立</mark><mark class="floatnoteV"> 化学品档案 </mark>？</h1>
+
+                <div>
+                    <!-- <p>
+                        手机横屏看本节，效果最佳。
+                    </p> -->
+                    <div class="summaryXS">
+                        <br>
+                        <br> 相,
+                        <br> 是相亲的相，
+                        <br> 指不得不自己亲自去干活，
+                        <br> 来完成老板交代的工作的人。
+                    </div>
+                    <div>
+                        <h4><br><br></h4>
+
+                        <h4>今天，照例，要先有微信截图。</h4>
+                        <!-- Notice/Center -->
+                        <!-- <div style="margin-right:50px;margin-left:50px;margin-bottom:10px;width:86%;height:50px;line-height:50px;background-color:#FFA500;float:left;text-align:center">包罗三只同命鸟(3)</div> -->
+                        <br><br>
+                        <div class="middle-timetag">
+                            <span>2016年05月09日 08:28</span>
+                        </div>
+
+
+                        <!-- left -->
+                        <div class="L-side">
+                            <div class="L-icon">
+                                <h1 class="R-name">XS</h1>
+                            </div>
+                            <div>3X安全经理XS</div>
+                            <div>
+                                <div class="L-side_sign"></div>
+                                <span>我们工厂有没有建立<a href="051101.html">化学品档案</a>？</span>
+                            </div>
+                        </div>
+
+                        <!-- right -->
+                        <div class="R-side">
+                            <div class="R-icon">
+                                <h1 class="R-name">!!!!</h1>
+                            </div>
+                            <div>一个声音@3X的面料供应商</div>
+                            <div>
+                                <div class="R-side_sign"></div>
+                                <span>Keep things simple. 你们给了我们3个表格，都是差不多的表格，都是要反复填写化学品。我们到现在还是不懂，为什么要填写这3个表格？</span>
+                            </div>
+                        </div>
+
+                        <!-- left -->
+                        <div class="L-side">
+                            <div class="L-icon">
+                                <h1 class="R-name">XS</h1>
+                            </div>
+                            <div>3X安全经理XS</div>
+                            <div>
+                                <div class="L-side_sign"></div>
+                                <span>比如我们每个人都一个<a href="http://www.mohrss.gov.cn/xxgk2020/fdzdgknr/zcfg/gfxwj/jy/202201/t20220110_432603.html">人事档案</a>，是反映每个人政治面貌、道德品行、学习工作经历、专业素养、工作实绩、遵纪守法以及家庭状况、社会关系等情况的历史记录材料，<a href="051101.html">化学品档案</a>就是汇总了每个化学品的基本信息(如商品名字，供应商联系方式)，禁用限用物质信息比如含不含甲醛等，安全生产属性，环境属性，认证信息，是否在用信息等等的信息汇总表。</span>
+                            </div>
+                        </div>
+                        <!-- right -->
+                        <div class="R-side">
+                            <div class="R-icon">
+                                <h1 class="R-name">!!!!</h1>
+                            </div>
+                            <div>一个声音@3X的面料供应商</div>
+                            <div>
+                                <div class="R-side_sign"></div>
+                                <span>我们工厂没有建员工档案，没有这方面的经验。化学品档案，你们有没有示例可以参照？</span>
+                            </div>
+                        </div>
+
+                        <!-- Notice/Center  -->
+                        <div class="middle-timetag-end">
+                            <span>2016年05月09日 09:08</span>
+                        </div>
+
+                        <h4>为每个在用化学品建立化学品档案，到底有什么用呢？</h4>
+                        <ol>
+                            <li>对采购部门来说，这是一个在用化学品名录和供应商通讯录。</li>
+                            <li>对采购部门来说，这是一个sds，TDS动态管理表，便于及时索要最新的sds和TDS。</li>
+                            <li>对采购部门来说，这是一个供应商资质管理表。</li>
+                            <li>对质量部门来说，这是一个限用禁用物质管理表，可以掌握哪些化学品含有的活性物质(如甲醛，异氰酸酯)和溶剂(如甲苯)是列为限用禁用物质，但是生产工艺必须用，在成品上的残留量是本厂的风险，必须去管控。</li>
+                            <li>对职业安全健康部门来说，这是一个职业病接触限值化学因素管理表，可以掌握在用化学品会产生的化学危害因素有哪些，涉及哪些岗位，需要配置哪些防护措施，</li>
+                            <li>对环境部门来说，这是一个废水污染物管理表，产生多少COD...，现有污水处理设施的处理工艺是否继续满足污染物处理...</li>
+                            <li>对环境部门来说，这是一个废气污染物管理表，产生多少VOC...，现有废气处理设施的处理工艺是否继续满足污染物处理...</li>
+                            <li>对环境部门来说，这是一个固废管理表，产生多少种废弃物...</li>
+                            <li>对应急部门来说，这是一个危险化学品管理表，在用多少种危险化学品...，现有储存设施是否满足储存要求...</li>
+                            <li>对应急部门来说，这是一个危险化学品风险管理表，在用多少种危险化学品...，每年用量有多少，建立危险化学品专项预案。</li>
+                            <li>如果你有更多，欢迎分享。</li>
+
+                        </ol>
+                        <br><br>
+                        <!-- <h4>掌握国内外生态纺织品技术法规和标准,一个工厂需要<mark class="floatnoteG"> 展现 </mark>哪些呢？</h4> -->
+                        <h4>目录:</h4>
+                        <ul>
+                            <!-- <li><a href="051101.html">051101 GB 18401-2010</a></li> -->
+
+                            <li><a href="051101.html">051101 化学品档案 基本信息</a></li>
+                            <li><a href="051102.html">051102 化学品档案 危险特性</a></li>
+                            <li><a href="051103.html">051103 化学品档案 职业安全健康</a></li>
+                            <!--<li><a href="051105.html">051105 锅炉使用许可证</a></li>
+                            <li><a href="051106.html">051106 锅炉操作证</a></li>
+                            <li><a href="051107.html">051107 废气处理工证</a></li>
+                            <li><a href="051108.html">051108 废水处理工证</a></li>
+                            <li><a href="051109.html">051109 电工证</a></li>
+                            <li><a href="051110.html">051110 电焊证</a></li>
+                            <li><a href="051111.html">051111 叉车使用证</a></li>
+                            <li><a href="051112.html">051112 叉车操作证</a></li>
+                            <li><a href="051113.html">051113 电梯使用证</a></li>
+                            <li><a href="051114.html">051114 电梯操作证</a></li>
+                            <li><a href="051115.html">051115 电梯操作证</a></li>
+                            <li><a href="051116.html">051116 急救员证</a></li>
+                            <li><a href="051117.html">051117 危险化学品登记证</a></li>
+                            <li><a href="051118.html">051118 危险化学品安全使用许可证</a></li>
+                            <li><a href="051119.html">051119 危险化学品经营许可证</a></li>
+                            <li><a href="051120.html">051120 安全生产许可证</a></li>
+                            <li><a href="051121.html">051121 易制毒化学品购买申请表</a></li>
+                            <li><a href="051122.html">051122 易制毒化学品备案证明</a></li>
+                            <li><a href="051123.html">051123 易制毒化学品运输证明</a></li>
+                            <li><a href="051124.html">051124 环境影响评价</a></li>
+                            <li><a href="051125.html">051125 竣工验收批复</a></li>
+                            <li><a href="051126.html">051126 压力容器使用许可证</a></li>
+                            <li><a href="051127.html">051127 压力容器操作许可证</a></li> -->
+                        </ul>
+
+                        <br/>
+                        <!-- <p>更多国内外生态纺织品标准和技术规范陆续添加中。如果你刚好知道一些，上面没有列入，烦请微信留言。</p> -->
+
+
+                    </div>
+                </div>
+                <div class="admonition note">
+                    <p class="admonition-title">
+                        <i>XB 学习笔记 20160509 17:00 Sunny</i>
+                    </p>
+                    <ul class="simple">
+                        <li>
+                            <p>今天，尝试为在用的每个化学品建立化学品档案，用时8h。</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr />
+                <p>Creation date: 20220312 Revision date: - Version: 0.1.0</p>
+                <p>免责声明
+                    <br>- 这个电子书是Free免费的, 也是Free自由的。
+                    <br>- 这个电子书是个人对工作的云端自学记录，内容聚合自元宇宙, 整理自过往的朋友圈。
+                    <br>- 这个电子书中的外部文章，外部链接，外部数据，外部图片等等的版权归原作者所有。
+                </p>
+
+
+                <!-- /#main -->
+            </div>
+        </div>
+    </div>>
+    <footer>
+        <object data="footer.html" width="100%" height="200px" type="text/html">
+       </object>
+    </footer>
+
+    <script>
+        // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+
+        // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+
+        // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+                overlayBg.style.display = "none";
+            } else {
+                mySidebar.style.display = 'block';
+                overlayBg.style.display = "block";
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+            overlayBg.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
