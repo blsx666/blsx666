@@ -12,7 +12,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="../css/alerts.css"> -->
     <style>
         table {
-            width: 97%;
+            width: 120%;
             /* margin: 10px auto; */
             border-collapse: collapse;
             border-spacing: 0px;
@@ -111,10 +111,10 @@
         
         @media screen and (max-width: 600px) {
             table {
-                width: 100%;
+                width: 120%;
                 display: block;
                 margin: 2px;
-                font-size: 0.25rem;
+                font-size: 0.5rem;
                 /* width: fit-content; */
             }
             th,
@@ -125,7 +125,7 @@
             }
             #myInput {
                 width: 100%;
-                font-size: 0.25rem;
+                font-size: 0.5rem;
                 margin: 2px;
                 padding: 12px 20px 12px 40px;
                 margin-top: 50px;
@@ -232,12 +232,12 @@
 
     <input type="text" id="myInput" onkeyup="searchtable()" placeholder="Search for ..." title="Type in a keyword">
 
-    <div style="height:400px; overflow-y: auto;overflow-x:auto;margin-left:2%;">
-        <h6>订单号: XXX22ML0001 客户号: XXX666 客户名称: 人生就是大闹一场.</h6>
-        <h6>流转卡号: ML20220309 批号: ML20220309066 日期: 20220309</h6>
-        <h6>备注: 各种交货期，色牢度等等</h6>
-        <h6>安全信息1: 本订单的前处理和染色，因使用醋酸和烧碱产生职业病危害，前处理和染色员工必须按照上墙的职业危害告知卡执行。</h6>
-        <h6>安全信息2: 本订单的后整理做抗皱整理。抗皱剂含甲醛，后整理员工必须按照上墙的抗皱剂的职业危害告知卡执行。</h6>
+    <div style="height:1200px; overflow-y: auto;overflow-x:auto;margin-left:2%;">
+        <h6 style="font-size: 0.8em;">订单号: XXX22ML0001 客户号: XXX666 客户名称: 人生就是大闹一场.</h6>
+        <h6 style="font-size: 0.8em;">流转卡号: ML20220309 批号: ML20220309066 日期: 20220309</h6>
+        <h6 style="font-size: 0.8em;">备注: 添加更多表头信息，添加各种交货期，色牢度等等</h6>
+        <h6 style="font-size: 0.8em;">安全信息1: 本订单的前处理和染色，因使用醋酸和烧碱产生职业病危害，前处理和染色员工必须按照上墙的职业危害告知卡执行。</h6>
+        <h6 style="font-size: 0.8em;">安全信息2: 本订单的后整理做抗皱整理。抗皱剂含甲醛，后整理员工必须按照上墙的抗皱剂的职业危害告知卡执行。</h6>
         <table id="myTable" cellspacing="0">
             <thead style="position:sticky;top: 0;">
                 <tr>
@@ -420,8 +420,8 @@
             工艺: '连续退浆OS',
             物料代码: '800012340004',
             物料全称: '精炼剂os-bs',
-            职业危害告知: '无',
-            限用禁用物质: '无，因蓝标认证。',
+            职业危害告知: '无,因蓝标认证',
+            限用禁用物质: '无',
             物料批号: 'JLJ22OS01',
             物料卷号箱号桶号: '01桶',
             布车号转盘位置: 'Y004',
@@ -653,7 +653,7 @@
             工艺: '抗皱整理',
             物料代码: '800012340801',
             物料全称: '低甲醛抗皱剂ho-bs',
-            限用禁用物质: '甲醛，虽然是蓝标认证。严格工艺控制。残液回用。',
+            限用禁用物质: '甲醛,虽蓝标.严控工艺.残液回用.',
             职业危害告知: '甲醛',
             物料批号: 'KZ0922ER09',
             物料卷号箱号桶号: '19桶',
