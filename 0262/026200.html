@@ -8,6 +8,7 @@
     <title>可溯源-成品安全-职业危害</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/basic.css">
     <style type="text/css">
         body {
             margin: 6px;
@@ -63,6 +64,7 @@
             left: 0;
             width: 38px;
             min-width: 38px;
+            color: #e0e0e0;
         }
         
         .div1 th:nth-child(2),
@@ -71,6 +73,7 @@
             left: 38px;
             width: 50px;
             min-width: 50px;
+            color: #e0e0e0;
         }
         
         .div1 th:nth-child(3),
@@ -79,6 +82,7 @@
             left: 92px;
             width: 80px;
             min-width: 80px;
+            color: #e0e0e0;
         }
         
         .div1 td:nth-child(1),
@@ -102,7 +106,7 @@
             font-size: 16px;
             margin-left: 2px;
             padding: 12px 20px 12px 40px;
-            margin-top: 20px;
+            margin-top: 10px;
             border: 1px solid #ddd;
             margin-bottom: 12px;
         }
@@ -126,7 +130,7 @@
                 font-size: 0.5rem;
                 margin: 2px;
                 padding: 12px 20px 12px 40px;
-                margin-top: 20px;
+                margin-top: 10px;
                 border: 1px solid #ddd;
                 margin-bottom: 12px;
             }
@@ -138,11 +142,11 @@
             font-size: 35px;
             cursor: pointer;
         }
-        /* .gyp-top {
+        
+        .gyp-top {
             position: static;
             width: 100%;
-            z-index: 1 
-    }*/
+        }
     </style>
 </head>
 
@@ -160,27 +164,25 @@
             </div>
         </div>
     </header>
-    <div style="padding-top:40px;color:white;display:block;background:#04AA6D;font-size:1.5em;position:sticky;top:-80px;">
+    <div style="padding-top:40px;color:white;display:block;background:#04AA6D;font-size:1.5em;">
         <span onclick="this.parentElement.style.display='none'" class="closebtn" title="点击关闭。刷新网页可以重新打开。">&times;</span>
         <h5 style="text-align:center;margin: 0;padding:0;padding-top: 20px;">辛笑笑特种化学品科技有限公司</h5>
         <h1 style="text-align:center;margin: 0;padding:0;padding-bottom:20px;">工艺单 - 可溯源，成品限用禁用物质管控，职业危害告知</h1>
     </div>
 
-    <div>
-        <h6 style="font-size: 0.8em;">订单号: XXX22ML0001 客户号: XXX666 客户名称: 人生就是大闹一场.</h6>
-        <h6 style="font-size: 0.8em;">流转卡号: ML20220309 批号: ML20220309066 日期: 20220309</h6>
-        <h6 style="font-size: 0.8em;">备注: 添加更多表头信息，添加各种交货期，色牢度等等</h6>
-        <h6 style="font-size: 0.8em;">安全信息1: 本订单的前处理和染色，因使用醋酸和烧碱产生职业病危害，前处理和染色员工必须按照上墙的职业危害告知卡执行。</h6>
-        <h6 style="font-size: 0.8em;">安全信息2: 本订单的后整理做抗皱整理。抗皱剂含甲醛，后整理员工必须按照上墙的抗皱剂的职业危害告知卡执行。</h6>
+    <div style="text-align:left; ">
+        <h6 style="text-align:left;font-size: 0.8em;float: left;"> 订单号: XXX22ML0001 客户号: XXX666 客户名称: 人生就是大闹一场. 流转卡号: ML20220309 批号: ML20220309066 日期: 20220309 备注: 添加更多表头信息，添加各种交货期，色牢度等等</h6>
+        <h6 style="text-align:left;font-size: 0.8em;float: left;">安全信息1: 本订单的前处理和染色，因使用醋酸和烧碱产生职业病危害，前处理和染色员工必须按照上墙的职业危害告知卡执行。</h6>
+        <h6 style="text-align:left;font-size: 0.8em;">安全信息2: 本订单的后整理做抗皱整理。抗皱剂含<mark class="floatnoteG"> 甲醛 </mark>，后整理员工必须按照上墙的抗皱剂的职业危害告知卡执行。</h6>
     </div>
 
-    <input type="text" id="myInput" onkeyup="searchtable0()" placeholder="Search for ..." title="Type in a keyword">
+    <input type="text" id="myInput" onkeyup="searchtable0()" placeholder="输入比如坯布...">
 
     <div id="myTable" class="div1 customers-list">
         <table>
             <tr>
                 <th>行号</th>
-                <th>工艺编号</th>
+                <th>工艺号</th>
                 <th>工艺</th>
                 <th style="width:68px;min-width:68px;">物料代码</th>
                 <th style="width:128px;min-width:118px;">物料全称</th>
@@ -213,8 +215,8 @@
         工艺编号: '01P0',
         工艺: '配锅/解坯',
         物料代码: '800043219001',
-        物料全称: '100%涤纶春亚纺坯布',
-        限用禁用物质: 'APEO,锑',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺<mark class="floatnoteV"> 坯布 </mark> ',
+        限用禁用物质: '<mark class="floatnoteV"> APEO </mark> ,<mark class="floatnoteV"> 锑 </mark> ',
         职业危害告知: '粉尘',
         物料批号: 'PB2022030501',
         物料卷号箱号桶号: '01-04卷',
@@ -237,8 +239,8 @@
         工艺编号: '02Q0',
         工艺: '无张力退浆BO',
         物料代码: '800043219001',
-        物料全称: '100%涤纶春亚纺坯布',
-        限用禁用物质: 'APEO,锑',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺<mark class="floatnoteV"> 坯布 </mark> ',
+        限用禁用物质: '<mark class="floatnoteV"> APEO </mark> ,<mark class="floatnoteV"> 锑 </mark> ',
         职业危害告知: '粉尘',
         物料批号: 'PB2022030501',
         物料卷号箱号桶号: '01-04卷',
@@ -333,8 +335,8 @@
         工艺编号: '02Q1',
         工艺: '连续退浆OS',
         物料代码: '800043219001',
-        物料全称: '100%涤纶春亚纺坯布',
-        限用禁用物质: 'APEO,锑',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺<mark class="floatnoteV"> 坯布 </mark> ',
+        限用禁用物质: '<mark class="floatnoteV"> APEO </mark> ,<mark class="floatnoteV"> 锑 </mark> ',
         职业危害告知: '无',
         物料批号: 'PB2022030501',
         物料卷号箱号桶号: '01-04卷',
@@ -406,8 +408,8 @@
         工艺编号: '05D0',
         工艺: '苹果机染色',
         物料代码: '800043219001',
-        物料全称: '100%涤纶春亚纺坯布',
-        限用禁用物质: 'APEO,锑',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺<mark class="floatnoteV"> 坯布 </mark> ',
+        限用禁用物质: '<mark class="floatnoteV"> APEO </mark> ,<mark class="floatnoteV"> 锑 </mark> ',
         职业危害告知: '粉尘',
         物料批号: 'PB2022030501',
         物料卷号箱号桶号: '01-04卷',
@@ -544,8 +546,8 @@
         工艺编号: '06K0',
         工艺: '开福脱水',
         物料代码: '800043219001',
-        物料全称: '100%涤纶春亚纺坯布',
-        限用禁用物质: 'APEO,锑',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺<mark class="floatnoteV"> 坯布 </mark> ',
+        限用禁用物质: '<mark class="floatnoteV"> APEO </mark> ,<mark class="floatnoteV"> 锑 </mark> ',
         职业危害告知: '无',
         物料批号: 'PB2022030501',
         物料卷号箱号桶号: '01-04卷',
@@ -567,8 +569,8 @@
         工艺编号: '09X0',
         工艺: '抗皱整理',
         物料代码: '800043219001',
-        物料全称: '100%涤纶春亚纺坯布',
-        限用禁用物质: 'APEO,锑',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺<mark class="floatnoteV"> 坯布 </mark> ',
+        限用禁用物质: '<mark class="floatnoteV"> APEO </mark> ,<mark class="floatnoteV"> 锑 </mark> ',
         职业危害告知: '无',
         物料批号: 'PB2022030501',
         物料卷号箱号桶号: '01-04卷',
@@ -590,9 +592,9 @@
         工艺编号: '09X0',
         工艺: '抗皱整理',
         物料代码: '800012340801',
-        物料全称: '低甲醛抗皱剂ho-bs',
-        限用禁用物质: '甲醛,虽蓝标.严控工艺.残液回用.',
-        职业危害告知: '甲醛',
+        物料全称: '低<mark class="floatnoteG"> 甲醛 </mark>抗皱剂ho-bs',
+        限用禁用物质: '<mark class="floatnoteG"> 甲醛 </mark>,虽蓝标.严控工艺.残液回用.',
+        职业危害告知: '<mark class="floatnoteG"> 甲醛 </mark>',
         物料批号: 'KZ0922ER09',
         物料卷号箱号桶号: '19桶',
         布车号转盘位置: 'H009',
@@ -613,8 +615,8 @@
         工艺编号: '10J0',
         工艺: '成品经验',
         物料代码: '800043219001',
-        物料全称: '100%涤纶春亚纺坯布',
-        限用禁用物质: 'APEO,锑',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺<mark class="floatnoteV"> 坯布 </mark> ',
+        限用禁用物质: '<mark class="floatnoteV"> APEO </mark> ,<mark class="floatnoteV"> 锑 </mark> ',
         职业危害告知: '无',
         物料批号: 'PB2022030501',
         物料卷号箱号桶号: '01-04卷',
@@ -636,9 +638,9 @@
         工艺编号: '10J0',
         工艺: '成品经验',
         物料代码: '900043210001',
-        物料全称: '100%涤纶春亚纺面料',
-        限用禁用物质: 'APEO,锑,甲醛,pH,色牢度',
-        职业危害告知: '粉尘,甲醛',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺面料',
+        限用禁用物质: '<span title="思考:为什么不测试烧碱带入的汞和铅?还有其他限用禁用物质都真的不用测试了?"><mark class="floatnoteV"> APEO </mark> ,<mark class="floatnoteV"> 锑 </mark> ,<mark class="floatnoteG"> 甲醛 </mark>,pH,色牢度</span>',
+        职业危害告知: '粉尘,<mark class="floatnoteG"> 甲醛 </mark>',
         物料批号: 'ML20220309066',
         物料卷号箱号桶号: '01卷',
         布车号转盘位置: '-',
@@ -659,9 +661,9 @@
         工艺编号: '10J0',
         工艺: '成品经验',
         物料代码: '900043210001',
-        物料全称: '100%涤纶春亚纺面料',
-        限用禁用物质: 'APEO,锑,甲醛,pH,色牢度',
-        职业危害告知: '粉尘,甲醛',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺面料',
+        限用禁用物质: '<span title="思考:为什么不测试烧碱带入的汞和铅?还有其他限用禁用物质都真的不用测试了?"><mark class="floatnoteV"> APEO </mark> ,<mark class="floatnoteV"> 锑 </mark> ,<mark class="floatnoteG"> 甲醛 </mark>,pH,色牢度</span>',
+        职业危害告知: '粉尘,<mark class="floatnoteG"> 甲醛 </mark>',
         物料批号: 'ML20220309066',
         物料卷号箱号桶号: '02卷',
         布车号转盘位置: '-',
@@ -682,9 +684,9 @@
         工艺编号: '10J0',
         工艺: '成品经验',
         物料代码: '900043210001',
-        物料全称: '100%涤纶春亚纺面料',
-        限用禁用物质: 'APEO,锑,甲醛,pH,色牢度',
-        职业危害告知: '粉尘,甲醛',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺面料',
+        限用禁用物质: '<span title="思考:为什么不测试烧碱带入的汞和铅?还有其他限用禁用物质都真的不用测试了?"><mark class="floatnoteV"> APEO </mark> ,<mark class="floatnoteV"> 锑 </mark> ,<mark class="floatnoteG"> 甲醛 </mark>,pH,色牢度</span>',
+        职业危害告知: '粉尘,<mark class="floatnoteG"> 甲醛 </mark>',
         物料批号: 'ML20220309066',
         物料卷号箱号桶号: '03卷',
         布车号转盘位置: '-',
@@ -705,9 +707,9 @@
         工艺编号: '10J0',
         工艺: '成品经验',
         物料代码: '900043210001',
-        物料全称: '100%涤纶春亚纺面料',
-        限用禁用物质: 'APEO,锑,甲醛,pH,色牢度',
-        职业危害告知: '粉尘,甲醛',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺面料',
+        限用禁用物质: '<span title="思考:为什么不测试烧碱带入的汞和铅?还有其他限用禁用物质都真的不用测试了?"><mark class="floatnoteV"> APEO </mark> ,<mark class="floatnoteV"> 锑 </mark> ,<mark class="floatnoteG"> 甲醛 </mark>,pH,色牢度</span>',
+        职业危害告知: '粉尘,<mark class="floatnoteG"> 甲醛 </mark>',
         物料批号: 'ML20220309066',
         物料卷号箱号桶号: '04卷',
         布车号转盘位置: '-',
@@ -726,9 +728,9 @@
     }, {
         id: '023',
         工艺编号: '旁白:',
-        工艺: '坯布已成面料',
+        工艺: '<mark class="floatnoteV"> 坯布 </mark> 已成面料',
         物料代码: '-',
-        物料全称: '100%涤纶春亚纺面料',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺面料',
         限用禁用物质: '22行达成后，面料符合蓝标认证',
         职业危害告知: '欲知详情问邵总',
         物料批号: 'ML20220309066',
@@ -751,7 +753,7 @@
         工艺编号: '11Y0',
         工艺: '数码直接印花',
         物料代码: '900043210001',
-        物料全称: '100%涤纶春亚纺面料',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺面料',
         限用禁用物质: '无,因蓝标认证面料',
         职业危害告知: '粉尘',
         物料批号: 'ML20220309066',
@@ -843,7 +845,7 @@
         工艺编号: '12G0',
         工艺: '汽蒸固色',
         物料代码: '900043210001',
-        物料全称: '100%涤纶春亚纺面料',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺面料',
         限用禁用物质: '无,因蓝标认证面料',
         职业危害告知: '粉尘,异丙醇(GBZ 2.1-2019 341个)',
         物料批号: 'ML20220309066',
@@ -889,7 +891,7 @@
         工艺编号: '13H0',
         工艺: '柔软烘干',
         物料代码: '900043210001',
-        物料全称: '100%涤纶春亚纺面料',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺面料',
         限用禁用物质: '无,因蓝标认证',
         职业危害告知: '粉尘',
         物料批号: 'ML20220309066',
@@ -935,7 +937,7 @@
         工艺编号: '10J1',
         工艺: '成品经验',
         物料代码: '900043210001',
-        物料全称: '100%涤纶春亚纺面料',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺面料',
         限用禁用物质: '无,因蓝标认证',
         职业危害告知: '粉尘',
         物料批号: 'ML20220309066',
@@ -958,7 +960,7 @@
         工艺编号: '10J1',
         工艺: '成品经验',
         物料代码: '900056784321',
-        物料全称: '100%涤纶春亚纺印花面料',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺印花面料',
         限用禁用物质: 'pH,色牢度',
         职业危害告知: '粉尘',
         物料批号: 'YHML220412111',
@@ -981,7 +983,7 @@
         工艺编号: '10J1',
         工艺: '成品经验',
         物料代码: '900056784321',
-        物料全称: '100%涤纶春亚纺印花面料',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺印花面料',
         限用禁用物质: 'pH,色牢度',
         职业危害告知: '粉尘',
         物料批号: 'YHML220412111',
@@ -1004,7 +1006,7 @@
         工艺编号: '10J1',
         工艺: '成品经验',
         物料代码: '900056784321',
-        物料全称: '100%涤纶春亚纺印花面料',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺印花面料',
         限用禁用物质: 'pH,色牢度',
         职业危害告知: '粉尘',
         物料批号: 'YHML220412111',
@@ -1027,7 +1029,7 @@
         工艺编号: '10J1',
         工艺: '成品经验',
         物料代码: '900056784321',
-        物料全称: '100%涤纶春亚纺印花面料',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺印花面料',
         限用禁用物质: 'pH,色牢度',
         职业危害告知: '粉尘',
         物料批号: 'YHML220412111',
@@ -1050,7 +1052,7 @@
         工艺编号: '旁白:',
         工艺: '面料已成印花面料',
         物料代码: '-',
-        物料全称: '100%涤纶春亚纺印花面料',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺印花面料',
         限用禁用物质: '34行达成后，面料符合蓝标认证',
         职业危害告知: '欲知详情问邵总',
         物料批号: 'YHML220412111',
@@ -1073,7 +1075,7 @@
         工艺编号: '14C0',
         工艺: '干法溶剂涂层',
         物料代码: '900056784321',
-        物料全称: '100%涤纶春亚纺印花面料',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺印花面料',
         限用禁用物质: '无,因蓝标认证',
         职业危害告知: '粉尘',
         物料批号: 'YHML220412111',
@@ -1142,7 +1144,7 @@
         工艺编号: '10J3',
         工艺: '成品经验',
         物料代码: '900056784321',
-        物料全称: '100%涤纶春亚纺印花面料',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺印花面料',
         限用禁用物质: '无,因蓝标认证',
         职业危害告知: '粉尘',
         物料批号: 'YHML220412111',
@@ -1165,7 +1167,7 @@
         工艺编号: '10J3',
         工艺: '成品经验',
         物料代码: '900034569988',
-        物料全称: '100%涤纶春亚纺印花涂层面料',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺印花涂层面料',
         限用禁用物质: '甲苯,DMF,色牢度',
         职业危害告知: '粉尘,甲苯,DMF',
         物料批号: 'TCYHML22042401',
@@ -1188,7 +1190,7 @@
         工艺编号: '旁白:',
         工艺: '面料已成印花涂层面料',
         物料代码: '-',
-        物料全称: '100%涤纶春亚纺印花涂层面料',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺印花涂层面料',
         限用禁用物质: '38行达成后，面料符合蓝标认证',
         职业危害告知: '欲知详情问邵总',
         物料批号: 'TCYHML22042401',
@@ -1211,7 +1213,7 @@
         工艺编号: '15L0',
         工艺: '热熔胶贴合',
         物料代码: '900034569988',
-        物料全称: '100%涤纶春亚纺印花涂层面料',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺印花涂层面料',
         限用禁用物质: '无,因蓝标认证',
         职业危害告知: '粉尘',
         物料批号: 'TCYHML22042401',
@@ -1280,7 +1282,7 @@
         工艺编号: '10J4',
         工艺: '成品经验',
         物料代码: '900034569988',
-        物料全称: '100%涤纶春亚纺印花涂层面料',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺印花涂层面料',
         限用禁用物质: '无,因蓝标认证',
         职业危害告知: '粉尘',
         物料批号: 'TCYHML22042401',
@@ -1303,7 +1305,7 @@
         工艺编号: '10J4',
         工艺: '成品经验',
         物料代码: '900056789999',
-        物料全称: '100%涤纶春亚纺印花涂层贴合面料',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺印花涂层贴合面料',
         限用禁用物质: '异氰酸酯,色牢度',
         职业危害告知: '粉尘',
         物料批号: 'TCYHML22042401',
@@ -1326,7 +1328,7 @@
         工艺编号: '旁白:',
         工艺: '面料已成印花涂层贴合面料',
         物料代码: '-',
-        物料全称: '100%涤纶春亚纺印花涂层贴合面料',
+        物料全称: '<mark class="floatnoteV"> 100%涤纶 </mark> 春亚纺印花涂层贴合面料',
         限用禁用物质: '44行达成后，面料符合蓝标认证',
         职业危害告知: '欲知详情问邵总',
         物料批号: 'TCYHML22042401',
