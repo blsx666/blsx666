@@ -8,7 +8,7 @@
    id="SVGRoot"
    version="1.1"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
-   sodipodi:docname="drawing13.svg"
+   sodipodi:docname="drawing1301.svg"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    enable-background="new"
@@ -21,7 +21,7 @@
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
-     id="defs77">
+     id="defs4787">
     <clipPath
        clipPathUnits="userSpaceOnUse"
        id="patternClipPath">
@@ -57,7 +57,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="4"
      inkscape:cx="25.125"
-     inkscape:cy="37.125"
+     inkscape:cy="36.875"
      inkscape:document-units="px"
      inkscape:current-layer="designTop"
      showgrid="false"
@@ -66,7 +66,7 @@
      inkscape:window-width="1920"
      inkscape:window-height="1051"
      inkscape:window-x="-9"
-     inkscape:window-y="1071"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      width="10px" />
   <metadata
@@ -375,6 +375,18 @@
            inkscape:transform-center-y="0.90308217"
            transform="matrix(1.0703749,0,0,1.0563637,15.735365,-38.037437)"
            d="M 44.5,43.75 C 42.640616,47.309391 35.550387,41.675461 31.953956,43.462151 28.357526,45.248841 28.564053,54.302562 24.60429,53.634095 20.644527,52.965628 23.811711,44.48144 21.00111,41.613149 18.190509,38.744858 9.6437293,41.73903 9.0558447,37.766504 8.4679601,33.793978 17.515617,34.184391 19.375,30.625 c 1.859384,-3.559391 -3.629344,-10.762612 -0.03291,-12.549301 3.596431,-1.78669 6.021006,6.938787 9.980769,7.607254 3.959763,0.668466 9.114323,-6.777542 11.924924,-3.909251 2.810601,2.868291 -4.738586,7.87052 -4.150701,11.843046 C 37.684963,37.589274 46.359383,40.190609 44.5,43.75 Z" />
+        <path
+           sodipodi:type="spiral"
+           style="fill:none;fill-rule:evenodd;stroke:#000000"
+           id="path1515"
+           sodipodi:cx="97"
+           sodipodi:cy="98.75"
+           sodipodi:expansion="1"
+           sodipodi:revolution="3"
+           sodipodi:radius="10.854147"
+           sodipodi:argument="-17.417398"
+           sodipodi:t0="0"
+           d="m 97,98.75 c 0.07521,0.538988 -0.68944,0.367295 -0.895833,0.124999 -0.559313,-0.656607 -0.01741,-1.59889 0.645835,-1.916666 1.186387,-0.568427 2.52109,0.267873 2.937498,1.416669 0.6111,1.685908 -0.552817,3.458978 -2.187503,3.958328 -2.17878,0.66556 -4.402854,-0.83709 -4.979164,-2.958334 -0.725228,-2.669374 1.120907,-5.349682 3.729172,-5.999997 3.158957,-0.787618 6.298195,1.404443 7.020825,4.500006 0.8516,3.648015 -1.68779,7.247765 -5.270836,8.041665 -4.136767,0.91659 -8.19803,-1.97103 -9.062495,-6.041677 -0.98226,-4.625326 2.25418,-9.148792 6.812509,-10.083328 5.113752,-1.048407 10.099912,2.53727 11.104162,7.583344 1.1149,5.602101 -2.82032,11.051301 -8.354179,12.124991" />
       </g>
       <g
          id="designBottomGenerator"
