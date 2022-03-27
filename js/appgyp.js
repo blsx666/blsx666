@@ -194,6 +194,21 @@ var vm = new Vue({
         isHandProtection: 'none',
         isBodyProtection: 'none',
         isVentilation: 'none',
+        gyp爆炸弹: null,
+        gyp火焰: null,
+        gyp圆圈上方火焰: null,
+        gyp高压气瓶: null,
+        gyp腐蚀: null,
+        gyp骷髅和交叉骨: null,
+        gyp感叹号: null,
+        gyp健康危害: null,
+        gyp环境危害: null,
+        gyp防护眼镜: null,
+        gyp防毒面具: null,
+        gyp防护手套: null,
+        gyp防护服: null,
+        gyp通风: null,
+        gyp防尘口罩: null,
         selectedPattern: null
     },
 
@@ -234,89 +249,89 @@ var vm = new Vue({
         selectPattern: function selectPattern(pattern) {
             this.selectedPattern = pattern;
             if (pattern.爆炸弹 === 'Y') {
-                pattern.爆炸弹 = '../image/explos.gif';
+                pattern.gyp爆炸弹 = '../image/explos.gif';
                 this.isGHS01 = 'block'
             } else {
                 this.isGHS01 = 'none'
             }
             if (pattern.火焰 === 'Y') {
-                pattern.火焰 = '../image/flamme.gif';
+                pattern.gyp火焰 = '../image/flamme.gif';
                 this.isGHS02 = 'block'
             } else {
                 this.isGHS02 = 'none'
             }
             if (pattern.圆圈上方火焰 === 'Y') {
-                pattern.圆圈上方火焰 = '../image/rondflam.gif';
+                pattern.gyp圆圈上方火焰 = '../image/rondflam.gif';
                 this.isGHS03 = 'block'
             } else {
                 this.isGHS03 = 'none'
             }
             if (pattern.高压气体 === 'Y') {
-                pattern.高压气体 = '../image/bottle.gif';
+                pattern.gyp高压气体 = '../image/bottle.gif';
                 this.isGHS04 = 'block'
             } else {
                 this.isGHS04 = 'none'
             }
 
             if (pattern.腐蚀 === 'Y') {
-                pattern.腐蚀 = '../image/acid_red.gif';
+                pattern.gyp腐蚀 = '../image/acid_red.gif';
                 this.isGHS05 = 'block'
             } else {
                 this.isGHS05 = 'none'
             }
             if (pattern.骷髅和交叉骨 === 'Y') {
-                pattern.骷髅和交叉骨 = '../image/skull.gif';
+                pattern.gyp骷髅和交叉骨 = '../image/skull.gif';
                 this.isGHS06 = 'block'
             } else {
                 this.isGHS06 = 'none'
             }
             if (pattern.感叹号 === 'Y') {
-                pattern.感叹号 = '../image/exclam.gif';
+                pattern.gyp感叹号 = '../image/exclam.gif';
                 this.isGHS07 = 'block'
             } else {
                 this.isGHS07 = 'none'
             }
 
             if (pattern.健康危害 === 'Y') {
-                pattern.健康危害 = '../image/silhouete.gif';
+                pattern.gyp健康危害 = '../image/silhouete.gif';
                 this.isGHS08 = 'block'
             } else {
                 this.isGHS08 = 'none'
             }
             if (pattern.环境危害 === 'Y') {
-                pattern.环境危害 = '../image/Aquatic-pollut-red.gif';
+                pattern.gyp环境危害 = '../image/Aquatic-pollut-red.gif';
                 this.isGHS09 = 'block'
             } else {
                 this.isGHS09 = 'none'
             }
 
             if (pattern.防护眼镜 === 'Y') {
-                pattern.防护眼镜 = '../image/eyeprotection.svg';
+                pattern.gyp防护眼镜 = '../image/eyeprotection.svg';
                 this.isEyeProtection = 'block'
             } else {
                 this.isEyeProtection = 'none'
             }
 
             if (pattern.防毒面具 === 'Y') {
-                pattern.防毒面具 = '../image/faceprotection.svg';
+                pattern.gyp防毒面具 = '../image/faceprotection.svg';
                 this.isFaceProtection = 'block'
             } else {
                 this.isFaceProtection = 'none'
             }
             if (pattern.防护手套 === 'Y') {
-                pattern.防护手套 = '../image/handprotection.svg';
+                pattern.gyp防护手套 = '../image/handprotection.svg';
                 this.isHandProtection = 'block'
             } else {
                 this.isHandProtection = 'none'
             }
             if (pattern.防护服 === 'Y') {
-                pattern.防护服 = '../image/bodyprotection.svg';
+                pattern.gyp防护服 = '../image/bodyprotection.svg';
                 this.isBodyProtection = 'block'
             } else {
                 this.isBodyProtection = 'none'
             }
             if (pattern.通风 === 'Y') {
-                pattern.通风 = '../image/ventilation.svg';
+                pattern.gyp通风 = '../image/ventilation.svg';
                 this.isVentilation = 'block'
             } else {
                 this.isVentilation = 'none'
