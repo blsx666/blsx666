@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.css">
     <link href="../css/main.css" rel="stylesheet" type="text/css">
     <!-- from http://www.heropatterns.com/ -->
+    <link rel="stylesheet" href="../static/vendor/fontawesome/5.13.0/css/all.min.css">
+
 </head>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -20,18 +22,24 @@
     table {
         border-collapse: collapse;
         border: 1px solid #44475C;
-        margin: 10px 10px 0 10px;
+        margin: 0px;
+        font-size: 0.7rem;
+        /* margin-left: 2%; */
         /* background-color: aqua; */
     }
     
     table th {
-        text-transform: uppercase;
         text-align: center;
+        /* justify-content: center; */
+        /* align-items: center; */
         background: #44475C;
         color: #FFF;
         cursor: pointer;
         padding: 2px;
-        min-width: 30px;
+        background-color: #04AA6D;
+        /* position: sticky; */
+        left: 30px;
+        /* z-index: 999!important; */
     }
     
     table th:hover {
@@ -121,39 +129,102 @@
         display: table;
         clear: both;
     }
+    
+    #myInput {
+        background-image: url('../image/searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        width: 98%;
+        font-size: 16px;
+        margin-left: 2%;
+        padding: 12px 20px 12px 40px;
+        margin-top: 10px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+    }
+    
+    @media screen and (max-width: 600px) {
+        table {
+            width: 100%;
+            display: block;
+            margin: 2px;
+            font-size: 0.25rem;
+        }
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+            white-space: nowrap;
+        }
+        #myInput {
+            width: 100%;
+            font-size: 0.25rem;
+            margin: 2px;
+            padding: 12px 20px 12px 40px;
+            margin-top: 50px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+    }
+    
+    details {
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        padding: .5em .5em 0;
+        margin-left: 2%;
+    }
+    
+    summary {
+        font-weight: bold;
+        margin: -.5em -.5em 0;
+        padding: .5em;
+    }
+    
+    details[open] {
+        padding: .5em;
+    }
+    
+    details[open] summary {
+        border-bottom: 1px solid #aaa;
+        margin-bottom: .5em;
+    }
 </style>
 
 <body>
-    <h1>化学品档案,COD测算,危险化学品安全周知卡,职业危害告知卡 </h1>
-    <h3>用法说明:</h3>
-    <ol>
-        <li>第1行是每个单元格的填写注解.</li>
-        <li>第2行开始,可以点击任意单元格内的文字,生成职业危害告知卡.粉尘的职业危害告知卡,不会生成.</li>
-        <li>点击每列的标题,可以排序.</li>
-        <li>正在编写中: 危险化学品安全周知卡</li>
-        <li>正在编写中: COD测算</li>
-        <li>正在编写中: 搜索功能</li>
-    </ol>
+    <h1 style="margin: left 2%;padding: 2%;">化学品档案,COD测算,危险化学品安全周知卡,职业危害告知卡 </h1>
 
+    <details>
+        <summary class="summaryIndex fa fa-angle-double-right">点击这里看用法说明:</summary>
+        <ol>
+            <li>第1行是每个单元格的填写注解.</li>
+            <li>第2行开始,可以点击任意单元格内的文字,生成职业危害告知卡.粉尘的职业危害告知卡,不会生成.</li>
+            <li>点击每列的标题,可以排序.</li>
+            <li>正在编写中: 危险化学品安全周知卡</li>
+            <li>正在编写中: COD测算</li>
+        </ol>
+    </details>
     <div id="app">
+        <input type="text" id="myInput" onkeyup="searchtable()" placeholder="输入比如醋酸..." title="Type in a keyword">
 
-        <table class="gyp-table-td">
-            <thead>
-                <tr>
-                    <th v-for="col in columns" v-on:click="sortTable(col)">{{col}}
-                        <div class="arrow" v-if="col == sortColumn" v-bind:class="[ascending ? 'arrow_up' : 'arrow_down']"></div>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="row in get_rows()">
+        <div style="height:400px; overflow-y: auto;overflow-x:auto;margin-left:2%;">
+            <table id="myTable" class="gyp-table-td">
+                <thead style="position: sticky;top: 0;">
+                    <tr>
+                        <th v-for="col in columns" v-on:click="sortTable(col)">{{col}}
+                            <div class="arrow" v-if="col == sortColumn" v-bind:class="[ascending ? 'arrow_up' : 'arrow_down']"></div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="row in get_rows()">
 
-                    <td v-for="col in columns">
-                        <a data-toggle="modal" data-target="#mymodal" @click="selectPattern(row)">{{row[col]}}</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                        <td v-for="col in columns">
+                            <a data-toggle="modal" data-target="#mymodal" @click="selectPattern(row)">{{row[col]}}</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <div class="pagination">
             <div class="number" v-for="i in num_pages()" v-bind:class="[i == currentPage ? 'active' : '']" v-on:click="change_page(i)">{{i}}</div>
         </div>
@@ -167,7 +238,7 @@
                         <h1 class="modal-title">职业危害告知卡Workplace Safety Card</h1>
                     </div>
                     <div class="modal-body ">
-                        <table style="width:100%;padding:0;margin: 0;">
+                        <table style="width:100%;padding:0;margin: 0;font-size: 1rem;">
                             <tbody>
                                 <tr style="color:white;background-color: red;font-size:1.5em">
                                     <td colspan="3">此工作场所存在 <strong>{{ selectedPattern.职业危害物质 }} </strong>，对人体有害，烦请注意防护。</td>
@@ -248,14 +319,14 @@
                                 </tr>
                                 <tr>
 
-                                    <td colspan="2">GB/T 31523.1-2015 安全信息识别系统 第1部分：标志和GBZ 158-2003
+                                    <td colspan="2">GB/T 31523.1-2015 安全信息识别系统 第1部分: 标志和GBZ 158-2003
                                     </td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">
                                         <div class="gyp-ppe-row">
                                             <img v-bind:src="selectedPattern.gyp防护眼镜" alt="protection pictogram" v-bind:style="{display:isEyeProtection}" class="gyp-ppe-column" />
-                                            <img v-bind:src="selectedPattern.gyp防毒面具" alt="protection pictogram" v-bind:style="{display:isFaceProtection}" class="gyp-ppe-column" />
+                                            <img v-bind:src="selectedPattern.gyp防护面具" alt="protection pictogram" v-bind:style="{display:isFaceProtection}" class="gyp-ppe-column" />
                                             <img v-bind:src="selectedPattern.gyp防护手套" alt="protection pictogram" v-bind:style="{display:isHandProtection}" class="gyp-ppe-column" />
                                             <img v-bind:src="selectedPattern.gyp防护服" alt="protection pictogram" v-bind:style="{display:isBodyProtection}" class="gyp-ppe-column" />
                                             <img v-bind:src="selectedPattern.gyp通风" alt="protection pictogram" v-bind:style="{display:isVentilation}" class="gyp-ppe-column" />
@@ -293,5 +364,107 @@
     <script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
     <script src="../js/appgyp.js"></script>
 </body>
+<script>
+    function searchtable() {
+        // Declare variables
+        var input, filter, table, tr, td, tdd, i, j;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 1; i < tr.length; i++) {
+            is_present = 0;
+            td = tr[i].getElementsByTagName("td");
+            for (j = 1; j < td.length; j++) {
+                tdd = td[j - 1]; //.getElementsByTagName("td")[j];
+                // td1 = tr[i].getElementsByTagName("td")[1];
+                // td2 = tr[i].getElementsByTagName("td")[2];
+                // td3 = tr[i].getElementsByTagName("td")[3];
+
+                // is_present = 0;
+
+                if (tdd) {
+                    if (tdd.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        is_present = 1
+                    }
+                }
+            }
+            // if (td1) {
+            //     if (td1.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            //         is_present = 1
+            //     }
+            // }
+            // if (td2) {
+            //     if (td2.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            //         is_present = 1
+            //     }
+            // }
+            // if (td3) {
+            //     if (td3.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            //         is_present = 1
+            //     }
+            // }
+
+            if (is_present == 1) {
+                tr[i].style.display = "";
+
+            } else {
+                tr[i].style.display = "none";
+            }
+
+        }
+    }
+</script>
+
+<script>
+    function searchtable0() {
+        // Declare variables
+        var input, filter, table, tr, td, td1, td2, td3, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 1; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            td1 = tr[i].getElementsByTagName("td")[1];
+            td2 = tr[i].getElementsByTagName("td")[2];
+            td3 = tr[i].getElementsByTagName("td")[3];
+
+            is_present = 0;
+
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    is_present = 1
+                }
+            }
+            if (td1) {
+                if (td1.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    is_present = 1
+                }
+            }
+            if (td2) {
+                if (td2.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    is_present = 1
+                }
+            }
+            if (td3) {
+                if (td3.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    is_present = 1
+                }
+            }
+
+            if (is_present == 1) {
+                tr[i].style.display = "";
+
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+</script>
 
 </html>
