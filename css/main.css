@@ -133,6 +133,16 @@ a:hover {
     margin-top: 1px;
 }
 
+.btn-hazprimary {
+    color: #FFFFFF;
+    margin-right: 20px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.10);
+    background-color: #ec35a0;
+    background-image: none;
+    padding: 5px 20px;
+    margin-top: 1px;
+}
+
 .btn-link {
     color: #9179BA;
     background-image: none;

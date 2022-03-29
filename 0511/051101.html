@@ -167,29 +167,41 @@
         <summary class="summaryIndex fa fa-angle-double-right">点击这里看用法说明:</summary>
         <ol>
             <li>第1行是每个单元格的填写注解.</li>
-            <li>第2行开始,可以点击任意单元格内的文字,生成职业危害告知卡.粉尘的职业危害告知卡,不会生成.</li>
+            <li>第2行开始,可以点击第一列,生成职业危害告知卡或危险化学品安全告知卡.粉尘的职业危害告知卡,不会生成.</li>
             <li>点击每列的标题,可以排序.</li>
-            <li>正在编写中: 危险化学品安全周知卡</li>
             <li>正在编写中: COD测算</li>
         </ol>
     </details>
     <div id="app">
-        <input type="text" id="myInput" onkeyup="searchtable()" placeholder="输入比如醋酸..." title="Type in a keyword">
+        <input type="text" id="myInput" onkeyup="searchtable()" placeholder="输入比如醋酸, H340..." title="Type in a keyword">
 
         <div style="height:400px; overflow-y: auto;overflow-x:auto;margin-left:2%;">
             <table id="myTable">
                 <thead style="position: sticky;top: 0;">
                     <tr>
+                        <th>action</th>
                         <th v-for="col in columns" v-on:click="sortTable(col)">{{col}}
                             <div class="arrow" v-if="col == sortColumn" v-bind:class="[ascending ? 'arrow_up' : 'arrow_down']"></div>
                         </th>
+
                     </tr>
                 </thead>
                 <tbody class="gyp-table-td">
-                    <tr v-for="row in get_rows()">
 
+                    <tr v-for="row in get_rows()">
+                        <td>
+                            <span v-if="row.职业危害物质 !='无'">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal" @click="selectPattern(row)">职业危害告知卡</button>
+                            </span>
+                            <span v-else-if="row.危险化学品 === 'Y'">
+                                <button type="button" class="btn btn-hazprimary" data-toggle="modal" data-target="#mymodal" @click="selectPattern(row)">危化安全周知卡</button>
+                            </span>
+                            <span v-else>
+                                无.核对有无粉尘
+                            </span>
+                        </td>
                         <td v-for="col in columns">
-                            <a data-toggle="modal" data-target="#mymodal" @click="selectPattern(row)">{{row[col]}}</a>
+                            <span>{{row[col]}}</span>
                         </td>
                     </tr>
                 </tbody>
@@ -205,16 +217,37 @@
                 <div class="modal-content">
                     <div class="modal-header" style="background-color: white;">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>close</title><path d="M10 8.586l-7.07-7.07-1.415 1.413L8.585 10l-7.07 7.07 1.414 1.415 7.07-7.07 7.07 7.07 1.415-1.414-7.07-7.07 7.07-7.07-1.414-1.415L10 8.585" fill="black" fill-rule="evenodd"/></svg></span></button>
-                        <h1 class="modal-title">职业危害告知卡Workplace Safety Card</h1>
+                        <h1 class="modal-title">
+                            <span v-if="selectedPattern.职业危害物质 !='无'">
+                                职业危害告知卡Workplace Safety Card
+                            </span>
+                            <span v-else-if="selectedPattern.危险化学品 === 'Y'">
+                                危险化学品安全周知卡Chemical Safety Card
+                            </span></h1>
                     </div>
                     <div class="modal-body ">
                         <table style="width:100%;padding:0;margin: 0;font-size: 1rem;">
                             <tbody>
                                 <tr style="color:white;background-color: red;font-size:1.5rem">
-                                    <td colspan="3">此工作场所存在 <strong>{{ selectedPattern.职业危害物质 }} </strong>，对人体有害，烦请注意防护。</td>
+                                    <td colspan="3">此工作场所存在
+                                        <span v-if="selectedPattern.职业危害物质 !='无'">
+                                            <strong>{{ selectedPattern.职业危害物质 }} </strong>, 
+                                        </span>
+                                        <span v-else-if="selectedPattern.危险化学品 === 'Y'">
+                                            <strong>{{ selectedPattern.危险组分 }} </strong>, 
+                                        </span> 对人体有害，烦请注意防护。
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td rowspan="6" style="width: 20% ;text-align:center;font: size 1.25rem;">{{ selectedPattern.职业危害物质 }} <br> <span style="font: size 0.6em;"> 来自如下物料:<br> {{ selectedPattern.中文名称 }} <br> {{ selectedPattern.英文名称 }}</span></td>
+                                    <td rowspan="6" style="width: 20% ;text-align:center;font: size 1.25rem;">
+                                        <span v-if="selectedPattern.职业危害物质 !='无'">
+                                            <strong>{{ selectedPattern.职业危害物质 }} </strong>
+                                        </span>
+                                        <span v-else-if="selectedPattern.危险化学品 === 'Y'">
+                                            <strong>{{ selectedPattern.危险组分 }} </strong>
+                                        </span>
+                                        <br>
+                                        <span style="font: size 0.6em;"> 来自如下物料:<br> {{ selectedPattern.中文名称 }} <br> {{ selectedPattern.英文名称 }}</span></td>
                                     <td>理化特性</td>
                                     <td>健康危害</td>
                                 </tr>
@@ -307,7 +340,12 @@
 
                                 <tr>
                                     <td colspan="3">
+                                        <span v-if="selectedPattern.职业危害物质 !='无'">
                                         标准限值：{{ selectedPattern.职业接触限值 }} (强制国标GBZ 2.1-2019 {{ selectedPattern.GBZ212019 }}个) 检测数据：PC-TWA 0.88 mg/m3 合格 <br> 检测日期：20200909 检测机构：通标标准技术服务有限公司(SGS) 预计下次检测日期：20210808
+                                        </span>
+                                        <span v-else-if="selectedPattern.危险化学品 === 'Y'">
+                                        </span>
+
                                     </td>
                                 </tr>
                                 <tr style="color:white;background-color: red;font-size:1.5rem">
@@ -315,7 +353,13 @@
                                 </tr>
                                 <tr>
 
-                                    <td colspan="3" style="font-size:0.7rem">此职业病危害告知卡按照
+                                    <td colspan="3" style="font-size:0.7rem">
+                                        <span v-if="selectedPattern.职业危害物质 !='无'">
+                                            此职业危害告知卡按照
+                                        </span>
+                                        <span v-else-if="selectedPattern.危险化学品 === 'Y'">
+                                            此危险化学品安全告知卡参照
+                                        </span>
                                         <a href="http://www.gov.cn/xinwen/2014-11/21/content_2781778.htm" target="blank">《用人单位职业病危害告知与警示标识管理规范》</a> 编写。该规范原文链接: http://www.gov.cn/xinwen/2014-11/21/content_2781778.htm。<br> 告知卡编号：GYP100 编写：本厂EHS负责人的姓名 初次编写日期：20141113
                                         上次修订日期：20201111，最近修订日期：20210202 如褪色，掉落，破损，错误，烦请联系本厂EHS负责人的姓名。
                                     </td>

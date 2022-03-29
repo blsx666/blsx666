@@ -56,9 +56,13 @@ var vm = new Vue({
             通风: '来自sds第8部分',
             防尘口罩: '来自sds第8部分',
             危险组分: '来自sds第3部分',
-            职业危害物质: '化学物质来自\nsds第8部分. \n粉尘来自\nGBZ 2.1-2019表2',
+            职业危害物质: '化学物质来自\nsds第8部分',
             GBZ212019: '来自GBZ 2.1-2019',
             职业接触限值: '来自sds第8部分',
+            职业危害粉尘: '粉尘来自\nGBZ 2.1-2019表2',
+            粉尘名称: '来自\nGBZ 2.1-2019表2',
+            粉尘接触限值: '来自\nGBZ 2.1-2019表2',
+
         }, {
             ERP物料代码: '123123123004',
             物料分类: '基础化工',
@@ -114,9 +118,12 @@ var vm = new Vue({
             通风: 'Y',
             防尘口罩: 'Y',
             危险组分: '碳酸钠',
-            职业危害物质: '其他粉尘',
-            GBZ212019: '表2 49',
-            职业接触限值: 'PC-TWA 总尘 8',
+            职业危害物质: '无',
+            GBZ212019: '无',
+            职业接触限值: '无',
+            职业危害粉尘: '其他粉尘',
+            粉尘名称: '表2 49',
+            粉尘接触限值: 'PC-TWA 总尘 8',
         }, {
             ERP物料代码: '123123123003',
             物料分类: '基础化工',
@@ -175,6 +182,9 @@ var vm = new Vue({
             职业危害物质: '氢氧化钠',
             GBZ212019: '表1 228',
             职业接触限值: 'MAC 2',
+            职业危害粉尘: '无',
+            粉尘名称: '无',
+            粉尘接触限值: '无',
         }, {
             ERP物料代码: '123123123002',
             物料分类: '合成染料',
@@ -230,9 +240,12 @@ var vm = new Vue({
             通风: 'Y',
             防尘口罩: 'Y',
             危险组分: 'N',
-            职业危害物质: '其他粉尘',
-            GBZ212019: '表2 49',
-            职业接触限值: 'PC-TWA 总尘 8',
+            职业危害物质: '无',
+            GBZ212019: '无',
+            职业接触限值: '无',
+            职业危害粉尘: '其他粉尘',
+            粉尘名称: '表2 49',
+            粉尘接触限值: 'PC-TWA 总尘 8',
         }, {
             ERP物料代码: '123123123001',
             物料分类: '基础化工',
@@ -291,6 +304,9 @@ var vm = new Vue({
             职业危害物质: '醋酸',
             GBZ212019: '表1 327',
             职业接触限值: 'PC-TWA 10, PC-STEL 20',
+            职业危害粉尘: '无',
+            粉尘名称: '无',
+            粉尘接触限值: '无',
         }],
         currentPage: 1,
         elementsPerPage: 10,
@@ -533,3 +549,63 @@ var vm = new Vue({
 });
 
 vm.$mount('#app');
+
+
+// // 
+// <template>
+//   <div id="app">
+//     <vue-good-table :columns="columns" :rows="rows">
+//       <template slot="table-row" slot-scope="props">
+//         <span v-if="props.column.field === 'details'">
+//           <button type="button" class="btn btn-primary">View Details</button>
+//         </span>
+//         <span v-else> {{ props.formattedRow[props.column.field] }} </span>
+//       </template>
+//     </vue-good-table>
+//   </div>
+// </template>
+
+// <script>
+// export default {
+//   name: "App",
+//   data() {
+//     return {
+//       columns: [
+//         {
+//           label: "Date",
+//           field: "date",
+//           filterable: true
+//         },
+//         {
+//           label: "Event",
+//           field: "event",
+//           filterable: true
+//         },
+//         {
+//           label: "Details",
+//           field: "details",
+//           filterable: true
+//         }
+//       ],
+//       rows: [
+//         {
+//           event: "Thanksgiving Barrel Events",
+//           details: "View Event",
+//           date: "11/28/2018 at 6:34 PM"
+//         },
+//         {
+//           event: "Christmas Barrel Events",
+//           details: "View Event",
+//           date: "12/25/2018 at 6:34 PM"
+//         },
+//         {
+//           event: "Thanksgiving Barrel Events",
+//           details: "View Event",
+//           date: "11/28/2018 at 6:34 PM"
+//         }
+//       ]
+//     };
+//   }
+// };
+// </script>
+// https://codesandbox.io/s/nnpqpn6ll4?fontsize=14&file=/src/App.vue:0-1277
