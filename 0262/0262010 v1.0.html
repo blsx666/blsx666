@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拉链 - 包罗三相</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<style>
+    .col-xs-6 {
+        width: 33%;
+    }
+    
+    .col-xs-6-15 {
+        width: 14.23%;
+    }
+    
+    .arrow-padding-top {
+        padding-top: 2%;
+    }
+    
+    .arrow-color,
+    .gypactive {
+        color: red;
+    }
+    
+    .lev2-width {
+        width: 100%;
+    }
+    
+    .level51 {
+        width: 10%;
+    }
+    
+    .level51.level51active {
+        width: 40%;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="text-center">拉链 - 原材料限用禁用物质来源</h1>
+        </div>
+    </header>
+    <div class="container">
+        <h4 class="page-header">点击以下按钮，开始探索源头。</h4>
+        <div class="row">
+            <div class="col-xs-12">
+                <!-- <button class="lead text-center bg-info btn text-info center-block" onclick="document.getElementById('ZT02').style.display='block'; document.getElementById('ZT01').style.display='block';"> -->
+                <button class="lead text-center bg-info btn text-info center-block" onclick="showhide()">
+                        <h3>拉链</h3>
+                    <p>GB/T 18746-2015 第3节: 按照材料定义, 拉链可分为3大种类</p>
+                </button>
+
+                <div class="row">
+                    <div class="col-xs-6 text-center arrow-padding-top zt" style="display: none;">
+                        <p><span class="glyphicon glyphicon-arrow-down"></span></p>
+                    </div>
+                    <div class="col-xs-6 text-center arrow-padding-top zt" style="display: none;">
+                        <p><span class="glyphicon glyphicon-arrow-down"></span></p>
+                    </div>
+                    <div class="col-xs-6 text-center arrow-padding-top zt" style="display: none;">
+                        <p> <span class="glyphicon glyphicon-arrow-down"></span></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 text-center">
+                <p class="center-block"><button class="btn btn-success btn-lg zt lev2-width gypbtnstatus" style="display: none;" onclick="showhidelevel41()">3.1 金属拉链</button></p>
+                <!-- <p class="center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                <p class="bg-success text-success btn">1.</p> -->
+            </div>
+
+            <div class="col-xs-6 text-center">
+                <p class="center-block"><button class="btn btn-success btn-lg zt lev2-width gypbtnstatus" style="display: none;" onclick="showhidelevel43()">3.3 尼龙拉链</button></p>
+                <!-- <p class="center-block"><span class="glyphicon glyphicon-arrow-down arrow-color"></span></p> -->
+                <!-- <p class="bg-info text-info btn">包含哪些组件呢?</p> -->
+                <!-- <p class="lead text-center bg-info btn text-info center-block">包含哪些组件呢?</p> -->
+                <!-- <div class="row">
+                    <div class="col-xs-6 text-center">
+                        <p class="center-block arrow-padding-top"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                    </div>
+                    <div class="col-xs-6 text-center">
+                        <p class="center-block arrow-padding-top">
+                            <span class="glyphicon glyphicon-arrow-down"></span></p>
+                    </div>
+                    <div class="col-xs-6 text-center">
+                        <p class="center-block arrow-padding-top"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                    </div>
+                    <div class="col-xs-6 text-center">
+                        <p class="center-block arrow-padding-top">
+                            <span class="glyphicon glyphicon-arrow-down"></span></p>
+                    </div>
+                </div> -->
+
+                <!-- <div class="row"> -->
+                <!-- <div class="col-xs-6">
+                        <p class="center-block"><span class="btn btn-success btn-lg">Yes</span></p>
+                        <p class="btn center-block">
+                            <span class="glyphicon glyphicon-arrow-down"></span></p>
+                        <p class="bg-success text-success btn text-wrap">Okay! proceed to step 2.</p>
+
+                    </div> -->
+                <!-- <div class="col-xs-6 text-center">
+                        <p class="center-block"><span class="btn btn-danger btn-lg">No</span></p>
+                        <p class="btn center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                        <p class="btn bg-danger text-danger text-wrap">The service.</p>
+                    </div> -->
+                <!-- </div> -->
+            </div>
+            <div class="col-xs-6 text-center">
+                <p class="center-block"><button class="btn btn-success btn-lg zt lev2-width gypbtnstatus" style="display: none;" onclick="showhidelevel42()">3.2 注塑拉链</button></p>
+                <!-- <p class="center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                <p class="bg-success text-success btn">2.</p> -->
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="lead text-center bg-info btn text-info center-block zt level3 level41" style="display: none;">
+
+                    GB/T 18746-2015 第5节: 每条拉链包含如下组件
+                </div>
+                <div class="row">
+                    <div id="level41" class="col-xs-6 text-center arrow-padding-top col-xs-6-15 zt level3 level41" style="display: none;">
+                        <p><span class="glyphicon glyphicon-arrow-down arrow-color"></span></p>
+                    </div>
+                    <div class="col-xs-6 text-center arrow-padding-top col-xs-6-15 zt level3 level41" style="display: none;">
+                        <p> <span class="glyphicon glyphicon-arrow-down arrow-color"></span></p>
+                    </div>
+                    <div class="col-xs-6 text-center arrow-padding-top col-xs-6-15 zt level3 level41" style="display: none;">
+                        <p> <span class="glyphicon glyphicon-arrow-down arrow-color"></span></p>
+                    </div>
+                    <div class="col-xs-6 text-center arrow-padding-top col-xs-6-15 zt level3 level41" style="display: none;">
+                        <p> <span class="glyphicon glyphicon-arrow-down arrow-color"></span></p>
+                    </div>
+                    <div class="col-xs-6 text-center arrow-padding-top col-xs-6-15 zt level3 level41" style="display: none;">
+                        <p> <span class="glyphicon glyphicon-arrow-down arrow-color"></span></p>
+                    </div>
+                    <div class="col-xs-6 text-center arrow-padding-top col-xs-6-15 zt level3 level41" style="display: none;">
+                        <p> <span class="glyphicon glyphicon-arrow-down arrow-color"></span></p>
+                    </div>
+                    <div class="col-xs-6 text-center arrow-padding-top col-xs-6-15 zt level3 level41" style="display: none;">
+                        <p> <span class="glyphicon glyphicon-arrow-down arrow-color"></span></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6 text-center col-xs-6-15 zt level3 level41" style="display: none;">
+                <p class="center-block"><button class="btn btn-success btn-lg" onclick="showhidelevel51()">5.1 链带</button></p>
+                <p class="center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                <p class="bg-success text-success btn">5.1.2 链牙 <br> 5.1.3 布带 <br> 5.1.4 带筋</p>
+                <p class="center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                <p class="bg-success text-success btn" data-toggle="tooltip" data-placement="top" title="原材料">5.1.2 合金 <br> 或涤纶单丝 <br> 或塑料 <br> 5.1.3 涤纶中芯线 <br> 5.1.4 涤纶中芯线</p>
+            </div>
+
+            <div class="col-xs-6 text-center col-xs-6-15 zt level3 level41" style="display: none;">
+                <p class="center-block"><button class="btn btn-success btn-lg" onclick="showhidelevel51()">5.2 拉头</button></p>
+                <p class="center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                <p class="bg-success text-success btn">5.2.1 拉头体 <br> 5.2.5 拉片 <br> 5.2.6 连接件 <br> 5.2.7 其他组件</p>
+                <p class="center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                <p class="bg-success text-success btn" data-toggle="tooltip" data-placement="top" title="原材料">合金</p>
+            </div>
+
+            <div class="col-xs-6 text-center col-xs-6-15 zt level3 level41" style="display: none;">
+                <p class="center-block"><button class="btn btn-success btn-lg" onclick="showhidelevel51()">5.3 上止</button></p>
+                <p class="center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                <p class="bg-success text-success btn">链带前端的止动件</p>
+                <p class="center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                <p class="bg-success text-success btn" data-toggle="tooltip" data-placement="top" title="原材料">合金?</p>
+            </div>
+            <div class="col-xs-6 text-center col-xs-6-15 zt level3 level41" style="display: none;">
+                <p class="center-block"><button class="btn btn-success btn-lg" onclick="showhidelevel51()">5.4 下止</button></p>
+                <p class="center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                <p class="bg-success text-success btn">链带末端的止动件</p>
+                <p class="center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                <p class="bg-success text-success btn" data-toggle="tooltip" data-placement="top" title="原材料">合金?</p>
+            </div>
+
+            <div class="col-xs-6 text-center col-xs-6-15 zt level3 level41" style="display: none;">
+                <p class="center-block"><button class="btn btn-success btn-lg" onclick="showhidelevel51()">5.5 分开件</button></p>
+                <p class="center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                <p class="bg-success text-success btn">5.5.1 插座 <br> 5.5.2 插管 <br> 5.5.3 挡件</p>
+                <p class="center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                <p class="bg-success text-success btn" data-toggle="tooltip" data-placement="top" title="原材料">合金?</p>
+            </div>
+
+            <div class="col-xs-6 text-center col-xs-6-15 zt level3 level41" style="display: none;">
+                <p class="center-block"><button class="btn btn-success btn-lg" onclick="showhidelevel51()">5.6 加强胶带</button></p>
+                <p class="center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                <p class="bg-success text-success btn">复合型薄片</p>
+                <p class="center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                <p class="bg-success text-success btn" data-toggle="tooltip" data-placement="top" title="原材料">不知道?</p>
+            </div>
+
+            <div class="col-xs-6 text-center col-xs-6-15 zt level3 level41" style="display: none;">
+                <p class="center-block"><button class="btn btn-success btn-lg" onclick="showhidelevel51()">5.7 带头</button></p>
+                <p class="center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                <p class="bg-success text-success btn" data-toggle="tooltip" data-placement="top" title="拉链上没有链牙的那段布带">布带</p>
+                <p class="center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                <p class="bg-success text-success btn" data-toggle="tooltip" data-placement="top" title="原材料">涤纶中芯线</p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- 
+    <div class="container">
+        <h2 class="page-header">Step 2: What type of email is it?</h2>
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="lead text-center bg-info btn text-info center-block">What type of email do you want to send?</p>
+                <div class="row">
+                    <div class="col-xs-6 text-center">
+                        <p class="btn"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                    </div>
+                    <div class="col-xs-6 text-center">
+                        <p class="btn">
+                            <span class="glyphicon glyphicon-arrow-down"></span></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 text-center">
+                        <p class="center-block"><span class="btn btn-warning btn-lg">Newsletter</span></p>
+                        <p class="btn center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                        <p class="center-block bg-info text-info btn">Is it directly related to fundraising?</p>
+                        <div class="row">
+                            <div class="col-xs-6 text-center">
+                                <p class="btn"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                            </div>
+                            <div class="col-xs-6 text-center">
+                                <p class="btn">
+                                    <span class="glyphicon glyphicon-arrow-down"></span></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <p class="center-block"><span class="btn btn-success btn-lg">Yes</span></p>
+                                <p class="btn">
+                                    <span class="glyphicon glyphicon-arrow-down"></span></p>
+                                <p class="bg-success text-success btn text-wrap">Okay! You can proceed to step 3. </p>
+
+                            </div>
+                            <div class="col-xs-6 text-center">
+                                <p class="center-block"><span class="btn btn-danger btn-lg">No</span></p>
+                                <p class="btn center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
+                                <p class="btn bg-danger text-danger text-wrap">Content must be directly related to fundraising to use this service.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 text-center">
+                        <p class="center-block"><span class="btn btn-success btn-lg">Solicitation</span></p>
+                        <p class="btn center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
+
+                        <p class="bg-success text-success btn">Okay! Proceed to step 3.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> -->
+    <footer>
+        <div class="container">
+            <hr>
+            <p> </p>
+        </div>
+    </footer>
+</body>
+
+<script>
+    function showhide() {
+        var zt = document.getElementsByClassName("zt");
+        for (i = 0; i < zt.length; i++) {
+            var str = zt[i].className;
+            if (str.includes('level3') == false) {
+                if (zt[i].style.display == 'none') {
+                    zt[i].style.display = 'block';
+                } else {
+                    zt[i].style.display = 'none';
+                }
+            } else {
+                zt[i].style.display = 'none';
+            }
+        }
+
+        // var btns = document.getElementsByClassName("gypbtnstatus")
+        // for (var i = 0; i < btns.length; i++) {
+        //     btns[i].index = i;
+        //     btns[i].onclick = function() {
+        //         for (var j = 0; j < btns.length; j++) {
+        //             btns[j].className = btns[j].className.replace(' gypactive', '').trim();
+        //             contents[j].className = contents[j].className.replace(' show', '').trim();
+        //         }
+        //         this.className = this.className + ' gypactive';
+        //         contents[this.index].className = contents[this.index].className + ' show';
+        //     };
+        // }
+
+    };
+
+    function showhidelevel41() {
+        var zt = document.getElementsByClassName("level41");
+        var btn = document.getElementsByClassName("gypbtnstatus");
+        var str = btn[0].className;
+        if (str.includes('btn-danger') == true) {
+            btn[0].className = btn[0].className.replace(' btn-danger', '').trim();
+            for (i = 0; i < zt.length; i++) {
+                zt[i].style.display = 'none';
+            }
+
+        } else {
+            btn[0].className = btn[0].className + ' btn-danger';
+            btn[1].className = btn[1].className.replace(' btn-danger', '').trim();
+            btn[2].className = btn[2].className.replace(' btn-danger', '').trim();
+            for (i = 0; i < zt.length; i++) {
+                zt[i].style.display = 'block';
+            }
+        }
+    };
+
+    function showhidelevel42() {
+        var zt = document.getElementsByClassName("level41");
+        var btn = document.getElementsByClassName("gypbtnstatus");
+        var str = btn[2].className;
+        if (str.includes('btn-danger') == true) {
+            btn[2].className = btn[2].className.replace(' btn-danger', '').trim();
+            for (i = 0; i < zt.length; i++) {
+                zt[i].style.display = 'none';
+            }
+        } else {
+            btn[2].className = btn[2].className + ' btn-danger';
+            btn[1].className = btn[1].className.replace(' btn-danger', '').trim();
+            btn[0].className = btn[0].className.replace(' btn-danger', '').trim();
+            for (i = 0; i < zt.length; i++) {
+                zt[i].style.display = 'block';
+            }
+        }
+    };
+
+    function showhidelevel43() {
+        var zt = document.getElementsByClassName("level41");
+        var btn = document.getElementsByClassName("gypbtnstatus");
+        var str = btn[1].className;
+        if (str.includes('btn-danger') == true) {
+            btn[1].className = btn[1].className.replace(' btn-danger', '').trim();
+            for (i = 0; i < zt.length; i++) {
+                zt[i].style.display = 'none';
+            }
+
+        } else {
+            btn[1].className = btn[1].className + ' btn-danger';
+            btn[0].className = btn[0].className.replace(' btn-danger', '').trim();
+            btn[2].className = btn[2].className.replace(' btn-danger', '').trim();
+            for (i = 0; i < zt.length; i++) {
+                zt[i].style.display = 'block';
+            }
+        }
+    };
+
+    // function showhidelevel51() {
+    //     var zt = document.getElementsByClassName("level51");
+    //     var btn = document.getElementsByClassName("gypbtnstatus51");
+    //     var str = btn[0].className;
+    //     if (str.includes('btn-danger') == true) {
+    //         btn[0].className = btn[0].className.replace(' btn-danger', '').trim();
+    //         zt[0].className = zt[0].className.replace(' level51active', '').trim();
+    //         for (i = 1; i < zt.length; i++) {
+    //             zt[i].style.display = 'none';
+    //         }
+
+    //     } else {
+    //         btn[0].className = btn[0].className + ' btn-danger';
+    //         zt[0].className = zt[0].className + ' level51active';
+
+    //         // btn[0].className = btn[0].className.replace(' btn-danger', '').trim();
+    //         // btn[2].className = btn[2].className.replace(' btn-danger', '').trim();
+    //         for (i = 1; i < zt.length; i++) {
+    //             zt[i].style.display = 'block';
+    //         }
+    //     }
+    // };
+    // for (i = 0; i < zt.length; i++) {
+    //     if (zt[i].style.display == 'none') {
+    //         zt[i].style.display = 'block';
+    //     } else {
+    //         zt[i].style.display = 'none';
+    //     }
+    // }
+
+    // function showhidelevel43() {
+    //     var zt = document.getElementsByClassName("level41");
+    //     for (i = 0; i < zt.length; i++) {
+    //         if (zt[i].style.display == 'none') {
+    //             zt[i].style.display = 'block';
+    //         } else {
+    //             zt[i].style.display = 'none';
+    //         }
+    //     }
+    // };
+
+    function ShowAndHide() {
+        var x = document.getElementById('level41');
+        if (x.style.display == 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+</script>
+
+
+
+</html>
