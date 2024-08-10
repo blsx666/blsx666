@@ -1,0 +1,1991 @@
+footer: function(currentPage, pageCount) {
+        return [{
+                style: 'tableExample',
+                table: {
+                    heights: [1],
+                    widths: ['*'],
+                    body: [
+                        [{
+                            border: [false, true, false, false],
+                            fillColor: '#eeeeee',
+                            text: ''
+                        }, ],
+                    ]
+                }
+            },
+            {
+                text: '第 ' + currentPage.toString() + ' 页 共 ' + pageCount + ' 页',
+                alignment: 'center',
+            },
+        ];
+    },
+    header: function(currentPage, pageCount, pageSize) {
+        if (currentPage != 1) then:
+            return [{
+                style: 'tableExample',
+                table: {
+                    heights: [16, 1],
+                    widths: [30, 77, 77, 10, 50, 40, 20, '*', 77, 30],
+                    body: [
+                        [{
+                            border: [false, false, false, true],
+                            // fillColor: '#eeeeee',
+                            text: ' ',
+                        }, {
+                            border: [false, false, false, true],
+                            text: '本次修订日期：',
+                        }, {
+                            border: [false, false, false, true],
+                            text: '2024-05-05',
+                        }, {
+                            border: [false, false, false, true],
+                            text: ' '
+                        }, {
+                            border: [false, false, false, true],
+                            text: 'SDS版本: ',
+                        }, {
+                            border: [false, false, false, true],
+                            text: { text: '第6.9版', style: 'right' },
+                        }, {
+                            border: [false, false, false, true],
+                            text: ' ',
+                        }, {
+                            border: [false, false, false, true],
+                            text: '产品名称：',
+                        }, {
+                            border: [false, false, false, true],
+                            text: { text: '醋酸98%', style: 'right' },
+                        }, {
+                            border: [false, false, false, true],
+                            text: ' ',
+                        }, ],
+                        [{
+                                border: [false, false, false, false],
+                                fillColor: '#eeeeee',
+                                text: '',
+                            }, {
+                                border: [false, false, false, false],
+                                fillColor: '#eeeeee',
+                                text: '',
+                            }, {
+                                border: [false, false, false, false],
+                                fillColor: '#eeeeee',
+                                text: '',
+                            }, {
+                                border: [false, false, false, false],
+                                fillColor: '#eeeeee',
+                                text: '',
+                            }, {
+                                border: [false, false, false, false],
+                                fillColor: '#eeeeee',
+                                text: '',
+                            }, {
+                                border: [false, false, false, false],
+                                fillColor: '#eeeeee',
+                                text: '',
+                            },
+                            {
+                                border: [false, false, false, false],
+                                fillColor: '#eeeeee',
+                                text: '',
+                            },
+                            {
+                                border: [false, false, false, false],
+                                fillColor: '#eeeeee',
+                                text: '',
+                            },
+                            {
+                                border: [false, false, false, false],
+                                fillColor: '#eeeeee',
+                                text: '',
+                            },
+                            {
+                                border: [false, false, false, false],
+                                fillColor: '#eeeeee',
+                                text: '',
+                            },
+                        ]
+                    ]
+                }
+            }, ];
+    },
+
+    content: [
+
+
+        //          { text: '作业场所安全使用化学品公约(第170号国际公约)', link: 'https://yjglj.sh.gov.cn/xxgk/xxgkml/zcfg/aqbz/20101105/0037-21539.html', style: 'blsxTextlink' },
+        //          '\n',
+        //         { text: ['第八条 ', { text: '化学品安全技术说明书(CSDS)', color: 'red' },] },
+
+        // '1 对于有害化学品，应向雇主提供化学品安全技术说明书(CSDS)，详细表明其特性、供货人、分类、危害、安全注意事项和应急处置方法。',
+        // '2 主管当局，或经主管当局批准或认可的机构，应根据国家或国际标准，制订化学品安全技术说明书(CSDS)编制的标准。',
+        // '3 化学品安全技术说明书(CSDS)中用于识别化学品的化学或通用名称应与标签上使用的名称一致。',
+        //         '\n',
+
+        // { text: '中华人民共和国国家通用语言文字法 ', link: '', style: 'blsxTextlink' },
+        // '\n',
+        // { text: ['第十四条  下列情形，应当以', { text: '国家通用语言文字', color: 'red' }, '为基本的用语用字：…'] }, ,
+        // '（五）在境内销售的商品的包装、说明。',
+        // '\n',
+        // { text: '中华人民共和国产品质量法', link: '', style: 'blsxTextlink' },
+        // '\n',
+        // '第二十七条 产品或者其包装上的标识必须真实，并符合下列要求：…',
+        // { text: ['（二）有', { text: '中文标明的产品名称、生产厂厂名和厂址；', color: 'red' }] },
+        // { text: ['（三）…所含主要成份的名称和含量的，用', { text: '中文', color: 'red' }, '相应予以标明；…'] },
+        // { text: ['（五）…可能危及人身、财产安全的产品，应当有', { text: '警示标志或者中文警示说明。', color: 'red' }] },
+        // '\n',
+        { text: '危险化学品安全管理条例', link: 'https://flk.npc.gov.cn/detail2.html?ZmY4MDgwODE2ZjNjYmIzYzAxNmY0MDg3Y2RjYzAzZDk%3D', style: 'blsxTextlink' },
+        '\n',
+        { text: ['第十五条 ', { text: '危险化学品生产企业', color: 'red' }, '应当提供与其生产的危险化学品相符的化学品安全技术说明书，并在危险化学品包装(包括外包装件)上粘贴或者拴挂与包装内危险化学品相符的化学品安全标签。化学品安全技术说明书和化学品安全标签所载明的内容应当', { text: '符合国家标准', color: 'red' }, '的要求。'] },
+        '\n',
+        { text: [{ text: '化学品安全技术说明书', style: 'header' }, { text: 'Safety Data Sheet', fontSize: '16' }] },
+        {
+            text: ['按照',
+                { text: 'GB/T 16483-2008', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=67992CA972A4CF9222095CA06064724A', style: 'blsxTextlink', fontSize: '12' },
+                '和',
+                { text: 'GB/T 17519-2013', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=0DF24B277B29E2F0B39D13D0F2B7BA07', style: 'blsxTextlink', fontSize: '12' },
+                '编写',
+            ],
+        },
+        '\n\n',
+
+        { text: '醋酸98%', style: 'header' },
+        { text: 'Acetic Acid 98%' },
+        '\n\n',
+        {
+            layout: 'noBorders', // optional
+            table: {
+                // headers are automatically repeated if the table spans over multiple pages
+                // you can declare how many rows should be treated as headers
+                headerRows: 0,
+                widths: ['*', 240, "*", '*'],
+
+                body: [
+                    ['首次编写日期：', '1993-12-31', '产品名称：', { text: '醋酸98%', style: 'right' }],
+                    ['首次修订日期: ', '1996-10-18', 'SDS编号: ', { text: '100200101', style: 'right' }],
+                    ['本次修订日期：', '2024-05-05', 'SDS版本: ', { text: '第6.9版', style: 'right' }],
+                ],
+
+            },
+        },
+
+        {
+            style: 'tableExample',
+            table: {
+                heights: [1],
+                widths: ['*'],
+                body: [
+                    [{
+                        border: [false, true, false, false],
+                        fillColor: '#eeeeee',
+                        text: ''
+                    }, ],
+                ]
+            }
+        },
+
+        // SECTION01
+        {
+            style: 'sectionheader',
+            table: {
+                heights: [5, 29],
+                widths: ['*'],
+                body: [
+                    [{
+                        border: [false, false, false, false],
+                        fillColor: '#1AEAC2',
+                        text: '',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        fillColor: '#eeeeee',
+                        text: '第一部分 化学品及企业标识',
+                        style: 'sectionheaderText',
+                    }, ],
+                ]
+            }
+        },
+
+        {
+            style: 'tableExample',
+            table: {
+                heights: [18, 18],
+                widths: [20, 118, '*'],
+                body: [
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '1.1',
+                        style: "subsectionText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '产品标识',
+                        style: "subsectionText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '产品中文名称:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '醋酸98%',
+                            { text: '\n包罗三相：属于物质的，填写化学名称或常用名俗名；属于混合物的，填写商品名称或混合物名称。中英文名称应和产品外包装标签上的名称保持一致。', style: 'blsxText' }
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '产品中文别名:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '乙酸98%，冰醋酸98%',
+                            { text: '\n包罗三相：自愿填写。', style: 'blsxText' }
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '产品英文名称:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            'Acetic Acid 98%',
+                            { text: '\n包罗三相：便于客户参加第三方体系认证和品牌认证等等。因均以英文名称来认证。', style: 'blsxText' }
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '产品英文别名:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            'Vinegar Acid 98%，Glacial Acetic Acid 98%',
+                            { text: '\n包罗三相：自愿填写。', style: 'blsxText' }
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '产品代码:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            'DHG001',
+                            { text: '\n包罗三相：车有车牌号，人有身份证号码，化学品要有物料代码，方便用户使用。', style: 'blsxText' }
+                        ],
+                        style: "paraText",
+
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '1.2',
+                        style: "subsectionText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '企业标识',
+                        style: "subsectionText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '生产厂家中文公司名称:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '辛笑笑特种化学品有限公司',
+                            // { text: 'styled\n', italics: true },
+                            { text: '\n 包罗三相：见第一页的法律法规的要求。', style: 'blsxText' }
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '生产厂家英文公司名称:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            'XXX Basic Chemical Co., Ltd.',
+                            // { text: 'styled\n', italics: true },
+                            { text: '\n 包罗三相：便于客户参加第三方体系认证和品牌认证等等', style: 'blsxText' }
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '生产厂家中文公司地址:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '大湖省大湖市大湖路1号，邮编 000001',
+                            // { text: 'styled\n', italics: true },
+                            { text: '\n 包罗三相：见第一页的法律法规的要求', style: 'blsxText' }
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '生产厂家英文公司地址:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            'No. 1, Road Dahu, Dahu City, Dahu Province, China, 000001',
+                            // { text: 'styled\n', italics: true },
+                            { text: '\n 包罗三相：便于客户参加第三方体系认证和品牌认证等等', style: 'blsxText' }
+                        ],
+                        style: "paraText",
+                    }, ],
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'SDS责任部门电话号码:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '0000 - 0000 0000',
+                            // { text: 'styled\n', italics: true },
+                            { text: '\n 包罗三相：见GB/T 17519-2013 第3.1.2节的要求', style: 'blsxText' }
+                        ],
+                        style: "paraText",
+                    }, ],
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'SDS责任部门电子邮件:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            'SDS@xxx.com',
+                            // { text: 'styled\n', italics: true },
+                            { text: '\n 包罗三相：见GB/T 17519-2013 第3.1.2节的要求', style: 'blsxText' }
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '经销商中文公司名称:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '经销商中文公司名称',
+                            // { text: 'styled\n', italics: true },
+                            { text: '\n 包罗三相：自愿填写，增加供应链信息透明度', style: 'blsxText' }
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '经销商中文公司地址:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '经销商中文公司地址，邮政编码',
+                            // { text: 'styled\n', italics: true },
+                            { text: '\n 包罗三相：自愿填写，增加供应链信息透明度', style: 'blsxText' }
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '经销商英文公司名称:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            'trader name in EN, China, 000001',
+                            // { text: 'styled\n', italics: true },
+                            { text: '\n 包罗三相：自愿填写，增加供应链信息透明度', style: 'blsxText' }
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '经销商英文公司地址:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            'trader address in EN, China, 000001',
+                            // { text: 'styled\n', italics: true },
+                            { text: '\n 包罗三相：自愿填写，增加供应链信息透明度', style: 'blsxText' }
+                        ],
+                        style: "paraText",
+                    }, ],
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+
+                    //1.3
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '1.3',
+                        style: "subsectionText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '应急咨询电话',
+                        style: "subsectionText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '生产厂家应急咨询电话:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '0000 - 0000 0000 （24小时）',
+                            // { text: 'styled\n', italics: true },
+                            { text: '\n 包罗三相：见GB/T 17519-2013 第3.1.3节的要求', style: 'blsxText' }
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '国家应急咨询电话:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '0532 - 8388 9090 （NRCC，24小时）',
+                            // { text: 'styled\n', italics: true },
+                            { text: '\n 包罗三相：化学名称或常用名时可写。商品名称时因无法通过商品名称知道危害，需购买该应急咨询服务，把SDS委托给NRCC。', style: 'blsxText' }
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '进口化学品应急咨询电话: ',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '0000- 1111 1111',
+                            // { text: 'styled\n', italics: true },
+                            { text: '\n 包罗三相：见GB/T 17519-2013 第3.1.3节：应提供中国境内24小时化学事故应急咨询电话。', style: 'blsxText' }
+                        ],
+                        style: "paraText",
+                    }, ],
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+
+                    //1.4
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '1.4',
+                        style: "subsectionText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '推荐用途和限制用途',
+                        style: "subsectionText",
+                        colSpan: 2,
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '推荐用途:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '化学工业，电子工业，医药工业，纺织工业，造纸工业等等工业用原料。',
+                            { text: '\n 包罗三相：见GB/T 17519-2013 第3.1.4节的要求', style: 'blsxText' }
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '限制用途: ',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '禁止用于食品生产，饮料生产，个人护理，家用和分析实验室。',
+                            // { text: 'styled\n', italics: true },
+                            { text: '\n 包罗三相：见GB/T 17519-2013 第3.1.4节。', style: 'blsxText' }
+                        ],
+                        style: "paraText",
+                    }, ],
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                        pageBreak: 'after',
+                    }, ],
+                ],
+            }
+        },
+
+
+        '\n\n\n\n',
+        { text: '危险化学品安全管理条例', link: '', style: 'blsxTextlink' },
+        '\n',
+        { text: ['第十五条 ', { text: '危险化学品生产企业', color: 'red' }, '应当提供与其生产的危险化学品相符的化学品安全技术说明书，并在危险化学品包装(包括外包装件)上粘贴或者拴挂与包装内危险化学品相符的化学品安全标签。化学品安全技术说明书和化学品安全标签所载明的内容应当', { text: '符合国家标准', color: 'red' }, '的要求。'] },
+        '\n',
+
+        // SECTION 02
+        {
+            style: 'sectionheader',
+            table: {
+                heights: [5, 29],
+                widths: ['*'],
+                body: [
+                    [{
+                        border: [false, false, false, false],
+                        fillColor: '#1AEAC2',
+                        text: '',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        fillColor: '#eeeeee',
+                        text: '第二部分 危险性概述',
+                        style: 'sectionheaderText',
+                    }, ],
+                ]
+            }
+        },
+
+        {
+            style: 'tableExample',
+            table: {
+                heights: [18, 18],
+                widths: [28, 118, '*'],
+                body: [
+                    [{
+                        border: [false, false, false, false],
+                        text: ' ',
+                        style: "subsectionText",
+                    }, {
+                        border: [true, true, true, false],
+                        text: '紧急情况概述',
+                        style: "subsectionText",
+                        colSpan: 2,
+                    }, {
+                        border: [false, true, false, true],
+                        text: '',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        text: '',
+                    }, {
+                        border: [true, false, true, true],
+                        text: ['\n易燃液体和蒸气，造成严重的皮肤灼伤和眼损伤。',
+                            { text: '\n包罗三相：见GB/T 17519-2013的第3.2.1节。', style: 'blsxText' },
+                        ],
+                        style: "paraText",
+                        colSpan: 2,
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '2.1',
+                        style: "subsectionText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '危险性类别',
+                        style: "subsectionText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        // text: ' 按照GB 13690-2009，GB 30000.2 - GB 30000.29进行GHS分类：',
+                        text: [
+                            '按照',
+                            { text: 'GB 13690-2009，', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=3FCEB3CB81076CDB311D0D3F2783B2F7', style: 'blsxTextlink18' },
+                            { text: 'GB 30000.2 - GB 30000.29', link: 'https://openstd.samr.gov.cn/bzgk/gb/std_list?p.p1=0&p.p90=circulation_date&p.p91=desc&p.p2=gb%2030000', style: 'blsxTextlink18' },
+                            '进行GHS分类：',
+                        ],
+                        style: "paraText",
+                        colSpan: 2,
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'H226',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '易燃液体，类别 3；',
+                            { text: '\n包罗三相：见GB 30000.7-2013 化学品分类和标签规范 第7部分：易燃液体', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=3FCEB3CB81076CDB311D0D3F2783B2F7', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'H314',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '皮肤腐蚀/刺激，类别 1A； ',
+                            { text: '\n包罗三相：见GB 30000.19-2013 化学品分类和标签规范 第19部分：皮肤腐蚀/刺激', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=C5B87B85478148F2AD9FBC80991F2D92', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'H318',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '严重眼损伤/眼刺激，类别 1。',
+                            { text: '\n包罗三相：见GB 30000.20-2013 化学品分类和标签规范 第20部分：严重眼损伤/眼刺激', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=406689A7D0C4443BEE5DB91B2BF23C91', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '2.2',
+                        style: "subsectionText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '标签要素',
+                        style: "subsectionText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        text: ' ',
+                    }, ],
+                    [{
+                            border: [false, false, false, false],
+                            text: ' ',
+                        }, {
+                            border: [false, false, false, false],
+                            text: '象形图：',
+                        },
+						{   border: [false, false, false, false],
+							table: {
+								body: [
+									[{
+                                         border: [false, false, false, false],
+                                        //  image: 'examples/fonts/flamme.jpg',
+                                        //  fit: [100, 100],
+                                         // pageBreak: 'after',
+										 text: '象形图：'
+                                    }, '2'],
+								]
+							},
+						},
+					// ],
+                            // table: {
+                            //     body: [
+                            //         [{
+                            //             border: [false, false, false, false],
+                            //             image: 'examples/fonts/flamme.jpg',
+                            //             fit: [100, 100],
+                            //             // pageBreak: 'after',
+                            //         }, {
+                            //             border: [false, false, false, false],
+                            //             image: 'examples/fonts/acid_red.jpg',
+                            //             fit: [100, 100],
+                            //             // pageBreak: 'after',
+                            //         }, ],
+                            //     ],
+                            // },
+                        // },
+
+                    ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '信号词:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '危险',
+                            // { text: 'styled\n', italics: true },
+                            // { text: '\n 包罗三相：', style: 'blsxText' }
+                        ],
+                        style: "paraText",
+                    }, ],
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '危险性说明:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '',
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'H226',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '易燃液体和蒸气，类别 3；',
+                            { text: '\n包罗三相：见GB 30000.7-2013 化学品分类和标签规范 第7部分：易燃液体', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=3FCEB3CB81076CDB311D0D3F2783B2F7', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'H314',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '皮肤腐蚀/刺激，类别 1A； ',
+                            { text: '\n包罗三相：见GB 30000.19-2013 化学品分类和标签规范 第19部分：皮肤腐蚀/刺激', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=C5B87B85478148F2AD9FBC80991F2D92', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'H318',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '严重眼损伤/眼刺激，类别 1。',
+                            { text: '\n包罗三相：见GB 30000.20-2013 化学品分类和标签规范 第20部分：严重眼损伤/眼刺激', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=406689A7D0C4443BEE5DB91B2BF23C91', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+
+                    }, ],
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '防范说明:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '',
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' 预防措施:',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '',
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'P210',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '远离热源/火花/明火/热表面--禁止吸烟。',
+                            { text: '\n包罗三相：见表D.2, GB 30000.7-2013 化学品分类和标签规范 第7部分：易燃液体', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=3FCEB3CB81076CDB311D0D3F2783B2F7', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'P233',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '保持容器密闭。',
+                            { text: '\n包罗三相：见表D.2, GB 30000.7-2013 化学品分类和标签规范 第7部分：易燃液体', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=C5B87B85478148F2AD9FBC80991F2D92', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'P240',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '容器和接收设备接地/等势联接。',
+                            { text: '\n包罗三相：见表D.2, GB 30000.7-2013 化学品分类和标签规范 第7部分：易燃液体', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=406689A7D0C4443BEE5DB91B2BF23C91', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'P241',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '使用防爆的电气/通风/照明等设备。', //……制造商/供应商或主管部门列明其他设备。
+                            { text: '\n包罗三相：见表D.2, GB 30000.7-2013 化学品分类和标签规范 第7部分：易燃液体', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=406689A7D0C4443BEE5DB91B2BF23C91', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'P242',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '只能使用不产生火花的工具。',
+                            { text: '\n包罗三相：见表D.2, GB 30000.7-2013 化学品分类和标签规范 第7部分：易燃液体', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=406689A7D0C4443BEE5DB91B2BF23C91', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+
+                    }, ],
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'P243',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '采取防止静电放电的措施。',
+                            { text: '\n包罗三相：见表D.2, GB 30000.7-2013 化学品分类和标签规范 第7部分：易燃液体', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=406689A7D0C4443BEE5DB91B2BF23C91', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+
+                    }, ],
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'P260',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '不要吸入粉尘/烟/气体/烟雾/蒸气/喷雾。',
+                            { text: '\n包罗三相：见表E.2，GB 30000.19-2013 化学品分类和标签规范 第19部分：皮肤腐蚀/刺激', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=C5B87B85478148F2AD9FBC80991F2D92', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+                    }, ],
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'P264',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '作业后彻底清洗皮肤。',
+                            { text: '\n包罗三相：见表E.2，GB 30000.19-2013 化学品分类和标签规范 第19部分：皮肤腐蚀/刺激', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=C5B87B85478148F2AD9FBC80991F2D92', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+                    }, ],
+
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'P280',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '戴防护手套/穿防护服/戴防护眼罩/戴防护面具。',
+                            { text: '\n包罗三相：见表D.2, GB 30000.7-2013 化学品分类和标签规范 第7部分：易燃液体', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=406689A7D0C4443BEE5DB91B2BF23C91', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+
+                    }, ],
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' 事故响应：',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '',
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'P301+P330+P331',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '如误吞咽：激口。不要诱导呕吐。',
+                            { text: '\n包罗三相：见表E.2，GB 30000.19-2013 化学品分类和标签规范 第19部分：皮肤腐蚀/刺激', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=C5B87B85478148F2AD9FBC80991F2D92', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'P303+P361+P353',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '如皮肤(或头发)沾染：立即脱掉所有沾染的衣服。用水清洗皮肤/淋浴。',
+                            { text: '\n包罗三相：见表D.2, GB 30000.7-2013 化学品分类和标签规范 第7部分：易燃液体', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=3FCEB3CB81076CDB311D0D3F2783B2F7', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+                    }, ],
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'P305+P351+P338',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '如进入眼睛：用水小心冲洗几分钟。如戴隐形眼镜并可方便地取出，取出隐形眼镜。继续冲洗。',
+                            { text: '\n包罗三相：见表D.2，GB 30000.20-2013 化学品分类和标签规范 第20部分：严重眼损伤/眼刺激', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=406689A7D0C4443BEE5DB91B2BF23C91', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+                    }, ],
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'P363',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '沾染的衣服清洗后方可重新使用。',
+                            { text: '\n包罗三相：见表E.2，GB 30000.19-2013 化学品分类和标签规范 第19部分：皮肤腐蚀/刺激', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=C5B87B85478148F2AD9FBC80991F2D92', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'P304+P340',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '如误吸入：将受害人转移到空气新鲜处，保持呼吸舒适的休息姿势。',
+                            { text: '\n包罗三相：见表E.2，GB 30000.19-2013 化学品分类和标签规范 第19部分：皮肤腐蚀/刺激', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=C5B87B85478148F2AD9FBC80991F2D92', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'P310',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '立即呼叫解毒中心或医生。',
+                            { text: '\n包罗三相：见表E.2，GB 30000.19-2013 化学品分类和标签规范 第19部分：皮肤腐蚀/刺激', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=C5B87B85478148F2AD9FBC80991F2D92', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'P305+P351+P338',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '如进入眼睛：用水小心冲洗几分钟。如戴隐形眼镜并可方便地取出，取出隐形眼镜。继续冲洗。',
+                            { text: '\n包罗三相：见表E.2，GB 30000.19-2013 化学品分类和标签规范 第19部分：皮肤腐蚀/刺激', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=C5B87B85478148F2AD9FBC80991F2D92', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+                    }, ],
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'P370+P378',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '火灾时；使用雾状水、抗溶性泡沫、干粉、二氧化碳灭火。',
+                            { text: '\n包罗三相：见表D.2，GB 30000.19-2013 化学品分类和标签规范 第19部分：皮肤腐蚀/刺激', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=C5B87B85478148F2AD9FBC80991F2D92', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+                    }, ],
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' 安全储存：',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '',
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'P403+P235',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '存放在通风良好的地方。保持低温。',
+                            { text: '\n包罗三相：见表D.2, GB 30000.7-2013 化学品分类和标签规范 第7部分：易燃液体', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=3FCEB3CB81076CDB311D0D3F2783B2F7', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'P405',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '存放处须加锁。',
+                            { text: '\n包罗三相：见表E.2，GB 30000.19-2013 化学品分类和标签规范 第19部分：皮肤腐蚀/刺激', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=C5B87B85478148F2AD9FBC80991F2D92', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+                    }, ],
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' 废弃处置：',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '',
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'P501',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '按照《国家危险废物名录（2021年版）》，内装物和容器均属于危险废弃物，废物类别HW49，废物代码900-047-49。\n内装物，送有资质的第三方处置。容器可由我司回收(干净整洁无破损)，或送有资质的第三方处置。详情见第十三部分。',
+                            { text: '\n包罗三相：见表D.2, GB 30000.7-2013 化学品分类和标签规范 第7部分：易燃液体', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=3FCEB3CB81076CDB311D0D3F2783B2F7', style: 'blsxTextlink' },
+                            { text: '\n包罗三相：见国家危险废物名录（2021年版）', link: 'https://www.mee.gov.cn/gzk/gz/202112/t20211213_963867.shtml', style: 'blsxTextlink' },
+                            { text: '\n包罗三相：生产厂家在生产和存储过程中是不是也产生该危险废弃物？答案是肯定的。那么生产厂家处置是不是需要填报废物类别和废物代码？生产厂家是不是可以轻松把废物类别和废物代码写在这里？', style: 'blsxText' },
+                        ],
+                        style: "paraText",
+                    }, ],
+
+                    //2.3
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '2.3',
+                        style: "subsectionText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '物理和化学危险',
+                        style: "subsectionText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'H226',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '易燃液体和蒸气。',
+                            // { text: 'styled\n', italics: true },
+                            { text: '\n 包罗三相：见GB/T 17519-2013 第3.2.4节的要求', style: 'blsxText' },
+                            { text: '\n包罗三相：见GB 30000.7-2013 化学品分类和标签规范 第7部分：易燃液体', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=3FCEB3CB81076CDB311D0D3F2783B2F7', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+                    //2.4
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '2.4',
+                        style: "subsectionText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '健康危害',
+                        style: "subsectionText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'H314',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '皮肤腐蚀/刺激。',
+                            { text: '\n 包罗三相：见GB/T 17519-2013 第3.2.5节的要求', style: 'blsxText' },
+                            { text: '\n包罗三相：见GB 30000.19-2013 化学品分类和标签规范 第19部分：皮肤腐蚀/刺激', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=C5B87B85478148F2AD9FBC80991F2D92', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: 'H318',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '严重眼损伤/眼刺激。',
+                            { text: '\n 包罗三相：见GB/T 17519-2013 第3.2.5节的要求', style: 'blsxText' },
+                            { text: '\n包罗三相：见GB 30000.20-2013 化学品分类和标签规范 第20部分：严重眼损伤/眼刺激', link: 'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=406689A7D0C4443BEE5DB91B2BF23C91', style: 'blsxTextlink' },
+                        ],
+                        style: "paraText",
+
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+
+                    //2.5
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '2.5',
+                        style: "subsectionText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '环境危害',
+                        style: "subsectionText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '无GHS分类危害。更多信息，见第十二部分 生态学信息',
+                            { text: '\n 包罗三相：见GB/T 17519-2013 第3.2.6节的要求', style: 'blsxText' },
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+
+                    //2.6
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '2.6',
+                        style: "subsectionText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '其他危害',
+                        style: "subsectionText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: '',
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                        // style: "paraText",
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: [
+                            '使用过程中产生的水污染物（COD，BOD等）和空气污染物（VOC），见第十二部分 生态学信息。\n\n本品的产品碳足迹，见第十二部分 生态学信息',
+                            { text: '\n 包罗三相：见GB/T 17519-2013 第3.2.7节的要求', style: 'blsxText' },
+                        ],
+                        style: "paraText",
+                    }, ],
+                    [{
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, {
+                        border: [false, false, false, false],
+                        // fillColor: '#eeeeee',
+                        text: ' ',
+                    }, ],
+
+                ],
+            }
+        },
+
+
+    ],
+
+    styles: {
+        header: {
+            fontSize: 22,
+            bold: true,
+        },
+        right: {
+            italics: true,
+            alignment: 'right',
+        },
+        tableExample: {
+            margin: [0, 8, 0, 8]
+        },
+        sectionheader: {
+            margin: [0, 16, 0, 16],
+        },
+        sectionheaderText: {
+            margin: [2, 10, 0, 0],
+            fontSize: 18,
+            bold: true,
+        },
+
+        subsectionText: {
+            fontSize: 18,
+            bold: true,
+
+        },
+
+        paraText: {
+            fontSize: 15,
+            bold: true,
+
+        },
+        blsxText: {
+            fontSize: 10,
+            color: 'turquoise',
+        },
+        blsxTextlink: {
+            fontSize: 10,
+            color: 'blue',
+        },
+        blsxTextlink18: {
+            fontSize: 15,
+            color: 'blue',
+        },
+    },
+
+    defaultStyle: {
+        font: 'WCSF',
+    },

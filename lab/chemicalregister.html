@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>化学品档案</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <!-- from http://www.heropatterns.com/ -->
+</head>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+
+<style>
+    table {
+        border-collapse: collapse;
+        border: 1px solid #44475C;
+        margin: 10px 10px 0 10px;
+        /* background-color: aqua; */
+    }
+    
+    table th {
+        text-transform: uppercase;
+        text-align: center;
+        background: #44475C;
+        color: #FFF;
+        cursor: pointer;
+        padding: 2px;
+        min-width: 30px;
+    }
+    
+    table th:hover {
+        background: #717699;
+    }
+    
+    table td {
+        text-align: left;
+        padding: 2px;
+        border-right: 1px solid #7D82A8;
+        min-width: 30px;
+    }
+    
+    .gyp-table-td {
+        white-space: pre;
+    }
+    
+    table tr {
+        text-align: left;
+        padding: 2px;
+        border-right: 1px solid #7D82A8;
+    }
+    
+    table tr:hover {
+        background-color: orange;
+    }
+    /* table td:last-child {
+        border-right: none;
+    } */
+    
+    table tbody tr:nth-child(2n) td {
+        background: #D4D8F9;
+    }
+    
+    .pagination {
+        font-family: 'Open Sans', sans-serif;
+        text-align: right;
+        /* width: 750px; */
+        padding: 8px;
+    }
+    
+    .arrow_down {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAaCAYAAABPY4eKAAAAAXNSR0IArs4c6QAAAvlJREFUSA29Vk1PGlEUHQaiiewslpUJiyYs2yb9AyRuJGm7c0VJoFXSX9A0sSZN04ULF12YEBQDhMCuSZOm1FhTiLY2Rky0QPlQBLRUsICoIN/0PCsGyox26NC3eTNn3r3n3TvnvvsE1PkwGo3yUqkkEQqFgw2Mz7lWqwng7ztN06mxsTEv8U0Aam5u7r5EInkplUol/f391wAJCc7nEAgE9Uwmkzo4OPiJMa1Wq6cFs7Ozt0H6RqlUDmJXfPIx+qrX69Ti4mIyHA5r6Wq1egND+j+IyW6QAUoul18XiUTDNHaSyGazKcZtdgk8wqhUKh9o/OMvsVgsfHJy0iWqVrcQNRUMBnd6enqc9MjISAmRP3e73T9al3XnbWNjIw2+KY1Gc3imsNHR0YV4PP5+d3e32h3K316TySQFoX2WyWR2glzIO5fLTSD6IElLNwbqnFpbWyO/96lCoai0cZjN5kfYQAYi5H34fL6cxWIZbya9iJyAhULBHAqFVlMpfsV/fHxMeb3er+Vy+VUzeduzwWC45XA4dlD/vEXvdDrj8DvURsYEWK3WF4FA4JQP9mg0WrHZbEYmnpa0NxYgPVObm5teiLABdTQT8a6vrwdRWhOcHMzMzCiXlpb2/yV6qDttMpkeshEzRk4Wo/bfoe4X9vb2amzGl+HoXNT29vZqsVi0sK1jJScG+Xx+HGkL4Tew2TPi5zUdQQt9otPpuBk3e0TaHmMDh1zS7/f780S0zX6Yni+NnBj09fUZUfvudDrNZN+GkQbl8Xi8RLRtHzsB9Hr9nfn5+SjSeWUCXC7XPq5kw53wsNogjZNohYXL2EljstvtrAL70/mVaW8Y4OidRO1/gwgbUMvcqGmcDc9aPvD1gnTeQ+0nmaInokRj0nHh+uvIiVOtVvt2a2vLv7Ky0tL3cRTXIcpPAwMDpq6R4/JXE4vFQ5FI5CN+QTaRSFCYc8vLy1l0rge4ARe5kJ/d27kYkLXoy2Jo4C7K8CZOsEBvb+9rlUp1xNXPL7v3IDwxvPD6AAAAAElFTkSuQmCC')
+    }
+    
+    .arrow_up {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAaCAYAAACgoey0AAAAAXNSR0IArs4c6QAAAwpJREFUSA21Vt1PUmEYP4dvkQ8JFMwtBRocWAkDbiqXrUWXzU1rrTt0bdVqXbb1tbW16C9IBUSmm27cODdneoXjputa6069qwuW6IIBIdLvdaF4OAcOiGeDc87zPs/vd57P96WpFq7p6enbGo1mjKZpeTabjU1MTCRagGnOZHFxcXxtbe1XKpUq7+zslJeXl//Mz8+Hy+Uy3RxSE9qTk5M3otFooVQqgef4Wl9f343FYoEmoISrxuNxFX5f9vb2jhn/PxUKhfLS0tIPfFifUESRUMV8Pv/M6XReRm5rTGQyGeXxeGxYe1ezeBpBOBx2rKysbO7v79d4Wy3Y2Nj4GQqFbgnhaugxwiuGJx99Pp9FLBbXxYTXvTqd7v3MzIy6riIWGxJnMpl7AwMD14xGYyMsSq1WUyQdUqn0eSPlusQIsbGrq+vl4OCgvhFQZd1utyv1en0gEolcqsi47nWJlUrlG5fLZVcoFFy2nDKSDpIWlUoVTCQSEk4lCHmJMZ2GTCbTiMVikfIZ88l7enoos9l8dXt7+z6fDicxSJUokqDX6xXcl2wCROoc0vQCWL3sNfLOSdzR0fHY4XC4tVotl40gmVwup9xuN4OQv+UyqCFGH9rg7SOGYVRcBs3IEG4J0nVnamrqOtvuBDGGgQg9+wHFcVEi4a0LNkbdd6TrPKo8ODc311mteIIYjT/a398/jK+s1jnVM0kXoufCFvq0GuiIGEVgQIhfoygM1QrteEa9dAL7ITiYCt4RMabOK5AyKKzKWtvupLcRciu8D5J0EuDDPyT/Snd39yh6VtY2NhYQSR9G79Ds7OxdskRjEyAufvb7/cPoO5Z6e1+xtVKrq6vfcFzyi/A3ZrPZ3GdNSlwgo5ekE4X2RIQGf2C1WlufFE0GBeGWYQ8YERWLxQtnUVB830MKLZfL9RHir8lkssCn2G751tZWEWe03zTKm15YWPiEiXXTYDB0Ig/t7yd8PRws4EicwWHxO4jHD8/C5HiTTqd1BwcHFozKU89origB+y/kmzgYpgOBQP4fGmUiZmJ+WNgAAAAASUVORK5CYII=')
+    }
+    
+    .arrow {
+        float: right;
+        width: 12px;
+        height: 15px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-y: bottom;
+    }
+    
+    .number {
+        display: inline-block;
+        padding: 4px 10px;
+        color: #FFF;
+        border-radius: 4px;
+        background: #44475C;
+        margin: 0px 5px;
+        cursor: pointer;
+    }
+    
+    .number:hover,
+    .number.active {
+        background: #717699;
+    }
+    
+    .gyp-ppe-column {
+        float: left;
+        width: 18%;
+        padding: 0px;
+        margin: 0px;
+        /* text-align: center;
+        font-size: 25px;
+        cursor: pointer;
+        color: white; */
+    }
+    
+    .gyp-ppe-row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+</style>
+
+<body>
+    <h1>化学品档案,COD测算,危险化学品安全周知卡,职业危害告知卡 </h1>
+    <h3>用法说明:</h3>
+    <ol>
+        <li>第1行是每个单元格的填写注解.</li>
+        <li>第2行开始,可以点击任意单元格内的文字,生成职业危害告知卡.粉尘的职业危害告知卡,不会生成.</li>
+        <li>点击每列的标题,可以排序.</li>
+        <li>正在编写中: 危险化学品安全周知卡</li>
+        <li>正在编写中: COD测算</li>
+        <li>正在编写中: 搜索功能</li>
+    </ol>
+
+    <div id="app">
+
+        <table class="gyp-table-td">
+            <thead>
+                <tr>
+                    <th v-for="col in columns" v-on:click="sortTable(col)">{{col}}
+                        <div class="arrow" v-if="col == sortColumn" v-bind:class="[ascending ? 'arrow_up' : 'arrow_down']"></div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="row in get_rows()">
+
+                    <td v-for="col in columns">
+                        <a data-toggle="modal" data-target="#mymodal" @click="selectPattern(row)">{{row[col]}}</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="pagination">
+            <div class="number" v-for="i in num_pages()" v-bind:class="[i == currentPage ? 'active' : '']" v-on:click="change_page(i)">{{i}}</div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="mymodallabel">
+            <div class="modal-dialog gyp-modal-width" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: white;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>close</title><path d="M10 8.586l-7.07-7.07-1.415 1.413L8.585 10l-7.07 7.07 1.414 1.415 7.07-7.07 7.07 7.07 1.415-1.414-7.07-7.07 7.07-7.07-1.414-1.415L10 8.585" fill="black" fill-rule="evenodd"/></svg></span></button>
+                        <h1 class="modal-title">职业危害告知卡Workplace Safety Card</h1>
+                    </div>
+                    <div class="modal-body ">
+                        <table style="width:100%;padding:0;margin: 0;">
+                            <tbody>
+                                <tr style="color:white;background-color: red;font-size:1.5em">
+                                    <td colspan="3">此工作场所存在 <strong>{{ selectedPattern.职业危害物质 }} </strong>，对人体有害，烦请注意防护。</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="6" style="width: 20% ;text-align:center;font: size 1.25em;">{{ selectedPattern.职业危害物质 }} <br> <span style="font: size 0.6em;"> 来自如下物料:<br> {{ selectedPattern.中文名称 }} <br> {{ selectedPattern.英文名称 }}</span></td>
+                                    <td>理化特性</td>
+                                    <td>健康危害</td>
+                                </tr>
+                                <tr>
+
+                                    <td style="width: 40% ;">{{ selectedPattern.理化特性 }}</td>
+                                    <td style="width: 40% ; white-space: pre-wrap;">{{ selectedPattern.GHS健康危害 }}</td>
+                                </tr>
+                                <tr>
+
+                                    <td>紧急情况概述</td>
+                                    <td>物理危害</td>
+                                </tr>
+                                <tr>
+
+                                    <td>{{ selectedPattern.紧急情况概述 }}</td>
+                                    <td>{{ selectedPattern.GHS物理危害 }}</td>
+                                </tr>
+                                <tr>
+
+                                    <td>GHS信号词</td>
+                                    <td>环境危害</td>
+                                </tr>
+                                <tr>
+
+                                    <td><strong>{{ selectedPattern.信号词 }}</strong></td>
+                                    <td>{{ selectedPattern.GHS环境危害 }}</td>
+                                </tr>
+                                <tr style="border-top: 1px solid black; ">
+                                    <td style="width: 20% ;background-color: white; border-bottom: 0px white;">按照GHS</td>
+                                    <td colspan="2">GHS预防措施</td>
+                                </tr>
+                                <tr style="border-top: 1px solid white; ">
+
+                                    <td rowspan="9" style="width: 20% ;background-color: white;">
+                                        <img v-bind:src="selectedPattern.gyp爆炸弹" alt="ghs pictogram" v-bind:style="{display:isGHS01}" style="width: 88%;padding-left: 6%;" /><br>
+                                        <img v-bind:src="selectedPattern.gyp火焰" alt="ghs pictogram" v-bind:style="{display:isGHS02}" style="width: 88%;padding-left: 6%;" /><br>
+                                        <img v-bind:src="selectedPattern.gyp圆圈上方火焰" alt="ghs pictogram" v-bind:style="{display:isGHS03}" style="width: 88%;padding-left: 6%;" /><br>
+                                        <img v-bind:src="selectedPattern.gyp高压气瓶" alt="ghs pictogram" v-bind:style="{display:isGHS04}" style="width: 88%;padding-left: 6%;" /><br>
+                                        <img v-bind:src="selectedPattern.gyp腐蚀" alt="ghs pictogram" v-bind:style="{display:isGHS05}" style="width: 88%;padding-left: 6%;" /><br>
+                                        <img v-bind:src="selectedPattern.gyp骷髅和交叉骨" alt="ghs pictogram" v-bind:style="{display:isGHS06}" style="width: 88%;padding-left: 6%;" /><br>
+                                        <img v-bind:src="selectedPattern.gyp感叹号" alt="ghs pictogram" v-bind:style="{display:isGHS07}" style="width: 88%;padding-left: 6%;" /><br>
+                                        <img v-bind:src="selectedPattern.gyp健康危害" alt="ghs pictogram" v-bind:style="{display:isGHS08}" style="width: 88%;padding-left: 6%;" /><br>
+                                        <img v-bind:src="selectedPattern.gyp环境危害" alt="ghs pictogram" v-bind:style="{display:isGHS09}" style="width: 88%;padding-left: 6%;" /><br>
+                                        <!-- <img v-bind:src="selectedPattern.GHS02" alt="ghs pictogram" v-bind:style="{display:isGHS01}" style="width: 88%;padding-left: 6%;" /><br><br> -->
+                                    </td>
+                                    <td colspan="2" style="width: 40% ; white-space: pre-wrap;">{{ selectedPattern.GHS预防措施 }}</td>
+                                </tr>
+                                <tr>
+
+                                    <td colspan="2">GHS应急处理</td>
+                                </tr>
+                                <tr>
+
+                                    <td colspan="2" style="white-space: pre-wrap;">{{ selectedPattern.GHS事故响应 }}</td>
+                                </tr>
+                                <tr>
+
+                                    <td colspan="2">GHS存储</td>
+                                </tr>
+                                <tr>
+
+                                    <td colspan="2" style="white-space: pre-wrap;">{{ selectedPattern.GHS存储 }}</td>
+                                </tr>
+                                <tr>
+
+                                    <td colspan="2">GHS废弃处置</td>
+                                </tr>
+                                <tr>
+
+                                    <td colspan="2" style="white-space: pre-wrap;">{{ selectedPattern.GHS废弃处置 }}</td>
+                                </tr>
+                                <tr>
+
+                                    <td colspan="2">GB/T 31523.1-2015 安全信息识别系统 第1部分：标志和GBZ 158-2003
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <div class="gyp-ppe-row">
+                                            <img v-bind:src="selectedPattern.gyp防护眼镜" alt="protection pictogram" v-bind:style="{display:isEyeProtection}" class="gyp-ppe-column" />
+                                            <img v-bind:src="selectedPattern.gyp防毒面具" alt="protection pictogram" v-bind:style="{display:isFaceProtection}" class="gyp-ppe-column" />
+                                            <img v-bind:src="selectedPattern.gyp防护手套" alt="protection pictogram" v-bind:style="{display:isHandProtection}" class="gyp-ppe-column" />
+                                            <img v-bind:src="selectedPattern.gyp防护服" alt="protection pictogram" v-bind:style="{display:isBodyProtection}" class="gyp-ppe-column" />
+                                            <img v-bind:src="selectedPattern.gyp通风" alt="protection pictogram" v-bind:style="{display:isVentilation}" class="gyp-ppe-column" />
+                                            <!-- <img v-bind:src="selectedPattern.防护眼镜" alt="protection pictogram" v-bind:style="{display:isEYEPROTECTION}" style="width: 15%;padding: 0px;margin: 0;" /> -->
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="3">
+                                        标准限值：{{ selectedPattern.职业接触限值 }} (强制国标GBZ 2.1-2019 {{ selectedPattern.GBZ212019 }}个) 检测数据：PC-TWA 0.88 mg/m3 合格 <br> 检测日期：20200909 检测机构：通标标准技术服务有限公司(SGS) 预计下次检测日期：20210808
+                                    </td>
+                                </tr>
+                                <tr style="color:white;background-color: red;font-size:1.5em">
+                                    <td colspan="3">急救电话：120 消防电话：119 职业卫生咨询电话:（本厂职业安全健康负责人姓名）</td>
+                                </tr>
+                                <tr style="font-size:0.2em">
+
+                                    <td colspan="3">此职业病危害告知卡按照
+                                        <a href="http://www.gov.cn/xinwen/2014-11/21/content_2781778.htm" target="blank">《用人单位职业病危害告知与警示标识管理规范》</a> 编写。该规范原文链接: http://www.gov.cn/xinwen/2014-11/21/content_2781778.htm。<br> 告知卡编号：GYP100 编写：本厂EHS负责人的姓名 初次编写日期：20141113
+                                        上次修订日期：20201111，最近修订日期：20210202 如褪色，掉落，破损，错误，烦请联系本厂EHS负责人的姓名。
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="js/appgyp.js"></script>
+</body>
+
+</html>

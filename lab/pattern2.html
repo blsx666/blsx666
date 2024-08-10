@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fabrics</title>
+</head>
+
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+<!-- source: https://icons.getbootstrap.com/ -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+<style>
+    /* body {
+        background-image: url(../image/drawing17.svg);
+        background-repeat: repeat;
+    } */
+    
+    .div1 {
+        width: calc(100vw - 20px);
+        height: calc(100vh - 200px);
+        overflow: scroll;
+        /* border: 1px solid #777777 */
+    }
+    
+    .div1 table {
+        border-spacing: 0;
+        border-spacing: 0px;
+        text-align: center;
+        font-size: 0.7rem;
+    }
+    
+    .div1 th {
+        /* border: 1px solid #bbbbbb; */
+        padding: 5px;
+        width: 80px;
+        min-width: 80px;
+        position: sticky;
+        top: 0;
+        background: #04AA6D;
+        color: #e0e0e0;
+        font-weight: normal;
+    }
+    
+    .div1 td {
+        /* border: 1px solid #bbbbbb; */
+        padding: 5px;
+        width: 80px;
+        min-width: 80px;
+    }
+    
+    .div1 tr:nth-child(even) {
+        background-color: whitesmoke;
+        /* z-index: -1; */
+    }
+    
+    .div1 tr:hover {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        /* background-color: #FFA500; */
+        background-color: #FFA500;
+        color: whitesmoke;
+    }
+    
+    .div1 th:nth-child(1),
+    .div1 td:nth-child(1) {
+        position: sticky;
+        left: 0;
+        width: 38px;
+        min-width: 38px;
+        color: #e0e0e0;
+    }
+    
+    .div1 th:nth-child(2),
+    .div1 td:nth-child(2) {
+        position: sticky;
+        left: 38px;
+        width: 50px;
+        min-width: 50px;
+        color: #e0e0e0;
+    }
+    
+    .div1 th:nth-child(3),
+    .div1 td:nth-child(3) {
+        position: sticky;
+        left: 92px;
+        width: 80px;
+        min-width: 80px;
+        color: #e0e0e0;
+    }
+    
+    .div1 td:nth-child(1),
+    .div1 td:nth-child(2),
+    .div1 td:nth-child(3) {
+        background-color: #04AA6D;
+    }
+    
+    .div1 th:nth-child(1),
+    .div1 th:nth-child(2),
+    .div1 th:nth-child(3) {
+        z-index: 2;
+        background-color: #04AA6D;
+    }
+    
+    #myInput {
+        background-image: url('../image/searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        width: 98%;
+        font-size: 16px;
+        margin-left: 2px;
+        padding: 12px 20px 12px 40px;
+        margin-top: 10px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .div1 table {
+            width: 140%;
+            display: block;
+            margin: 2px;
+            font-size: 0.7rem;
+            /* width: fit-content; */
+        }
+        .div1 th,
+        .div1 td {
+            text-align: left;
+            padding: 8px;
+            /* white-space: nowrap; */
+        }
+        #myInput {
+            width: 100%;
+            font-size: 0.5rem;
+            margin: 2px;
+            padding: 12px 20px 12px 40px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+    }
+    
+    .closebtn {
+        float: right;
+        color: black;
+        font-size: 1em;
+        cursor: pointer;
+    }
+    /* Float four columns side by side */
+    
+    .column {
+        /* float: left; */
+        width: 30%;
+        padding: 0 10px;
+    }
+    /* Remove extra left and right margins, due to padding */
+    
+    .row {
+        /* margin: 0 -5px; */
+        left: 5%;
+        margin-left: 5%;
+        padding-left: 5%;
+        /* right: 5%; */
+    }
+    /* Clear floats after the columns */
+    
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /* Responsive columns */
+    
+    @media screen and (max-width: 600px) {
+        .column {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+    /* Style the counter cards */
+    
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        text-align: center;
+        background-color: #f1f1f1;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+
+    <i class="bi-alarm" style="font-size: 2rem; color: cornflowerblue;"></i>
+    <div class="table-responsive-xl div1 ">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>物料中文全名</th>
+                    <th>物料英文全名</th>
+                    <th>物料代码</th>
+                    <th>sds中文版</th>
+                    <th>下次索取</th>
+                    <th>sds英文版</th>
+                    <th>tds中文版</th>
+                    <th>tds英文版</th>
+                    <th>定制</th>
+                    <th>生产厂家中文全名</th>
+                    <th>生产厂家英文全名</th>
+                    <th>与sds</th>
+                    <th>与包装</th>
+                    <th>走代理</th>
+                    <th>代理商公司全名</th>
+                    <th>代理资质从</th>
+                    <th>代理资质到</th>
+                    <th>更新日期</th>
+                    <th>更新人</th>
+                    <th>危险化学品</th>
+                    <th>GHS象形图01</th>
+                    <th>GHS象形图02</th>
+                    <th>GHS象形图03</th>
+                    <th>GHS象形图04</th>
+                    <th>GHS象形图05</th>
+                    <th>GHS象形图06</th>
+                    <th>GHS象形图07</th>
+                    <th>GHS象形图08</th>
+                    <th>GHS象形图09</th>
+                    <th>信号词</th>
+                    <th>物理和化学危害</th>
+                    <th>健康危害</th>
+                    <th>环境危害</th>
+                    <th>理化特性</th>
+
+
+
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+    <script>
+        var datas = [{
+            id: '000',
+            cnname: '来自SDS的1.1产品标识',
+            enname: '来自SDS的1.1产品标识',
+            erpno: '自己内部的物料编号',
+            sds中文版: '填写sds的修订日期',
+            sds下次索取日期: 'sds到期的提醒日期',
+            sds英文版: '填写sds的修订日期',
+            tds中文版: '填写Y or N',
+            tds英文版: '填写Y or N',
+            供应商中文公司全称: '来自SDS的1.2制造商名称',
+            供应商英文公司全称: '来自SDS的1.2制造商名称',
+            与sds一致: '产品全名是否和sds一致',
+            与外包装标签一致: '产品全名是否和外包装标签一致',
+            是否走代理商: '填写Y or N',
+            代理商公司全称: '如有则填写',
+            代理商资质从: '起始日期',
+            代理商资质到: '到期日期',
+            更新日期: '这行信息的最后更新日期',
+            更新人: 'gor',
+            危险化学品: '来自sds的2.1. 如是,填Y.',
+            GHS象形图01: '来自sds的2.2',
+            GHS象形图02: '来自sds的2.2',
+            GHS象形图03: '来自sds的2.2',
+            GHS象形图04: '来自sds的2.2',
+            GHS象形图05: '来自sds的2.2',
+            GHS象形图06: '来自sds的2.2',
+            GHS象形图07: '来自sds的2.2',
+            GHS象形图08: '来自sds的2.2',
+            GHS象形图09: '来自sds的2.2',
+            信号词: '来自sds的2.2',
+            物理和化学危害: '来自sds的2.3',
+            健康危害: '来自sds的2.4',
+            环境危害: '来自sds的2.5',
+            理化特性: '来自sds的2,3,9',
+
+        }, {
+            id: '001',
+            cnname: '醋酸 88%',
+            enname: 'acetic acid 88%',
+            erpno: '800012340001',
+            sds中文版: '20210225',
+            sds下次索取日期: '20230825',
+            sds英文版: '20210225',
+            tds中文版: 'Y',
+            tds英文版: 'N',
+            供应商中文公司全称: 'XX化工有限公司',
+            供应商英文公司全称: 'XX Chemical Co.,Ltd.',
+            与sds一致: 'Y',
+            与外包装标签一致: 'Y',
+            是否走代理商: 'Y',
+            代理商公司全称: 'YY化工门市部',
+            代理商资质从: '20220101',
+            代理商资质到: '20221231',
+            更新日期: '20220311',
+            更新人: 'gor',
+            危险化学品: 'Y',
+            GHS象形图01: '',
+            GHS象形图02: '',
+            GHS象形图03: '',
+            GHS象形图04: '',
+            GHS象形图05: '',
+            GHS象形图06: '',
+            GHS象形图07: '',
+            GHS象形图08: '',
+            GHS象形图09: '',
+            信号词: '危险',
+            物理和化学危害: 'H226  易燃液体和蒸气',
+            健康危害: 'H303  吞咽可能有害    H314 造成严重皮肤灼伤和眼损伤       H318 造成严重眼损伤 ',
+            环境危害: '无',
+            理化特性: '来自sds的2,3,9',
+        }]
+
+        var tbody = document.querySelector('tbody');
+
+        for (var i = 0; i < datas.length; i++) {
+            var tr = document.createElement('tr');
+            var j = 0;
+            tbody.appendChild(tr);
+            for (var k in datas[i]) {
+                var td = document.createElement('td');
+                // td.innerHTML = datas[i][k];
+                // tr.appendChild(td);
+                j = j + 1
+                if (j == 9) {
+                    td.innerHTML = datas[i][k];
+                    // td.innerHTML = "<a href='" + datas[i]['link'] + "'>" + datas[i][k] + "</a>";
+                    // td.innerHTML = "<a href='summarypage.html' onclick='return popup(this, 'notes')'>" + datas[i][k] + "</a>";
+                    tr.appendChild(td);
+                    var td = document.createElement('td');
+                    // td.innerHTML = "<a href='javascript:;'>删除</ a>";
+                    td.innerHTML = "<button class='gypscard closebtn' data-toggle='modal' data-target='#gypmodal'>告知卡</button>";
+                    tr.appendChild(td);
+
+                } else if (k != "link") {
+                    td.innerHTML = datas[i][k];
+                    // td.innerHTML = "<span class='gypWinclass'>" + datas[i][k] + "</span>";
+                    tr.appendChild(td);
+                }
+            }
+
+        }
+        // var as = document.querySelectorAll('a');
+        // for (var i = 0; i < as.length; i++) {
+        //     as[i].onclick = function() {
+        //         tbody.removeChild(this.parentNode.parentNode);
+        //     }
+        // }
+    </script>
+
+
+    <!-- <button id="edit" class="layui-btn layui-btn-small">
+                          <i class="layui-icon">&#xe642;</i>
+                        </button> -->
+    <!-- <button class="gfgselect bg-secondary" data-toggle="modal" data-target="#gfgmodal">
+                            SELECT</button>
+                            <button id="delete" class="layui-btn layui-btn-small">
+                          <i class="layui-icon">&#xe640;</i>
+                        </button> -->
+
+
+    <script>
+        $(function() {
+            $(".gypscard").click(function() {
+                var gyprow = $(this).parents("tr").find("td");
+                // var safetycard = gyprow.eq(11).text();
+                // $("#gypmodaltitle").empty();
+                // $("#gypmodaltitle").append(safetycard);
+                var a = gyprow.eq(1).text();
+                var p = "";
+                p += "<p>化学品中文名称: " + a + " </p>";
+                var a = gyprow.eq(2).text();
+                p += "<p>化学品英文名称: " + a + " </p>";
+                $("#gypscards01").empty();
+                $("#gypscards01").append(p);
+            });
+        });
+    </script>
+
+    <div class="modal" id="gypmodal">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h1>
+                        <!-- <p class="modal-title" id="gypmodaltitle"></p> -->
+                        <p>职业危害告知卡Workplace safety card</p>
+                    </h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">X</span>
+                    </button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <h2 style="width: 100%;background-color:red;color: white;text-align: center;">此工作区域存在职业危害化学因素 - <mark color="black"> <b>醋酸</b> </mark>，对人体有损害，请注意防护。</h2>
+                    <hr>
+
+                    <!-- ROW 1 -->
+                    <div class="row">
+                        <div class="column">
+                            <div class="card">
+                                <h4 id="gypscards0"></h4>
+                                <p id="gypscards01"></p>
+                                <h4></h4>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="card">
+                                <h4>
+                                    <p>危险Danger</p>
+                                    <p>信号词</p>
+                                </h4>
+                                <p id="gypscards02"></p>
+                                <h4></h4>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="card">
+                                <h4>
+                                    <p>H340</p>
+                                    <p>危害描述</p>
+                                </h4>
+                                <p id="gypscards03"></p>
+                                <h4></h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ROW 2 -->
+                    <div class="row">
+                        <div class="column">
+                            <div class="card">
+                                <h4 id="gypscards04"></h4>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="card">
+                                <h4>危险Danger</h4>
+                                <p id="gypscards05"></p>
+                                <p>信号词</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="card">
+                                <h4>H340</h4>
+                                <p id="gypscards06"></p>
+                                <p>危害描述</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ROW 3 -->
+                    <div class="row">
+                        <div class="column">
+                            <div class="card">
+                                <h4 id="gypscards07"></h4>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="card">
+                                <h4>危险Danger</h4>
+                                <p id="gypscards08"></p>
+                                <p>信号词</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="card">
+                                <h4>H340</h4>
+                                <p id="gypscards09"></p>
+                                <p>危害描述</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ROW 4 -->
+                    <div class="row">
+                        <div class="column">
+                            <div class="card">
+                                <h4 id="gypscards10"></h4>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="card">
+                                <h4>危险Danger</h4>
+                                <p id="gypscards11"></p>
+                                <p>信号词</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="card">
+                                <h4>H340</h4>
+                                <p id="gypscards12"></p>
+                                <p>危害描述</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <hr>
+                    <p style="float: left; text-align:left;margin-left: 0%;padding-left: 0;">标准限值：PC-TWA 50 mg/m3,PC-STEL 100 mg/m3 (强制国标GBZ 2.1-2019表1第136个)，50 ml/m3 或190 mg/m3 (自愿蓝标工作场所接触限值201911)</p>
+                    <p style="text-align:left;margin-left: 0%;padding-left: 0;"> 检测数据：PC-TWA 0.88 mg/m3合格 检测日期：20200909 检测机构：通标标准技术服务有限公司(SGS) 预计下次检测日期：20210808
+                    </p>
+                    <h2 style="width: 100%;background-color:red;color: white;text-align: center;">急救电话：120 消防电话：119 职业卫生咨询电话:（填写本厂的职业安全健康负责人的）</h2>
+                    <hr>
+                    <p style="text-align:left;margin-left: 0%;padding-left: 0;">此职业病危害告知卡按照《用人单位职业病危害告知与警示标识管理规范》编写。该规范原文链接：http://www.gov.cn/xinwen/2014-11/21/content_2781778.htm。 </p>
+                    <p style="text-align:left;margin-left: 0%;padding-left: 0;"> 告知卡编号：GYP100 编写：本厂EHS负责人的姓名 初次编写日期：20141113 上次修订日期：20201111，最近修订日期：20210202 如褪色，掉落，破损，错误，烦请联系本厂EHS负责人的姓名。
+                    </p>
+                    <!-- <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button> -->
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

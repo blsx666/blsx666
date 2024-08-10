@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Dialog - Default functionality</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            $(".dialog").click(function() {
+                $('#dialog').html($(this).html());
+                $('#dialog').dialog();
+            });
+        });
+    </script>
+
+    <!-- <script>
+        $('#myTable td').each(function(indx, val) {
+            $(this).click(function() {
+                var index = $(this).index();
+                var value = $(this).text();
+                alert('This row index is ' + index + ' This row value is ' + value)
+                console.log(indx)
+            })
+        })
+    </script> -->
+</head>
+
+<body>
+    <table id="myTable" width="100%" border="1" cellpadding="1">
+        <tr>
+            <th scope="col" class="dialog" title="Example1">
+                <p>Example1</p>
+            </th>
+            <th scope="col" class="dialog">
+                <p>Example2</p>
+            </th>
+        </tr>
+        <tr>
+            <td class="dialog">
+                <p>Example3</p>
+            </td>
+            <td class="dialog">
+                <p>Example4</p>
+            </td>
+        </tr>
+    </table>
+
+    <div id="dialog" title="Basic dialog">
+
+    </div>
+</body>
+
+</html>

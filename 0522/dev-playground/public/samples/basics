@@ -1,0 +1,431 @@
+// 纸张类型或自定义 { width: number, height: number }
+pageSize: 'A3',
+// 纸张方向。默认：portrait。
+// pageOrientation: 'landscape',
+// 页边距：[left, top, right, bottom] or [horizontal, vertical]
+pageMargins: [ 16, 36, 16, 36 ],
+
+//		
+content: [
+			{ text: '化学品作业场所警示标志和职业病危害告知卡', style: 'center' },
+				        {
+							style: 'tableExample',
+							//表格，每行3列。
+				            table: {
+				                headerRows: 0,
+				                widths: [180, 300, "*"],				
+				                body: [
+								//第一行
+								[
+								//第一行的第一格，这里合并了第二格和第三格。
+								{
+			                        fillColor: 'red',
+			                        text: ['此工作场所存在',
+									{text: '二甲基甲酰胺DMF', style: 'firstrowinBold'},
+									'，对人体有损害，请注意防护。'],
+			                        style: "firstrow",
+			                        colSpan: 3,
+			                    },
+								//第一行的第二格
+								{
+			                        text: '',
+			                    },
+								//第一行的第三格
+								{
+			                        text: '',
+			                    }],
+				                //第二行    
+								[{text:[{ text: '化学品商品称：'},
+									],
+								}, 
+								{
+			                        // border: [false, false, false, false], 紧急情况概述
+			                        fillColor: 'blue',
+			                        text: '1 理化特性',
+			                        style: "subsectionTextinWhite",
+			                        // colSpan: 3,
+			                    },  
+								{
+			                        // border: [false, false, false, false], 健康危害
+			                        fillColor: 'blue',
+			                        text: '4 物理和化学危险',
+			                        style: "subsectionTextinWhite",
+			                        // colSpan: 3,
+			                    },  
+								],
+
+				                //第三行   
+								['\n辛笑笑牌聚氨酯胶水AP-100', 
+								'\n化学文摘号CAS No.: 68-12-2。无色至淡黄色的液体，具有轻微的类似胺的气味。和水互溶。\n\n', 
+								{ text: '\nH226 易燃液体和蒸气\n\n'}],
+
+				                //第四行    
+								['信号词：', 
+								{
+			                        fillColor: 'blue',
+			                        text: '2 紧急情况概述',
+			                        style: "subsectionTextinWhite",
+			                    },{
+			                        fillColor: 'blue',
+			                        text: '5 健康危害',
+			                        style: "subsectionTextinWhite",
+			                    },  
+								],
+								//第五行
+								[{
+			                        fillColor: 'black',
+			                        text: '危 险',
+			                        style: "subsectionTextinWhiteCenter",
+			                    }, 
+								'\n易燃液体和蒸气，皮肤接触有害，造成严重眼刺激，吸入有害，可能对生育能力或胎儿造成伤害。\n\n 临界不良健康效应：眼和上呼吸道刺激；肝损害。皮：经皮吸收。G2A：对人可能致癌。\n包罗三相：来自GBZ 2.1-2019。此处和GHS分类有出入。\n\n',
+								{ text: '\nH312 皮肤接触有害\nH319 造成严重眼刺激\nH332 吸入有害\nH360 可能对生育能力或胎儿造成伤害\n\n'}],
+								//第六行
+								['产生如下职业病危害因素：', 
+								{
+			                        fillColor: 'blue',
+			                        text: '3 职业病危害因素及其编号',
+			                        style: "subsectionTextinWhite",
+			                    }, 
+								{ fillColor: 'blue',text: '6 环境危害', style: 'subsectionTextinWhite' },
+								],
+								//第七行	
+								['\nN,N-二甲基甲酰胺\nDMF\nN,N-Dimethylformamide', 
+									'\n二甲基甲酰胺即DMF，编号：hwys003，为本工厂第3个化学品危害因素。按照建设项目职业病危害风险分类管理目录，我司列为职业病危害严重。按照职业病防治法，需要每年安排工作场所职业病危害因素检测。\n\n', 
+								{ text: '\n无GHS分类'}],
+								//第八行
+				                [{
+			                        border: [true, false, false, false],
+			                        text: '按照GHS',
+			                    },
+									{
+			                        fillColor: 'skyblue',
+			                        text: '7 预防措施',
+			                        style: "subsectionTextinWhite",
+			                    },  
+									{
+			                        fillColor: 'skyblue',
+			                        text: '8 事故响应',
+			                        style: "subsectionTextinWhite",
+			                    },  
+								],
+								//第九行
+								[
+								{
+									border: [true, false, false, false],
+									image: 'examples/fonts/flamme.jpg',
+									fit: [100, 100],
+									style: 'imagecenter',
+								},
+								{
+			                        text: '\nP201 使用前取得专用说明。\nP202 在阅读并明了所有安全措施前切勿搬动。\nP210 远离热源/火花/明火/热表面--禁止吸烟。\nP233 保持容器密闭。\nP240 容器和接收设备接地/等势联接。\nP241 使用防爆的电气/通风/照明等设备。\nP242 只能使用不产生火花的工具。\nP243 采取防止静电放电的措施。\nP280 戴防护手套/穿防护服/戴防护眼罩/戴防护面具。\nP260 不要吸入粉尘/烟/气体/烟雾/蒸气/喷雾。\nP261 避免吸入粉尘/烟/气体/烟雾/蒸气/啧雾。\nP264 作业后彻底清洗皮肤。\nP271 只能在室外或通风良好之处使用。',
+			                        rowSpan:3,
+			                    },  
+									{
+			                        text: '\nP302+P352 如皮肤沾染：用水充分清洗。\nP303+P361+P353 如皮肤(或头发)沾染：立即脱掉所有沾染的衣服。用水清洗皮肤/淋浴。\nP304+P340 如误吸入：将人转移到空气新鲜处，保持呼吸舒适体位。\nP305+P351+P338 如进入眼睛：用水小心冲洗几分钟。如戴隐形眼镜并可方便地取出，取出隐形眼镜。继续冲洗。\nP362+P364 脱掉沾染的衣服，清洗后方可重新使用。\nP370+P378 火灾时；使用雾状水、抗溶性泡沫、干粉、二氧化碳灭火。',
+			                        rowSpan:3,
+			                    },  
+								],
+								[{
+									border: [true, false, false, false],
+									text:"包罗三相",
+									style: "subsectionTextinWhite",
+									rowSpan:1,
+								}, 
+								 '', 
+								 '', ],
+								[
+								{
+									border: [true, false, false, false],
+									image: 'examples/fonts/GHS07ExclamationMark.jpg',
+									fit: [100, 100],
+									style: 'imagecenter',
+									rowSpan:1,
+								},
+								'', 
+								 '', 
+								],	
+								[{
+									border: [true, false, false, false],
+									text:"",
+									rowSpan:1,
+								}, 
+								{
+			                        fillColor: 'skyblue',
+			                        text: ' 9 安全储存',
+			                        style: "subsectionTextinWhite",
+			                    }, 
+								{
+			                        fillColor: 'skyblue',
+			                        text: '10 废弃处置',
+			                        style: "subsectionTextinWhite",
+			                    },],			                    
+								[{
+									border: [true, false, false, false],
+									image: 'examples/fonts/silhouete.jpg',
+									fit: [100, 100],
+									style: 'imagecenter',
+									rowSpan:1,
+								},								 
+								{
+			                        text: '\nP233 保持容器密闭。\nP403+P235 存放在通风良好的地方。保持低温。\nP405 存放处须加锁。',
+			                        rowSpan:2,
+			                    },  
+									{
+			                        text: '\nP501 按照《国家危险废物名录(2021年版)》，内装物和容器均属于危险废物，废物类别HW06 废有机溶剂与含有机溶剂废物，废物代码900-402-06。内装物，送有资质的第三方处置。容器可由我司回收(干净整洁无破损)，或送有资质的第三方处置。详情见SDS第十三部分。',
+			                        rowSpan:2,
+			                    },  ],
+								[{
+									border: [true, false, false, true],
+									text:"包罗三相，包罗三相",
+									style: "subsectionTextinWhite",
+									rowSpan:3,
+								}, 
+								 '', 
+								 '', ],
+								[
+								{ text: ''}, 
+								{ border: [true, false, true, false],text: '按照GB/T 31523.1-2015 安全信息识别系统 第1部分：标志',colSpan:2,},
+								{ text: ''},
+								],
+
+								[
+								{ text: ''}, 
+								{border: [true, false, true, true],
+									table: {
+										body: [
+											[
+												{
+											border: [false, false, false, false],
+													image: 'examples/fonts/301.jpg',
+													fit: [71, 71],
+												},
+												{
+												border: [false, false, false, false],
+													image: 'examples/fonts/304.jpg',
+													fit: [71, 71],
+												}, 
+												// {
+											// border: [false, false, false, false],
+											// 		image: 'examples/fonts/312.jpg',
+											// 		fit: [71, 71],
+											// 	},
+												{
+											border: [false, false, false, false],
+													image: 'examples/fonts/S310.jpg',
+													fit: [71, 71],
+												},
+												{
+												border: [false, false, false, false],
+													image: 'examples/fonts/S311.jpg',
+													fit: [71, 71],
+												}, 
+												// {
+											// border: [false, false, false, false],
+											// 		image: 'examples/fonts/314.jpg',
+											// 		fit: [71, 71],
+											// 	},
+												{
+											border: [false, false, false, false],
+													image: 'examples/fonts/315.jpg',
+													fit: [71, 71],
+												},
+												{
+												border: [false, false, false, false],
+													image: 'examples/fonts/321.jpg',
+													fit: [71, 71],
+												}, 
+												{
+											border: [false, false, false, false],
+													image: 'examples/fonts/322-01.jpg',
+													fit: [71, 71],
+												},
+												],	
+												[
+												{
+											border: [false, false, false, false],
+													text:"必须戴防护眼镜",
+													
+												},
+												{
+												border: [false, false, false, false],
+													text:"必须戴防毒面具",
+													style:'centerbold',
+												}, 
+												// {
+											// border: [false, false, false, false],
+											// 		text:"必须戴防毒面具",
+											// 	},
+												{
+											border: [false, false, false, false],
+													text:"必须穿防护服",
+													style:'centerbold',
+												},
+												{
+												border: [false, false, false, false],
+													text:"必须戴防护手套",
+													style:'centerbold',
+												}, 
+												// {
+											// border: [false, false, false, false],
+											// 		text:"必须加锁",
+											// 	},
+												{
+											border: [false, false, false, false],
+													text:"必须接地",
+													style:'centerbold',
+												},
+												{
+												border: [false, false, false, false],
+													text:"必须消除静电",
+													style:'centerbold',
+												}, 
+												{
+											border: [false, false, false, false],
+													text:"注意通风",
+													style:'centerbold',
+												},
+												],	
+										],
+									},
+								colSpan:2,},
+
+								{ text: ''},							
+								],	
+								[
+									{ text: ['标准限值：MAC - mg/m3，PC-TWA 20 mg/m3，PC-STEL - mg/m3 (强制国标GBZ 2.1-2019 表1第73个)；20 mg/m3 (第三方认证体系如蓝标接触限值) ',
+									'\n检测结果：PC-TWA 0.88 mg/m3 合格 检测日期：20231109 检测机构：(SGS。注：仅示例) 预计下次检测日期：20241008'],
+									colSpan:3,
+									style:'center18',
+									},
+									{ text: ''},
+									{ text: ''},							
+								],
+								[
+									{ text: '急救电话：120     消防电话：119      职业卫生咨询电话:（填写本厂的职业安全健康负责人）',
+									colSpan:3,fillColor:'red',style:"firstrow"},
+									{ text: ''},
+									{ text: ''},							
+								],	
+								[
+									{ text: [
+									'此化学品作业场所警示标志执行',
+									{ text: '中华人民共和国安全生产法', link:'https://flk.npc.gov.cn/detail2.html?ZmY4MDgxODE3YTY2YjgxNjAxN2E3OTU2YjdkYjBhZDQ%3D', style: 'blsxTextlink' },
+									'第三十五条　生产经营单位应当在有较大危险因素的生产经营场所和有关设施、设备上，设置明显的安全警示标志。编写依据：',
+									{ text: 'GB/T 30000.31-2023 化学品分类和标签规范 第31部分：化学品作业场所警示性标志', link:'https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=458D223C9CF07A34FF845F0815BFC95D', style: 'blsxTextlink' },
+									'、',
+									{ text: 'AQ 3047-2013 化学品作业场所安全警示标志规范', link:'https://std.samr.gov.cn/hb/search/stdHBDetailed?id=8B1827F1B148BB19E05397BE0A0AB44A', style: 'blsxTextlink' },
+									'。',
+									'\n此职业病危害告知卡执行',
+									{ text: '用人单位职业病危害告知与警示标识管理规范', link:'http://www.gov.cn/xinwen/2014-11/21/content_2781778.htm', style: 'blsxTextlink' },
+									'。该规范原文链接：http://www.gov.cn/xinwen/2014-11/21/content_2781778.htm。',
+									{ text: 'HG/T 23010-1997 常用危险化学品安全周知卡编制导则', link:'http://www.csres.com/notice/48324.html', style: 'blsxTextlink' },
+									'已经在2017年5月12日废止。',
+									'安全标志来自',
+									{ text: '安全色和安全标志（征求意见稿）。', link:'https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/202404/t20240429_486523.shtml', style: 'blsxTextlink' },
+									'\n告知卡编号：blsx100 编写：本厂EHS负责人的姓名 初次编写日期：20141113 上次修订日期：20201111，最近修订日期：20240320 如褪色，掉落，破损，错误，烦请联系本厂EHS负责人的姓名。',
+									],
+									colSpan:3,style:"lastrow"},
+									{ text: ''},
+									{ text: ''},							
+								],												
+
+				                ],
+				            },
+				        },		    
+			
+	],	
+			
+	styles: {
+	header: {
+		fontSize: 22,
+		bold: true,
+	},
+	right: {
+		italics: true,
+		alignment: 'right',
+	},
+	center: {
+		fontSize: 32,
+		alignment: 'center',
+	},
+	center18: {
+		// alignment: 'center',
+		fontSize: 18,
+	},
+	centerbold: {
+		// fontSize: 32,
+		bold: true,
+		alignment: 'center',
+	},
+	imagecenter:{
+		alignment: 'center',
+	},
+	firstrow: {
+		fontSize: 18,
+		alignment: 'center',
+		color: "white",
+	},
+	firstrowinBold: {
+		// italics: true,
+		fontSize: 28,
+		// alignment: 'center',
+		color: "black",
+		bold: true,
+	},
+	lastrow: {
+		fontSize: 10,
+		// alignment: 'center',
+		// color: "white",
+	},
+	tableExample: {
+		margin: [0, 8, 0, 8]
+	},
+	sectionheader: {
+		margin: [0, 16, 0, 16],
+	},
+	sectionheaderText: {
+		margin: [2, 10, 0, 0],
+		fontSize: 14,
+		bold: true,
+	},
+	subsectionTextinWhite: {
+		fontSize: 14,
+		color:"white",
+		bold: true,
+	},
+	subsectionTextinWhiteCenter: {
+		fontSize: 56,
+		alignment: 'center',
+		color:"white",
+		bold: true,
+		margin:[0,32,0,0]
+	},
+	
+	subsectionText: {
+		fontSize: 18,
+		bold: true,
+	
+	},
+	
+	paraText: {
+		fontSize: 15,
+		bold: true,
+	
+	},
+	blsxText: {
+		fontSize: 10,
+		color: 'teal',
+	},
+	blsxTextlink: {
+		fontSize: 10,
+		color: 'blue',
+	},
+	blsxTextlink18: {
+		fontSize: 15,
+		color: 'blue',
+	},
+	},
+	
+	defaultStyle: {
+	font: 'WCSF',
+	},

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Peter Collingridge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>SVG basics</title>
+
+    <meta property="og:site_name" content="petercollingridge.co.uk" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://petercollingridge.co.uk/tutorials/svg/basics/" />
+    <meta property="og:title" content="SVG basics" />
+
+
+
+
+
+    <meta property="og:image" content="http://petercollingridge.co.ukhttps://media.petercollingridge.co.uk/images/Screen_Shot_2018-03-24_at_17.24.17.width-400.png" />
+    <meta property="og:image:width" content="380" />
+    <meta property="og:image:height" content="380" />
+
+
+    <meta name="description" content="Introduction page for SVG basics">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/font-awesome.min.bf0c425cdb73.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/base.5b0ea2f049b9.css">
+    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:500|Josefin+Sans:300,600' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="https://wagtail.petercollingridge.co.uk/favicon.ico" />
+
+
+
+
+
+</head>
+
+<body class="introduction-body">
+    <div id="body">
+
+
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">
+                            <i class="navbar-brand fa fa-home"></i> <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/tutorials">Tutorials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/blog">Articles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/tools">Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" action="/search/" method="get">
+                    <input class="form-control mr-sm-2" type="text" name="query" value="" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+
+        <main role="main" class="container">
+            <h1>SVG basics</h1>
+            <div class="content">
+                <div class="row">
+                    <div class="col-xs-12 parent-page-link">
+                        <a href="/tutorials/svg/">SVG Tutorials</a>
+                    </div>
+                </div>
+
+                <hr>
+
+                <article>
+
+                    <div class="info-header">
+
+                        <span class="date">3 May 2012</span>
+
+
+
+                    </div>
+
+                    <h2>Contents</h2>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <ol>
+
+                                <li><a href="svg-document">The SVG document</a></li>
+
+                            </ol>
+                        </div>
+
+                        <div class="col-sm-7">
+                            <div class="rich-text">
+                                <p>SVGs are Scalable Vector Graphics. They are an increasing popular form of image, particular for use on the web.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+                    <section class="section-block block-paragraph">
+                        <div class="rich-text">
+                            <p>SVGs are called <i>Vector</i> graphics because they define graphics as a series of vectors, unlike <a href="https://en.wikipedia.org/wiki/Raster_graphics">raster graphics</a>, which define graphics as a series of pixel colours.
+                                This means if an image contains a black line, rather than setting every pixel along that line to be black, a description of the line is stored. When you view an SVG, the program you&#x27;re using to view it, for example
+                                your web browser, looks at the description and calculates the colour of each pixel. The advantage of this approach is that it makes graphics <i>Scalable</i>: you can zoom in on the image as much as you like and it will
+                                never pixelate because the image will be re-rendered after each zoom.</p>
+                            <p>In this series of tutorial I aim to cover the basics of drawing shapes in SVG. For complex drawings you may want to try <a href="https://inkscape.org/">Inkscape</a> (which is free) or Adobe Illustrator. As much as possible,
+                                I hope to include interactive demos like the one below (created using SVG) to allow you to drag the control points around and see what the what code would create that shape. I hope this will give you a more intuitive sense
+                                of what each attribute does. This style of demo was very much inspired by <a href="http://worrydream.com/">Bret Victor</a>, and if you have a spare hour, I recommend watching this <a href="https://www.youtube.com/watch?v=PUv66718DII">video</a>.</p>
+                        </div>
+                    </section>
+
+
+
+                    <section class="section-block block-html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="500" height="240" onload="init(evt)" onmousemove="drag(evt)" onmouseup="deselect()">
+    
+        <style>
+        text{
+            font-size: 12px;
+            font-family: monospace;
+        }
+        .variable{
+            font-weight: bold;
+        }
+        .background{
+            fill: none;
+            stroke: #444;
+            stroke-width: 1;
+            stroke-dasharray: 5, 5;
+        }
+        .control_line{
+            stroke: #888;
+            stroke-width: 0.5;
+        }
+        .point1{
+            fill: #28A86B;
+        }
+        .point2{
+            fill: #6495ED;
+        }
+        .point3{
+            fill: #FF7878;
+        }
+        .point4{
+            fill: #8D5FD3;
+        }
+        #example_shape{
+            fill: none;
+            stroke: #111;
+            stroke-width: 1.5;
+        }
+        .control_point{
+            fill: #FFF;
+            opacity: 0;
+            stroke: #888;
+            stroke-width: 2;
+            cursor: pointer;
+        }
+        .control_point:hover{
+            opacity: 0.5;
+        }
+        .no-touch{
+            pointer-events: none;
+        }
+    </style>
+    
+    <script type="text/ecmascript"><![CDATA[
+        var svgDoc;
+        var selectedPoint = 0;
+        var dx = 0;
+        var dy = 0;
+        
+        var example_shape;
+        var text_variables;
+        var control_lines;
+        var coords = [0, 0, 100, 100, 150, 20, 180, 150, 280, 100];
+    
+        function init(evt) {
+            if ( window.svgDocument == null ) {
+                svgDoc = evt.target.ownerDocument;
+            }  
+            example_shape = svgDoc.getElementById('example_shape');
+            controls_lines = [svgDoc.getElementById('control_line1'),
+                              svgDoc.getElementById('control_line2')] ;
+            text_variables = [];
+            for (var i=1; i<=4; i++){
+                text_variables.push(svgDoc.getElementById('variable'+i));
+            }
+        };
+        
+        function selectElement(evt, point){
+            selectedPoint = point;
+            control_point = evt.target.parentNode;
+            dx = coords[selectedPoint*2] - evt.clientX;
+            dy = coords[selectedPoint*2 + 1] - evt.clientY;
+        };
+        
+        function drag(evt){
+            if (selectedPoint === 0) { return; }
+            
+            var x = evt.clientX + dx;
+            var y = evt.clientY + dy;
+            coords[selectedPoint*2] = x;
+            coords[selectedPoint*2 + 1] = y;
+            
+            var d = "M";
+            for (var i=2; i<coords.length; i+=2){
+                if (i === 4) { d += "C"; }
+                d += " " + coords[i] + " " + coords[i+1];
+            }
+            example_shape.setAttributeNS(null, "d", d);
+            control_point.setAttributeNS(null, "transform", "translate(" + x + "," + y + ")");
+            text_variables[selectedPoint-1].firstChild.data = x + "," + y;
+            
+            // Control lines
+            var n = Math.floor(selectedPoint/3);
+            var i = (selectedPoint % 2) + 1;
+            controls_lines[n].setAttributeNS(null, "x"+i, x);
+            controls_lines[n].setAttributeNS(null, "y"+i, y);
+            
+        };
+        
+        function deselect(){
+            selectedPoint = 0;
+        }
+    
+    ]]> </script>
+    
+    <g class="no-touch">
+        <rect class="background" x="0.5" y="0.5" width="499" height="239" />
+        <path id="example_shape" d="M100 100 C150 20 180 150 280 100 " />
+        <line class="control_line" id="control_line1" x1="150" y1="20" x2="100" y2="100" />
+        <line class="control_line" id="control_line2" x1="280" y1="100" x2="180" y2="150" />
+    </g>
+    
+    <g transform="translate(100,100)" >
+        <circle class="control_point" cx="0" cy="0" r="10" onmousedown="selectElement(evt, 1)" />
+        <circle class="point1 no-touch" cx="0" cy="0" r="3" />
+    </g>
+
+    <g transform="translate(150,20)" >
+        <circle class="control_point" cx="0" cy="0" r="10" onmousedown="selectElement(evt, 2)" />
+        <circle class="point2 no-touch" cx="0" cy="0" r="3" />
+    </g>
+
+    <g transform="translate(180,150)" >
+        <circle class="control_point" cx="0" cy="0" r="10" onmousedown="selectElement(evt, 3)" />
+        <circle class="point3 no-touch" cx="0" cy="0" r="3" />
+    </g>
+    
+   <g transform="translate(280,100)" >
+        <circle class="control_point" cx="0" cy="0" r="10" onmousedown="selectElement(evt, 4)" />
+        <circle class="point4 no-touch" cx="0" cy="0" r="3" />
+    </g>
+    
+    <text x="40" y="230">
+        <tspan>&lt;path</tspan>
+        <tspan>d="</tspan><tspan class="point1 variable">M<tspan id="variable1">100,100</tspan></tspan>
+                         C<tspan class="point2 variable" id="variable2">150,20</tspan>
+                          <tspan class="point3 variable" id="variable3">200,180</tspan>
+                          <tspan class="point4 variable" id="variable4">280,140</tspan>
+       <tspan>" /&gt;</tspan>
+    </text>
+</svg>
+                    </section>
+
+
+
+                    <h2>Related tutorials</h2>
+
+
+
+                    <section class="section-block block-paragraph">
+                        <div class="rich-text">
+                            <p>I also have tutorials on some more advanced aspects of SVGs.</p>
+                        </div>
+                    </section>
+
+
+
+                    <section class="section-block block-link_block">
+
+
+
+                        <div class="row featured-page-row">
+
+                            <div class="col-md-6 offset-md-0 col-sm-10 offset-sm-1 featured-page-container">
+                                <div class="featured-page">
+                                    <a class="featured-page-link" href="/tutorials/svg/interactive/">
+
+                                        <div class="featured-page-image">
+                                            <img alt="SVG bar chart with mouseover effect" height="72" src="https://media.petercollingridge.co.uk/images/Screen_Shot_2018-02-03_at_17.45.17.width-100.png" width="100">
+                                        </div>
+
+
+                                        <div class="featured-page-text">
+                                            <div class="featured-page-title">Interactive SVGs</div>
+
+                                            <div class="featured-page-details">
+                                                <div class="rich-text">
+                                                    <p>A set of tutorials on how to make SVGs interactive.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+
+
+                </article>
+
+                <div class="row">
+                    <div class="col-12 parent-page-link">
+                        <a href="/tutorials/svg/">Back to SVG Tutorials</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="footer"></div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
+
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+
+
+
+
+
+
+    <!-- <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(["_setAccount", "UA-13015193-1"]);
+        _gaq.push(["_trackPageview"]);
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script> -->
+</body>
+
+</html>

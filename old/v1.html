@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="css/v1.css">
+    <title>v1</title>
+
+</head>
+
+<body>
+
+    <!-- 
+    <li class="t-MediaList-item  ">
+        <a href="" class="t-MediaList-itemWrap ">
+            <div class="t-MediaList-iconWrap">
+                <span class="t-MediaList-icon u-color "><span class="t-Icon fa&#x20;fa-apex u-color " ></span></span>
+            </div>
+            <div class="t-MediaList-body">
+                <h3 class="t-MediaList-title">Oracle Apex</h3>
+                <p class="t-MediaList-desc">Need to build online database applications quickly? Oracle Application Express (Apex) is a low code development tool and deployment platform for building web and mobile apps for databases.</p>
+            </div>
+            <div class="t-MediaList-badgeWrap">
+                <span class="t-MediaList-badge"></span>
+            </div>
+        </a>
+    </li> -->
+
+    <div class="main">
+        <h2>包罗三相 第一卷 基本功 温故而知新 与时俱进</h2>
+        <div id="btnContainer">
+            <button class="btn" onclick="listView()"><i class="fas fa-th-list"></i> List</button>
+            <button class="btn active" onclick="gridView()"><i class="fas fa-th-large"></i> Grid</button>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="column" style="background-color:#aaa;">
+                <h4><i class="fas fa-th-list"></i> 0152</h4>
+                <p>过去的错，我改故我公开</p>
+            </div>
+            <div class="column" style="background-color:#aaa;">
+
+                <h4><i class="fas fa-th-list"></i> 0152</h4>
+                <p>过去的错，我改故我公开</p>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        // Get the elements with class="column"
+        var elements = document.getElementsByClassName("column");
+
+        // Declare a loop variable
+        var i;
+
+        // List View
+        function listView() {
+            for (i = 0; i < elements.length; i++) {
+                elements[i].style.width = "100%";
+            }
+        }
+
+        // Grid View
+        function gridView() {
+            for (i = 0; i < elements.length; i++) {
+                elements[i].style.width = "25%";
+            }
+        }
+
+        /* Optional: Add active class to the current button (highlight it) */
+        var container = document.getElementById("btnContainer");
+        var btns = container.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+
+</body>
+
+</html>

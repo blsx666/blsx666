@@ -1,0 +1,101 @@
+*,
+*:after,
+*::before {
+    box-sizing: border-box;
+}
+
+.gyp-flyout-div {
+    display: block;
+    width: calc(100vw - 20px);
+    /* height: calc(100vh-50px); */
+    height: 300px;
+    /* background-color: #e2e612; */
+}
+
+.gyp-flyout-div2 {
+    display: block;
+    width: calc(100vw - 20px);
+    /* height: calc(100vh-50px); */
+    height: 600px;
+    /* background-color: #1243e6; */
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+
+/* ******************************************************
+	Circular Navigation Menu
+*********************************************************/
+
+.CircularNavigation {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.circleNavi {
+    width: 250px;
+    height: 250px;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.4s ease-out;
+    position: relative;
+    right: 105px;
+    bottom: 90px;
+}
+
+.circleNavi a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    height: 90px;
+    width: 44px;
+    line-height: 40px;
+    margin-left: -20px;
+    margin-top: -20px;
+    position: absolute;
+    text-align: center;
+}
+
+
+/* .circleNavi a:hover {
+    background-color: rgb(233, 108, 24);
+} */
+
+.circleNavi i.fa {
+    border: 1px solid #4c1b6f;
+    border-radius: 50%;
+    color: #fff;
+    display: block;
+    /* font-size: 14px; */
+    padding: 12px;
+}
+
+.circleNavi i.fa:hover {
+    background-color: #4c1b6f;
+}
+
+.open.circleNavi {
+    opacity: 1;
+    transform: scale(2.8);
+}
+
+.navbtn {
+    background: #6d438b none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #fff;
+    display: block;
+    height: 160px;
+    left: calc(50% - 95px);
+    line-height: 40px;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    top: calc(50% - 100px);
+    width: 160px;
+}
+
+.navbtn:hover {
+    background-color: #4c1b6f;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width ,  user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ee</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/unslider.css">
+    <link rel="stylesheet" href="css/unslider-dots.css">
+    <!-- from http://www.heropatterns.com/ -->
+</head>
+
+<body data-spy="scroll" data-target="#appearance-settings">
+    <div id="app">
+        <!-- <div id="appearance-settings" class="nav hidden-xs hidden-sm" data-spy="affix">
+            <div class="container">
+                <div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="form-control">
+                                <label>
+                                    Foreground color
+                                </label>
+                                <div class="color-input">
+                                    <input type="text" v-el:fg-color>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="form-control">
+                                <label>
+                                    Background color
+                                </label>
+                                <div class="color-input">
+                                    <input type="text" v-el:bg-color>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="form-control">
+                                <label>
+                                    Foreground Opacity
+                                    <input type="range" min="0" max="1" step="0.01" v-model="opacity">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <section id="patterns">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6" v-for="pattern in patterns">
+                        <div class="pattern-container" type="button" data-toggle="modal" data-target="#myModal" :style="style(pattern)" @click="selectPattern(pattern)">
+                            <div class="pattern-info">
+                                <button type="button" class="btn btn-link use-pattern-btn">Use Pattern</button>
+                                <h3 class="pattern-title">{{ pattern.name }}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>close</title><path d="M10 8.586l-7.07-7.07-1.415 1.413L8.585 10l-7.07 7.07 1.414 1.415 7.07-7.07 7.07 7.07 1.415-1.414-7.07-7.07 7.07-7.07-1.414-1.415L10 8.585" fill="#fff" fill-rule="evenodd"/></svg></span></button>
+                        <h3 class="modal-title" id="myModalLabel">Selected Pattern</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="selected-pattern-header">
+                            <div class="download-svg">
+                                <a class="btn btn-link" href="{{ selectedPattern.download }}">
+                                    <span class="download-icon">
+                                    <svg class="svg-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" fill="#9179BA" fill-rule="evenodd"/></svg>Download unstyled SVG</span>
+                                </a>
+                            </div>
+                            <h2 class="modal-title" id="myModalLabel">{{ selectedPattern.name }}</h2>
+                        </div>
+                        <form>
+                            <h4>Generated CSS code</h4>
+                            <label>Use the following CSS rules to apply this background pattern:</label>
+                            <textarea class="form-control" rows="4" onclick="this.select()">{{ css }}</textarea>
+                        </form>
+                        <div class="row modal-appearance">
+                            <div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="modal-pattern-container" :style="modalStyle"></div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 appearance-settings">
+                                    <h4>Appearance Settings</h4>
+                                    <div class="form-control">
+                                        <label>
+                                            Foreground color
+                                        </label>
+                                        <div class="color-input">
+                                            <input type="text" v-el:modal-fg-color>
+                                        </div>
+                                    </div>
+                                    <div class="form-control">
+                                        <label>
+                                            Background color
+                                        </label>
+                                        <div class="color-input">
+                                            <input type="text" v-el:modal-bg-color>
+                                        </div>
+                                    </div>
+                                    <div class="form-control">
+                                        <label>
+                                            Foreground Opacity
+                                        </label>
+                                        <input type="range" min="0" max="1" step="0.01" v-model="modal.opacity">
+                                    </div>
+                                    <button type="button" class="btn btn-primary" @click="reset">Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        $('#appearance-settings').affix({
+            offset: {
+                top: $('#appearance-settings').offset().top,
+            }
+        });
+
+        $(document).on('affix.bs.affix', function() {
+            $('#patterns').css('padding-top', '120px');
+        });
+
+
+        $(document).on('affix-top.bs.affix', function() {
+            $('#patterns').css('padding-top', '');
+        });
+    </script>
+</body>
+
+</html>
