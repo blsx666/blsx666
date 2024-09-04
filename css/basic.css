@@ -1,420 +1,408 @@
-            :root {
-               --maincolor: white;
-               --secondarycolor: whitesmoke;
-               --white2: #64f7f7;
-               --textcolor: #808080;
-               --white: #f1f1f1;
-           }
-           
-           body {
-               background: var(--white);
-               color: var(--textcolor);
-               font-family: "Roboto", "Microsoft YaHei", sans-serif;
-               margin: 0px;
-               top: 0%;
-               max-width: 100%;
-               font-size: 16px;
-           }
-           /* set sidenavbar text color */
-           
-           .gyp-textcolor {
-               color: var(--textcolor)!important;
-           }
-           
-           .gyp-sidenavbar-bgcolor {
-               background: var(--white);
-           }
-           /* end */
-           
-           .main {
-               margin: 0;
-               padding-top: 60px;
-               margin-left: 20px;
-               max-width: 99%;
-           }
-           
-           h2 {
-               font-size: 2em;
-               word-break: break-all;
-           }
-           
-           h4 {
-               padding: bottom 1px;
-               margin: 0;
-               padding-left: 6px;
-               font-size: 1em;
-           }
-           
-           h6 {
-               float: right;
-               font-size: 0.6em;
-               top: 1px;
-               margin: 0;
-               padding-right: 8px;
-               /* color: #FFA500; */
-               /* background-color: darkorange;
-    border-radius: 3px; */
-           }
-           
-           p {
-               font-size: 0.8em;
-               word-break: break-all;
-               padding-left: 6px;
-           }
-           
-           .row {
-               margin: 8px -12px;
-           }
-           
-           .row,
-           .row>.column {
-               padding: 6px;
-           }
-           
-           .column {
-               float: left;
-               width: 18%;
-               margin-left: 10px;
-               display: none;
-           }
-           
-           .row:after {
-               content: "";
-               display: table;
-               clear: both;
-           }
-           
-           .content {
-               background-color: white;
-               padding: 6px;
-               border-radius: 2px;
-           }
-           
-           .show {
-               display: block;
-           }
-           
-           .btn {
-               border: none;
-               border-radius: 150px;
-               outline: none;
-               padding: 8px 12px;
-               background-color: white;
-               cursor: pointer;
-               font: size 0.5em;
-           }
-           
-           .btn:hover {
-               background-color: #ddd;
-           }
-           
-           .btn.gypactive,
-           .btn.active {
-               background-color: #FFA500;
-               color: white;
-           }
-           
-           .w3-sidebar {
-               z-index: 3;
-               width: 200px;
-               top: 43px;
-               bottom: 0;
-               height: inherit;
-               font: size 0.5em;
-           }
-           
-           .gyp-Navbar-small-bgcolor {
-               background-color: #FFA500;
-           }
-           
-           .gyp-Navbar-bgcolor {
-               background-color: #f1f1f1;
-           }
-           
-           abbr {
-               font-style: italic;
-               font-weight: 100;
-           }
-           
-           .h6specific {
-               float: right;
-               font-size: 0.4em;
-               padding-top: 20px;
-               padding-right: 8px;
-           }
-           
-           .imgplace {
-               background-color: #aaa;
-               width: 100%;
-               padding: 1px;
-           }
-           
-           .dailypost {
-               margin: 0px auto;
-               margin-top: 20px;
-               justify-content: center;
-               border: 1px solid red;
-               border-radius: 10px;
-               margin-left: 5px;
-           }
-           
-           .pp {
-               width: 90%;
-               font-size: 0.3em;
-               margin-left: 5px;
-           }
-           
-           footer {
-               /* padding-top: 20px; */
-               text-align: center;
-               background: #ddd;
-               /* margin-top: 20px; */
-           }
-           
-           footer p {
-               margin-left: 0px;
-           }
-           
-           .w3-container:after,
-           .w3-container:before {
-               content: "";
-               display: table;
-               clear: both
-           }
-           
-           .w3-container {
-               padding: 0.01em 16px
-           }
-           
-           .w3-main {
-               width: 100%;
-           }
-           
-           .summaryIndex {
-               /* font-size: 100%; */
-               /* color: #808080; */
-               margin: 20px 0px 20px 0px;
-               border-left: 2px solid #66CCCC;
-               /* border-right: 6px solid #66CCCC; */
-               padding-left: 10px;
-               /* font-weight: bold; */
-               font-size: 0.8em;
-           }
-           
-           .summaryRed {
-               font-size: 120%;
-               color: #808080;
-               margin: 20px 0px 20px 0px;
-               border-left: 2px solid #66CCCC;
-               /* border-right: 6px solid #66CCCC; */
-               padding-left: 10px;
-           }
-           
-           .summaryRed:before {
-               content: "红橙黄绿青蓝紫，7步贯标小意思";
-               font-weight: bold;
-           }
-           
-           .summaryXB {
-               font-size: 1em;
-               color: #808080;
-               margin: 20px 0px 20px 0px;
-               border-left: 5px solid #f5972c;
-               padding-left: 10px;
-           }
-           
-           .summaryXB:before {
-               content: "大家好Greeting，我是QM经理 XB，姓包，名相。";
-           }
-           
-           .summaryXS {
-               font-size: 1rem;
-               color: #808080;
-               margin: 20px 0px 20px 0px;
-               border-left: 5px solid #ED1951;
-               padding-left: 10px;
-           }
-           
-           .summaryXS:before {
-               /* content: "大家好Greeting，我是安全经理 XS，姓三，名相。我的座右铭是：安全不规范，三相两行泪。安全要规范，全靠你管我。"; */
-               /* font-weight: bold; */
-               content: "大家好Greeting，我是安全经理 XS，姓三，名相。";
-           }
-           
-           .summaryXL {
-               font-size: 1rem;
-               color: #808080;
-               margin: 20px 0px 20px 0px;
-               border-left: 5px solid #ED1951;
-               padding-left: 10px;
-           }
-           
-           .summaryXL:before {
-               /* content: "大家好Greeting，我是安全经理 XS，姓三，名相。我的座右铭是：安全不规范，三相两行泪。安全要规范，全靠你管我。"; */
-               /* font-weight: bold; */
-               content: "大家好Greeting，我是环境经理 XL，姓罗，名相。";
-           }
-           
-           .simple {
-               font-size: 1.2em;
-           }
-           
-           .simpleimportant {
-               font-size: 0.8em;
-           }
-           
-           .floatnoteQ {
-               border-radius: 150px;
-               background-color: #66CCCC;
-           }
-           
-           .floatnoteG {
-               border-radius: 150px;
-               background-color: #CCFF66;
-           }
-           
-           .floatnoteV {
-               border-radius: 150px;
-               background-color: #FF99CC;
-           }
-           
-           .tooltipright {
-               position: relative;
-               display: inline-block;
-           }
-           
-           .tooltipright .toolttext {
-               /* opacity: 0; */
-               /* visibility: hidden; */
-               width: 240px;
-               background-color: lightsalmon;
-               color: black;
-               text-align: center;
-               border-radius: 4px;
-               padding: 2px;
-               /* Position the tooltip */
-               position: absolute;
-               z-index: 0;
-               top: 110%;
-               left: -50%;
-               font-size: xx-small;
-           }
-           
-           .tooltipright:hover .toolttext {
-               opacity: 0;
-               visibility: hidden;
-           }
-           /* .tooltip {
-    position: relative;
-    display: inline-block;
+:root {
+    --maincolor: #62f1f1;
+    --secondarycolor: #8dfcfc;
+    --white2: #64f7f7;
+    --textcolor: #808080;
+    --white: #f1f1f1;
 }
 
-.tooltip .toolttext {
-    opacity: 0;
-    visibility: hidden;
-    width: 240px;
-    background-color: lightsalmon;
-    color: black;
-    text-align: center;
-    border-radius: 4px;
-    padding: 2px;
-    position: absolute;
-    z-index: 0;
-    top: 110%;
-    left: -50%;
-    font-size: xx-small;
+body {
+    background: var(--white);
+    color: var(--textcolor);
+    font-family: "Roboto", "Microsoft YaHei", sans-serif;
+    margin: 0px;
+    top: 0%;
+    max-width: 100%;
+    font-size: 16px;
 }
 
-.tooltip:hover .toolttext {
-    opacity: 1;
-    visibility: visible;
+textarea {
+    background-color: var(--secondarycolor);
+    color: var(--textcolor) !important;
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    /* font-family: "Heebo", sans-serif; */
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    width: 100%;
+    height: 400px;
+    transition: all 0.2s;
+}
+
+/* textarea:hover {
+    cursor: pointer;
+    background-color: #eeeeee;
 } */
-           /* Mobile Styles */
-           
-           @media only screen and (max-width: 600px) {
-               .simple {
-                   font-size: 1em;
-               }
-               h1 {
-                   font-size: 1.2em;
-               }
-           }
-           /* Tablet Styles */
-           
-           @media only screen and (min-width: 601px) and (max-width: 960px) {}
-           /* Desktop Styles */
-           
-           @media only screen and (min-width: 961px) {}
-           /* 0522 start */
-           
-           .container {
-               box-sizing: border-box;
-               width: 70%;
-               background-color: var(--white2);
-               border-radius: 20px;
-               box-shadow: -28px -28px 60px var(--maincolor), 28px 28px 60px var(--secondarycolor);
-               margin: auto;
-               margin-top: 70px;
-               font-size: 1.2em;
-           }
-           
-           .gypbutton {
-               border: none;
-               padding: 16px 32px;
-               text-align: center;
-               text-decoration: none;
-               display: inline-block;
-               font-size: 0.8em;
-               margin: 4px 2px;
-               transition-duration: 0.4s;
-               cursor: pointer;
-           }
-           
-           table {
-               border-collapse: collapse;
-               border-spacing: 0;
-               width: 100%;
-               border: 1px solid #ddd;
-           }
-           
-           th,
-           td {
-               text-align: left;
-               padding: 16px;
-               border: 1px solid #ddd;
-           }
-           
-           tr:nth-child(even) {
-               background-color: white;
-           }
-           
-           .gyp-main {
-               margin-left: 50px;
-               width: 90%;
-           }
-           /* Mobile Styles */
-           
-           @media only screen and (max-width: 600px) {
-               .container {
-                   box-sizing: border-box;
-                   width: 90%;
-                   background-color: var(--white2);
-                   border-radius: 20px;
-                   box-shadow: -28px -28px 60px var(--maincolor), 28px 28px 60px var(--secondarycolor);
-                   margin: auto;
-                   margin-top: 50px;
-                   font-size: 1em;
-               }
-               .gyp-main {
-                   margin-left: 30px;
-                   width: 82%;
-               }
-           }
-           
-           @media only screen and (min-width: 601px) and (max-width: 960px) {
-               .gyp-main {
-                   margin-left: 25px;
-                   width: 82%;
-               }
-           }
-           /* 0522 end */
+
+textarea:focus {
+    cursor: text;
+    color: var(--textcolor) !important;
+    background-color: var(--secondarycolor);
+    border-color: #333333;
+}
+
+textArea::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.div-in-htmlbag {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.div-in-htmlbag::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    /* color: var(--maincolor); */
+}
+
+.blsxTextlink {
+    /* color: var(--maincolor); */
+    font-size: 16px;
+    color: blue;
+}
+
+.blsxText {
+    /* color: var(--maincolor); */
+    font-size: 10px;
+}
+
+.blsxTextFigure {
+    font-size: 10px;
+}
+
+/* set sidenavbar text color */
+
+.gyp-textcolor {
+    color: var(--textcolor) !important;
+}
+
+.gyp-sidenavbar-bgcolor {
+    background: var(--white);
+}
+
+
+/* end */
+
+.main {
+    margin: 0;
+    padding-top: 60px;
+    margin-left: 20px;
+    max-width: 99%;
+    /* background-color: #CCFF66; */
+}
+
+h2 {
+    font-size: 2em;
+    word-break: break-all;
+}
+
+h4 {
+    padding: bottom 1px;
+    margin: 0;
+    padding-left: 6px;
+    font-size: 1em;
+}
+
+h6 {
+    float: right;
+    font-size: 0.6em;
+    top: 1px;
+    margin: 0;
+    padding-right: 8px;
+    /* color: #FFA500; */
+    /* background-color: darkorange;
+    border-radius: 3px; */
+}
+
+p {
+    font-size: 0.8em;
+    word-break: break-all;
+    padding-left: 6px;
+}
+
+.revisionTextinRight {
+    text-align: right;
+}
+
+.row {
+    margin: 8px -12px;
+}
+
+.row,
+.row>.column {
+    padding: 6px;
+}
+
+.column {
+    float: left;
+    width: 18%;
+    margin-left: 10px;
+    /* display: none; */
+    /* background-color: #3919ed; */
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content {
+    background-color: white;
+    padding: 6px;
+    border-radius: 2px;
+}
+
+.show {
+    display: block;
+}
+
+.btn {
+    border: none;
+    border-radius: 150px;
+    outline: none;
+    padding: 8px 12px;
+    background-color: white;
+    cursor: pointer;
+    font: size 0.5em;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+.btn.active {
+    background-color: #FFA500;
+    color: white;
+}
+
+.w3-sidebar {
+    z-index: 3;
+    width: 200px;
+    top: 43px;
+    bottom: 0;
+    height: inherit;
+    font: size 0.5em;
+}
+
+.gyp-Navbar-small-bgcolor {
+    background-color: #FFA500;
+}
+
+.gyp-Navbar-bgcolor {
+    background-color: #f1f1f1;
+}
+
+abbr {
+    font-style: italic;
+    font-weight: 100;
+}
+
+h6specific {
+    float: right;
+    font-size: 0.4em;
+    padding-top: 20px;
+    padding-right: 8px;
+}
+
+.imgplace {
+    background-color: #aaa;
+    width: 100%;
+    padding: 1px;
+}
+
+.dailypost {
+    margin: 0px auto;
+    margin-top: 20px;
+    justify-content: center;
+    border: 1px solid red;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+.pp {
+    width: 90%;
+    font-size: 0.3em;
+    margin-left: 5px;
+}
+
+footer {
+    /* padding-top: 20px; */
+    text-align: center;
+    background: #ddd;
+    /* margin-top: 20px; */
+}
+
+footer p {
+    margin-left: 0px;
+}
+
+.w3-container:after,
+.w3-container:before {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.w3-container {
+    padding: 0.01em 16px
+}
+
+.w3-main {
+    width: 100%;
+}
+
+.summaryRed {
+    font-size: 120%;
+    color: #808080;
+    margin: 20px 0px 20px 0px;
+    border-left: 2px solid #66CCCC;
+    /* border-right: 6px solid #66CCCC; */
+    padding-left: 10px;
+}
+
+.summaryRed:before {
+    content: "红橙黄绿青蓝紫，7步贯标小意思";
+    font-weight: bold;
+}
+
+.summaryXB {
+    font-size: 1em;
+    color: #808080;
+    margin: 20px 0px 20px 0px;
+    border-left: 5px solid #f5972c;
+    padding-left: 10px;
+}
+
+.summaryXB:before {
+    content: "大家好Greeting，我是QM经理 XB，姓包，名相。";
+}
+
+.summaryXS {
+    font-size: 1rem;
+    color: #808080;
+    margin: 20px 0px 20px 0px;
+    border-left: 5px solid #ED1951;
+    padding-left: 10px;
+}
+
+.summaryXS:before {
+    /* content: "大家好Greeting，我是安全经理 XS，姓三，名相。我的座右铭是：安全不规范，三相两行泪。安全要规范，全靠你管我。"; */
+    /* font-weight: bold; */
+    content: "大家好Greeting，我是安全经理 XS，姓三，名相。";
+}
+
+.simple {
+    font-size: 1.2em;
+}
+
+.simpleimportant {
+    font-size: 0.8em;
+}
+
+.floatnoteQ {
+    border-radius: 150px;
+    background-color: #66CCCC;
+}
+
+.floatnoteG {
+    border-radius: 150px;
+    background-color: #CCFF66;
+}
+
+.floatnoteV {
+    border-radius: 150px;
+    background-color: #FF99CC;
+}
+
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 600px) {
+    .simple {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+}
+
+
+/* Tablet Styles */
+
+@media only screen and (min-width: 601px) and (max-width: 960px) {}
+
+
+/* Desktop Styles */
+
+@media only screen and (min-width: 961px) {}
+
+
+/* 0522 start */
+
+.container {
+    box-sizing: border-box;
+    width: 70%;
+    background-color: var(--white2);
+    border-radius: 20px;
+    box-shadow: -28px -28px 60px var(--maincolor), 28px 28px 60px var(--secondarycolor);
+    margin: auto;
+    margin-top: 70px;
+    font-size: 1.2em;
+}
+
+.gypbutton {
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.8em;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.gyp-main {
+    margin-left: 50px;
+    width: 90%;
+}
+
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 600px) {
+    .container {
+        box-sizing: border-box;
+        width: 90%;
+        background-color: var(--white2);
+        border-radius: 20px;
+        box-shadow: -28px -28px 60px var(--maincolor), 28px 28px 60px var(--secondarycolor);
+        margin: auto;
+        margin-top: 50px;
+        font-size: 1em;
+    }
+
+    .gyp-main {
+        margin-left: 30px;
+        width: 82%;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 960px) {
+    .gyp-main {
+        margin-left: 25px;
+        width: 82%;
+    }
+}
