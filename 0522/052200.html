@@ -3900,9 +3900,9 @@
         </div>
 
     </div>
-    </div>
 
-    <div style="display:flex;height:15vh;">
+
+    <div style="display:flex;height:15vh;display: none;">
         <div style="flex:1;display:flex;flex-direction:column;">
             <b><a href="https://pdfmake.github.io/docs/document-definition-object/styling/">Styles</a> for
                 PDFMake:</b>
@@ -3971,7 +3971,6 @@
                         "font": "WCSF"
                     },
                     "blsxText": {
-                        "fontSize": 10,
                         "color": "teal",
                         "font": "WCSF"
                     },
@@ -3998,7 +3997,7 @@
                 }
             </textarea>
         </div>
-        <div style="flex:1;display:flex;flex-direction:column;">
+        <div style="flex:1;display:flex;flex-direction:column;display: none;">
             <b>htmlToPdfmake <a href="https://github.com/Aymkdn/html-to-pdfmake#options">options</a>:</b>
             <div class="error" id="options_error" style="display:none"></div>
             <textarea style="height:100%" id="options">
@@ -4009,19 +4008,18 @@
             </textarea>
         </div>
     </div>
-    <div style="display:flex;height:800px;margin-top:1em;margin-bottom: 1em;">
-         <div style="flex:1;display:flex;flex-direction:column;">
+    <div style="display:flex;height:800px;margin-top:1em;margin-bottom: 1em;display: none;">
+        <div style="flex:1;display:flex;flex-direction:column;">
             <textarea id="result" style="height:100%;"></textarea>
-            </div>
-        </div> 
-        <div style="flex:1;display:flex;flex-direction:column;height:100%;padding-bottom: 5px;margin-bottom: 5px;">
-            <iframe id="pdf" style="height:100%;"></iframe>
         </div>
     </div>
+    <div style="flex:1;display:flex;flex-direction:column;height:800px;padding-bottom: 5px;margin-bottom: 5px;">
+        <iframe id="pdf" style="height:100%;"></iframe>
+    </div>
 
-   <script src="https://blsx666.github.io/0522/browser-2.5.12.js"></script>
+    <script src="https://blsx666.github.io/0522/browser-2.5.12.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pdfmake@latest/build/pdfmake.min.js"></script>
-<!--     <script src="https://blsx666.github.io/0522/vfs_fonts_blsx.js"></script> -->
+    <!--     <script src="https://blsx666.github.io/0522/vfs_fonts_blsx.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/pdfmake@latest/build/vfs_fonts.js"></script>
     <script>
         function myFunction() {
@@ -4225,27 +4223,27 @@
         };
 
         function convert() {
-            // document.getElementById('pdf').classList.toggle
-            var errorStyles = document.querySelector('#styles_error');
-            var errorOptions = document.querySelector('#options_error');
-            // hide errors
-            errorStyles.style.display = "none";
-            errorOptions.style.display = "none";
-            // retrieve options
-            try {
-                var p = document.querySelector('#options').value.trim() || '{}';
-                var options = JSON.parse(document.querySelector('#options').value.trim() || '{}');
-            } catch (err) {
-                errorOptions.style.display = 'block';
-                errorOptions.innerHTML = err;
-            }
-            // retrieve styles
-            try {
-                var styles = JSON.parse(document.querySelector('#styles').value.trim() || '{}');
-            } catch (err) {
-                errorStyles.style.display = 'block';
-                errorStyles.innerHTML = err;
-            }
+            // // document.getElementById('pdf').classList.toggle
+            // var errorStyles = document.querySelector('#styles_error');
+            // var errorOptions = document.querySelector('#options_error');
+            // // hide errors
+            // errorStyles.style.display = "none";
+            // errorOptions.style.display = "none";
+            // // retrieve options
+            // try {
+            //     var p = document.querySelector('#options').value.trim() || '{}';
+            //     var options = JSON.parse(document.querySelector('#options').value.trim() || '{}');
+            // } catch (err) {
+            //     errorOptions.style.display = 'block';
+            //     errorOptions.innerHTML = err;
+            // }
+            // // retrieve styles
+            // try {
+            //     var styles = JSON.parse(document.querySelector('#styles').value.trim() || '{}');
+            // } catch (err) {
+            //     errorStyles.style.display = 'block';
+            //     errorStyles.innerHTML = err;
+            // }
 
 
 
@@ -4274,6 +4272,106 @@
                     italics: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
                     bolditalics: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
                 },
+            };
+            var options = {
+                defaultStyles: {
+                    // b: {
+                    //     bold: true,
+                    //     font: 'WCSF'
+                    // },
+                    // strong: {
+                    //     bold: true,
+                    //     font: 'WCSF'
+                    // },
+                    // u: {
+                    //     decoration: 'underline',
+                    //     font: 'WCSF'
+                    // },
+                    // s: {
+                    //     decoration: 'lineThrough',
+                    //     font: 'WCSF'
+                    // },
+                    // em: {
+                    //     italics: true,
+                    //     font: 'WCSF'
+                    // },
+                    // i: {
+                    //     italics: true,
+                    //     font: 'WCSF'
+                    // },
+                    h1: {
+                        fontSize: 24,
+                        bold: true,
+                        marginBottom: 5,
+                        font: 'WCSF'
+                    },
+                    h2: {
+                        fontSize: 22,
+                        bold: true,
+                        marginBottom: 5,
+                        font: 'WCSF'
+                    },
+                    h3: {
+                        fontSize: 20,
+                        bold: true,
+                        marginBottom: 5,
+                        font: 'WCSF'
+                    },
+                    h4: {
+                        fontSize: 18,
+                        bold: true,
+                        marginBottom: 5,
+                        font: 'WCSF'
+                    },
+                    h5: {
+                        fontSize: 16,
+                        bold: true,
+                        marginBottom: 5,
+                        font: 'WCSF'
+                    },
+                    h6: {
+                        fontSize: 14,
+                        bold: true,
+                        marginBottom: 5,
+                        font: 'WCSF'
+                    },
+                    a: {
+                        color: 'teal',
+                        decoration: '',
+                        font: 'WCSF',
+                        fontSize: 7
+                    },
+                    strike: {
+                        decoration: 'lineThrough',
+                        font: 'WCSF'
+                    },
+                    p: {
+                        margin: [0, 5, 0, 10],
+                        font: 'WCSF'
+                    },
+                    ul: {
+                        marginBottom: 5,
+                        font: 'WCSF'
+                    },
+                    li: {
+                        marginLeft: 5,
+                        font: 'WCSF'
+                    },
+                    table: {
+                        marginBottom: 5,
+                        font: 'WCSF'
+                    },
+                    th: {
+                        bold: true,
+                        fillColor: '#EEEEEE',
+                        font: 'WCSF'
+                    }
+                },
+                imagesByReference: true,
+                tableAutoSize: true,
+                // defaultStyle: {
+                //     font: 'WCSF',
+                // }
             };
             var val = htmlToPdfmake(sdsinHtmlCode.value, options);
             console.log("val is generated");
