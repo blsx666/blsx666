@@ -119,7 +119,7 @@
   </div>
   <script src="browser-2.5.12.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/pdfmake@latest/build/pdfmake.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/pdfmake@latest/build/vfs_fonts.js"></script>
+<!--   <script src="https://cdn.jsdelivr.net/npm/pdfmake@latest/build/vfs_fonts.js"></script> -->
   <script>
     var codeBag = document.querySelector('#code');
     function convert () {
@@ -143,8 +143,26 @@
         errorStyles.style.display='block';
         errorStyles.innerHTML = err;
       }
+      pdfMake.fonts = {
+                Roboto: {
+        normal: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Regular.ttf',
+        bold: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Medium.ttf',
+        italics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Italic.ttf',
+        bolditalics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-MediumItalic.ttf'
+    },
+                WCSF: {
+                    normal: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
+                    bold: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
+                    italics: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
+                    bolditalics: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
+                },
+            };
       var val = htmlToPdfmake(code.value, options);
-      var dd = (typeof val.content !== "undefined" ? val : {content:val});
+      var dd = (typeof val.content !== "undefined" ? val : {content:val},
+               defaultStyle: {
+                    font: 'WCSF',
+                },
+      );
       if (typeof styles === 'object') dd.styles = styles;
       document.querySelector('#result').value = "var dd = " + JSON.stringify(dd, null, '  ');
       // is IE ?
