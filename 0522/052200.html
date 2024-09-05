@@ -4019,26 +4019,20 @@
         </div>
     </div>
     <div style="display:flex;height:800px;margin-top:1em;margin-bottom: 1em;">
-        <!-- <div style="flex:1;display:flex;flex-direction:column;">
+         <div style="flex:1;display:flex;flex-direction:column;">
             <textarea id="result" style="height:100%;"></textarea>
-            <div style="padding:5px;border:2px solid #CCC;height:100%; overflow: auto" id="html" onkeyup="toHTMLCode()">
             </div>
-        </div> -->
+        </div> 
         <div style="flex:1;display:flex;flex-direction:column;height:100%;padding-bottom: 5px;margin-bottom: 5px;">
             <iframe id="pdf" style="height:100%;"></iframe>
         </div>
     </div>
 
-    <!--     <script src="https://aymkdn.github.io/html-to-pdfmake/browser-2.5.12.js"></script> -->
-    <!--     <script src="https://cdn.jsdelivr.net/npm/pdfmake@latest/build/pdfmake.js"></script> -->
-    <script src='pdfmake.min.js'></script>
-    <!--     <script src='/0522/dev-playground/public/pdfmake.min.js'></script> -->
-    <script src="browser-2.5.12.js"></script>
-    <!--     <script src="vfs_fonts_blsx.js"></script> -->
-    <!--     <script src="/0522/dev-playground/public/vfs_fonts.js"></script> -->
+   <script src="https://blsx666.github.io/0522/browser-2.5.12.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pdfmake@latest/build/pdfmake.min.js"></script>
+<!--     <script src="https://blsx666.github.io/0522/vfs_fonts_blsx.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/pdfmake@latest/build/vfs_fonts.js"></script>
     <script>
-        /* When the user clicks on the button, 
-                                                                                                        toggle between hiding and showing the dropdown content */
         function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
             console.log("clicked");
@@ -4276,85 +4270,6 @@
             // console.log(revisionversion);
             // var chemicalname = 'None';
             // console.log(chemicalname);
-            // var options = {
-            //     defaultStyles: {
-            //         b: {
-            //             bold: true
-            //         },
-            //         strong: {
-            //             bold: true
-            //         },
-            //         u: {
-            //             decoration: 'underline'
-            //         },
-            //         s: {
-            //             decoration: 'lineThrough'
-            //         },
-            //         em: {
-            //             italics: true
-            //         },
-            //         i: {
-            //             italics: true
-            //         },
-            //         h1: {
-            //             fontSize: 24,
-            //             bold: true,
-            //             marginBottom: 5
-            //         },
-            //         h2: {
-            //             fontSize: 22,
-            //             bold: true,
-            //             marginBottom: 5
-            //         },
-            //         h3: {
-            //             fontSize: 20,
-            //             bold: true,
-            //             marginBottom: 5
-            //         },
-            //         h4: {
-            //             fontSize: 18,
-            //             bold: true,
-            //             marginBottom: 5
-            //         },
-            //         h5: {
-            //             fontSize: 16,
-            //             bold: true,
-            //             marginBottom: 5
-            //         },
-            //         h6: {
-            //             fontSize: 14,
-            //             bold: true,
-            //             marginBottom: 5
-            //         },
-            //         a: {
-            //             color: 'teal',
-            //             decoration: ''
-            //         },
-            //         strike: {
-            //             decoration: 'lineThrough'
-            //         },
-            //         p: {
-            //             margin: [0, 5, 0, 10]
-            //         },
-            //         ul: {
-            //             marginBottom: 5
-            //         },
-            //         li: {
-            //             marginLeft: 5
-            //         },
-            //         table: {
-            //             marginBottom: 5
-            //         },
-            //         th: {
-            //             bold: true,
-            //             fillColor: '#EEEEEE'
-            //         },
-            //         // window: window,
-            //         // tableAutoSize: true
-            //     },
-            //     imagesByReference: true,
-            // };
-            // var val = htmlToPdfmake(codegyp.value, options);
             pdfMake.fonts = {
                 Roboto: {
                     normal: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Regular.ttf',
