@@ -179,7 +179,7 @@
                     bold: true           
                 }               
             });
-            // if (typeof styles === 'object') dd.styles = styles;
+            if (typeof styles === 'object') dd.styles = styles;
             document.querySelector('#result').value = "var dd = " + JSON.stringify(dd, null, '  ');
             pdfMake.createPdf(dd).getDataUrl(function(outDoc) {
                 document.getElementById('pdf').src = outDoc;
