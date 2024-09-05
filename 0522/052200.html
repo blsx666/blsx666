@@ -4020,7 +4020,7 @@
     <!--     <script src="/0522/dev-playground/public/vfs_fonts.js"></script> -->
     <script>
         /* When the user clicks on the button, 
-                                toggle between hiding and showing the dropdown content */
+                                        toggle between hiding and showing the dropdown content */
         function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
             console.log("clicked");
@@ -4179,14 +4179,14 @@
         toHTML();
 
         function toHTMLCode(status) {
-            str = htmlBag.innerHTML;
+            // str = htmlBag.innerHTML;
             if (status == "true") {
                 codeBag.value = htmlBag.innerHTML;
             };
             // var finder = ".jpg";
             // var replace = "";
             // var res = str.split(finder).join(replace);
-            codeBaggyp.innerHTML = res;
+            codeBaggyp.innerHTML = htmlBag.innerHTML;
         }
         toHTMLCode("true");
 
@@ -4497,6 +4497,7 @@
                         fontSize: 15,
                         color: 'blue',
                     },
+
                 },
                 defaultStyle: {
                     font: 'WCSF',
@@ -4511,5 +4512,7 @@
         }
         convert();
     </script>
+
 </body>
+
 </html>
