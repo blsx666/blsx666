@@ -4343,6 +4343,7 @@
                 },
             };
       var val = htmlToPdfmake(sdsinHtmlCode.value, options);
+            console.log(val)
       var dd = (typeof val.content !== "undefined" ? val : {content:val});
       // if (typeof styles === 'object') dd.styles = styles;
       // document.querySelector('#pdfV').value = "var dd = " + JSON.stringify(dd, null, '  ');
