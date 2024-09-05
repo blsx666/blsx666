@@ -4018,16 +4018,16 @@
             </textarea>
         </div>
     </div>
-    <div style="display:flex;height:800px;margin-top:1em;margin-bottom: 1em;">
-        <!-- <div style="flex:1;display:flex;flex-direction:column;">
+<!--     <div style="display:flex;height:800px;margin-top:1em;margin-bottom: 1em;">
+        <div style="flex:1;display:flex;flex-direction:column;">
             <textarea id="result" style="height:100%;display: none;"></textarea>
             <div style="padding:5px;border:2px solid #CCC;height:100%; overflow: auto" id="html" onkeyup="toHTMLCode()">
             </div>
-        </div> -->
+        </div>
         <div style="flex:1;display:flex;flex-direction:column;height:100%;padding-bottom: 5px;margin-bottom: 5px;">
             <iframe id="pdf" style="height:100%;"></iframe>
         </div>
-    </div>
+    </div> -->
 
 
     <div id="pdfV" style="height:100%;"></div>
@@ -4056,6 +4056,21 @@
     <script src="browser-2.5.12.js"></script>
     <script src="vfs_fonts_blsx.js"></script>
 <!--     <script src="/0522/dev-playground/public/vfs_fonts.js"></script> -->
+  <div style="display:flex;height:40vh;margin-top:1em">
+    <div style="flex:1;display:flex;flex-direction:column;">
+      <b>Result that can directly be copied in <a href="http://pdfmake.org/playground.html">PDFMake Playground</a>:</b>
+      <textarea id="result" style="height:100%"></textarea>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;">
+      <b>PDF:</b>
+      <iframe id="pdf" style="height:100%"></iframe>
+      <div id="pdf_ie" style="display:none;padding:3em">The PDF file is sent to you for download. Use a modern browser (like Chrome or Firefox) to display the PDF in this page.</div>
+    </div>
+  </div>
+  <script src="browser-2.5.13.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pdfmake@latest/build/pdfmake.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pdfmake@latest/build/vfs_fonts.js"></script>
+    
     <script>
 
         /* When the user clicks on the button, 
@@ -4264,103 +4279,103 @@
             };
         };
 
-        function convert() {
-            // document.getElementById('pdf').classList.toggle
-            var errorStyles = document.querySelector('#styles_error');
-            var errorOptions = document.querySelector('#options_error');
-            // hide errors
-            errorStyles.style.display = "none";
-            errorOptions.style.display = "none";
-            // retrieve options
-            try {
-                var p = document.querySelector('#options').value.trim() || '{}';
-                var options = JSON.parse(document.querySelector('#options').value.trim() || '{}');
-            } catch (err) {
-                errorOptions.style.display = 'block';
-                errorOptions.innerHTML = err;
-            }
-            // retrieve styles
-            try {
-                var styles = JSON.parse(document.querySelector('#styles').value.trim() || '{}');
-            } catch (err) {
-                errorStyles.style.display = 'block';
-                errorStyles.innerHTML = err;
-            }
+    //     function convert() {
+    //         // document.getElementById('pdf').classList.toggle
+    //         var errorStyles = document.querySelector('#styles_error');
+    //         var errorOptions = document.querySelector('#options_error');
+    //         // hide errors
+    //         errorStyles.style.display = "none";
+    //         errorOptions.style.display = "none";
+    //         // retrieve options
+    //         try {
+    //             var p = document.querySelector('#options').value.trim() || '{}';
+    //             var options = JSON.parse(document.querySelector('#options').value.trim() || '{}');
+    //         } catch (err) {
+    //             errorOptions.style.display = 'block';
+    //             errorOptions.innerHTML = err;
+    //         }
+    //         // retrieve styles
+    //         try {
+    //             var styles = JSON.parse(document.querySelector('#styles').value.trim() || '{}');
+    //         } catch (err) {
+    //             errorStyles.style.display = 'block';
+    //             errorStyles.innerHTML = err;
+    //         }
 
 
 
-            // var revisiondate = document.querySelector('#revisiondateblsx').innerText;
-            // console.log(revisiondate);
-            // var revisionversion = document.querySelector('#revisionversionblsx').innerText;
-            // console.log(revisionversion);
-            // var chemicalname = document.querySelector('#chemicalnameblsx').innerText;
-            // console.log(chemicalname);
-            var revisiondate = '20240905';
-            // console.log(revisiondate);
-            var revisionversion = 'v 1.00';
-            // console.log(revisionversion);
-            var chemicalname = 'None';
-            // console.log(chemicalname);
-            var options = {
-                defaultStyles:
-                {
-                    b: { bold: true },
-                    strong: { bold: true },
-                    u: { decoration: 'underline' },
-                    s: { decoration: 'lineThrough' },
-                    em: { italics: true },
-                    i: { italics: true },
-                    h1: { fontSize: 24, bold: true, marginBottom: 5 },
-                    h2: { fontSize: 22, bold: true, marginBottom: 5 },
-                    h3: { fontSize: 20, bold: true, marginBottom: 5 },
-                    h4: { fontSize: 18, bold: true, marginBottom: 5 },
-                    h5: { fontSize: 16, bold: true, marginBottom: 5 },
-                    h6: { fontSize: 14, bold: true, marginBottom: 5 },
-                    a: { color: 'teal', decoration: '' },
-                    strike: { decoration: 'lineThrough' },
-                    p: { margin: [0, 5, 0, 10] },
-                    ul: { marginBottom: 5 },
-                    li: { marginLeft: 5 },
-                    table: { marginBottom: 5 },
-                    th: { bold: true, fillColor: '#EEEEEE' },
-                    window: window,
-                    tableAutoSize: true
-                }
-            };
-            var val = htmlToPdfmake(codegyp.value, options);
-            pdfMake.fonts = {
-                Roboto: {
-        normal: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Regular.ttf',
-        bold: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Medium.ttf',
-        italics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Italic.ttf',
-        bolditalics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-MediumItalic.ttf'
-    },
-                WCSF: {
-                    normal: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
-                    bold: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
-                    italics: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
-                    bolditalics: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
-                },
-            };
-      var val = htmlToPdfmake(sdsinHtmlCode.value, options);
-            console.log(val)
-      var dd = (typeof val.content !== "undefined" ? val : {content:val});
-      // if (typeof styles === 'object') dd.styles = styles;
-      // document.querySelector('#pdfV').value = "var dd = " + JSON.stringify(dd, null, '  ');
-      // // is IE ?
-      // var isIE = '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;
-      // if (isIE) {
-      //   document.getElementById('pdf').style.display='none';
-      //   document.getElementById('pdf_ie').style.display='block';
-      //   pdfMake.createPdf(dd).download();
-      // } else {
-        pdfMake.createPdf(dd).getDataUrl(function(outDoc) {
-          document.getElementById('pdfV').src = outDoc;
-        });
-      // }
+    //         // var revisiondate = document.querySelector('#revisiondateblsx').innerText;
+    //         // console.log(revisiondate);
+    //         // var revisionversion = document.querySelector('#revisionversionblsx').innerText;
+    //         // console.log(revisionversion);
+    //         // var chemicalname = document.querySelector('#chemicalnameblsx').innerText;
+    //         // console.log(chemicalname);
+    //         var revisiondate = '20240905';
+    //         // console.log(revisiondate);
+    //         var revisionversion = 'v 1.00';
+    //         // console.log(revisionversion);
+    //         var chemicalname = 'None';
+    //         // console.log(chemicalname);
+    //         var options = {
+    //             defaultStyles:
+    //             {
+    //                 b: { bold: true },
+    //                 strong: { bold: true },
+    //                 u: { decoration: 'underline' },
+    //                 s: { decoration: 'lineThrough' },
+    //                 em: { italics: true },
+    //                 i: { italics: true },
+    //                 h1: { fontSize: 24, bold: true, marginBottom: 5 },
+    //                 h2: { fontSize: 22, bold: true, marginBottom: 5 },
+    //                 h3: { fontSize: 20, bold: true, marginBottom: 5 },
+    //                 h4: { fontSize: 18, bold: true, marginBottom: 5 },
+    //                 h5: { fontSize: 16, bold: true, marginBottom: 5 },
+    //                 h6: { fontSize: 14, bold: true, marginBottom: 5 },
+    //                 a: { color: 'teal', decoration: '' },
+    //                 strike: { decoration: 'lineThrough' },
+    //                 p: { margin: [0, 5, 0, 10] },
+    //                 ul: { marginBottom: 5 },
+    //                 li: { marginLeft: 5 },
+    //                 table: { marginBottom: 5 },
+    //                 th: { bold: true, fillColor: '#EEEEEE' },
+    //                 window: window,
+    //                 tableAutoSize: true
+    //             }
+    //         };
+    //         var val = htmlToPdfmake(codegyp.value, options);
+    //         pdfMake.fonts = {
+    //             Roboto: {
+    //     normal: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Regular.ttf',
+    //     bold: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Medium.ttf',
+    //     italics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Italic.ttf',
+    //     bolditalics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-MediumItalic.ttf'
+    // },
+    //             WCSF: {
+    //                 normal: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
+    //                 bold: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
+    //                 italics: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
+    //                 bolditalics: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
+    //             },
+    //         };
+    //   var val = htmlToPdfmake(sdsinHtmlCode.value, options);
+    //         console.log(val)
+    //   var dd = (typeof val.content !== "undefined" ? val : {content:val});
+    //   // if (typeof styles === 'object') dd.styles = styles;
+    //   // document.querySelector('#pdfV').value = "var dd = " + JSON.stringify(dd, null, '  ');
+    //   // // is IE ?
+    //   // var isIE = '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;
+    //   // if (isIE) {
+    //   //   document.getElementById('pdf').style.display='none';
+    //   //   document.getElementById('pdf_ie').style.display='block';
+    //   //   pdfMake.createPdf(dd).download();
+    //   // } else {
+    //     pdfMake.createPdf(dd).getDataUrl(function(outDoc) {
+    //       document.getElementById('pdfV').src = outDoc;
+    //     });
+    //   // }
 
             
-            var dd = (typeof val.content !== "undefined" ? val : {
+            // var dd = (typeof val.content !== "undefined" ? val : {
             //     footer: function (currentPage, pageCount) {
             //         return [{
             //             style: 'tableExample',
@@ -4429,93 +4444,142 @@
             //                 }
             //             },];
             //     },
-                // watermark: {text: '微信公众号：包罗三相', color: 'blue', opacity: 0.03},
-                content: val,
-                images: {
-                    ExclamationMark: 'https://blsx666.github.io/0522/ExclamationMark.jpg',
-                    flamme: 'https://blsx666.github.io/0522/flamme.jpg',
-                    acid_red: 'https://blsx666.github.io/0522/acid_red.jpg',
-                    silhouete: 'https://blsx666.github.io/0522/silhouete.jpg',
-                    E003: 'https://blsx666.github.io/0522/E003.jpg',
-                    E007: 'https://blsx666.github.io/0522/E007.jpg',
-                    E011: 'https://blsx666.github.io/0522/E011.jpg',
-                    E012: 'https://blsx666.github.io/0522/E012.jpg',
-                    F0010: 'https://blsx666.github.io/0522/F0010.jpg',
-                    F0011: 'https://blsx666.github.io/0522/F0011.jpg',
-                    F0090: 'https://blsx666.github.io/0522/F0090.jpg',
-                    203: 'https://blsx666.github.io/0522/203.jpg',
-                    102: 'https://blsx666.github.io/0522/102.jpg',
-                    M005: 'https://blsx666.github.io/0522/M005.jpg',
-                    M008: 'https://blsx666.github.io/0522/M008.jpg',
-                    M009: 'https://blsx666.github.io/0522/M009.jpg',
-                    M010: 'https://blsx666.github.io/0522/M010.jpg',
-                    M017: 'https://blsx666.github.io/0522/M017.jpg',
-                    321: 'https://blsx666.github.io/0522/321.jpg',
-                    322: 'https://blsx666.github.io/0522/322.jpg',
-                    wwacid02: 'https://blsx666.github.io/0522/wwacid02.jpg',
-                    wwflam: 'https://blsx666.github.io/0522/wwflam.jpg',
-                    rouge3_noir: 'https://blsx666.github.io/0522/rouge3_noir.jpg'
+            //     // watermark: {text: '微信公众号：包罗三相', color: 'blue', opacity: 0.03},
+            //     content: val,
+            //     images: {
+            //         ExclamationMark: 'https://blsx666.github.io/0522/ExclamationMark.jpg',
+            //         flamme: 'https://blsx666.github.io/0522/flamme.jpg',
+            //         acid_red: 'https://blsx666.github.io/0522/acid_red.jpg',
+            //         silhouete: 'https://blsx666.github.io/0522/silhouete.jpg',
+            //         E003: 'https://blsx666.github.io/0522/E003.jpg',
+            //         E007: 'https://blsx666.github.io/0522/E007.jpg',
+            //         E011: 'https://blsx666.github.io/0522/E011.jpg',
+            //         E012: 'https://blsx666.github.io/0522/E012.jpg',
+            //         F0010: 'https://blsx666.github.io/0522/F0010.jpg',
+            //         F0011: 'https://blsx666.github.io/0522/F0011.jpg',
+            //         F0090: 'https://blsx666.github.io/0522/F0090.jpg',
+            //         203: 'https://blsx666.github.io/0522/203.jpg',
+            //         102: 'https://blsx666.github.io/0522/102.jpg',
+            //         M005: 'https://blsx666.github.io/0522/M005.jpg',
+            //         M008: 'https://blsx666.github.io/0522/M008.jpg',
+            //         M009: 'https://blsx666.github.io/0522/M009.jpg',
+            //         M010: 'https://blsx666.github.io/0522/M010.jpg',
+            //         M017: 'https://blsx666.github.io/0522/M017.jpg',
+            //         321: 'https://blsx666.github.io/0522/321.jpg',
+            //         322: 'https://blsx666.github.io/0522/322.jpg',
+            //         wwacid02: 'https://blsx666.github.io/0522/wwacid02.jpg',
+            //         wwflam: 'https://blsx666.github.io/0522/wwflam.jpg',
+            //         rouge3_noir: 'https://blsx666.github.io/0522/rouge3_noir.jpg'
 
-                },
-                styles: {
-                    header: {
-                        fontSize: 22,
-                        bold: true,
-                    },
-                    right: {
-                        italics: true,
-                        alignment: 'right',
-                    },
-                    tableExample: {
-                        margin: [0, 8, 0, 8]
-                    },
-                    sectionheader: {
-                        margin: [0, 16, 0, 16],
-                    },
-                    sectionheaderText: {
-                        margin: [2, 10, 0, 0],
-                        fontSize: 18,
-                        bold: true,
-                    },
+            //     },
+            //     styles: {
+            //         header: {
+            //             fontSize: 22,
+            //             bold: true,
+            //         },
+            //         right: {
+            //             italics: true,
+            //             alignment: 'right',
+            //         },
+            //         tableExample: {
+            //             margin: [0, 8, 0, 8]
+            //         },
+            //         sectionheader: {
+            //             margin: [0, 16, 0, 16],
+            //         },
+            //         sectionheaderText: {
+            //             margin: [2, 10, 0, 0],
+            //             fontSize: 18,
+            //             bold: true,
+            //         },
 
-                    subsectionText: {
-                        fontSize: 18,
-                        bold: true,
+            //         subsectionText: {
+            //             fontSize: 18,
+            //             bold: true,
 
-                    },
+            //         },
 
-                    paraText: {
-                        fontSize: 15,
-                        bold: true,
+            //         paraText: {
+            //             fontSize: 15,
+            //             bold: true,
 
-                    },
-                    blsxText: {
-                        fontSize: 10,
-                        color: 'teal',
-                        // opacity: 0,
-                    },
-                    blsxTextlink: {
-                        fontSize: 10,
-                        color: 'blue',
-                    },
-                    blsxTextlink18: {
-                        fontSize: 15,
-                        color: 'blue',
-                    },
+            //         },
+            //         blsxText: {
+            //             fontSize: 10,
+            //             color: 'teal',
+            //             // opacity: 0,
+            //         },
+            //         blsxTextlink: {
+            //             fontSize: 10,
+            //             color: 'blue',
+            //         },
+            //         blsxTextlink18: {
+            //             fontSize: 15,
+            //             color: 'blue',
+            //         },
 
-                },
-                defaultStyle: {
-                    font: 'WCSF',
-                },
-            });
-            if (typeof styles === 'object') dd.styles = styles;
-            // document.querySelector('#result').value = "var dd = " + JSON.stringify(dd, null, '  ');
-            pdfMake.createPdf(dd).getDataUrl(function (outDoc) {
-                document.getElementById('pdf').src = outDoc;
-            });
+            //     },
+            //     defaultStyle: {
+            //         font: 'WCSF',
+            //     },
+            // });
+            // if (typeof styles === 'object') dd.styles = styles;
+            // // document.querySelector('#result').value = "var dd = " + JSON.stringify(dd, null, '  ');
+            // pdfMake.createPdf(dd).getDataUrl(function (outDoc) {
+            //     document.getElementById('pdf').src = outDoc;
+            // });
+
+            
+            // console.log("generated")
+        // }
+    // var val = htmlToPdfmake(sdsinHtmlCode.value, options);
+    var codeBag = document.querySelector('#sdsinHtmlCode');
+    function convert () {
+      var errorStyles = document.querySelector('#styles_error');
+      var errorOptions = document.querySelector('#options_error');
+      // hide errors
+      errorStyles.style.display="none";
+      errorOptions.style.display="none";
+      // retrieve options
+      try {
+        var p = document.querySelector('#options').value.trim() || '{}';
+        var options = JSON.parse(document.querySelector('#options').value.trim() || '{}');
+      } catch(err) {
+        errorOptions.style.display='block';
+        errorOptions.innerHTML = err;
+      }
+      // retrieve styles
+      try {
+        var styles = JSON.parse(document.querySelector('#styles').value.trim() || '{}');
+      } catch(err) {
+        errorStyles.style.display='block';
+        errorStyles.innerHTML = err;
+      }
+      var val = htmlToPdfmake(sdsinHtmlCode.value, options);
+      var dd = (typeof val.content !== "undefined" ? val : {content:val});
+      // if (typeof styles === 'object') dd.styles = styles;
+      // document.querySelector('#result').value = "var dd = " + JSON.stringify(dd, null, '  ');
+      // is IE ?
+      var isIE = '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;
+      if (isIE) {
+        document.getElementById('pdf').style.display='none';
+        document.getElementById('pdf_ie').style.display='block';
+        pdfMake.createPdf(dd).download();
+      } else {
+        pdfMake.createPdf(dd).getDataUrl(function(outDoc) {
+          document.getElementById('pdf').src = outDoc;
             console.log("generated")
-        }
-        convert();
+        });
+      }
+    }
+    convert();
+
+    var htmlBag = document.querySelector('#html');
+    function toHTML() {
+      htmlBag.innerHTML = codeBag.value;
+    }
+    toHTML();
+
     </script>
 
 </body>
