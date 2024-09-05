@@ -311,8 +311,8 @@
                         text</span></button>
                 <button class="w3-button w3-hover-orange tablinks tooltip"
                     onclick="openCity(event, 'sdsinHtmlCode')">2.在html中编写></button>
-                <!-- <button class="w3-button w3-hover-orange tablinks tooltip"
-                    onclick="openCity(event, 'codegyp')">4.查看成稿</button> -->
+                 <button class="w3-button w3-hover-orange tablinks tooltip"
+                    onclick="openCity(event, 'codegyp')">4.查看成稿</button> 
                 <button id="button" type="primary" is="ui-button" class="w3-button w3-hover-orange  tooltip">3.打开<span
                         class="tooltiptext">上传你自己保存的模板</span></button>
                 <button id="buttonSave" type="primary" is="ui-button"
@@ -4340,103 +4340,103 @@
                     bolditalics: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
                 },
             };
-            var dd = (typeof val.content !== "undefined" ? val : {
-                footer: function (currentPage, pageCount) {
-                    return [{
-                        style: 'tableExample',
-                        table: {
-                            heights: [1],
-                            widths: ['*'],
-                            body: [
-                                [{
-                                    border: [false, true, false, false],
-                                    fillColor: '#eeeeee',
-                                    text: ''
-                                },],
-                            ]
-                        }
-                    }, {
-                        text: '第 ' + currentPage.toString() + ' 页 共 ' + pageCount + ' 页',
-                        alignment: 'center',
-                    },];
-                },
-                header: function (currentPage, pageCount, pageSize) {
-                    if (currentPage != 1) then:
-                        return [{
-                            style: 'tableExample',
-                            table: {
-                                heights: [16, 1],
-                                widths: [30, 77, 77, 10, 50, 40, 20, '*', 88, 21],
-                                body: [
-                                    [{
-                                        border: [false, false, false, true],
-                                        text: ' ',
-                                    }, {
-                                        border: [false, false, false, true],
-                                        text: '本次修订日期：',
-                                    }, {
-                                        border: [false, false, false, true],
-                                        text: revisiondate,
-                                    }, {
-                                        border: [false, false, false, true],
-                                        text: ' '
-                                    }, {
-                                        border: [false, false, false, true],
-                                        text: 'SDS版本: ',
-                                    }, {
-                                        border: [false, false, false, true],
-                                        text: {
-                                            text: revisionversion,
-                                            style: 'right'
-                                        },
-                                    }, {
-                                        border: [false, false, false, true],
-                                        text: ' ',
-                                    }, {
-                                        border: [false, false, false, true],
-                                        text: '产品名称：',
-                                    }, {
-                                        border: [false, false, false, true],
-                                        text: {
-                                            text: chemicalname,
-                                            style: 'right'
-                                        },
-                                    }, {
-                                        border: [false, false, false, true],
-                                        text: ' ',
-                                    },],
-                                ]
-                            }
-                        },];
-                },
+            // var dd = (typeof val.content !== "undefined" ? val : {
+            //     footer: function (currentPage, pageCount) {
+            //         return [{
+            //             style: 'tableExample',
+            //             table: {
+            //                 heights: [1],
+            //                 widths: ['*'],
+            //                 body: [
+            //                     [{
+            //                         border: [false, true, false, false],
+            //                         fillColor: '#eeeeee',
+            //                         text: ''
+            //                     },],
+            //                 ]
+            //             }
+            //         }, {
+            //             text: '第 ' + currentPage.toString() + ' 页 共 ' + pageCount + ' 页',
+            //             alignment: 'center',
+            //         },];
+            //     },
+            //     header: function (currentPage, pageCount, pageSize) {
+            //         if (currentPage != 1) then:
+            //             return [{
+            //                 style: 'tableExample',
+            //                 table: {
+            //                     heights: [16, 1],
+            //                     widths: [30, 77, 77, 10, 50, 40, 20, '*', 88, 21],
+            //                     body: [
+            //                         [{
+            //                             border: [false, false, false, true],
+            //                             text: ' ',
+            //                         }, {
+            //                             border: [false, false, false, true],
+            //                             text: '本次修订日期：',
+            //                         }, {
+            //                             border: [false, false, false, true],
+            //                             text: revisiondate,
+            //                         }, {
+            //                             border: [false, false, false, true],
+            //                             text: ' '
+            //                         }, {
+            //                             border: [false, false, false, true],
+            //                             text: 'SDS版本: ',
+            //                         }, {
+            //                             border: [false, false, false, true],
+            //                             text: {
+            //                                 text: revisionversion,
+            //                                 style: 'right'
+            //                             },
+            //                         }, {
+            //                             border: [false, false, false, true],
+            //                             text: ' ',
+            //                         }, {
+            //                             border: [false, false, false, true],
+            //                             text: '产品名称：',
+            //                         }, {
+            //                             border: [false, false, false, true],
+            //                             text: {
+            //                                 text: chemicalname,
+            //                                 style: 'right'
+            //                             },
+            //                         }, {
+            //                             border: [false, false, false, true],
+            //                             text: ' ',
+            //                         },],
+            //                     ]
+            //                 }
+            //             },];
+            //     },
                 // watermark: {text: '微信公众号：包罗三相', color: 'blue', opacity: 0.03},
                 content: val,
-                images: {
-                    ExclamationMark: 'https://blsx666.github.io/0522/ExclamationMark.jpg',
-                    flamme: 'https://blsx666.github.io/0522/flamme.jpg',
-                    acid_red: 'https://blsx666.github.io/0522/acid_red.jpg',
-                    silhouete: 'https://blsx666.github.io/0522/silhouete.jpg',
-                    E003: 'https://blsx666.github.io/0522/E003.jpg',
-                    E007: 'https://blsx666.github.io/0522/E007.jpg',
-                    E011: 'https://blsx666.github.io/0522/E011.jpg',
-                    E012: 'https://blsx666.github.io/0522/E012.jpg',
-                    F0010: 'https://blsx666.github.io/0522/F0010.jpg',
-                    F0011: 'https://blsx666.github.io/0522/F0011.jpg',
-                    F0090: 'https://blsx666.github.io/0522/F0090.jpg',
-                    203: 'https://blsx666.github.io/0522/203.jpg',
-                    102: 'https://blsx666.github.io/0522/102.jpg',
-                    M005: 'https://blsx666.github.io/0522/M005.jpg',
-                    M008: 'https://blsx666.github.io/0522/M008.jpg',
-                    M009: 'https://blsx666.github.io/0522/M009.jpg',
-                    M010: 'https://blsx666.github.io/0522/M010.jpg',
-                    M017: 'https://blsx666.github.io/0522/M017.jpg',
-                    321: 'https://blsx666.github.io/0522/321.jpg',
-                    322: 'https://blsx666.github.io/0522/322.jpg',
-                    wwacid02: 'https://blsx666.github.io/0522/wwacid02.jpg',
-                    wwflam: 'https://blsx666.github.io/0522/wwflam.jpg',
-                    rouge3_noir: 'https://blsx666.github.io/0522/rouge3_noir.jpg'
+                // images: {
+                //     ExclamationMark: 'https://blsx666.github.io/0522/ExclamationMark.jpg',
+                //     flamme: 'https://blsx666.github.io/0522/flamme.jpg',
+                //     acid_red: 'https://blsx666.github.io/0522/acid_red.jpg',
+                //     silhouete: 'https://blsx666.github.io/0522/silhouete.jpg',
+                //     E003: 'https://blsx666.github.io/0522/E003.jpg',
+                //     E007: 'https://blsx666.github.io/0522/E007.jpg',
+                //     E011: 'https://blsx666.github.io/0522/E011.jpg',
+                //     E012: 'https://blsx666.github.io/0522/E012.jpg',
+                //     F0010: 'https://blsx666.github.io/0522/F0010.jpg',
+                //     F0011: 'https://blsx666.github.io/0522/F0011.jpg',
+                //     F0090: 'https://blsx666.github.io/0522/F0090.jpg',
+                //     203: 'https://blsx666.github.io/0522/203.jpg',
+                //     102: 'https://blsx666.github.io/0522/102.jpg',
+                //     M005: 'https://blsx666.github.io/0522/M005.jpg',
+                //     M008: 'https://blsx666.github.io/0522/M008.jpg',
+                //     M009: 'https://blsx666.github.io/0522/M009.jpg',
+                //     M010: 'https://blsx666.github.io/0522/M010.jpg',
+                //     M017: 'https://blsx666.github.io/0522/M017.jpg',
+                //     321: 'https://blsx666.github.io/0522/321.jpg',
+                //     322: 'https://blsx666.github.io/0522/322.jpg',
+                //     wwacid02: 'https://blsx666.github.io/0522/wwacid02.jpg',
+                //     wwflam: 'https://blsx666.github.io/0522/wwflam.jpg',
+                //     rouge3_noir: 'https://blsx666.github.io/0522/rouge3_noir.jpg'
 
-                },
+                // },
                 styles: {
                     header: {
                         fontSize: 22,
