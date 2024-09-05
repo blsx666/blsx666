@@ -130,6 +130,7 @@
     <script src="https://blsx666.github.io/0522/browser-2.5.12.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pdfmake@latest/build/pdfmake.min.js"></script>
     <script src="https://blsx666.github.io/0522/vfs_fonts_blsx.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pdfmake@latest/build/vfs_fonts.js"></script>
     <script>
         var codeBag = document.querySelector('#code');
 
@@ -175,7 +176,8 @@
                 defaultStyle: {
                     font: 'WCSF',
                     fontSize: 15,
-                    bold: true           }               
+                    bold: true           
+                }               
             });
             // if (typeof styles === 'object') dd.styles = styles;
             document.querySelector('#result').value = "var dd = " + JSON.stringify(dd, null, '  ');
