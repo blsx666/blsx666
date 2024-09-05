@@ -145,21 +145,28 @@
         errorStyles.style.display='block';
         errorStyles.innerHTML = err;
       }
-      var val = htmlToPdfmake(code.value, options);
-      var dd = (typeof val.content !== "undefined" ? val : {content:val});
-      if (typeof styles === 'object') dd.styles = styles;
-      document.querySelector('#result').value = "var dd = " + JSON.stringify(dd, null, '  ');
-      // is IE ?
-      var isIE = '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;
-      if (isIE) {
-        document.getElementById('pdf').style.display='none';
-        document.getElementById('pdf_ie').style.display='block';
-        pdfMake.createPdf(dd).download();
-      } else {
-        pdfMake.createPdf(dd).getDataUrl(function(outDoc) {
-          document.getElementById('pdf').src = outDoc;
-        });
-      }
+            pdfMake.fonts = {
+                Roboto: {
+                    normal: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Regular.ttf',
+                    bold: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Medium.ttf',
+                    italics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Italic.ttf',
+                    bolditalics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-MediumItalic.ttf'
+                },
+                WCSF: {
+                    normal: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
+                    bold: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
+                    italics: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
+                    bolditalics: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
+                },
+            };
+            var val = htmlToPdfmake(code.value, options);
+            var dd = (typeof val.content !== "undefined" ? val : {
+                content: val.content,
+                images: val.images,
+                defaultStyle: {
+                    font: 'WCSF',
+                }
+            });
     }
     convert();
 
