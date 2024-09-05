@@ -154,7 +154,7 @@
                     bolditalics: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
                 },
             };
-      var val = htmlToPdfmake(code.value, {options;imagesByReference:true});
+      var val = htmlToPdfmake(code.value, {imagesByReference:true}, options);
       var dd = (typeof val.content !== "undefined" ? val : {
         // content:val,
         content:val.content,
