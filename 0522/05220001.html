@@ -161,8 +161,7 @@
             };
             var val = htmlToPdfmake(code.value, options);
             var dd = (typeof val.content !== "undefined" ? val : {
-                content: val.content,
-                images: val.images,
+                content: val,
                 defaultStyle: {
                     font: 'WCSF',
                 }
