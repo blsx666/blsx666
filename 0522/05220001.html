@@ -173,9 +173,9 @@
                 content: val.content,
                 images: val.images,
                 defaultStyle: {
-                    font: "WCSF"
-                }
-  //                 
+                    font: 'WCSF',
+                    fontSize: 15,
+                    bold: true           }               
             });
             // if (typeof styles === 'object') dd.styles = styles;
             document.querySelector('#result').value = "var dd = " + JSON.stringify(dd, null, '  ');
