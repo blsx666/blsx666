@@ -3972,7 +3972,9 @@
                     },
                     "blsxText": {
                         "color": "teal",
-                        "font": "WCSF"
+                        "font": "WCSF",
+                        "decoration": '',
+                        "fontSize":7   
                     },
                     "blsxTextFigure": {
                         "fontSize": 10,
@@ -4341,6 +4343,7 @@
                         font: 'WCSF',
                         fontSize: 7
                     },
+                    // a: '',
                     strike: {
                         decoration: 'lineThrough',
                         font: 'WCSF'
@@ -4369,9 +4372,7 @@
                 },
                 imagesByReference: true,
                 tableAutoSize: true,
-                // defaultStyle: {
-                //     font: 'WCSF',
-                // }
+                ignoreStyles: ['font-family']
             };
             var val = htmlToPdfmake(sdsinHtmlCode.value, options);
             console.log("val is generated");
