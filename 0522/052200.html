@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8">
@@ -27,12 +26,11 @@
         margin-top: 15px;
         background-color: #C9FFFF;
     }
-
     /* 
     body {
         font-family: Roboto
     } */
-
+    
     .button {
         background-color: #4CAF50;
         /* Green */
@@ -46,31 +44,28 @@
         cursor: pointer;
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
-
+    
     .button:hover {
         box-shadow: none;
     }
-
+    
     .error {
         color: red;
     }
-
+    
     p {
         margin: 5pt 0 10pt 0;
     }
-
+    
     ul {
         margin-bottom: 5pt;
         margin-left: 5pt;
     }
-
+    
     table {
         margin-bottom: 5pt;
         border-collapse: collapse;
     }
-
-
-
     /* th {
         font-weight: bold;
         background-color: #EEEEEE
@@ -82,18 +77,16 @@
         text-align: left;
         vertical-align: top;
     } */
-
     /* body {font-family: Arial;} */
     /* Style the tab */
-
+    
     .tab {
         overflow: hidden;
         border: 1px solid #ccc;
         background-color: #f1f1f1;
     }
-
     /* Style the buttons inside the tab */
-
+    
     .tab button {
         background-color: inherit;
         float: left;
@@ -104,42 +97,39 @@
         transition: 0.3s;
         font-size: 17px;
     }
-
     /* Change background color of buttons on hover */
-
+    
     .tab button:hover {
         background-color: #ddd;
     }
-
     /* Create an active/current tablink class */
-
+    
     .tab button.active {
         background-color: #ccc;
     }
-
     /* Style the tab content */
-
+    
     .tabcontent {
         display: none;
         padding: 6px 12px;
         border: 1px solid #ccc;
         border-top: none;
     }
-
-    :root {
+    
+     :root {
         --maincolor: #3a0b3b;
         --secondarycolor: #5e2a6e;
         --white2: #fbf7fb;
         --textcolor: #fefbfb;
         --white: #fbf9fb;
     }
-
+    
     .tooltip {
         position: relative;
         display: inline-block;
         border-bottom: 1px dotted black;
     }
-
+    
     .tooltip .tooltiptext {
         visibility: hidden;
         width: 120px;
@@ -156,7 +146,7 @@
         opacity: 0;
         transition: opacity 0.3s;
     }
-
+    
     .tooltip .tooltiptext::after {
         content: "";
         position: absolute;
@@ -167,12 +157,12 @@
         border-style: solid;
         border-color: #555 transparent transparent transparent;
     }
-
+    
     .tooltip:hover .tooltiptext {
         visibility: visible;
         opacity: 1;
     }
-
+    
     .dropbtn {
         background-color: #3498DB;
         color: white;
@@ -181,18 +171,18 @@
         border: none;
         cursor: pointer;
     }
-
+    
     .dropbtn:hover,
     .dropbtn:focus {
         background-color: #2980B9;
     }
-
+    
     .dropdown {
         /* position: relative; */
         position: absolute;
         display: inline-block;
     }
-
+    
     .dropdown-content {
         display: none;
         position: absolute;
@@ -202,18 +192,18 @@
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 999;
     }
-
+    
     .dropdown-content a {
         color: black;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
     }
-
+    
     .dropdown a:hover {
         background-color: #ddd;
     }
-
+    
     .show {
         display: block;
     }
@@ -307,17 +297,13 @@
                 <button class="w3-button w3-hover-orange tooltip" onclick="Generateramdoncolor()">0.颜色自由
                     <span class="tooltiptext">点击更换背景色</span>
                 </button>
-                <button class="w3-button w3-hover-orange  tooltip"
-                    onclick="openCity(event, 'helpText')">1.点击任意文字开始编写<span class="tooltiptext">Tooltip
+                <button class="w3-button w3-hover-orange  tooltip" onclick="openCity(event, 'helpText')">1.点击任意文字开始编写<span class="tooltiptext">Tooltip
                         text</span></button>
-                <button class="w3-button w3-hover-orange tablinks tooltip"
-                    onclick="openCity(event, 'sdsinHtmlCode')">2.在html中编写></button>
-                 <button class="w3-button w3-hover-orange tablinks tooltip"
-                    onclick="openCity(event, 'codegyp')">4.查看成稿</button> 
+                <button class="w3-button w3-hover-orange tablinks tooltip" onclick="openCity(event, 'sdsinHtmlCode')">2.在html中编写></button>
+                <button class="w3-button w3-hover-orange tablinks tooltip" onclick="openCity(event, 'codegyp')">4.查看成稿</button>
                 <button id="button" type="primary" is="ui-button" class="w3-button w3-hover-orange  tooltip">3.打开<span
                         class="tooltiptext">上传你自己保存的模板</span></button>
-                <button id="buttonSave" type="primary" is="ui-button"
-                    class="w3-button w3-hover-orange tooltip ">4.保存<span class="tooltiptext">保存当前内容，作为模板</span></button>
+                <button id="buttonSave" type="primary" is="ui-button" class="w3-button w3-hover-orange tooltip ">4.保存<span class="tooltiptext">保存当前内容，作为模板</span></button>
                 <!-- <button class="w3-button w3-hover-orange tablinks" -->
                 <!-- onclick="openCity(event, 'textContent')">7.html转义</button> -->
                 <!-- <button class="w3-button w3-hover-orange tablinks" -->
@@ -330,8 +316,7 @@
         </div>
     </header>
 
-    <textarea class="tabcontent" style="padding:5px; border:2px solid #CCC;height:400px; overflow: auto;" name="content"
-        id="helpText">
+    <textarea class="tabcontent" style="padding:5px; border:2px solid #CCC;height:400px; overflow: auto;" name="content" id="helpText">
         &#13;&#10;&#13;&#10;&#13;&#10;
         使用帮助
         点击“任意文字开始编写”按钮一次打开使用帮助；
@@ -357,14 +342,11 @@
 
         祝编写sds愉快！！！
 </textarea>
-    <textarea class="tabcontent" style="padding:5px; border:2px solid #CCC;height:400px; overflow: auto;" name="content"
-        id="textContent">
+    <textarea class="tabcontent" style="padding:5px; border:2px solid #CCC;height:400px; overflow: auto;" name="content" id="textContent">
     </textarea>
-    <textarea class="tabcontent" style="padding:5px; border:2px solid #CCC;height:400px; overflow: auto;" name="content"
-        id="textResult">
+    <textarea class="tabcontent" style="padding:5px; border:2px solid #CCC;height:400px; overflow: auto;" name="content" id="textResult">
     </textarea>
-    <textarea class="tabcontent" style="padding:5px;border:2px solid #CCC;height:400px; overflow: auto;"
-        id="sdsinHtmlCode" onkeyup="toHTML()">
+    <textarea class="tabcontent" style="padding:5px;border:2px solid #CCC;height:400px; overflow: auto;" id="sdsinHtmlCode" onkeyup="toHTML()">
         <div contenteditable="true">
             <p>化学品安全技术说明书Safety Data Sheet
                 <br>
@@ -3867,8 +3849,7 @@
         </div>
 
     </textarea>
-    <textarea class="tabcontent" style="padding:5px;border:2px solid #CCC;height:300px; overflow: auto;width: 99%;"
-        id="codegyp">
+    <textarea class="tabcontent" style="padding:5px;border:2px solid #CCC;height:300px; overflow: auto;width: 99%;" id="codegyp">
 </textarea>
 
     <div style="height: 500px;width: 100%;border: 1px solid #4CAF50;overflow: scroll;" class="div-in-htmlbag">
@@ -4030,24 +4011,23 @@
         </div>
     </div>
 
-<!--     <script src="https://aymkdn.github.io/html-to-pdfmake/browser-2.5.12.js"></script> -->
-<!--     <script src="https://cdn.jsdelivr.net/npm/pdfmake@latest/build/pdfmake.js"></script> -->
+    <!--     <script src="https://aymkdn.github.io/html-to-pdfmake/browser-2.5.12.js"></script> -->
+    <!--     <script src="https://cdn.jsdelivr.net/npm/pdfmake@latest/build/pdfmake.js"></script> -->
     <script src='pdfmake.min.js'></script>
-<!--     <script src='/0522/dev-playground/public/pdfmake.min.js'></script> -->
+    <!--     <script src='/0522/dev-playground/public/pdfmake.min.js'></script> -->
     <script src="browser-2.5.12.js"></script>
-<!--     <script src="vfs_fonts_blsx.js"></script> -->
-<!--     <script src="/0522/dev-playground/public/vfs_fonts.js"></script> -->
+    <!--     <script src="vfs_fonts_blsx.js"></script> -->
+    <!--     <script src="/0522/dev-playground/public/vfs_fonts.js"></script> -->
     <script>
-
         /* When the user clicks on the button, 
-        toggle between hiding and showing the dropdown content */
+                                toggle between hiding and showing the dropdown content */
         function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
             console.log("clicked");
         }
 
         // Close the dropdown if the user clicks outside of it
-        window.onclick = function (event) {
+        window.onclick = function(event) {
             if (!event.target.matches('.dropbtn')) {
                 var dropdowns = document.getElementsByClassName("dropdown-content");
                 var i;
@@ -4060,16 +4040,16 @@
             }
         }
 
-        $(function () {
+        $(function() {
             //注册提示文字事件
             // registerHintText($('#textContent'));
             // registerHintText($('#textResult'));
             //注册清空事件
-            $('#butClear').click(function () {
+            $('#butClear').click(function() {
                 $('#textResult').val('').siblings('b').css('display', 'block');
             });
             //转义
-            $('#butRehtml').click(function () {
+            $('#butRehtml').click(function() {
                 var content = $('#textContent').val();
                 var result = content.replace(/&/g, '&amp;')
                     .replace(/"/g, '&quot;')
@@ -4078,7 +4058,7 @@
                 $('#textResult').val(result).siblings('b').css('display', (result ? 'none' : 'block'));
             });
             //反转义
-            $('#butHtml').click(function () {
+            $('#butHtml').click(function() {
                 var content = $('#textContent').val();
                 var result = content.replace(/&amp;/g, '&')
                     .replace(/&quot;/g, '"')
@@ -4086,7 +4066,7 @@
                     .replace(/&gt;/g, '>');
                 $('#textResult').val(result).siblings('b').css('display', (result ? 'none' : 'block'));
             });
-            $("#butCopy").click(function () {
+            $("#butCopy").click(function() {
                 $("#textResult").select(); //获取对象
                 try {
                     document.execCommand("Copy"); //执行复制
@@ -4106,22 +4086,20 @@
         // https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader/readAsText
         var eleButton = document.getElementById('button');
         if (window.showOpenFilePicker && eleButton) {
-            eleButton.addEventListener('click', async function () {
+            eleButton.addEventListener('click', async function() {
                 const fileHandle = await window.showOpenFilePicker({
                     excludeAcceptAllOption: false,
-                    types: [
-                        {
-                            description: 'Text files',
-                            accept: {
-                                'text/plain': ['.txt'],
-                            },
+                    types: [{
+                        description: 'Text files',
+                        accept: {
+                            'text/plain': ['.txt'],
                         },
-                    ],
+                    }, ],
                 });
 
                 const file = await fileHandle[0].getFile();
                 const reader = new FileReader();
-                reader.onload = function (e) {
+                reader.onload = function(e) {
                     document.getElementById('sdsinHtmlCode').value = e.target.result;
                     toHTML();
                     toHTMLCode();
@@ -4133,16 +4111,14 @@
         }
         var eleButtonSave = document.getElementById('buttonSave');
         if (window.showOpenFilePicker && eleButtonSave) {
-            eleButtonSave.addEventListener('click', async function () {
+            eleButtonSave.addEventListener('click', async function() {
                 const fileHandle = await window.showSaveFilePicker({
-                    types: [
-                        {
-                            description: 'Text files',
-                            accept: {
-                                'text/plain': ['.txt'],
-                            },
+                    types: [{
+                        description: 'Text files',
+                        accept: {
+                            'text/plain': ['.txt'],
                         },
-                    ],
+                    }, ],
                 });
                 // 创建一个可写流
                 const writable = await fileHandle.createWritable();
@@ -4182,7 +4158,7 @@
 
 
         var editableElements = document.querySelectorAll('[contenteditable=true]');
-        editableElements.forEach(function (element) {
+        editableElements.forEach(function(element) {
             element.addEventListener('input', handleChange);
         });
 
@@ -4283,39 +4259,90 @@
             // var chemicalname = 'None';
             // console.log(chemicalname);
             var options = {
-                defaultStyles:
-                {
-                    b: { bold: true },
-                    strong: { bold: true },
-                    u: { decoration: 'underline' },
-                    s: { decoration: 'lineThrough' },
-                    em: { italics: true },
-                    i: { italics: true },
-                    h1: { fontSize: 24, bold: true, marginBottom: 5 },
-                    h2: { fontSize: 22, bold: true, marginBottom: 5 },
-                    h3: { fontSize: 20, bold: true, marginBottom: 5 },
-                    h4: { fontSize: 18, bold: true, marginBottom: 5 },
-                    h5: { fontSize: 16, bold: true, marginBottom: 5 },
-                    h6: { fontSize: 14, bold: true, marginBottom: 5 },
-                    a: { color: 'teal', decoration: '' },
-                    strike: { decoration: 'lineThrough' },
-                    p: { margin: [0, 5, 0, 10] },
-                    ul: { marginBottom: 5 },
-                    li: { marginLeft: 5 },
-                    table: { marginBottom: 5 },
-                    th: { bold: true, fillColor: '#EEEEEE' },
+                defaultStyles: {
+                    b: {
+                        bold: true
+                    },
+                    strong: {
+                        bold: true
+                    },
+                    u: {
+                        decoration: 'underline'
+                    },
+                    s: {
+                        decoration: 'lineThrough'
+                    },
+                    em: {
+                        italics: true
+                    },
+                    i: {
+                        italics: true
+                    },
+                    h1: {
+                        fontSize: 24,
+                        bold: true,
+                        marginBottom: 5
+                    },
+                    h2: {
+                        fontSize: 22,
+                        bold: true,
+                        marginBottom: 5
+                    },
+                    h3: {
+                        fontSize: 20,
+                        bold: true,
+                        marginBottom: 5
+                    },
+                    h4: {
+                        fontSize: 18,
+                        bold: true,
+                        marginBottom: 5
+                    },
+                    h5: {
+                        fontSize: 16,
+                        bold: true,
+                        marginBottom: 5
+                    },
+                    h6: {
+                        fontSize: 14,
+                        bold: true,
+                        marginBottom: 5
+                    },
+                    a: {
+                        color: 'teal',
+                        decoration: ''
+                    },
+                    strike: {
+                        decoration: 'lineThrough'
+                    },
+                    p: {
+                        margin: [0, 5, 0, 10]
+                    },
+                    ul: {
+                        marginBottom: 5
+                    },
+                    li: {
+                        marginLeft: 5
+                    },
+                    table: {
+                        marginBottom: 5
+                    },
+                    th: {
+                        bold: true,
+                        fillColor: '#EEEEEE'
+                    },
                     window: window,
                     tableAutoSize: true
                 }
             };
-            var val = htmlToPdfmake(codegyp.value, options);
+            // var val = htmlToPdfmake(codegyp.value, options);
             pdfMake.fonts = {
                 Roboto: {
-        normal: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Regular.ttf',
-        bold: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Medium.ttf',
-        italics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Italic.ttf',
-        bolditalics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-MediumItalic.ttf'
-    },
+                    normal: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Regular.ttf',
+                    bold: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Medium.ttf',
+                    italics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Italic.ttf',
+                    bolditalics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-MediumItalic.ttf'
+                },
                 WCSF: {
                     normal: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
                     bold: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
@@ -4323,10 +4350,12 @@
                     bolditalics: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
                 },
             };
-      var val = htmlToPdfmake(sdsinHtmlCode.value,{imagesByReference:true}, options);
+            var val = htmlToPdfmake(sdsinHtmlCode.value, {
+                imagesByReference: true
+            }, options);
             console.log("val is generated");
-      var dd = (typeof val.content !== "undefined" ? val : {
-                footer: function (currentPage, pageCount) {
+            var dd = (typeof val.content !== "undefined" ? val : {
+                footer: function(currentPage, pageCount) {
                     return [{
                         style: 'tableExample',
                         table: {
@@ -4337,15 +4366,15 @@
                                     border: [false, true, false, false],
                                     fillColor: '#eeeeee',
                                     text: ''
-                                },],
+                                }, ],
                             ]
                         }
                     }, {
                         text: '第 ' + currentPage.toString() + ' 页 共 ' + pageCount + ' 页',
                         alignment: 'center',
-                    },];
+                    }, ];
                 },
-                header: function (currentPage, pageCount, pageSize) {
+                header: function(currentPage, pageCount, pageSize) {
                     if (currentPage != 1) then:
                         return [{
                             style: 'tableExample',
@@ -4389,10 +4418,10 @@
                                     }, {
                                         border: [false, false, false, true],
                                         text: ' ',
-                                    },],
+                                    }, ],
                                 ]
                             }
-                        },];
+                        }, ];
                 },
                 // watermark: {text: '微信公众号：包罗三相', color: 'blue', opacity: 0.03},
                 content: val.content,
@@ -4468,7 +4497,6 @@
                         fontSize: 15,
                         color: 'blue',
                     },
-
                 },
                 defaultStyle: {
                     font: 'WCSF',
@@ -4476,14 +4504,12 @@
             });
             if (typeof styles === 'object') dd.styles = styles;
             // document.querySelector('#result').value = "var dd = " + JSON.stringify(dd, null, '  ');
-            pdfMake.createPdf(dd).getDataUrl(function (outDoc) {
+            pdfMake.createPdf(dd).getDataUrl(function(outDoc) {
                 document.getElementById('pdf').src = outDoc;
             });
             console.log("generated")
         }
         convert();
     </script>
-
 </body>
-
 </html>
