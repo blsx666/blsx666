@@ -140,12 +140,12 @@
         errorStyles.innerHTML = err;
       }
       pdfMake.fonts = {
-                Roboto: {
-        normal: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Regular.ttf',
-        bold: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Medium.ttf',
-        italics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Italic.ttf',
-        bolditalics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-MediumItalic.ttf'
-    },
+    //             Roboto: {
+    //     normal: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Regular.ttf',
+    //     bold: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Medium.ttf',
+    //     italics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Italic.ttf',
+    //     bolditalics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-MediumItalic.ttf'
+    // },
                 WCSF: {
                     normal: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
                     bold: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
@@ -153,7 +153,7 @@
                     bolditalics: 'https://blsx666.github.io/0522/examples/fonts/WenCangShuFang-2.ttf',
                 },
             };
-      var val = htmlToPdfmake(code.value, options, {imagesByReference:true});
+      var val = htmlToPdfmake({code.value,options}, {imagesByReference:true});
       var dd = (typeof val.content !== "undefined" ? val : {
         // content:val,
         content:val.content,
