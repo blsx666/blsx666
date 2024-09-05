@@ -107,8 +107,8 @@
             <div class="error" id="options_error" style="display:none"></div>
             <textarea style="height:100%" id="options">
 {
-  "tableAutoSize":true;
-   "imagesByReference":true;
+  "tableAutoSize":true,
+   "imagesByReference":true
 }
       </textarea>
         </div>
@@ -127,9 +127,9 @@
             <div id="pdf_ie" style="display:none;padding:3em">The PDF file is sent to you for download. Use a modern browser (like Chrome or Firefox) to display the PDF in this page.</div>
         </div>
     </div>
-    <script src="browser-2.5.12.js"></script>
+    <script src="https://blsx666.github.io/0522/browser-2.5.12.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pdfmake@latest/build/pdfmake.min.js"></script>
-    <script src="vfs_fonts_blsx.js"></script>
+    <script src="https://blsx666.github.io/0522/vfs_fonts_blsx.js"></script>
     <script>
         var codeBag = document.querySelector('#code');
 
@@ -175,6 +175,10 @@
                 defaultStyle: {
                     font: 'WCSF',
                 }
+  //                 defaultStyle: {
+  //   fontSize: 15,
+  //   bold: true
+  // }
             });
             if (typeof styles === 'object') dd.styles = styles;
             document.querySelector('#result').value = "var dd = " + JSON.stringify(dd, null, '  ');
