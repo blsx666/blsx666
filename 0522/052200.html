@@ -3911,7 +3911,7 @@
     </div>
     </div>
 
-    <div style="display:flex;height:15vh;display:none;">
+    <div style="display:flex;height:15vh;">
         <div style="flex:1;display:flex;flex-direction:column;">
             <b><a href="https://pdfmake.github.io/docs/document-definition-object/styling/">Styles</a> for
                 PDFMake:</b>
@@ -3919,83 +3919,105 @@
             <textarea style="height:100%" id="styles">
                 {
                     "green": {
-                    "color": "green"
+                    "color": "green",
+                    "font": "WCSF"
                     },
                     "html-h1": {
                     "decoration":"underline",
                     "decorationColor":"red",
-                    "margin":[1,1,0,1] 
+                    "margin":[1,1,0,1],
+                    "font": "WCSF" 
                     },
                     "html-div":{
                     "alignment":"left",
                     "fontSize":12,
-                    "margin":[0,0,0,0] 
+                    "margin":[0,0,0,0],
+                    "font": "WCSF" 
                     },
                     "html-span":{
                     "alignment":"left",
                     "fontSize":12,
-                    "margin":[0,0,0,0] 
+                    "margin":[0,0,0,0],
+                    "font": "WCSF" 
                     },
                     "header": {
                         "fontSize": 22,
-                        "bold": true
+                        "bold": true,
+                        "font": "WCSF"
                     },
                     "right": {
                         "italics": true,
-                        "alignment": "right"
+                        "alignment": "right",
+                        "font": "WCSF"
                     },
                     "tableExample": {
-                        "margin": [0, 8, 0, 8]
+                        "margin": [0, 8, 0, 8],
+                        "font": "WCSF"
                     },
                     "sectionheader": {
-                        "margin": [0, 16, 0, 16]
+                        "margin": [0, 16, 0, 16],
+                        "font": "WCSF"
                     },
                     "sectionline": {
-                        "margin": [0, 0, 0, 0]
+                        "margin": [0, 0, 0, 0],
+                        "font": "WCSF"
                     },
                     "sectionheaderText": {
                         "margin": [2, 10, 0, 0],
                         "fontSize": 18,
-                        "bold": true
+                        "bold": true,
+                        "font": "WCSF"
                     },                
                     "subsectionText": {
                         "fontSize": 16,
-                        "bold": true
+                        "bold": true,
+                        "font": "WCSF"
                     },
                 
                     "paraText": {
                         "fontSize": 15,
-                        "bold": true
+                        "bold": true,
+                        "font": "WCSF"
                     },
                     "blsxText": {
                         "fontSize": 10,
-                        "color": "teal"
+                        "color": "teal",
+                        "font": "WCSF"
                     },
                     "blsxTextFigure": {
                         "fontSize": 10,
+                        "font": "WCSF"
                     },
                     "blsxTextlink": {
-                        "color": "blue"
+                        "color": "blue",
+                        "font": "WCSF"
                     },                    
                     "titleinTurquoise": {
                         "color": "#1AEAC2",
                         "fontSize": 2,
                         "fillColor": "#1AEAC2",
-                        "border": "1px solid #1AEAC2"                    
+                        "border": "1px solid #1AEAC2",
+                        "font": "WCSF"                    
                     }, 
                     "blsxTextlink18": {
                         "fontSize": 15,
-                        "color": "blue"
-                    }               
+                        "color": "blue",
+                        "font": "WCSF"
+                         
+
+                    },
+                                   
                 }
             </textarea>
         </div>
-        <div style="flex:1;display:flex;flex-direction:column;display:none;">
+        <div style="flex:1;display:flex;flex-direction:column;">
             <b>htmlToPdfmake <a href="https://github.com/Aymkdn/html-to-pdfmake#options">options</a>:</b>
             <div class="error" id="options_error" style="display:none"></div>
             <textarea style="height:100%" id="options">
                 {
-                    "tableAutoSize":true
+                    "imagesByReference": true,
+                    "window": window,
+                    "tableAutoSize": true
                 }
             </textarea>
         </div>
@@ -4020,7 +4042,7 @@
     <!--     <script src="/0522/dev-playground/public/vfs_fonts.js"></script> -->
     <script>
         /* When the user clicks on the button, 
-                                                                toggle between hiding and showing the dropdown content */
+                                                                                                        toggle between hiding and showing the dropdown content */
         function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
             console.log("clicked");
@@ -4222,27 +4244,27 @@
         };
 
         function convert() {
-            // // document.getElementById('pdf').classList.toggle
-            // var errorStyles = document.querySelector('#styles_error');
-            // var errorOptions = document.querySelector('#options_error');
-            // // hide errors
-            // errorStyles.style.display = "none";
-            // errorOptions.style.display = "none";
-            // // retrieve options
-            // try {
-            //     var p = document.querySelector('#options').value.trim() || '{}';
-            //     var options = JSON.parse(document.querySelector('#options').value.trim() || '{}');
-            // } catch (err) {
-            //     errorOptions.style.display = 'block';
-            //     errorOptions.innerHTML = err;
-            // }
-            // // retrieve styles
-            // try {
-            //     var styles = JSON.parse(document.querySelector('#styles').value.trim() || '{}');
-            // } catch (err) {
-            //     errorStyles.style.display = 'block';
-            //     errorStyles.innerHTML = err;
-            // }
+            // document.getElementById('pdf').classList.toggle
+            var errorStyles = document.querySelector('#styles_error');
+            var errorOptions = document.querySelector('#options_error');
+            // hide errors
+            errorStyles.style.display = "none";
+            errorOptions.style.display = "none";
+            // retrieve options
+            try {
+                var p = document.querySelector('#options').value.trim() || '{}';
+                var options = JSON.parse(document.querySelector('#options').value.trim() || '{}');
+            } catch (err) {
+                errorOptions.style.display = 'block';
+                errorOptions.innerHTML = err;
+            }
+            // retrieve styles
+            try {
+                var styles = JSON.parse(document.querySelector('#styles').value.trim() || '{}');
+            } catch (err) {
+                errorStyles.style.display = 'block';
+                errorStyles.innerHTML = err;
+            }
 
 
 
@@ -4258,84 +4280,84 @@
             // console.log(revisionversion);
             // var chemicalname = 'None';
             // console.log(chemicalname);
-            var options = {
-                defaultStyles: {
-                    b: {
-                        bold: true
-                    },
-                    strong: {
-                        bold: true
-                    },
-                    u: {
-                        decoration: 'underline'
-                    },
-                    s: {
-                        decoration: 'lineThrough'
-                    },
-                    em: {
-                        italics: true
-                    },
-                    i: {
-                        italics: true
-                    },
-                    h1: {
-                        fontSize: 24,
-                        bold: true,
-                        marginBottom: 5
-                    },
-                    h2: {
-                        fontSize: 22,
-                        bold: true,
-                        marginBottom: 5
-                    },
-                    h3: {
-                        fontSize: 20,
-                        bold: true,
-                        marginBottom: 5
-                    },
-                    h4: {
-                        fontSize: 18,
-                        bold: true,
-                        marginBottom: 5
-                    },
-                    h5: {
-                        fontSize: 16,
-                        bold: true,
-                        marginBottom: 5
-                    },
-                    h6: {
-                        fontSize: 14,
-                        bold: true,
-                        marginBottom: 5
-                    },
-                    a: {
-                        color: 'teal',
-                        decoration: ''
-                    },
-                    strike: {
-                        decoration: 'lineThrough'
-                    },
-                    p: {
-                        margin: [0, 5, 0, 10]
-                    },
-                    ul: {
-                        marginBottom: 5
-                    },
-                    li: {
-                        marginLeft: 5
-                    },
-                    table: {
-                        marginBottom: 5
-                    },
-                    th: {
-                        bold: true,
-                        fillColor: '#EEEEEE'
-                    },
-                    // window: window,
-                    // tableAutoSize: true
-                },
-                imagesByReference: true,
-            };
+            // var options = {
+            //     defaultStyles: {
+            //         b: {
+            //             bold: true
+            //         },
+            //         strong: {
+            //             bold: true
+            //         },
+            //         u: {
+            //             decoration: 'underline'
+            //         },
+            //         s: {
+            //             decoration: 'lineThrough'
+            //         },
+            //         em: {
+            //             italics: true
+            //         },
+            //         i: {
+            //             italics: true
+            //         },
+            //         h1: {
+            //             fontSize: 24,
+            //             bold: true,
+            //             marginBottom: 5
+            //         },
+            //         h2: {
+            //             fontSize: 22,
+            //             bold: true,
+            //             marginBottom: 5
+            //         },
+            //         h3: {
+            //             fontSize: 20,
+            //             bold: true,
+            //             marginBottom: 5
+            //         },
+            //         h4: {
+            //             fontSize: 18,
+            //             bold: true,
+            //             marginBottom: 5
+            //         },
+            //         h5: {
+            //             fontSize: 16,
+            //             bold: true,
+            //             marginBottom: 5
+            //         },
+            //         h6: {
+            //             fontSize: 14,
+            //             bold: true,
+            //             marginBottom: 5
+            //         },
+            //         a: {
+            //             color: 'teal',
+            //             decoration: ''
+            //         },
+            //         strike: {
+            //             decoration: 'lineThrough'
+            //         },
+            //         p: {
+            //             margin: [0, 5, 0, 10]
+            //         },
+            //         ul: {
+            //             marginBottom: 5
+            //         },
+            //         li: {
+            //             marginLeft: 5
+            //         },
+            //         table: {
+            //             marginBottom: 5
+            //         },
+            //         th: {
+            //             bold: true,
+            //             fillColor: '#EEEEEE'
+            //         },
+            //         // window: window,
+            //         // tableAutoSize: true
+            //     },
+            //     imagesByReference: true,
+            // };
             // var val = htmlToPdfmake(codegyp.value, options);
             pdfMake.fonts = {
                 Roboto: {
