@@ -50,9 +50,7 @@
     </style>
 </head>
 <body>
-  <h1>HTML to PDFMake convertor</h1>
-  <p><a href="https://github.com/Aymkdn/html-to-pdfmake">Read the documentation</a></p>
-  <p>Paste your HTML code below and click on the button to convert it to the <a href="http://pdfmake.org/">PDFmake</a> format:</p>
+
   <div style="display:flex;height:35vh">
     <div style="flex:1;display:flex;flex-direction:column;">
       <b>Your HTML code here:</b>
@@ -76,12 +74,11 @@
       </textarea>
     </div>
     <div style="flex:1;display:flex;flex-direction:column;">
-      <b>HTML Preview:</b>
       <div style="padding:5px;border:2px solid #CCC;height:100%; overflow: auto" id="html"></div>
     </div>
   </div>
 
-  <div style="display:flex;height:15vh">
+  <div style="display:flex;height:15vh;display:none">
     <div style="flex:1;display:flex;flex-direction:column;">
       <b><a href="https://pdfmake.github.io/docs/document-definition-object/styling/">Styles</a> for PDFMake:</b>
       <div class="error" id="styles_error" style="display:none"></div>
@@ -93,7 +90,7 @@
 }
       </textarea>
     </div>
-    <div style="flex:1;display:flex;flex-direction:column;">
+    <div style="flex:1;display:flex;flex-direction:column;display:none">
       <b>htmlToPdfmake <a href="https://github.com/Aymkdn/html-to-pdfmake#options">options</a>:</b>
       <div class="error" id="options_error" style="display:none"></div>
       <textarea style="height:100%" id="options">
@@ -108,7 +105,7 @@
 
   <div style="display:flex;height:40vh;margin-top:1em">
     <div style="flex:1;display:flex;flex-direction:column;">
-      <b>Result that can directly be copied in <a href="http://pdfmake.org/playground.html">PDFMake Playground</a>:</b>
+<!--       <b>Result that can directly be copied in <a href="http://pdfmake.org/playground.html">PDFMake Playground</a>:</b> -->
       <textarea id="result" style="height:100%"></textarea>
     </div>
     <div style="flex:1;display:flex;flex-direction:column;">
