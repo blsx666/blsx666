@@ -17,10 +17,10 @@
         margin-top: 15px;
         background-color: #C9FFFF;
     }
-    /* 
-    body {
-        font-family: Roboto
-    } */
+    
+    .show {
+        display: none;
+    }
     
     .button {
         background-color: #4CAF50;
@@ -34,6 +34,10 @@
         font-size: 16px;
         cursor: pointer;
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    .w3-button {
+        font-size: 12px;
     }
     
     .button:hover {
@@ -290,18 +294,22 @@
                 </button>
                 <button class="w3-button w3-hover-orange  tooltip" onclick="openCity(event, 'helpText')">1.点击任意文字开始编写<span class="tooltiptext">Tooltip
                         text</span></button>
+                <button class="w3-button w3-hover-orange  tooltip" onclick="ToggleDivCE()">1.1开启关闭填空式编写<span class="tooltiptext">Tooltip
+                        text</span></button>
                 <button class="w3-button w3-hover-orange tablinks tooltip" onclick="openCity(event, 'sdsinHtmlCode')">2.在html中编写></button>
                 <!-- <button class="w3-button w3-hover-orange tablinks tooltip" onclick="openCity(event, 'codegyp')">4.查看成稿</button> -->
-                <button id="button" type="primary" is="ui-button" class="w3-button w3-hover-orange  tooltip">3.打开<span
-                        class="tooltiptext">上传你自己保存的模板</span></button>
+                <button type="button" onclick="convert()" class="w3-button w3-hover-orange ">3.生成PDF</button>
                 <button id="buttonSave" type="primary" is="ui-button" class="w3-button w3-hover-orange tooltip ">4.保存<span class="tooltiptext">保存当前内容，作为模板</span></button>
+                <button id="button" type="primary" is="ui-button" class="w3-button w3-hover-orange  tooltip">5.打开<span
+                    class="tooltiptext">上传你自己保存的模板</span></button>
+                <button type="button" onclick="ToggleBLSXNotes()" class="w3-button w3-hover-orange ">6.显示隐藏包罗三相注释</button>
                 <!-- <button class="w3-button w3-hover-orange tablinks" -->
                 <!-- onclick="openCity(event, 'textContent')">7.html转义</button> -->
                 <!-- <button class="w3-button w3-hover-orange tablinks" -->
                 <!-- onclick="openCity(event, 'textResult')">8.查看html转义</button> -->
                 <!-- <input type="button" id="butRehtml" class="btn btn-primary operationButton w3-button w3-hover-orange " -->
                 <!-- value="HTML转义"> -->
-                <button type="button" onclick="convert()" class="w3-button w3-hover-orange ">5.生成PDF</button>
+
 
             </div>
         </div>
@@ -338,7 +346,7 @@
     <textarea class="tabcontent" style="padding:5px; border:2px solid #CCC;height:400px; overflow: auto;" name="content" id="textResult">
     </textarea>
     <textarea class="tabcontent" style="padding:5px;border:2px solid #CCC;height:400px; overflow: auto;" id="sdsinHtmlCode" onkeyup="toHTML()">
-        <div contenteditable="true">
+        <div class="CE" contenteditable="true">
             <p>化学品安全技术说明书Safety Data Sheet
                 <br>
                 按照
@@ -397,16 +405,16 @@
                     <tr>
                         <td colspan="5" style="border: 0"><a class="blsxText" target="_blank"
                                 href="https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=C008AEDBFD9A16F3C5BEB671C20618DD">包罗三相：见GB
-                                30000.1-2024 化学品分类和标签规范 第1部分：通则的第6.1.6的要求</a>,&nbsp;<a target="_blank" class="blsxText"
+                                30000.1-2024 化学品分类和标签规范 第1部分：通则的第6.1.6的要求,</a><br><a target="_blank" class="blsxText"
                                 href="https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=0DF24B277B29E2F0B39D13D0F2B7BA07">GB/T
-                                17519-2013 化学品安全技术说明书编写指南 第4.2节的编写要求</a>,&nbsp;<a target="_blank" class="blsxText"
+                                17519-2013 化学品安全技术说明书编写指南 第4.2节的编写要求,</a><br><a target="_blank" class="blsxText"
                                 href="https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=0DF24B277B29E2F0B39D13D0F2B7BA07">GB/T
                                 17519-2013 化学品安全技术说明书编写指南 没有提到打印日期</a></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <div contenteditable="true">
+        <div class="CE" contenteditable="true">
             <table data-pdfmake="{'widths':['*'],'heights':8}">
                 <tbody>
                     <tr style="height:16px;">
@@ -609,7 +617,7 @@
             </table>
         </div>
 
-        <div contenteditable="true">
+        <div class="CE" contenteditable="true">
             <table data-pdfmake="{'widths':['*'],'heights':8}">
                 <tbody>
                     <tr style="height:16px;">
@@ -733,15 +741,14 @@
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td style="border:0; width:59px"><img src="https://blsx666.github.io/0522/flamme.jpg" width="80" height="80">
+                                        <td style="border:0; width:82px"><img src="https://blsx666.github.io/0522/flamme.jpg" width="80" height="80">
                                         </td>
-                                        <td style="border:0; width:59px"><img src="https://blsx666.github.io/0522/ExclamationMark.jpg" width="80"
+                                        <td style="border:0; width:82px"><img src="https://blsx666.github.io/0522/ExclamationMark.jpg" width="80"
                                                 height="80"></td>
-                                        <td style="border:0; width:59px"><img src="https://blsx666.github.io/0522/silhouete.jpg" width="80"
+                                        <td style="border:0; width:82px"><img src="https://blsx666.github.io/0522/silhouete.jpg" width="80"
                                                 height="80"></td>
-                                        <td style="border:0; width:59px"></td>
-                                        <td style="border:0; width:59px"></td>
-                                        <td style="border:0; width:59px"></td>
+                                        <td style="border:0; width:*"></td>
+                                        <td style="border:0; width:*"></td>
                                         <td style="border:0; width:*"></td>
 
                                     </tr>
@@ -1197,7 +1204,7 @@
             </table>
         </div>
 
-        <div contenteditable="true">
+        <div class="CE" contenteditable="true">
             <table data-pdfmake="{'widths':['*'],'heights':8}">
                 <tbody>
                     <tr style="height:16px;">
@@ -1361,7 +1368,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">纺织工业：</td>
-                        <td style="border:0; width:*">本品是否列入如下限用禁用物质要求<br><a class="blsxTextlink"
+                        <td style="border:0; width:*" contenteditable="true">本品是否列入如下限用禁用物质要求<br><a class="blsxTextlink"
                                 href="https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=52C1F4CBDE863F5095D7C9D17F8E3F71">GB
                                 18401-2010 国家纺织产品基本安全技术规范：未列入</a><br><a class="blsxTextlink"
                                 href="https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=1698157554F00EED2E79EC6BFF7F4DF0">GB
@@ -1380,7 +1387,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">本品使用后会残留在成品里(如纺织面料)，必须良好控制生产工艺，达到纺织品消费者安全使用要求。 </td>
+                        <td style="border:0; width:*" contenteditable="true">本品使用后会残留在成品里(如纺织面料)，必须良好控制生产工艺，达到纺织品消费者安全使用要求。 </td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
@@ -1409,7 +1416,7 @@
         </div>
 
 
-        <div contenteditable="true">
+        <div class="CE" contenteditable="true">
             <table data-pdfmake="{'widths':['*'],'heights':8}">
                 <tbody>
                     <tr style="height:16px;">
@@ -1428,12 +1435,12 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">重要！</td>
-                        <td style="border:0; width:*" contenteditable="true"> </td>
+                        <td style="border:0; width:*"> </td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"> 如下国家强制标准对安全标志(提示标志)作了强制规定。
+                        <td style="border:0; width:*"> 如下国家强制标准对安全标志(提示标志)作了强制规定。
                             <table>
                                 <tbody>
                                     <tr>
@@ -1538,7 +1545,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">
+                        <td style="border:0; width:*" contenteditable="true">
                             造成皮肤刺激，可能对生育能力或胎儿造成伤害，可能引起昏睡或眩晕，长期或反复接触可能对器官造成伤害，吞咽并进入呼吸道可能致命。<br><a class="blsxText">包罗三相：
                                 见GB 17519-2013 第3.4.1节的编写要求。 </a></td>
                     </tr>
@@ -1556,7 +1563,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">施救者需要作好自我保护，根据需要穿戴个人防护设备。向到达现场的医生出示本化学品安全技术说明书。<br><a
+                        <td style="border:0; width:*" contenteditable="true">施救者需要作好自我保护，根据需要穿戴个人防护设备。向到达现场的医生出示本化学品安全技术说明书。<br><a
                                 class="blsxText">包罗三相： 出处见重点监管的危险化学品名录 2013完整版。 </a><br><a class="blsxText">包罗三相： 见GB
                                 17519-2013 第3.4.1节的编写要求。 </a></td>
                     </tr>
@@ -1574,14 +1581,14 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">对症处理。<br><a class="blsxText">包罗三相： 见GB 17519-2013 第3.4.4节的编写要求。
+                        <td style="border:0; width:*" contenteditable="true">对症处理。<br><a class="blsxText">包罗三相： 见GB 17519-2013 第3.4.4节的编写要求。
                             </a></td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <div contenteditable="true">
+        <div class="CE" contenteditable="true">
             <table data-pdfmake="{'widths':['*'],'heights':8}">
                 <tbody>
                     <tr style="height:16px;">
@@ -1600,12 +1607,12 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">重要！</td>
-                        <td style="border:0; width:*" contenteditable="true"> </td>
+                        <td style="border:0; width:*"> </td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"> 如下国家强制标准对灭火器及其安全标志作了强制规定。
+                        <td style="border:0; width:*"> 如下国家强制标准对灭火器及其安全标志作了强制规定。
                             <table>
                                 <tbody>
                                     <tr>
@@ -1692,7 +1699,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">
+                        <td style="border:0; width:*" contenteditable="true">
                             与氧化剂能发生强烈反应。流速过快，容易产生和积聚静电。蒸气比空气重，沿地面扩散并易积存于低洼处，遇火源会着火回燃。燃烧生成有害的一氧化碳。<br><a
                                 class="blsxText">出处：《危险化学品安全技术全书》 第三版 第800页</a><br><a class="blsxText">包罗三相： 见GB
                                 17519-2013 第3.5.2节的编写要求。 </a></td>
@@ -1710,7 +1717,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">
+                        <td style="border:0; width:*" contenteditable="true">
                             消防人员必须佩戴空气呼吸器、穿全身防火防毒服，在上风向灭火。喷水冷却容器，尽可能将容器从火场移至空旷处。容器突然发出异常声音或出现异常现象,
                             应立即撤离。防止消防水污染地表和地下水。<br><a class="blsxText">出处：《危险化学品安全技术全书》 第三版 第800页</a><br><a
                                 class="blsxText">包罗三相： 见GB 17519-2013 第3.5.2节的编写要求。 </a></td>
@@ -1719,7 +1726,7 @@
             </table>
         </div>
 
-        <div contenteditable="true">
+        <div class="CE" contenteditable="true">
             <table data-pdfmake="{'widths':['*'],'heights':8}">
                 <tbody>
                     <tr style="height:16px;">
@@ -1770,7 +1777,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">本品为水污染物，防止进入下水道、地下水和地表水。<br>本品同时为VOC物质即空气污染物，防止进入大气。<br><a
+                        <td style="border:0; width:*" contenteditable="true">本品为水污染物，防止进入下水道、地下水和地表水。<br>本品同时为VOC物质即空气污染物，防止进入大气。<br><a
                                 class="blsxText">包罗三相： 见GB 17519-2013 第3.6.2节的编写要求。 </a></td>
                     </tr>
 
@@ -1786,7 +1793,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">
+                        <td style="border:0; width:*" contenteditable="true">
                             小量泄漏：用专用化学品泄漏吸收材料如沙土、吸收棉或其他惰性材料吸附。尽可能把泄漏液体收集在可密闭的容器内。<br>大量泄漏：构筑围堤或挖坑收容。用泡沫覆盖，抑制蒸发。用防爆泵转移至槽车或专用收集器内，回收或运至废物处理场所处置。<br><a
                                 class="blsxText">包罗三相： 出处见重点监管的危险化学品名录 2013完整版。</a><br><a class="blsxText">包罗三相： 见GB
                                 17519-2013 第3.6.3节的编写要求。 </a></td>
@@ -1804,7 +1811,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">禁止使用易产生静电火花的机械设备和收集工具如铁铲。消除点火源。<br><a class="blsxText">包罗三相：
+                        <td style="border:0; width:*" contenteditable="true">禁止使用易产生静电火花的机械设备和收集工具如铁铲。消除点火源。<br><a class="blsxText">包罗三相：
                                 出处见重点监管的危险化学品名录 2013完整版。</a><br><a class="blsxText">包罗三相： 见GB 17519-2013 第3.6.4节的编写要求。
                             </a></td>
                     </tr>
@@ -1812,7 +1819,7 @@
             </table>
         </div>
 
-        <div contenteditable="true">
+        <div class="CE" contenteditable="true">
             <table data-pdfmake="{'widths':['*'],'heights':8}">
                 <tbody>
                     <tr style="height:16px;">
@@ -1831,12 +1838,12 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">重要！</td>
-                        <td style="border:0; width:*" contenteditable="true"> </td>
+                        <td style="border:0; width:*"> </td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"> 如下国家强制标准对安全标志作了强制规定。
+                        <td style="border:0; width:*"> 如下国家强制标准对安全标志作了强制规定。
                             <table>
                                 <tbody>
                                     <tr>
@@ -1888,30 +1895,30 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">防火防爆：</td>
-                        <td style="border:0; width:*">穿戴防静电服。防止静电，消除所有点火源。远离热源。作业场所应使用防爆型设备，并且接地。</td>
+                        <td style="border:0; width:*" contenteditable="true">穿戴防静电服。防止静电，消除所有点火源。远离热源。作业场所应使用防爆型设备，并且接地。</td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">局部通风：</td>
-                        <td style="border:0; width:*">
+                        <td style="border:0; width:*" contenteditable="true">
                             手工称化料，应设置防爆型局部通风。自动称化料，选用无泄漏泵来输送本介质，如屏蔽泵或磁力泵输送。甲苯储罐采取人工脱水方式时，应增配检测有毒气体检测报警仪（固定式或便携式）。储罐等容器和设备应设置液位计、温度计，并应装有带液位、温度远传记录和报警功能的安全装置。料间应设置全面通风。设置必要的安全联锁及紧急排放系统，通风设施应每年进行一次检查。
                         </td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">气溶胶和粉尘：</td>
-                        <td style="border:0; width:*">不适用。<br><a class="blsxText">包罗三相： 见GB 17519-2013 第3.7.1节的编写要求。</a>
+                        <td style="border:0; width:*" contenteditable="true">不适用。<br><a class="blsxText">包罗三相： 见GB 17519-2013 第3.7.1节的编写要求。</a>
                         </td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">防止接触禁配物：</td>
-                        <td style="border:0; width:*">避免接触氧化剂等等</td>
+                        <td style="border:0; width:*" contenteditable="true">避免接触氧化剂等等</td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">基本卫生要求：</td>
-                        <td style="border:0; width:*">禁止在工作场所进饮食；使用后洗手；进入餐饮区前脱掉污染的衣着和个体防护装备。<br><a
+                        <td style="border:0; width:*" contenteditable="true">禁止在工作场所进饮食；使用后洗手；进入餐饮区前脱掉污染的衣着和个体防护装备。<br><a
                                 class="blsxText">包罗三相： 见GB 17519-2013 第3.7.1节的编写要求。</a></td>
                     </tr>
                     <tr>
@@ -1927,7 +1934,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">
+                        <td style="border:0; width:*" contenteditable="true">
                             张贴危险化学品安全周知卡，存放本说明书。
                             <br><br>上锁保存。
                             <br><br>和氧化剂分开存放。
@@ -1966,7 +1973,7 @@
         </div>
 
 
-        <div contenteditable="true">
+        <div class="CE" contenteditable="true">
             <table data-pdfmake="{'widths':['*'],'heights':8}">
                 <tbody>
                     <tr style="height:16px;">
@@ -1986,12 +1993,12 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">重要！</td>
-                        <td style="border:0; width:*" contenteditable="true"> </td>
+                        <td style="border:0; width:*"> </td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"> 如下国家强制标准对安全标志作了强制规定。
+                        <td style="border:0; width:*"> 如下国家强制标准对安全标志作了强制规定。
                             <table>
                                 <tbody>
                                     <tr>
@@ -2047,27 +2054,27 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">化学有害因素：</td>
-                        <td style="border:0; width:*">甲苯</td>
+                        <td style="border:0; width:*" contenteditable="true">甲苯</td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">CAS号：</td>
-                        <td style="border:0; width:*">108-88-3</td>
+                        <td style="border:0; width:*" contenteditable="true">108-88-3</td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">标准限值：</td>
-                        <td style="border:0; width:*">MAC -;\nPC-TWA 80 mg/m3;\nPC-STEL 100 mg/m3;</td>
+                        <td style="border:0; width:*" contenteditable="true">MAC -;\nPC-TWA 80 mg/m3;\nPC-STEL 100 mg/m3;</td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">临界不良健康效应：</td>
-                        <td style="border:0; width:*">麻醉作用；皮肤黏膜刺激。</td>
+                        <td style="border:0; width:*" contenteditable="true">麻醉作用；皮肤黏膜刺激。</td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">备注：</td>
-                        <td style="border:0; width:*">经皮吸收。<br><a class="blsxText">包罗三相：来自GBZ 2.1-2019。</a></td>
+                        <td style="border:0; width:*" contenteditable="true">经皮吸收。<br><a class="blsxText">包罗三相：来自GBZ 2.1-2019。</a></td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
@@ -2094,7 +2101,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">仅本品，不产生粉尘。<br><a class="blsxText">包罗三相：见GB/T
+                        <td style="border:0; width:*" contenteditable="true">仅本品，不产生粉尘。<br><a class="blsxText">包罗三相：见GB/T
                                 17519-2013的第3.8.1节。</a></td>
                     </tr>
                     <tr>
@@ -2115,7 +2122,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">生物监测指标：</td>
-                        <td style="border:0; width:*">
+                        <td style="border:0; width:*" contenteditable="true">
                             尿中马尿酸<br>
                             <a class="blsxText">包罗三相： 见GBZ 2.1—2019 表4。</a>
                         </td>
@@ -2123,7 +2130,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">职业接触生物限值：</td>
-                        <td style="border:0; width:*">
+                        <td style="border:0; width:*" contenteditable="true">
                             1 mol/mol Cr（1.5g/g Cr），采样时间：工作班末（停止接触后）；\n11 mmol/L（2.0 g/L），采样时间：工作班末（停止接触后）。<br>
                             <a class="blsxText">包罗三相： 见GBZ 2.1—2019 表4。</a>
                         </td>
@@ -2131,7 +2138,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">生物监测指标：</td>
-                        <td style="border:0; width:*">
+                        <td style="border:0; width:*" contenteditable="true">
                             终末呼出气甲苯<br>
                             <a class="blsxText">包罗三相： 见GBZ 2.1—2019 表4。</a>
                         </td>
@@ -2139,7 +2146,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">职业接触生物限值：</td>
-                        <td style="border:0; width:*">
+                        <td style="border:0; width:*" contenteditable="true">
                             20 mg/m3，采样时间：工作班末（停止接触后15 min～30min）；\n5 mg/m3，采样时间：工作班前。<br>
                             <a class="blsxText">包罗三相： 见GBZ 2.1—2019 表4。</a>
                         </td>
@@ -2163,7 +2170,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">
+                        <td style="border:0; width:*" contenteditable="true">
                             GBZ/T 300.66-2017 工作场所空气有毒物质测定 第66部分 苯、甲苯、二甲苯和乙苯<br>
                             <a class="blsxText"
                                 class="http://www.nhc.gov.cn/wjw/pyl/201712/36b4b320f4d5460dba3212bf03447439.shtml">包罗三相：
@@ -2188,7 +2195,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"> 如下国家强制标准对安全标志作了强制规定。
+                        <td style="border:0; width:*"> 如下国家强制标准对安全标志作了强制规定。
                             <table>
                                 <tbody>
                                     <tr>
@@ -2208,7 +2215,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">
+                        <td style="border:0; width:*" contenteditable="true">
                             按照国标GB/T 194-2007 工作场所防止职业中毒 卫生工程防护措施规范、AQ/T 4274—2016 局部排风设施控制风速检测与评估技术规范、GB/T 35077-2018
                             机械安全 局部排气通风系统安全要求设置局部排风系统，保持空气中的浓度低于职业接触限值。
                             <br><br>有毒有害物质被吸入排毒罩口的过程，不应通过操作者的呼吸带，控制风速在0.25m/s~3m/s 之间，常用风速为 0.5m/s~1.5m/s。管道风速采用
@@ -2241,7 +2248,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">
+                        <td style="border:0; width:*" contenteditable="true">
                             在需要防止静电产生的工作场所，按照GB/T 31421 防静电工作帽，配置工作帽。
                             <br><a class="blsxText"
                                 class="http://c.gb688.cn/bzgk/gb/showGb?type=download&hcno=B8071B9B0A429EB6067597A7C98629C9">包罗三相：
@@ -2263,7 +2270,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">
+                        <td style="border:0; width:*" contenteditable="true">
                             在产生本品蒸气/烟雾的工作场所，按照<a class="blsxTextlink"
                                 class="https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=2B7493B6F32B3970726D80D3A8B581BA">GB
                                 2890 自吸过滤式防毒面具</a> 配置防毒面具，普通过滤件类型：A，颜色：褐色。
@@ -2287,7 +2294,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">
+                        <td style="border:0; width:*" contenteditable="true">
                             按照<a class="blsxTextlink"
                                 href="https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=70118B3CDB80C212C8FE2842622B1125">GB
                                 32166.1-2016 职业眼面部防护具</a>配置紧密贴合的眼面防护设备。
@@ -2310,7 +2317,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">
+                        <td style="border:0; width:*" contenteditable="true">
                             按照<a class="blsxTextlink"
                                 href="https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=9ED7523BE224D9F76FBB1036D27838D4">GB
                                 12014-2019 防护服装 防静电服</a>和
@@ -2333,7 +2340,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">
+                        <td style="border:0; width:*" contenteditable="true">
                             按照<a class="blsxTextlink"
                                 href="https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=4B6728867B93288951F1A9F8B41C1D4B">GB
                                 28881-2023 手部防护 化学品及微生物防护手套</a>和
@@ -2353,7 +2360,7 @@
         </div>
 
 
-        <div contenteditable="true">
+        <div class="CE" contenteditable="true">
             <table data-pdfmake="{'widths':['*'],'heights':8}">
                 <tbody>
                     <tr style="height:16px;">
@@ -2489,7 +2496,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">无资料</td>
+                        <td style="border:0; width:*" contenteditable="true">无资料</td>
                     </tr>
                 </tbody>
             </table>
@@ -2497,7 +2504,7 @@
 
 
 
-        <div contenteditable="true">
+        <div class="CE" contenteditable="true">
             <table data-pdfmake="{'widths':['*'],'heights':8}">
                 <tbody>
                     <tr style="height:16px;">
@@ -2550,7 +2557,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">危险反应：</td>
-                        <td style="border:0; width:*">与强氧化剂等接触，有发生火灾和爆炸的危险。</td>
+                        <td style="border:0; width:*" contenteditable="true">与强氧化剂等接触，有发生火灾和爆炸的危险。</td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
@@ -2570,7 +2577,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">应避免的条件：</td>
-                        <td style="border:0; width:*">点火源、静电。</td>
+                        <td style="border:0; width:*" contenteditable="true">点火源、静电。</td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
@@ -2590,7 +2597,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">禁配物：</td>
-                        <td style="border:0; width:*">强氧化剂、酸类、卤素等。</td>
+                        <td style="border:0; width:*" contenteditable="true">强氧化剂、酸类、卤素等。</td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
@@ -2610,7 +2617,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">危险的分解产物：</td>
-                        <td style="border:0; width:*">燃烧生成有害的一氧化碳。</td>
+                        <td style="border:0; width:*" contenteditable="true">燃烧生成有害的一氧化碳。</td>
                     </tr>
                 </tbody>
             </table>
@@ -2618,7 +2625,7 @@
 
 
 
-        <div contenteditable="true">
+        <div class="CE" contenteditable="true">
             <table data-pdfmake="{'widths':['*'],'heights':8}">
                 <tbody>
                     <tr style="height:16px;">
@@ -2743,7 +2750,7 @@
         </div>
 
 
-        <div contenteditable="true">
+        <div class="CE" contenteditable="true">
             <table data-pdfmake="{'widths':['*'],'heights':8}">
                 <tbody>
                     <tr style="height:16px;">
@@ -2924,7 +2931,7 @@
             </table>
         </div>
 
-        <div contenteditable="true">
+        <div class="CE" contenteditable="true">
             <table data-pdfmake="{'widths':['*'],'heights':8}">
                 <tbody>
                     <tr style="height:16px;">
@@ -2943,11 +2950,11 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">重要！</td>
-                        <td style="border:0; width:*" contenteditable="true"> </td>
+                        <td style="border:0; width:*"> </td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
-                        <td style="border:0; width:250px" colspan="2" contenteditable="true">
+                        <td style="border:0; width:250px" colspan="2">
                             废弃处置，应实施国家和地方监管机构的有关法律法规和要求。
                             <br>本部分按照<a class="blsxTextlink"
                                 href="https://flk.npc.gov.cn/detail2.html?ZmY4MDgwODE3MjljNjVkODAxNzI5ZDQ1NWZhZDA0YmU%3D">中华人民共和国固体废物污染环境防治法</a>和
@@ -2963,7 +2970,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"></td>
+                        <td style="border:0; width:*"></td>
                     </tr>
                     <tr class="subsectionText">
                         <td style="border:0; width:40px; ">13.1 </td>
@@ -2972,7 +2979,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"></td>
+                        <td style="border:0; width:*"></td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
@@ -3013,7 +3020,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"></td>
+                        <td style="border:0; width:*"></td>
                     </tr>
                     <tr class="subsectionText">
                         <td style="border:0; width:40px; ">13.2 </td>
@@ -3022,7 +3029,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"></td>
+                        <td style="border:0; width:*"></td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
@@ -3068,7 +3075,7 @@
         </div>
 
 
-        <div contenteditable="true">
+        <div class="CE" contenteditable="true">
             <table data-pdfmake="{'widths':['*'],'heights':8}">
                 <tbody>
                     <tr style="height:16px;">
@@ -3098,11 +3105,6 @@
                         <td style="border:0; width:250px"></td>
                         <td style="border:0; width:*"></td>
                     </tr>
-                    <!-- <tr>
-        <td style="border:0; width:59px"></td>
-        <td style="border:0; width:250px">组分： </td>
-        <td style="border:0; width:*" contenteditable="true">甲苯</td>
-        </tr> -->
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">联合国危险货物编号： </td>
@@ -3119,7 +3121,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"></td>
+                        <td style="border:0; width:*"></td>
                     </tr>
                     <tr class="subsectionText">
                         <td style="border:0; width:40px; ">14.2 </td>
@@ -3128,13 +3130,8 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"></td>
+                        <td style="border:0; width:*"></td>
                     </tr>
-                    <!-- <tr>
-                <td style="border:0; width:59px"></td>
-                <td style="border:0; width:250px">组分：</td>
-                <td style="border:0; width:*" contenteditable="true">甲苯</td>
-            </tr> -->
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">联合国运输中文名称：</td>
@@ -3162,7 +3159,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"></td>
+                        <td style="border:0; width:*"></td>
                     </tr>
                     <tr class="subsectionText">
                         <td style="border:0; width:40px; ">14.3 </td>
@@ -3171,7 +3168,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"></td>
+                        <td style="border:0; width:*"></td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
@@ -3200,7 +3197,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"></td>
+                        <td style="border:0; width:*"></td>
                     </tr>
                     <tr class="subsectionText">
                         <td style="border:0; width:40px; ">14.4 </td>
@@ -3209,7 +3206,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"></td>
+                        <td style="border:0; width:*"></td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
@@ -3227,7 +3224,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"></td>
+                        <td style="border:0; width:*"></td>
                     </tr>
                     <tr class="subsectionText">
                         <td style="border:0; width:40px; ">14.5 </td>
@@ -3236,7 +3233,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"></td>
+                        <td style="border:0; width:*"></td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
@@ -3253,7 +3250,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"></td>
+                        <td style="border:0; width:*"></td>
                     </tr>
                     <tr class="subsectionText">
                         <td style="border:0; width:40px; ">14.6 </td>
@@ -3262,7 +3259,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"></td>
+                        <td style="border:0; width:*"></td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
@@ -3279,7 +3276,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"></td>
+                        <td style="border:0; width:*"></td>
                     </tr>
                     <tr class="subsectionText">
                         <td style="border:0; width:40px; ">14.6 </td>
@@ -3288,12 +3285,12 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"></td>
+                        <td style="border:0; width:*" ></td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true">运输包装标志：</td>
+                        <td style="border:0; width:*" >运输包装标志：</td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
@@ -3346,7 +3343,7 @@
         </div>
 
 
-        <div contenteditable="true">
+        <div class="CE" contenteditable="true">
             <table data-pdfmake="{'widths':['*'],'heights':8}">
                 <tbody>
                     <tr style="height:16px;">
@@ -3479,7 +3476,7 @@
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
-                        <td style="border:0; width:250px" colspan="2">
+                        <td style="border:0; width:250px" colspan="2" contenteditable="true">
                             未列入
                         </td>
                     </tr>
@@ -3494,7 +3491,7 @@
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
-                        <td style="border:0; width:250px" colspan="2">
+                        <td style="border:0; width:250px" colspan="2" contenteditable="true">
                             未列入
                         </td>
                     </tr>
@@ -3509,7 +3506,7 @@
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
-                        <td style="border:0; width:250px" colspan="2">
+                        <td style="border:0; width:250px" colspan="2" contenteditable="true">
                             列为第1014个
                         </td>
                     </tr>
@@ -3524,7 +3521,7 @@
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
-                        <td style="border:0; width:250px" colspan="2">
+                        <td style="border:0; width:250px" colspan="2" contenteditable="true">
                             表1，危险化学品及其临界量，临界量500吨
                         </td>
                     </tr>
@@ -3538,7 +3535,7 @@
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
-                        <td style="border:0; width:250px" colspan="2">
+                        <td style="border:0; width:250px" colspan="2" contenteditable="true">
                             未列入
                         </td>
                     </tr>
@@ -3552,7 +3549,7 @@
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
-                        <td style="border:0; width:250px" colspan="2">
+                        <td style="border:0; width:250px" colspan="2" contenteditable="true">
                             列为第19个
                         </td>
                     </tr>
@@ -3566,7 +3563,7 @@
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
-                        <td style="border:0; width:250px" colspan="2">
+                        <td style="border:0; width:250px" colspan="2" contenteditable="true">
                             列为第29个
                         </td>
                     </tr>
@@ -3580,7 +3577,7 @@
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
-                        <td style="border:0; width:250px" colspan="2">
+                        <td style="border:0; width:250px" colspan="2" contenteditable="true">
                             列入五、职业性化学中毒 29.甲苯中毒
                         </td>
                     </tr>
@@ -3595,7 +3592,7 @@
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
-                        <td style="border:0; width:250px" colspan="2">
+                        <td style="border:0; width:250px" colspan="2" contenteditable="true">
                             列为第136个；生物限值第15个
                         </td>
                     </tr>
@@ -3610,7 +3607,7 @@
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
-                        <td style="border:0; width:250px" colspan="2">
+                        <td style="border:0; width:250px" colspan="2" contenteditable="true">
                             未列入
                         </td>
                     </tr>
@@ -3624,7 +3621,7 @@
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
-                        <td style="border:0; width:250px" colspan="2">
+                        <td style="border:0; width:250px" colspan="2" contenteditable="true">
                             列为第16691个，不属于新化学物质
                         </td>
                     </tr>
@@ -3640,7 +3637,7 @@
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
-                        <td style="border:0; width:250px" colspan="2">
+                        <td style="border:0; width:250px" colspan="2" contenteditable="true">
                             列为第16691个
                         </td>
                     </tr>
@@ -3648,7 +3645,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"></td>
+                        <td style="border:0; width:*"></td>
                     </tr>
                     <tr class="subsectionText">
                         <td style="border:0; width:40px; ">15.2 </td>
@@ -3657,7 +3654,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*" contenteditable="true"></td>
+                        <td style="border:0; width:*"></td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
@@ -3670,7 +3667,7 @@
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
-                        <td style="border:0; width:250px" colspan="2">
+                        <td style="border:0; width:250px" colspan="2" contenteditable="true">
                             列为O3前体物和应税污染物
                         </td>
                     </tr>
@@ -3679,7 +3676,7 @@
         </div>
 
 
-        <div contenteditable="true">
+        <div class="CE" contenteditable="true">
             <table data-pdfmake="{'widths':['*'],'heights':8}">
                 <tbody>
                     <tr style="height:16px;">
@@ -3712,32 +3709,32 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">编写：</td>
-                        <td style="border:0; width:*">产品监管部门</td>
+                        <td style="border:0; width:*" contenteditable="true">产品监管部门</td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px">修订：</td>
-                        <td style="border:0; width:*">产品监管部门</td>
+                        <td style="border:0; width:*" contenteditable="true">产品监管部门</td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">本7.00修订版对下述部分的内容进行了修订：</td>
+                        <td style="border:0; width:*" contenteditable="true">本7.00修订版对下述部分的内容进行了修订：</td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">GB/T 32374-2015 化学品危险信息短语与代码 已经在20240823废止。感谢TUTU猫的反馈。</td>
+                        <td style="border:0; width:*" contenteditable="true">GB/T 32374-2015 化学品危险信息短语与代码 已经在20240823废止。感谢TUTU猫的反馈。</td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">第二部分 危险性描述</td>
+                        <td style="border:0; width:*" contenteditable="true">第二部分 危险性描述</td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">第十五部分 法规信息</td>
+                        <td style="border:0; width:*" contenteditable="true">第十五部分 法规信息</td>
                     </tr>
                     <tr>
                         <td style="border:0; width:59px"></td>
@@ -3756,7 +3753,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">SDS：Safety Data Sheet，化学品安全技术说明书的英文缩写。<br>MAC：最高容许浓度(maximum allowable
+                        <td style="border:0; width:*" contenteditable="true">SDS：Safety Data Sheet，化学品安全技术说明书的英文缩写。<br>MAC：最高容许浓度(maximum allowable
                             concentration，MAC)。指工作地点、在一个工作日内、任何时间有毒化学物质均不应超过的浓度。
                             <br>PC-TWA：时间加权平均容许浓度(permissible concentration-time weighted
                             aver&ge，PC-TWA)。指以时间为权数规定的8h工作日、40h工作同的平均容许接触度。
@@ -3781,7 +3778,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">
+                        <td style="border:0; width:*" contenteditable="true">
                             在收到本SDS后，应由安全合规人员、质量合规人员、环境合规人员全文阅读，按照安全生产法、职业病防治法、产品质量法、环境保护法、第三方自愿体系等法律法规标准及其他要求，建立化学品档案，进行风险评价，结合存放和使用场所，编写有针对性的培训课件，为使用本品的员工提供针对性关于安全、环境保护、质量方面的首次培训和再培训。
                         </td>
                     </tr>
@@ -3802,7 +3799,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">危险化学品安全技术全书-通用卷(第三版)
+                        <td style="border:0; width:*" contenteditable="true">危险化学品安全技术全书-通用卷(第三版)
                             <br>Pubchem
                             <br>重点监管的危险化学品名录 2013完整版
                         </td>
@@ -3824,7 +3821,7 @@
                     <tr>
                         <td style="border:0; width:59px"></td>
                         <td style="border:0; width:250px"></td>
-                        <td style="border:0; width:*">
+                        <td style="border:0; width:*" contenteditable="true">
                             本SDS的信息仅适用于所指定的产品，除非特别指明，对于本产品与其他物质的混合物等情况不适用。本SDS只为那些受过适当专业训练的该产品的使用人员提供产品使用安全方面的资料。本SDS的使用者，在特殊的使用条件下必须对该SDS的适用性作出独立判断。在特殊的使用场合下，由于使用本SDS所导致的伤害，本SDS的编写者将不负任何责任。
                             <br><a class="blsxText">包罗三相：出处来自GB/T 17519-2013的附录A</a>
                         </td>
@@ -4019,25 +4016,6 @@
     <!--     <script src="https://blsx666.github.io/0522/vfs_fonts_blsx.js"></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/pdfmake@latest/build/vfs_fonts.js"></script> -->
     <script>
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-            console.log("clicked");
-        }
-
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-
         $(function() {
             //注册提示文字事件
             // registerHintText($('#textContent'));
@@ -4154,22 +4132,6 @@
             }
         };
 
-
-        var editableElements = document.querySelectorAll('[contenteditable=true]');
-        editableElements.forEach(function(element) {
-            element.addEventListener('input', handleChange);
-        });
-
-        function handleChange(event) {
-            var td = event.srcElement;
-            td.style.color = "pink";
-            var text = document.getElementById("input").value;
-            // var replaceRegex = /(\n\r|\r\n|\r|\n)/g
-            // text = text || '';
-            document.getElementById("message").innerHTML = text //.replace(replaceRegex, "<br/>");
-            codeBaggyp.innerHTML = htmlBag.innerHTML;
-        }
-
         function toHTML() {
             htmlBag.innerHTML = codeBag.value;
             toHTMLCode("false");
@@ -4187,6 +4149,52 @@
             codeBaggyp.innerHTML = htmlBag.innerHTML;
         }
         toHTMLCode("true");
+
+        function ToggleBLSXNotes() {
+            document.querySelectorAll("a[class='blsxText']").forEach(
+                el => {
+                    if (el.style.display == "none")
+                        el.style.display = "block"
+                    else
+                        el.style.display = "none"
+                }
+            );
+            toHTMLCode("true");
+            convert();
+        }
+
+        function ToggleDivCE() {
+            document.querySelectorAll("div[class='CE']").forEach(
+                el => {
+                    console.log(el.contentEditable)
+                    if (el.contentEditable == "true")
+                        el.contentEditable = "false"
+                    else
+                        el.contentEditable = "true"
+                }
+            );
+        }
+
+        var editableElements = document.querySelectorAll('[contenteditable=true]');
+        editableElements.forEach(function(element) {
+            // element.addEventListener('input', handleChange);
+            element.addEventListener('input',
+                function(event) {
+                    var td = event.srcElement;
+                    td.style.color = "red";
+                }
+            );
+        });
+
+        // function handleChange(event) {
+        //     var td = event.srcElement;
+        //     td.style.color = "pink";
+        //     var text = document.getElementById("input").value;
+        //     // var replaceRegex = /(\n\r|\r\n|\r|\n)/g
+        //     // text = text || '';
+        //     document.getElementById("message").innerHTML = text //.replace(replaceRegex, "<br/>");
+        //     codeBaggyp.innerHTML = htmlBag.innerHTML;
+        // }
 
         // function changeText() {
         //     var text = document.getElementById("input").value;
@@ -4641,7 +4649,6 @@
                         fontSize: 15,
                         color: 'blue',
                     },
-
                 },
                 defaultStyle: {
                     font: 'WCSF',
@@ -4660,7 +4667,5 @@
         }
         convert();
     </script>
-
 </body>
-
 </html>
